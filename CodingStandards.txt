@@ -1,0 +1,100 @@
+Coding Standards - Beattitudes Engineering
+------------------------------------------
+
+Configuration Bits:
+	Use the default generated CONFIG bits, except:
+		1. Change FOSC to INTIO67
+		2. Change WDTEN to OFF
+
+Microcontroller Settings:
+	8MHz internal oscillator will be used.
+	A PIC18F46k22 will be used for the BeeBot
+		The PIC18F26K22 can be used for testing, but just be aware of differences in pin assignments.
+	Set ANSELx to zero for all pins upon init; some protocols don't work otherwise.
+		
+
+Naming:
+	Use snake case (my_variable_name) for all names.
+
+	Variables need short but descriptive names.
+		For counter variables, such as in a loop, name them "descriptor_counter", where "descriptor" describes what you are counting.
+		DO NOT use single letter variable names, they should be words or easily understandable abbreviations.
+
+	Functions names need to begin with a present tense verb
+		Example: A function which gets the current location from the GPS should be named "get_gps_coords()"
+			 A function which moves the BeeBot forward should be named "move_forward()"
+		
+		
+Functions:
+	Required functions:
+		void init_pins(void)		//This function will initialize all the pins your program needs 
+		void init_interrupts(void)	//This function will initialize all your interrupts (if interrupts are used)
+		void __interrupt() ISR(void)    //This function will be your interrupt service routine
+
+Interrupts:
+	Use interrupts sparingly, if your subsystem does not need interrupts, then don't use them.
+		The BeeBot will be slow moving, so polling for short intervals would likely be fine.
+		
+	We will likely utilize a 1ms increment interrupt clock, so base your timing around that.
+
+	See "precommitted pins" below to see which interrupts are already being used.
+
+Variables:
+	Define all variables at the start of your function.
+
+	Limit usage of global variables unless actively needed.
+
+	Use BYTE for all single-byte data and for any counters that will remain less than 256.
+		BYTE is just a renaming of "unsigned char".
+		Include: "typedef unsigned char BYTE;" under your program constants.
+	
+	Use "unsigned int" if you need a 2 byte variable
+
+	Use "char" if you are defining an ASCII character.
+		An ASCII character is any single character surrounded by single quotes.
+
+Constants:
+	Use preprocessor defined constants (#define) for all your program constants
+		USE program constants, as they use no memory, and make your code cleaner and easier to debug
+		DO NOT use "const" style constants, as they take up memory space.
+
+	Required Constants:
+		#define _XTAL_FREQ 8000000	//This defines the clock frequency (we will use 8MHz unless we have to change)
+
+	Include a comment after every constants briefly describing it.
+
+Commenting:
+	Include a block comment above every function and setup section
+	Example block comment:
+		/******************************************************************************/
+		/*                          Initialize GPIO pins.                             */
+		/******************************************************************************/
+
+	Include a single-line comment after every variable initalization describing it.
+		Line up these comments if you have multiple variables.
+
+	Include a single-line comment above every loop describing its function.
+	
+	Include a single-line comment 
+
+Loops:
+	Use a "for" loop 
+	
+
+	
+
+Precommitted Pins:
+	The follow pins are currently committed to a subsystem, and thus you should not design your system utilizing these pins, unless it is in your subsystem.
+		RC7	UART RX
+		RC6	UART TX
+		RD4	SPI SDO
+		RD1	SPI SDI
+		RD0	SPI SCK
+		RC4	I2C SDA
+		RC3	I2C SCL
+		RB7	Debugger
+		RB6	Debugger
+	DO NOT use an interrupt pin (marked IOC or INTn in the datasheet) unless you actively need to use that interrupt. 
+
+Github Rules:
+	
