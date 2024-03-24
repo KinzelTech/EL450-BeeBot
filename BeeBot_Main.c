@@ -62,68 +62,166 @@
 // CONFIG7H
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot Block (000000-0007FFh) not protected from table reads executed in other blocks)
 
+
 /******************************************************************************/
-/*                               Libraries                                    */
+/*                                Libraries                                   */
 /******************************************************************************/
-#include <xc.h>             //XC8 default library
-#include <pic18f46k22.h>    //PIC MCU default library
-#include <string.h>         //C Strings library
-#include <math.h>           //C Math library
+#include "BeeBot_Globals.h"
+#include "MRF89XAM.h"
+#include "MCP2221A.h"
+//#include
+
+/******************************************************************************/
+/*                                 States                                     */
+/******************************************************************************/
+enum states
+{
+    INIT,       //System startup and initialization.
+    WAITING,    //No movement, waiting on commands from user.
+    AUTO,       //Autonomously moving, using obstacle avoidance and pathfinding.
+    MANUAL,     //Manually controlled via controller joysticks.
+    DEBUG,      //Debug mode while USB is plugged in.
+    DEPLOYED    //Deployment mode while in the field.
+};
 
 /******************************************************************************/
 /*                            Global Constants                                */
 /******************************************************************************/
-#define _XTAL_FREQ 8000000  //Set internal clock speed to 8MHz
-#define TRUE       1        //Boolean true
-#define FALSE      0        //Boolean false
-
-/******************************************************************************/
-/*                           Custom Data Types                                */
-/******************************************************************************/
-typedef unsigned char BYTE; //Single byte data type
+#define _XTAL_FREQ  8000000  //Set internal clock speed to 8MHz.
+#define UART_TERMINATOR '\n' //Terminator character for UART.
+#define MAX_REPORTS 24       //Number of reports to save.
 
 /******************************************************************************/
 /*                            Global Variables                                */
 /******************************************************************************/
-unsigned int timer_tick = 0;    //Counter for Timer0
+unsigned int timer_tick = 0;                //Increments per every Timer0 interrupt.
+BYTE state = INIT;
+char current_report[MSG_MAX] = "";
+char all_reports[MAX_REPORTS][MSG_MAX];
 
 /******************************************************************************/
 /*                          Function Declarations                             */
 /******************************************************************************/
-void init_pins      (void);     //Initialize all pins to initial values.
-void init_interrupts(void);     //Initialize all program interrupts
+//Initialization Code
+void init_pins      (void);         //Initialize all pins to initial values.
+void init_interrupts(void);         //Initialize all program interrupts.
+
+//Misc Code
+
 
 /******************************************************************************/
 /*                               Main Function                                */
 /******************************************************************************/
 void main(void) 
 {
+    BYTE previous_state;
+    char MRF_msg_code[4];
     //Clock setup
     OSCCON = 0b01100111;
     __delay_ms(200);
-    
-    //Initializers
-    init_pins();
-    init_interrupts();
-    //Put any other initializer functions here.
-    //...
     
     //Infinite processing loop
     while(TRUE)
     {
         //Put your processing code here.
         //Use functions as much as possible, instead of writing commands directly in main.
+        switch(state)
+        {
+            case INIT:
+                //Place all initialization code here.
+                init_pins      ();
+                init_interrupts();
+                init_uart2     (); 
+                previous_state = INIT;
+                state = WAITING;
+                break;
+            case WAITING:
+                //Initially waiting for message to arrive.
+                if(MRF_message_received)
+                {
+                    MRF_message_received = FALSE;
+                    MRF_parse_message(MRF_message, MRF_msg_code);
+                    
+                    if(!strcmp(MRF_msg_code, MSG_NAV))
+                    {
+                        state = AUTO;
+                        previous_state = WAITING;
+                    }
+                    else if(!strcmp(MRF_msg_code, MSG_MANUAL))
+                    {
+                        state = MANUAL;
+                        previous_state = WAITING;
+                    }
+                }
+                break;
+            case AUTO:
+                //Place all autonomous movement and navigation code here.
+                break;
+            case MANUAL:
+                //Place all manual control code here.
+                break;
+            case DEBUG:
+                //Place all USB code here (except for plug-in detection).
+                //Check if unplugged
+                if((!PORTDbits.RD5))
+                {
+                    state = previous_state;
+                    previous_state = DEBUG;
+                }
+                //Handle the usb_message
+                if(strcmp(usb_message, ""))
+                {
+                    parse_usb_message(usb_message);
+                    strcpy(usb_message, "");
+                }
+                break;
+            case DEPLOYED:
+                //Place all environmental sensor and hourly reporting code here.
+                
+                break;
+        }
+        
+        //Check if powered USB device is connected.
+        if(PORTDbits.RD5 && state != DEBUG)
+        {
+            previous_state = WAITING;
+            state = DEBUG;
+            strcpy(usb_message, "");
+        }
     }
-    
     return;
 }
+
+
 
 /******************************************************************************/
 /*                            Initialize all pins                             */
 /******************************************************************************/
 void init_pins(void)
 {
-    //Put all your ANSEL, LAT, TRIS setup commands here.
+    TRISDbits.RD6    = 1;   //Set USB_STAT as input.
+    TRISDbits.RD6    = 1;   //Set TX as input.
+    TRISDbits.RD7    = 1;   //Set RX as input.
+   
+    //MRF89XAM Code
+    TRISBbits.RB1 = 1;  //MRF IRQ0
+    TRISBbits.RB2 = 1;  //MRF IRQ1
+    TRISCbits.RC0 = 0;  //MRF CSCON
+    TRISCbits.RC1 = 0;  //MRF CSDATA
+    TRISCbits.RC2 = 1;  //MRF Reset
+    TRISCbits.RC3 = 0;  //MRF SCK1
+    TRISCbits.RC4 = 1;  //MRF SDI1 (MISO)
+    TRISCbits.RC5 = 1;  //MRF SDO1 (MOSI)
+    
+    //LATbits
+    LATCbits.LC0 = 1;   //CSCON is default high
+    LATCbits.LC1 = 1;   //CSDATA is default high
+    
+    ANSELA = 0;
+    ANSELB = 0;
+    ANSELC = 0;
+    ANSELD = 0;
+    ANSELE = 0;
     return;
 }
 
@@ -137,6 +235,11 @@ void init_interrupts(void)
     
     //Place interrupt enable and setup commands here
     //...
+    
+    //UART2 Interrupts
+    PIE3bits.RC2IE   = 1;   //Enable UART1 receive interrupt.
+    //PIE3bits.TX2IE   = 1;   //Enable UART1 transmit interrupt.
+                              //Only enable when needed.
     
     //Timer0 setup
     T0CON    	      = 0x08;     //Configure to 16bit timer, no prescaler.
@@ -156,8 +259,17 @@ void init_interrupts(void)
 /******************************************************************************/
 void __interrupt() ISR(void)
 {
+    char MRF_input = 0;
+    char temp_receive_string[MSG_MAX] = "";
     //Add checks here for any interrupts.
     //...
+    //UART2 Interrupts
+    char usb_input = 0;
+    if(PIR1bits.RC1IF && PIE1bits.RC1IE)
+    {
+        usb_input = read_byte_usb();
+        append_string(usb_message, usb_input);
+    }
     
     //Timer0 interrupt
     if(TMR0IE && TMR0IF) //Increment time if Timer0 is enabled and Timer0 has overflowed.
@@ -167,5 +279,20 @@ void __interrupt() ISR(void)
         TMR0H  = 0xF8;    //Reset 16bit timer preload to 63535
         TMR0L  = 0x2F;	
     }
+    
+    //IRQ0 interrupt for MRF89XAM (receiving only)
+    if(INTCON3bits.INT1F && !MRF_transmitting)
+    {
+        INTCON3bits.INT1F = 0;
+        MRF_input = (char) receive_MRF89XAM();
+        if(MRF_input == '\n')
+        {
+            MRF_message_received = TRUE;
+            strcpy(MRF_message, temp_receive_string);
+        }
+        else
+            append_string(temp_receive_string, MRF_input);
+    }
     return;
 }
+
