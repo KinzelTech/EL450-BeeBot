@@ -1,5 +1,106 @@
 Version 4.0 HI-TECH Software Intermediate Code
+<<<<<<< Updated upstream
 "7790 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+=======
+"52 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 52: {
+[s S857 `f 1 `f 1 ]
+[n S857 coords longitude latitude ]
+"14137 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14137: extern volatile unsigned char SSP1CON1 __attribute__((address(0xFC6)));
+[v _SSP1CON1 `Vuc ~T0 @X0 0 e@4038 ]
+"14386
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14386:     struct {
+[s S679 :2 `uc 1 :1 `uc 1 ]
+[n S679 . . R_NOT_W ]
+"14390
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14390:     struct {
+[s S680 :5 `uc 1 :1 `uc 1 ]
+[n S680 . . D_NOT_A ]
+"14394
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14394:     struct {
+[s S681 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S681 . BF UA R_nW S P D_nA CKE SMP ]
+"14404
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14404:     struct {
+[s S682 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S682 . . R . D ]
+"14410
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14410:     struct {
+[s S683 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S683 . . W . A ]
+"14416
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14416:     struct {
+[s S684 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S684 . . nW . nA ]
+"14422
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14422:     struct {
+[s S685 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S685 . . R_W . D_A ]
+"14428
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14428:     struct {
+[s S686 :2 `uc 1 :1 `uc 1 ]
+[n S686 . . NOT_WRITE ]
+"14432
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14432:     struct {
+[s S687 :5 `uc 1 :1 `uc 1 ]
+[n S687 . . NOT_ADDRESS ]
+"14436
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14436:     struct {
+[s S688 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S688 . . nWRITE . nADDRESS ]
+"14442
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14442:     struct {
+[s S689 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S689 . BF1 UA1 I2C_READ I2C_START I2C_STOP DA CKE1 SMP1 ]
+"14452
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14452:     struct {
+[s S690 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S690 . . READ_WRITE START STOP DA1 ]
+"14459
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14459:     struct {
+[s S691 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S691 . . RW START1 STOP1 DATA_ADDRESS ]
+"14466
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14466:     struct {
+[s S692 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S692 . . RW1 . I2C_DAT ]
+"14472
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14472:     struct {
+[s S693 :2 `uc 1 :1 `uc 1 ]
+[n S693 . . NOT_W ]
+"14476
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14476:     struct {
+[s S694 :5 `uc 1 :1 `uc 1 ]
+[n S694 . . NOT_A ]
+"14385
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14385: typedef union {
+[u S678 `S679 1 `S680 1 `S681 1 `S682 1 `S683 1 `S684 1 `S685 1 `S686 1 `S687 1 `S688 1 `S689 1 `S690 1 `S691 1 `S692 1 `S693 1 `S694 1 ]
+[n S678 . . . . . . . . . . . . . . . . . ]
+"14481
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14481: extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0xFC7)));
+[v _SSP1STATbits `VS678 ~T0 @X0 0 e@4039 ]
+"14148
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14148:     struct {
+[s S671 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S671 . SSPM CKP SSPEN SSPOV WCOL ]
+"14155
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14155:     struct {
+[s S672 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S672 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"14161
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14161:     struct {
+[s S673 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S673 . SSPM01 SSPM11 SSPM21 SSPM31 CKP1 SSPEN1 SSPOV1 WCOL1 ]
+"14147
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14147: typedef union {
+[u S670 `S671 1 `S672 1 `S673 1 ]
+[n S670 . . . . ]
+"14172
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14172: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0xFC6)));
+[v _SSP1CON1bits `VS670 ~T0 @X0 0 e@4038 ]
+"7790
+>>>>>>> Stashed changes
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7790:     struct {
 [s S386 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S386 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
@@ -14,6 +115,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7811
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7811: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
 [v _LATCbits `VS385 ~T0 @X0 0 e@3979 ]
+<<<<<<< Updated upstream
 "4268
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4268: extern volatile unsigned char SSP2BUF __attribute__((address(0xF6F)));
 [v _SSP2BUF `Vuc ~T0 @X0 0 e@3951 ]
@@ -116,6 +218,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3933
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3933: extern volatile SSP2STATbits_t SSP2STATbits __attribute__((address(0xF6D)));
 [v _SSP2STATbits `VS178 ~T0 @X0 0 e@3949 ]
+=======
+"15259
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15259: extern volatile unsigned char SSP1BUF __attribute__((address(0xFC9)));
+[v _SSP1BUF `Vuc ~T0 @X0 0 e@4041 ]
+"16770
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16770:     struct {
+[s S819 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S819 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
+"16780
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16780:     struct {
+[s S820 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S820 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
+"16769
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16769: typedef union {
+[u S818 `S819 1 `S820 1 ]
+[n S818 . . . ]
+"16791
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16791: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
+[v _INTCON3bits `VS818 ~T0 @X0 0 e@4080 ]
+>>>>>>> Stashed changes
 "6571
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6571:     struct {
 [s S346 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -167,8 +289,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\ctype.h
 [; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\ctype.h: 14: int isdigit(int);
 [v _isdigit `(i ~T0 @X0 0 ef1`i ]
+<<<<<<< Updated upstream
 "46 ./BeeBot_Globals.h
 [; ;./BeeBot_Globals.h: 46: void append_string(char str[], char ch);
+=======
+"76 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 76: void append_string(char str[], char ch);
+>>>>>>> Stashed changes
 [v _append_string `(v ~T0 @X0 0 ef2`*uc`uc ]
 "54 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
@@ -929,6 +1056,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17406
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+<<<<<<< Updated upstream
 "29 ./MRF89XAM.h
 [; ;./MRF89XAM.h: 29: char MRF_param1[10];
 [v _MRF_param1 `uc ~T0 @X0 -> 10 `i e ]
@@ -937,26 +1065,178 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _MRF_param2 `uc ~T0 @X0 -> 10 `i e ]
 "31
 [; ;./MRF89XAM.h: 31: BYTE MRF_transmitting = 0;
+=======
+"61 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 61: COORDS home = {0.00, 0.00};
+[v _home `S857 ~T0 @X0 1 e ]
+[i _home
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"62
+[; ;./BeeBot_Globals.h: 62: COORDS waypoint1 = {0.00, 0.00};
+[v _waypoint1 `S857 ~T0 @X0 1 e ]
+[i _waypoint1
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"63
+[; ;./BeeBot_Globals.h: 63: COORDS waypoint2 = {0.00, 0.00};
+[v _waypoint2 `S857 ~T0 @X0 1 e ]
+[i _waypoint2
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"64
+[; ;./BeeBot_Globals.h: 64: COORDS waypoint3 = {0.00, 0.00};
+[v _waypoint3 `S857 ~T0 @X0 1 e ]
+[i _waypoint3
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"65
+[; ;./BeeBot_Globals.h: 65: COORDS destination = {0.00, 0.00};
+[v _destination `S857 ~T0 @X0 1 e ]
+[i _destination
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"66
+[; ;./BeeBot_Globals.h: 66: COORDS current_coords = {0.00, 0.00};
+[v _current_coords `S857 ~T0 @X0 1 e ]
+[i _current_coords
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"68
+[; ;./BeeBot_Globals.h: 68: int temperature = 70;
+[v _temperature `i ~T0 @X0 1 e ]
+[i _temperature
+-> 70 `i
+]
+"69
+[; ;./BeeBot_Globals.h: 69: int humidity = 20;
+[v _humidity `i ~T0 @X0 1 e ]
+[i _humidity
+-> 20 `i
+]
+"70
+[; ;./BeeBot_Globals.h: 70: BYTE start = 0;
+[v _start `uc ~T0 @X0 1 e ]
+[i _start
+-> -> 0 `i `uc
+]
+"71
+[; ;./BeeBot_Globals.h: 71: BYTE mode = 1;
+[v _mode `uc ~T0 @X0 1 e ]
+[i _mode
+-> -> 1 `i `uc
+]
+"31 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 31: char MRF_param1[10] = "";
+[v _MRF_param1 `uc ~T0 @X0 -> 10 `i e ]
+[i _MRF_param1
+:U ..
+-> 0 `c
+..
+]
+"32
+[; ;./MRF89XAM.h: 32: char MRF_param2[10] = "";
+[v _MRF_param2 `uc ~T0 @X0 -> 10 `i e ]
+[i _MRF_param2
+:U ..
+-> 0 `c
+..
+]
+"33
+[; ;./MRF89XAM.h: 33: BYTE MRF_transmitting = 0;
+>>>>>>> Stashed changes
 [v _MRF_transmitting `uc ~T0 @X0 1 e ]
 [i _MRF_transmitting
 -> -> 0 `i `uc
 ]
+<<<<<<< Updated upstream
 "32
 [; ;./MRF89XAM.h: 32: char MRF_message[40] = "";
+=======
+"34
+[; ;./MRF89XAM.h: 34: char MRF_message[40] = "";
+>>>>>>> Stashed changes
 [v _MRF_message `uc ~T0 @X0 -> 40 `i e ]
 [i _MRF_message
 :U ..
 -> 0 `c
 ..
 ]
+<<<<<<< Updated upstream
 "33
 [; ;./MRF89XAM.h: 33: BYTE MRF_message_received = 0;
+=======
+"35
+[; ;./MRF89XAM.h: 35: BYTE MRF_message_received = 0;
+>>>>>>> Stashed changes
 [v _MRF_message_received `uc ~T0 @X0 1 e ]
 [i _MRF_message_received
 -> -> 0 `i `uc
 ]
+<<<<<<< Updated upstream
 "16 MRF89XAM.c
 [; ;MRF89XAM.c: 16: void write_spi_reg(BYTE reg_address, BYTE data)
+=======
+"13 MRF89XAM.c
+[; ;MRF89XAM.c: 13: void init_spi(void)
+[v _init_spi `(v ~T0 @X0 1 ef ]
+"14
+[; ;MRF89XAM.c: 14: {
+{
+[e :U _init_spi ]
+[f ]
+"15
+[; ;MRF89XAM.c: 15:     SSP1CON1 = 0b00100001;
+[e = _SSP1CON1 -> -> 33 `i `uc ]
+"16
+[; ;MRF89XAM.c: 16:     SSP1STATbits.SMP = 0;
+[e = . . _SSP1STATbits 2 7 -> -> 0 `i `uc ]
+"17
+[; ;MRF89XAM.c: 17:     SSP1STATbits.CKE = 1;
+[e = . . _SSP1STATbits 2 6 -> -> 1 `i `uc ]
+"18
+[; ;MRF89XAM.c: 18:     SSP1CON1bits.CKP = 0;
+[e = . . _SSP1CON1bits 0 1 -> -> 0 `i `uc ]
+"19
+[; ;MRF89XAM.c: 19:     return;
+[e $UE 858  ]
+"20
+[; ;MRF89XAM.c: 20: }
+[e :UE 858 ]
+}
+"28
+[; ;MRF89XAM.c: 28: void write_spi_reg(BYTE reg_address, BYTE data)
+>>>>>>> Stashed changes
 [v _write_spi_reg `(v ~T0 @X0 1 ef2`uc`uc ]
 "17
 [; ;MRF89XAM.c: 17: {
@@ -983,6 +1263,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [; ;MRF89XAM.c: 24:     LATCbits.LC0 = 0;
 [e = . . _LATCbits 1 0 -> -> 0 `i `uc ]
+<<<<<<< Updated upstream
 "27
 [; ;MRF89XAM.c: 27:     dummy = SSP2BUF;
 [e = _dummy _SSP2BUF ]
@@ -1021,6 +1302,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40
 [; ;MRF89XAM.c: 40: }
 [e :UE 855 ]
+=======
+"39
+[; ;MRF89XAM.c: 39:     dummy = SSP1BUF;
+[e = _dummy _SSP1BUF ]
+"40
+[; ;MRF89XAM.c: 40:     SSP1BUF = address_byte;
+[e = _SSP1BUF _address_byte ]
+"41
+[; ;MRF89XAM.c: 41:     while (!SSP1STATbits.BF);
+[e $U 860  ]
+[e :U 861 ]
+[e :U 860 ]
+[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 861  ]
+[e :U 862 ]
+"44
+[; ;MRF89XAM.c: 44:     dummy = SSP1BUF;
+[e = _dummy _SSP1BUF ]
+"45
+[; ;MRF89XAM.c: 45:     SSP1BUF = data;
+[e = _SSP1BUF _data ]
+"46
+[; ;MRF89XAM.c: 46:     while (!SSP1STATbits.BF);
+[e $U 863  ]
+[e :U 864 ]
+[e :U 863 ]
+[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 864  ]
+[e :U 865 ]
+"47
+[; ;MRF89XAM.c: 47:     dummy = SSP1BUF;
+[e = _dummy _SSP1BUF ]
+"50
+[; ;MRF89XAM.c: 50:     LATCbits.LC0 = 1;
+[e = . . _LATCbits 1 0 -> -> 1 `i `uc ]
+"51
+[; ;MRF89XAM.c: 51:     return;
+[e $UE 859  ]
+"52
+[; ;MRF89XAM.c: 52: }
+[e :UE 859 ]
+>>>>>>> Stashed changes
 }
 "45
 [; ;MRF89XAM.c: 45: BYTE read_spi_reg(BYTE reg_address)
@@ -1055,6 +1376,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54
 [; ;MRF89XAM.c: 54:     LATCbits.LC0 = 0;
 [e = . . _LATCbits 1 0 -> -> 0 `i `uc ]
+<<<<<<< Updated upstream
 "57
 [; ;MRF89XAM.c: 57:     dummy = SSP2BUF;
 [e = _dummy _SSP2BUF ]
@@ -1086,14 +1408,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _data _SSP2BUF ]
 "68
 [; ;MRF89XAM.c: 68:     LATCbits.LC0 = 1;
+=======
+"69
+[; ;MRF89XAM.c: 69:     dummy = SSP1BUF;
+[e = _dummy _SSP1BUF ]
+"70
+[; ;MRF89XAM.c: 70:     SSP1BUF = address_byte;
+[e = _SSP1BUF _address_byte ]
+"71
+[; ;MRF89XAM.c: 71:     while (!SSP1STATbits.BF);
+[e $U 867  ]
+[e :U 868 ]
+[e :U 867 ]
+[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 868  ]
+[e :U 869 ]
+"74
+[; ;MRF89XAM.c: 74:     dummy = SSP1BUF;
+[e = _dummy _SSP1BUF ]
+"75
+[; ;MRF89XAM.c: 75:     SSP1BUF = 0x00;
+[e = _SSP1BUF -> -> 0 `i `uc ]
+"76
+[; ;MRF89XAM.c: 76:     while (!SSP1STATbits.BF);
+[e $U 870  ]
+[e :U 871 ]
+[e :U 870 ]
+[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 871  ]
+[e :U 872 ]
+"77
+[; ;MRF89XAM.c: 77:     data = SSP1BUF;
+[e = _data _SSP1BUF ]
+"80
+[; ;MRF89XAM.c: 80:     LATCbits.LC0 = 1;
+>>>>>>> Stashed changes
 [e = . . _LATCbits 1 0 -> -> 1 `i `uc ]
 "70
 [; ;MRF89XAM.c: 70:     return data;
 [e ) _data ]
+<<<<<<< Updated upstream
 [e $UE 862  ]
 "71
 [; ;MRF89XAM.c: 71: }
 [e :UE 862 ]
+=======
+[e $UE 866  ]
+"83
+[; ;MRF89XAM.c: 83: }
+[e :UE 866 ]
+>>>>>>> Stashed changes
 }
 "76
 [; ;MRF89XAM.c: 76: void write_spi_data(BYTE data)
@@ -1114,6 +1476,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "81
 [; ;MRF89XAM.c: 81:     LATCbits.LC1 = 0;
 [e = . . _LATCbits 1 1 -> -> 0 `i `uc ]
+<<<<<<< Updated upstream
 "84
 [; ;MRF89XAM.c: 84:     dummy = SSP2BUF;
 [e = _dummy _SSP2BUF ]
@@ -1139,6 +1502,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "93
 [; ;MRF89XAM.c: 93: }
 [e :UE 869 ]
+=======
+"96
+[; ;MRF89XAM.c: 96:     dummy = SSP1BUF;
+[e = _dummy _SSP1BUF ]
+"97
+[; ;MRF89XAM.c: 97:     SSP1BUF = data;
+[e = _SSP1BUF _data ]
+"99
+[; ;MRF89XAM.c: 99:     while (!SSP1STATbits.BF);
+[e $U 874  ]
+[e :U 875 ]
+[e :U 874 ]
+[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 875  ]
+[e :U 876 ]
+"100
+[; ;MRF89XAM.c: 100:     dummy = SSP1BUF;
+[e = _dummy _SSP1BUF ]
+"103
+[; ;MRF89XAM.c: 103:     LATCbits.LC1 = 1;
+[e = . . _LATCbits 1 1 -> -> 1 `i `uc ]
+"105
+[; ;MRF89XAM.c: 105:     return;
+[e $UE 873  ]
+"106
+[; ;MRF89XAM.c: 106: }
+[e :UE 873 ]
+>>>>>>> Stashed changes
 }
 "98
 [; ;MRF89XAM.c: 98: BYTE read_spi_data(void)
@@ -1158,6 +1548,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;MRF89XAM.c: 104:     LATCbits.LC1 = 0;
 [e = . . _LATCbits 1 1 -> -> 0 `i `uc ]
+<<<<<<< Updated upstream
 "107
 [; ;MRF89XAM.c: 107:     dummy = SSP2BUF;
 [e = _dummy _SSP2BUF ]
@@ -1184,6 +1575,264 @@ Version 4.0 HI-TECH Software Intermediate Code
 "116
 [; ;MRF89XAM.c: 116: }
 [e :UE 873 ]
+=======
+"120
+[; ;MRF89XAM.c: 120:     dummy = SSP1BUF;
+[e = _dummy _SSP1BUF ]
+"121
+[; ;MRF89XAM.c: 121:     SSP1BUF = 0x00;
+[e = _SSP1BUF -> -> 0 `i `uc ]
+"122
+[; ;MRF89XAM.c: 122:     while (!SSP1STATbits.BF);
+[e $U 878  ]
+[e :U 879 ]
+[e :U 878 ]
+[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 879  ]
+[e :U 880 ]
+"123
+[; ;MRF89XAM.c: 123:     data = SSP1BUF;
+[e = _data _SSP1BUF ]
+"126
+[; ;MRF89XAM.c: 126:     LATCbits.LC1 = 1;
+[e = . . _LATCbits 1 1 -> -> 1 `i `uc ]
+"128
+[; ;MRF89XAM.c: 128:     return data;
+[e ) _data ]
+[e $UE 877  ]
+"129
+[; ;MRF89XAM.c: 129: }
+[e :UE 877 ]
+}
+"134
+[; ;MRF89XAM.c: 134: void init_MRF89XAM(void)
+[v _init_MRF89XAM `(v ~T0 @X0 1 ef ]
+"135
+[; ;MRF89XAM.c: 135: {
+{
+[e :U _init_MRF89XAM ]
+[f ]
+"136
+[; ;MRF89XAM.c: 136:     write_spi_reg(0x00, 0b01100010);
+[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 98 `i `uc ]
+"137
+[; ;MRF89XAM.c: 137:     write_spi_reg(0x01, 0b10101100);
+[e ( _write_spi_reg (2 , -> -> 1 `i `uc -> -> 172 `i `uc ]
+"138
+[; ;MRF89XAM.c: 138:     write_spi_reg(0x05, 0b00001000);
+[e ( _write_spi_reg (2 , -> -> 5 `i `uc -> -> 8 `i `uc ]
+"139
+[; ;MRF89XAM.c: 139:     write_spi_reg(0x0D, 0b10111000);
+[e ( _write_spi_reg (2 , -> -> 13 `i `uc -> -> 184 `i `uc ]
+"140
+[; ;MRF89XAM.c: 140:     write_spi_reg(0x0E, 0b00011101);
+[e ( _write_spi_reg (2 , -> -> 14 `i `uc -> -> 29 `i `uc ]
+"141
+[; ;MRF89XAM.c: 141:     write_spi_reg(0x0F, 0b11111111);
+[e ( _write_spi_reg (2 , -> -> 15 `i `uc -> -> 255 `i `uc ]
+"142
+[; ;MRF89XAM.c: 142:     write_spi_reg(0x1B, 0b00111100);
+[e ( _write_spi_reg (2 , -> -> 27 `i `uc -> -> 60 `i `uc ]
+"143
+[; ;MRF89XAM.c: 143:     write_spi_reg(0x1C, 0b00001000);
+[e ( _write_spi_reg (2 , -> -> 28 `i `uc -> -> 8 `i `uc ]
+"144
+[; ;MRF89XAM.c: 144:     return;
+[e $UE 881  ]
+"145
+[; ;MRF89XAM.c: 145: }
+[e :UE 881 ]
+}
+"150
+[; ;MRF89XAM.c: 150: void transmit_MRF89XAM(BYTE data)
+[v _transmit_MRF89XAM `(v ~T0 @X0 1 ef1`uc ]
+"151
+[; ;MRF89XAM.c: 151: {
+{
+[e :U _transmit_MRF89XAM ]
+"150
+[; ;MRF89XAM.c: 150: void transmit_MRF89XAM(BYTE data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"151
+[; ;MRF89XAM.c: 151: {
+[f ]
+"152
+[; ;MRF89XAM.c: 152:     BYTE filler = (BYTE)('\n' << 1);
+[v _filler `uc ~T0 @X0 1 a ]
+[e = _filler -> << -> 10 `ui -> 1 `i `uc ]
+"155
+[; ;MRF89XAM.c: 155:     MRF_transmitting = 1;
+[e = _MRF_transmitting -> -> 1 `i `uc ]
+"156
+[; ;MRF89XAM.c: 156:     INTCON3bits.INT1IE = 0;
+[e = . . _INTCON3bits 0 3 -> -> 0 `i `uc ]
+"157
+[; ;MRF89XAM.c: 157:     write_spi_reg(0x00, 0b00100010);
+[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 34 `i `uc ]
+"158
+[; ;MRF89XAM.c: 158:     write_spi_data(data);
+[e ( _write_spi_data (1 _data ]
+"159
+[; ;MRF89XAM.c: 159:     for(int counter = 0; counter < 15; counter++)
+{
+[v _counter `i ~T0 @X0 1 a ]
+[e = _counter -> 0 `i ]
+[e $ < _counter -> 15 `i 883  ]
+[e $U 884  ]
+[e :U 883 ]
+"160
+[; ;MRF89XAM.c: 160:         write_spi_data(filler);
+[e ( _write_spi_data (1 _filler ]
+[e ++ _counter -> 1 `i ]
+[e $ < _counter -> 15 `i 883  ]
+[e :U 884 ]
+}
+"161
+[; ;MRF89XAM.c: 161:     write_spi_reg(0x00, 0b10000010);
+[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 130 `i `uc ]
+"163
+[; ;MRF89XAM.c: 163:     while(PORTBbits.RB1 == 0);
+[e $U 886  ]
+[e :U 887 ]
+[e :U 886 ]
+[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 887  ]
+[e :U 888 ]
+"164
+[; ;MRF89XAM.c: 164:     while(PORTBbits.RB2 == 0);
+[e $U 889  ]
+[e :U 890 ]
+[e :U 889 ]
+[e $ == -> . . _PORTBbits 0 2 `i -> 0 `i 890  ]
+[e :U 891 ]
+"166
+[; ;MRF89XAM.c: 166:     write_spi_reg(0x00, 0b01100010);
+[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 98 `i `uc ]
+"167
+[; ;MRF89XAM.c: 167:     MRF_transmitting = 0;
+[e = _MRF_transmitting -> -> 0 `i `uc ]
+"168
+[; ;MRF89XAM.c: 168:     INTCON3bits.INT1IE = 1;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"169
+[; ;MRF89XAM.c: 169:     return;
+[e $UE 882  ]
+"170
+[; ;MRF89XAM.c: 170: }
+[e :UE 882 ]
+}
+"175
+[; ;MRF89XAM.c: 175: void transmit_string_MRF89XAM(char tx_str[])
+[v _transmit_string_MRF89XAM `(v ~T0 @X0 1 ef1`*uc ]
+"176
+[; ;MRF89XAM.c: 176: {
+{
+[e :U _transmit_string_MRF89XAM ]
+"175
+[; ;MRF89XAM.c: 175: void transmit_string_MRF89XAM(char tx_str[])
+[v _tx_str `*uc ~T0 @X0 1 r1 ]
+"176
+[; ;MRF89XAM.c: 176: {
+[f ]
+"177
+[; ;MRF89XAM.c: 177:     unsigned int length = strlen(tx_str);
+[v _length `ui ~T0 @X0 1 a ]
+[e = _length ( _strlen (1 -> _tx_str `*Cuc ]
+"178
+[; ;MRF89XAM.c: 178:     BYTE counter;
+[v _counter `uc ~T0 @X0 1 a ]
+"179
+[; ;MRF89XAM.c: 179:     BYTE loop = 1;
+[v _loop `uc ~T0 @X0 1 a ]
+[e = _loop -> -> 1 `i `uc ]
+"180
+[; ;MRF89XAM.c: 180:     BYTE loop_counter = 0;
+[v _loop_counter `uc ~T0 @X0 1 a ]
+[e = _loop_counter -> -> 0 `i `uc ]
+"184
+[; ;MRF89XAM.c: 184:         write_spi_reg(0x00, 0b00100010);
+[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 34 `i `uc ]
+"185
+[; ;MRF89XAM.c: 185:         MRF_transmitting = 1;
+[e = _MRF_transmitting -> -> 1 `i `uc ]
+"186
+[; ;MRF89XAM.c: 186:         INTCON3bits.INT1IE = 0;
+[e = . . _INTCON3bits 0 3 -> -> 0 `i `uc ]
+"187
+[; ;MRF89XAM.c: 187:         if(length <= 8)
+[e $ ! <= _length -> -> 8 `i `ui 893  ]
+"188
+[; ;MRF89XAM.c: 188:         {
+{
+"189
+[; ;MRF89XAM.c: 189:             for(counter = 0; counter < 8; counter++)
+{
+[e = _counter -> -> 0 `i `uc ]
+[e $ < -> _counter `i -> 8 `i 894  ]
+[e $U 895  ]
+[e :U 894 ]
+"190
+[; ;MRF89XAM.c: 190:             {
+{
+"191
+[; ;MRF89XAM.c: 191:                 if(counter < length)
+[e $ ! < -> _counter `ui _length 897  ]
+"192
+[; ;MRF89XAM.c: 192:                     write_spi_data((BYTE)(tx_str[counter] << 1));
+[e ( _write_spi_data (1 -> << -> *U + _tx_str * -> _counter `ux -> -> # *U _tx_str `ui `ux `i -> 1 `i `uc ]
+[e $U 898  ]
+"193
+[; ;MRF89XAM.c: 193:                 else
+[e :U 897 ]
+"194
+[; ;MRF89XAM.c: 194:                     write_spi_data((BYTE)('\n' << 1));
+[e ( _write_spi_data (1 -> << -> 10 `ui -> 1 `i `uc ]
+[e :U 898 ]
+"195
+[; ;MRF89XAM.c: 195:             }
+}
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 8 `i 894  ]
+[e :U 895 ]
+}
+"196
+[; ;MRF89XAM.c: 196:         }
+}
+[e :U 893 ]
+"197
+[; ;MRF89XAM.c: 197:         write_spi_reg(0x00, 0b10000010);
+[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 130 `i `uc ]
+"199
+[; ;MRF89XAM.c: 199:         while(PORTBbits.RB1 == 0);
+[e $U 899  ]
+[e :U 900 ]
+[e :U 899 ]
+[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 900  ]
+[e :U 901 ]
+"200
+[; ;MRF89XAM.c: 200:         while(PORTBbits.RB2 == 0);
+[e $U 902  ]
+[e :U 903 ]
+[e :U 902 ]
+[e $ == -> . . _PORTBbits 0 2 `i -> 0 `i 903  ]
+[e :U 904 ]
+"202
+[; ;MRF89XAM.c: 202:         write_spi_reg(0x00, 0b01100010);
+[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 98 `i `uc ]
+"203
+[; ;MRF89XAM.c: 203:         MRF_transmitting = 0;
+[e = _MRF_transmitting -> -> 0 `i `uc ]
+"204
+[; ;MRF89XAM.c: 204:         INTCON3bits.INT1IF = 0;
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+"205
+[; ;MRF89XAM.c: 205:         INTCON3bits.INT1IE = 1;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"206
+[; ;MRF89XAM.c: 206:     return;
+[e $UE 892  ]
+"207
+[; ;MRF89XAM.c: 207: }
+[e :UE 892 ]
+>>>>>>> Stashed changes
 }
 "121
 [; ;MRF89XAM.c: 121: void init_MRF89XAM(void)
@@ -1344,10 +1993,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "174
 [; ;MRF89XAM.c: 174:     return read_spi_data();
 [e ) ( _read_spi_data ..  ]
+<<<<<<< Updated upstream
 [e $UE 890  ]
 "175
 [; ;MRF89XAM.c: 175: }
 [e :UE 890 ]
+=======
+[e $UE 905  ]
+"216
+[; ;MRF89XAM.c: 216: }
+[e :UE 905 ]
+>>>>>>> Stashed changes
 }
 "180
 [; ;MRF89XAM.c: 180: void MRF_parse_message(char message[], char code[])
@@ -1378,11 +2034,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MRF89XAM.c: 185:     BYTE param1_full = 0;
 [v _param1_full `uc ~T0 @X0 1 a ]
 [e = _param1_full -> -> 0 `i `uc ]
+<<<<<<< Updated upstream
 "187
 [; ;MRF89XAM.c: 187:     if(!strcmp(message, "R"))
 [e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 2C -> 0 `i 895  ]
 "188
 [; ;MRF89XAM.c: 188:     {
+=======
+"228
+[; ;MRF89XAM.c: 228:     if(!strcmp(message, "R"))
+[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 2C -> 0 `i 907  ]
+"229
+[; ;MRF89XAM.c: 229:     {
+>>>>>>> Stashed changes
 {
 "189
 [; ;MRF89XAM.c: 189:         valid = 1;
@@ -1393,6 +2057,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "193
 [; ;MRF89XAM.c: 193:     }
 }
+<<<<<<< Updated upstream
 [e $U 896  ]
 "194
 [; ;MRF89XAM.c: 194:     else if(!strcmp(message, "RA"))
@@ -1400,6 +2065,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 4C -> 0 `i 897  ]
 "195
 [; ;MRF89XAM.c: 195:     {
+=======
+[e $U 908  ]
+"235
+[; ;MRF89XAM.c: 235:     else if(!strcmp(message, "RA"))
+[e :U 907 ]
+[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 4C -> 0 `i 909  ]
+"236
+[; ;MRF89XAM.c: 236:     {
+>>>>>>> Stashed changes
 {
 "196
 [; ;MRF89XAM.c: 196:         valid = 1;
@@ -1478,11 +2152,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "245
 [; ;MRF89XAM.c: 245:     }
 }
+<<<<<<< Updated upstream
 [e $U 906  ]
 "246
 [; ;MRF89XAM.c: 246:     else if(message[0] == 'A' || message[0] == 'M')
 [e :U 905 ]
 [e $ ! || == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 65 `ui == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 77 `ui 907  ]
+=======
+[e $U 910  ]
+"246
+[; ;MRF89XAM.c: 246:     else if(!strcmp(message, "H"))
+[e :U 909 ]
+[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 6C -> 0 `i 911  ]
+>>>>>>> Stashed changes
 "247
 [; ;MRF89XAM.c: 247:     {
 {
@@ -1490,7 +2172,79 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MRF89XAM.c: 248:         valid = 1;
 [e = _valid -> -> 1 `i `uc ]
 "249
+<<<<<<< Updated upstream
 [; ;MRF89XAM.c: 249:         code[0] = message[0];
+=======
+[; ;MRF89XAM.c: 249:         strcpy(code, message);
+[e ( _strcpy (2 , _code -> _message `*Cuc ]
+"253
+[; ;MRF89XAM.c: 253:     }
+}
+[e $U 912  ]
+"254
+[; ;MRF89XAM.c: 254:     else if(!strcmp(message, "STP"))
+[e :U 911 ]
+[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 8C -> 0 `i 913  ]
+"255
+[; ;MRF89XAM.c: 255:     {
+{
+"256
+[; ;MRF89XAM.c: 256:         valid = 1;
+[e = _valid -> -> 1 `i `uc ]
+"257
+[; ;MRF89XAM.c: 257:         strcpy(code, message);
+[e ( _strcpy (2 , _code -> _message `*Cuc ]
+"261
+[; ;MRF89XAM.c: 261:     }
+}
+[e $U 914  ]
+"262
+[; ;MRF89XAM.c: 262:     else if(!strcmp(message, "RES"))
+[e :U 913 ]
+[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 10C -> 0 `i 915  ]
+"263
+[; ;MRF89XAM.c: 263:     {
+{
+"264
+[; ;MRF89XAM.c: 264:         valid = 1;
+[e = _valid -> -> 1 `i `uc ]
+"265
+[; ;MRF89XAM.c: 265:         strcpy(code, message);
+[e ( _strcpy (2 , _code -> _message `*Cuc ]
+"272
+[; ;MRF89XAM.c: 272:     }
+}
+[e $U 916  ]
+"273
+[; ;MRF89XAM.c: 273:     else if(!strcmp(message, "REC"))
+[e :U 915 ]
+[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 12C -> 0 `i 917  ]
+"274
+[; ;MRF89XAM.c: 274:     {
+{
+"275
+[; ;MRF89XAM.c: 275:         valid = 1;
+[e = _valid -> -> 1 `i `uc ]
+"276
+[; ;MRF89XAM.c: 276:         strcpy(code, message);
+[e ( _strcpy (2 , _code -> _message `*Cuc ]
+"286
+[; ;MRF89XAM.c: 286:     }
+}
+[e $U 918  ]
+"287
+[; ;MRF89XAM.c: 287:     else if(message[0] == 'A' || message[0] == 'M')
+[e :U 917 ]
+[e $ ! || == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 65 `ui == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 77 `ui 919  ]
+"288
+[; ;MRF89XAM.c: 288:     {
+{
+"289
+[; ;MRF89XAM.c: 289:         valid = 1;
+[e = _valid -> -> 1 `i `uc ]
+"290
+[; ;MRF89XAM.c: 290:         code[0] = message[0];
+>>>>>>> Stashed changes
 [e = *U + _code * -> -> 0 `i `x -> -> # *U _code `i `x *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x ]
 "250
 [; ;MRF89XAM.c: 250:         code[1] = '\0';
@@ -1498,6 +2252,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "251
 [; ;MRF89XAM.c: 251:     }
 }
+<<<<<<< Updated upstream
 [e $U 908  ]
 "252
 [; ;MRF89XAM.c: 252:     else if(message[0] == 'N' && message[1] == 'A' && message[2] == 'V')
@@ -1505,6 +2260,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! && && == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 78 `ui == -> *U + _message * -> -> 1 `i `x -> -> # *U _message `i `x `ui -> 65 `ui == -> *U + _message * -> -> 2 `i `x -> -> # *U _message `i `x `ui -> 86 `ui 909  ]
 "253
 [; ;MRF89XAM.c: 253:     {
+=======
+[e $U 920  ]
+"293
+[; ;MRF89XAM.c: 293:     else if(message[0] == 'N' && message[1] == 'A' && message[2] == 'V')
+[e :U 919 ]
+[e $ ! && && == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 78 `ui == -> *U + _message * -> -> 1 `i `x -> -> # *U _message `i `x `ui -> 65 `ui == -> *U + _message * -> -> 2 `i `x -> -> # *U _message `i `x `ui -> 86 `ui 921  ]
+"294
+[; ;MRF89XAM.c: 294:     {
+>>>>>>> Stashed changes
 {
 "254
 [; ;MRF89XAM.c: 254:         strcpy(MRF_param1, "");
@@ -1528,6 +2292,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MRF89XAM.c: 262:         for(counter = 0; counter < length; counter++)
 {
 [e = _counter -> -> 0 `i `uc ]
+<<<<<<< Updated upstream
 [e $U 913  ]
 [e :U 910 ]
 "263
@@ -1544,10 +2309,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! ! != -> _param1_full `i -> 0 `i 915  ]
 "267
 [; ;MRF89XAM.c: 267:                 {
+=======
+[e $U 925  ]
+[e :U 922 ]
+"304
+[; ;MRF89XAM.c: 304:         {
+{
+"305
+[; ;MRF89XAM.c: 305:             if((0 && isdigit(message[counter]), ((unsigned)(message[counter])-'0') < 10) || message[counter] == '.')
+[e $ ! || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `i -> 0 `i `i -> < - -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `ui -> 46 `ui 926  ]
+"306
+[; ;MRF89XAM.c: 306:             {
+{
+"307
+[; ;MRF89XAM.c: 307:                 if(!param1_full)
+[e $ ! ! != -> _param1_full `i -> 0 `i 927  ]
+"308
+[; ;MRF89XAM.c: 308:                 {
+>>>>>>> Stashed changes
 {
 "268
 [; ;MRF89XAM.c: 268:                     append_string(MRF_param1, message[counter]);
 [e ( _append_string (2 , &U _MRF_param1 *U + _message * -> _counter `ux -> -> # *U _message `ui `ux ]
+<<<<<<< Updated upstream
 "269
 [; ;MRF89XAM.c: 269:                     if(!((0 && isdigit(message[counter+1]), ((unsigned)(message[counter+1])-'0') < 10) || message[counter+1] == '.'))
 [e $ ! ! || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `i -> 0 `i `i -> < - -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `ui -> 46 `ui 916  ]
@@ -1577,10 +2361,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 913 ]
 [e $ < -> _counter `i -> _length `i 910  ]
 [e :U 911 ]
+=======
+"310
+[; ;MRF89XAM.c: 310:                     if(!((0 && isdigit(message[counter+1]), ((unsigned)(message[counter+1])-'0') < 10) || message[counter+1] == '.'))
+[e $ ! ! || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `i -> 0 `i `i -> < - -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `ui -> 46 `ui 928  ]
+"311
+[; ;MRF89XAM.c: 311:                         param1_full = 1;
+[e = _param1_full -> -> 1 `i `uc ]
+[e :U 928 ]
+"312
+[; ;MRF89XAM.c: 312:                 }
+}
+[e $U 929  ]
+"313
+[; ;MRF89XAM.c: 313:                 else
+[e :U 927 ]
+"314
+[; ;MRF89XAM.c: 314:                     append_string(MRF_param2, message[counter]);
+[e ( _append_string (2 , &U _MRF_param2 *U + _message * -> _counter `ux -> -> # *U _message `ui `ux ]
+[e :U 929 ]
+"315
+[; ;MRF89XAM.c: 315:             }
+}
+[e :U 926 ]
+"316
+[; ;MRF89XAM.c: 316:         }
+}
+[e ++ _counter -> -> 1 `i `uc ]
+[e :U 925 ]
+[e $ < -> _counter `i -> _length `i 922  ]
+[e :U 923 ]
+>>>>>>> Stashed changes
 }
 "276
 [; ;MRF89XAM.c: 276:     }
 }
+<<<<<<< Updated upstream
 [e $U 918  ]
 "277
 [; ;MRF89XAM.c: 277:     else if(message[0] == 'J')
@@ -1588,6 +2404,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 74 `ui 919  ]
 "278
 [; ;MRF89XAM.c: 278:     {
+=======
+[e $U 930  ]
+"318
+[; ;MRF89XAM.c: 318:     else if(message[0] == 'J')
+[e :U 921 ]
+[e $ ! == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 74 `ui 931  ]
+"319
+[; ;MRF89XAM.c: 319:     {
+>>>>>>> Stashed changes
 {
 "279
 [; ;MRF89XAM.c: 279:         strcpy(MRF_param1, "");
@@ -1610,6 +2435,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "287
 [; ;MRF89XAM.c: 287:     }
 }
+<<<<<<< Updated upstream
 [e :U 919 ]
 [e :U 918 ]
 [e :U 908 ]
@@ -1625,6 +2451,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "289
 [; ;MRF89XAM.c: 289: }
 [e :UE 894 ]
+=======
+[e :U 931 ]
+[e :U 930 ]
+[e :U 920 ]
+[e :U 918 ]
+[e :U 916 ]
+[e :U 914 ]
+[e :U 912 ]
+[e :U 910 ]
+[e :U 908 ]
+"329
+[; ;MRF89XAM.c: 329:     return;
+[e $UE 906  ]
+"330
+[; ;MRF89XAM.c: 330: }
+[e :UE 906 ]
+>>>>>>> Stashed changes
 }
 [a 9C 82 69 83 0 ]
 [a 10C 82 69 83 0 ]

@@ -74,6 +74,7 @@
 /******************************************************************************/
 /*                                 States                                     */
 /******************************************************************************/
+<<<<<<< Updated upstream
 enum states
 {
     INIT,       //System startup and initialization.
@@ -83,14 +84,30 @@ enum states
     DEBUG,      //Debug mode while USB is plugged in.
     DEPLOYED    //Deployment mode while in the field.
 };
+=======
+
+#define INIT 2       //System startup and initialization.
+#define WAITING 3    //No movement, waiting on commands from user.
+#define DEBUG 4      //Debug mode while USB is plugged in.
+#define DEPLOYED 5    //Deployment mode while in the field.
+
+>>>>>>> Stashed changes
 
 /******************************************************************************/
 /*                            Global Constants                                */
 /******************************************************************************/
+<<<<<<< Updated upstream
 #define _XTAL_FREQ  8000000  //Set internal clock speed to 8MHz.
 #define UART_TERMINATOR '\n' //Terminator character for UART.
 #define MAX_REPORTS 24       //Number of reports to save.
 
+=======
+
+#define UART_TERMINATOR '\n' //Terminator character for UART.
+#define MAX_REPORTS 24       //Number of reports to save.
+
+
+>>>>>>> Stashed changes
 /******************************************************************************/
 /*                            Global Variables                                */
 /******************************************************************************/
@@ -98,6 +115,12 @@ unsigned int timer_tick = 0;                //Increments per every Timer0 interr
 BYTE state = INIT;
 char current_report[MSG_MAX] = "";
 char all_reports[MAX_REPORTS][MSG_MAX];
+<<<<<<< Updated upstream
+=======
+BYTE last_message_id = 0;
+BYTE left_joystick = 0;
+BYTE right_joystick = 0;
+>>>>>>> Stashed changes
 
 /******************************************************************************/
 /*                          Function Declarations                             */
@@ -106,9 +129,12 @@ char all_reports[MAX_REPORTS][MSG_MAX];
 void init_pins      (void);         //Initialize all pins to initial values.
 void init_interrupts(void);         //Initialize all program interrupts.
 
+<<<<<<< Updated upstream
 //Misc Code
 
 
+=======
+>>>>>>> Stashed changes
 /******************************************************************************/
 /*                               Main Function                                */
 /******************************************************************************/
@@ -121,6 +147,12 @@ void main(void)
     __delay_ms(200);
     
     //Infinite processing loop
+<<<<<<< Updated upstream
+=======
+    
+    char test_string[16] = "";
+    
+>>>>>>> Stashed changes
     while(TRUE)
     {
         //Put your processing code here.
@@ -130,17 +162,54 @@ void main(void)
             case INIT:
                 //Place all initialization code here.
                 init_pins      ();
+<<<<<<< Updated upstream
                 init_interrupts();
                 init_uart2     (); 
+=======
+                init_uart2     ();
+                init_spi       ();
+                init_MRF89XAM  ();
+                init_interrupts();
+>>>>>>> Stashed changes
                 previous_state = INIT;
                 state = WAITING;
                 break;
             case WAITING:
+<<<<<<< Updated upstream
                 //Initially waiting for message to arrive.
                 if(MRF_message_received)
                 {
                     MRF_message_received = FALSE;
                     MRF_parse_message(MRF_message, MRF_msg_code);
+=======
+                
+                while(TRUE)
+                {   
+                    if(MRF_message_received)
+                    {
+                        __delay_ms(10);
+                        MRF_message_received = FALSE;
+                        if(!strcmp(MRF_message, "hello\n\n\n"))
+                        {
+                            transmit_string_MRF89XAM("HI");
+                        }
+                        strcpy(MRF_message, "");
+                    }
+                    if(usb_message_received)
+                    {
+                        usb_message_received = FALSE;
+                        transmit_string_usb(usb_message);
+                        strcpy(usb_message, "");
+                    }
+                }
+                
+                //Initially waiting for message to arrive.
+                if(MRF_message_received)
+                {
+                    LATAbits.LA0 = 1;
+                    MRF_message_received = FALSE;
+                    //MRF_parse_message(MRF_message, MRF_msg_code);
+>>>>>>> Stashed changes
                     
                     if(!strcmp(MRF_msg_code, MSG_NAV))
                     {
@@ -180,6 +249,7 @@ void main(void)
                 
                 break;
         }
+<<<<<<< Updated upstream
         
         //Check if powered USB device is connected.
         if(PORTDbits.RD5 && state != DEBUG)
@@ -188,20 +258,32 @@ void main(void)
             state = DEBUG;
             strcpy(usb_message, "");
         }
+=======
+>>>>>>> Stashed changes
     }
     return;
 }
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 /******************************************************************************/
 /*                            Initialize all pins                             */
 /******************************************************************************/
 void init_pins(void)
 {
+<<<<<<< Updated upstream
     TRISDbits.RD6    = 1;   //Set USB_STAT as input.
     TRISDbits.RD6    = 1;   //Set TX as input.
     TRISDbits.RD7    = 1;   //Set RX as input.
+=======
+    //USB Code
+    TRISDbits.RD6 = 1;   //Set USB_STAT as input.
+    TRISDbits.RD6 = 1;   //Set TX as input.
+    TRISDbits.RD7 = 1;   //Set RX as input.
+>>>>>>> Stashed changes
    
     //MRF89XAM Code
     TRISBbits.RB1 = 1;  //MRF IRQ0
@@ -211,12 +293,24 @@ void init_pins(void)
     TRISCbits.RC2 = 1;  //MRF Reset
     TRISCbits.RC3 = 0;  //MRF SCK1
     TRISCbits.RC4 = 1;  //MRF SDI1 (MISO)
+<<<<<<< Updated upstream
     TRISCbits.RC5 = 1;  //MRF SDO1 (MOSI)
     
     //LATbits
     LATCbits.LC0 = 1;   //CSCON is default high
     LATCbits.LC1 = 1;   //CSDATA is default high
     
+=======
+    TRISCbits.RC5 = 0;  //MRF SDO1 (MOSI)
+    LATCbits.LC0  = 1;  //CSCON is default high
+    LATCbits.LC1  = 1;  //CSDATA is default high
+    
+    //Strobe Light
+    TRISAbits.RA0 = 0;
+    LATAbits.LA0  = 0;
+    
+    //No analog, all digital
+>>>>>>> Stashed changes
     ANSELA = 0;
     ANSELB = 0;
     ANSELC = 0;
@@ -233,6 +327,7 @@ void init_interrupts(void)
     RCONbits.IPEN    = 0;   //Disable priority levels for interrupts.
     INTCONbits.GIE   = 0;   //Disable all interrupts.
     
+<<<<<<< Updated upstream
     //Place interrupt enable and setup commands here
     //...
     
@@ -251,6 +346,19 @@ void init_interrupts(void)
     INTCONbits.PEIE  = 1;   //Enable all peripheral interrupts.
     INTCONbits.GIE   = 1;   //Enable all interrupts.
     T0CONbits.TMR0ON  = 1;  //Turn on Timer0.
+=======
+    //UART2 Interrupts
+    PIE3bits.RC2IE   = 1;   //Enable UART1 receive interrupt.
+    
+    //INT1 interrupts (used for IRQ0 on MRF89XAM)
+    INTCON3bits.INT1IE = 1;
+    INTCON2bits.INTEDG1 = 1;  //Set INT1 interrupts only on rising edge
+    
+    //Turn interrupts on
+    INTCONbits.PEIE   = 1;   //Enable all peripheral interrupts.
+    INTCONbits.GIE    = 1;   //Enable all interrupts.
+    T0CONbits.TMR0ON  = 1;   //Turn on Timer0.
+>>>>>>> Stashed changes
     return;
 }
 
@@ -261,6 +369,7 @@ void __interrupt() ISR(void)
 {
     char MRF_input = 0;
     char temp_receive_string[MSG_MAX] = "";
+<<<<<<< Updated upstream
     //Add checks here for any interrupts.
     //...
     //UART2 Interrupts
@@ -292,7 +401,197 @@ void __interrupt() ISR(void)
         }
         else
             append_string(temp_receive_string, MRF_input);
+=======
+
+    //UART2 Interrupts
+    char usb_input = 0;
+    if(PIR3bits.RC2IF && PIE3bits.RC2IE)
+    {
+        usb_input = read_byte_usb();
+        if(usb_input == '\n')
+            usb_message_received = TRUE;
+        else
+            append_string(usb_message, usb_input);
+    }
+    
+    //IRQ0 interrupt for MRF89XAM (receiving only)
+    if(INTCON3bits.INT1IE && INTCON3bits.INT1F)
+    {
+        INTCON3bits.INT1F = 0;
+        if(MRF_message_received == FALSE)            //Don't process another message until current one is done.
+        {
+            MRF_input = (char) receive_MRF89XAM();
+            append_string(MRF_message, MRF_input);
+            if(strlen(MRF_message) == 8)
+            {
+                MRF_message_received = TRUE;
+            }
+            else
+                MRF_message_received = FALSE;
+        }
+>>>>>>> Stashed changes
     }
     return;
 }
 
+<<<<<<< Updated upstream
+=======
+/******************************************************************************/
+/*             Parse and respond to received message from MRF89XAM            */
+/******************************************************************************/
+char parse_MRF_message() 
+{
+    char message_id = MRF_message[0];
+    char temp_string[9] = "";
+    char response[9] = "";
+    BYTE counter;
+
+    //Ignore blank messages
+    if (strcmp(MRF_message, "\n\n\n\n\n\n\n\n")) 
+    {
+        if (last_message_id == 0) 
+        {
+            //Parse longitude and latitude messages.
+            switch (last_message_id) 
+            {
+                case 1:
+                    waypoint1.longitude = atol(MRF_message);
+                    last_message_id = 11;
+                    break;
+                case 11:
+                    waypoint1.latitude = atol(MRF_message);
+                    last_message_id = 0;
+                    transmit_string_MRF89XAM("W1 Set");
+                    break;
+                case 2:
+                    waypoint2.longitude = atol(MRF_message);
+                    last_message_id = 22;
+                    break;
+                case 22:
+                    waypoint2.latitude = atol(MRF_message);
+                    last_message_id = 0;
+                    transmit_string_MRF89XAM("W2 Set");
+                    break;
+                case 3:
+                    waypoint3.longitude = atol(MRF_message);
+                    last_message_id = 33;
+                    break;
+                case 33:
+                    waypoint3.latitude = atol(MRF_message);
+                    last_message_id = 0;
+                    transmit_string_MRF89XAM("W3 Set");
+                    break;
+                case 4:
+                    waypoint1.longitude = atol(MRF_message);
+                    last_message_id = 11;
+                    break;
+                case 44:
+                    waypoint1.latitude = atol(MRF_message);
+                    last_message_id = 0;
+                    transmit_string_MRF89XAM("Dest Set");
+                    break;
+            }
+        } 
+        else 
+        {
+            //Parse all other messages.
+            switch (message_id) 
+            {
+                    //Report back temp, humid, and location.
+                case 'R':
+                    //Transmit temperature and humidity
+                    strcpy       (response, "RT");
+                    append_string(response, (char) temperature);
+                    strcat       (response, "H");
+                    append_string(response, (char) humidity);
+                    transmit_string_MRF89XAM(response);
+
+                    //Transmit longitude and latitude
+                    ltoa( (long) (current_coords.longitude * 100000), temp_string);
+                    transmit_string_MRF89XAM(temp_string); //Transmit as 8 digit integer.
+                    ltoa( (long) (current_coords.latitude * 100000), temp_string);
+                    transmit_string_MRF89XAM(temp_string); //Transmit as 8 digit integer.
+                    break;
+
+                    //Set home to current location.
+                case 'H':
+                    home = current_coords;
+                    break;
+
+                    //Start navigating back to home address.
+                case 'C':
+                    destination = home;
+                    break;
+
+                    //Set Waypoint 1.
+                case '1':
+                    last_message_id = 1;
+                    break;
+
+                    //Set Waypoint 2.
+                case '2':
+                    last_message_id = 2;
+                    break;
+
+                    //Set Waypoint 3.
+                case '3':
+                    last_message_id = 3;
+                    break;
+
+                    //Set final destination address.
+                case 'D':
+                    last_message_id = 4;
+                    break;
+
+                    //Start movement.
+                case 'S':
+                    start = TRUE;
+                    break;
+
+                    //Stop movement.
+                case 'X':
+                    start = FALSE;
+                    break;
+
+                    //Set robot to manual mode.
+                case 'M':
+                    mode = MANUAL;
+                    break;
+
+                    //Set robot to autonomous mode.
+                case 'A':
+                    mode = AUTO;
+                    break;
+
+                    //Read values from joysticks
+                case 'J':
+                    for(counter = 1; counter < 8; counter++)
+                    {
+                        //Read left joystick value.
+                        if(counter <= 3 || counter == 5)
+                            append_string(temp_string, MRF_message[counter]);
+                        else if(counter == 4)
+                        {
+                            left_joystick = atoi(temp_string);
+                            strcpy(temp_string, "");
+                            append_string(temp_string, MRF_message[counter]);
+                        }
+                        else if(counter == 6)
+                        {
+                            append_string(temp_string, MRF_message[counter]);
+                            right_joystick = atoi(temp_string);
+                        }
+                    }
+                    break;
+
+                    //Set to zero to indicate bad message.
+                default:
+                    message_id = 0x00;
+                    transmit_string_MRF89XAM("UNKNOWN");
+                    break;
+            }
+        }
+    }
+    return message_id;
+}
+>>>>>>> Stashed changes

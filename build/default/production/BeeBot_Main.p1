@@ -1,8 +1,15 @@
 Version 4.0 HI-TECH Software Intermediate Code
+<<<<<<< Updated upstream
 "98 BeeBot_Main.c
 [; ;BeeBot_Main.c: 98: BYTE state = INIT;
 [c E6705 0 1 2 3 4 5 .. ]
 [n E6705 states INIT WAITING AUTO MANUAL DEBUG DEPLOYED  ]
+=======
+"52 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 52: {
+[s S857 `f 1 `f 1 ]
+[n S857 coords longitude latitude ]
+>>>>>>> Stashed changes
 [p mainexit ]
 "16046 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16046: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
@@ -11,6 +18,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 C:\Program Files\Microchip\xc8\v2.40\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
 [p i __delay ]
+<<<<<<< Updated upstream
 "106 BeeBot_Main.c
 [; ;BeeBot_Main.c: 106: void init_pins (void);
 [v _init_pins `(v ~T0 @X0 0 ef ]
@@ -27,6 +35,51 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 39: int strcmp (const char *, const char *);
 [v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
 "7148 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+=======
+"107 BeeBot_Main.c
+[; ;BeeBot_Main.c: 107: void init_pins (void);
+[v _init_pins `(v ~T0 @X0 0 ef ]
+"28 ./MCP2221A.h
+[; ;./MCP2221A.h: 28: void init_uart2 (void);
+[v _init_uart2 `(v ~T0 @X0 0 ef ]
+"16 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 16: void init_spi (void);
+[v _init_spi `(v ~T0 @X0 0 ef ]
+"17
+[; ;./MRF89XAM.h: 17: void init_MRF89XAM (void);
+[v _init_MRF89XAM `(v ~T0 @X0 0 ef ]
+"108 BeeBot_Main.c
+[; ;BeeBot_Main.c: 108: void init_interrupts(void);
+[v _init_interrupts `(v ~T0 @X0 0 ef ]
+"39 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 39: int strcmp (const char *, const char *);
+[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"23 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 23: void transmit_string_MRF89XAM(char tx_str[]);
+[v _transmit_string_MRF89XAM `(v ~T0 @X0 0 ef1`*uc ]
+"33 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"31 ./MCP2221A.h
+[; ;./MCP2221A.h: 31: void transmit_string_usb(char message[]);
+[v _transmit_string_usb `(v ~T0 @X0 0 ef1`*uc ]
+"7566 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7566:     struct {
+[s S380 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S380 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"7576
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7576:     struct {
+[s S381 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S381 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
+"7565
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7565: typedef union {
+[u S379 `S380 1 `S381 1 ]
+[n S379 . . . ]
+"7587
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7587: extern volatile LATAbits_t LATAbits __attribute__((address(0xF89)));
+[v _LATAbits `VS379 ~T0 @X0 0 e@3977 ]
+"7148
+>>>>>>> Stashed changes
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7148:     struct {
 [s S363 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S363 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
@@ -64,9 +117,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32 ./MCP2221A.h
 [; ;./MCP2221A.h: 32: void parse_usb_message (char message[]);
 [v _parse_usb_message `(v ~T0 @X0 0 ef1`*uc ]
+<<<<<<< Updated upstream
 "33 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
 [; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
 [v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+=======
+>>>>>>> Stashed changes
 "8737 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8737:     struct {
 [s S413 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -127,6 +183,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7811
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7811: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
 [v _LATCbits `VS385 ~T0 @X0 0 e@3979 ]
+<<<<<<< Updated upstream
+=======
+"8071
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8071:     struct {
+[s S395 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S395 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"8081
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8081:     struct {
+[s S396 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S396 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"8070
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8070: typedef union {
+[u S394 `S395 1 `S396 1 ]
+[n S394 . . . ]
+"8092
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8092: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
+[v _TRISAbits `VS394 ~T0 @X0 0 e@3986 ]
+>>>>>>> Stashed changes
 "52
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 52: extern volatile unsigned char ANSELA __attribute__((address(0xF38)));
 [v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
@@ -215,6 +289,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9933
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9933: extern volatile PIE3bits_t PIE3bits __attribute__((address(0xFA3)));
 [v _PIE3bits `VS458 ~T0 @X0 0 e@4003 ]
+<<<<<<< Updated upstream
 "16129
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16129: extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
 [v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
@@ -224,6 +299,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16206
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16206: extern volatile unsigned char TMR0L __attribute__((address(0xFD6)));
 [v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
+=======
+"16770
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16770:     struct {
+[s S819 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S819 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
+"16780
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16780:     struct {
+[s S820 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S820 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
+"16769
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16769: typedef union {
+[u S818 `S819 1 `S820 1 ]
+[n S818 . . . ]
+"16791
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16791: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
+[v _INTCON3bits `VS818 ~T0 @X0 0 e@4080 ]
+"16862
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16862:     struct {
+[s S822 :7 `uc 1 :1 `uc 1 ]
+[n S822 . . NOT_RBPU ]
+"16866
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16866:     struct {
+[s S823 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S823 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
+"16876
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16876:     struct {
+[s S824 :7 `uc 1 :1 `uc 1 ]
+[n S824 . . RBPU ]
+"16861
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16861: typedef union {
+[u S821 `S822 1 `S823 1 `S824 1 ]
+[n S821 . . . . ]
+"16881
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16881: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
+[v _INTCON2bits `VS821 ~T0 @X0 0 e@4081 ]
+>>>>>>> Stashed changes
 "16135
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16135:     struct {
 [s S769 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -241,6 +352,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _T0CONbits `VS768 ~T0 @X0 0 e@4053 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
+<<<<<<< Updated upstream
 "9497
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9497:     struct {
 [s S441 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -301,6 +413,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23 ./MRF89XAM.h
 [; ;./MRF89XAM.h: 23: BYTE receive_MRF89XAM (void);
 [v _receive_MRF89XAM `(uc ~T0 @X0 0 ef ]
+=======
+"10019
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10019:     struct {
+[s S463 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S463 . TMR1GIF TMR3GIF TMR5GIF CTMUIF TX2IF RC2IF BCL2IF SSP2IF ]
+"10029
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10029:     struct {
+[s S464 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S464 . . RXBNIF . TXBNIF ]
+"10018
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10018: typedef union {
+[u S462 `S463 1 `S464 1 ]
+[n S462 . . . ]
+"10036
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10036: extern volatile PIR3bits_t PIR3bits __attribute__((address(0xFA4)));
+[v _PIR3bits `VS462 ~T0 @X0 0 e@4004 ]
+"29 ./MCP2221A.h
+[; ;./MCP2221A.h: 29: BYTE read_byte_usb (void);
+[v _read_byte_usb `(uc ~T0 @X0 0 ef ]
+"76 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 76: void append_string(char str[], char ch);
+[v _append_string `(v ~T0 @X0 0 ef2`*uc`uc ]
+"24 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 24: BYTE receive_MRF89XAM (void);
+[v _receive_MRF89XAM `(uc ~T0 @X0 0 ef ]
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"24 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h: 24: long atol (const char *);
+[v _atol `(l ~T0 @X0 0 ef1`*Cuc ]
+"36 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 36: char *strcat (char *restrict, const char *restrict);
+[v _strcat `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"81 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 81: void ltoa(long n, char s[]);
+[v _ltoa `(v ~T0 @X0 0 ef2`l`*uc ]
+"23 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h: 23: int atoi (const char *);
+[v _atoi `(i ~T0 @X0 0 ef1`*Cuc ]
+>>>>>>> Stashed changes
 "6 BeeBot_Main.c
 [p x FOSC  =  INTIO67    ]
 "7
@@ -1136,6 +1289,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17406
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+<<<<<<< Updated upstream
 "29 ./MRF89XAM.h
 [; ;./MRF89XAM.h: 29: char MRF_param1[10];
 [v _MRF_param1 `uc ~T0 @X0 -> 10 `i e ]
@@ -1144,20 +1298,140 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _MRF_param2 `uc ~T0 @X0 -> 10 `i e ]
 "31
 [; ;./MRF89XAM.h: 31: BYTE MRF_transmitting = 0;
+=======
+"61 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 61: COORDS home = {0.00, 0.00};
+[v _home `S857 ~T0 @X0 1 e ]
+[i _home
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"62
+[; ;./BeeBot_Globals.h: 62: COORDS waypoint1 = {0.00, 0.00};
+[v _waypoint1 `S857 ~T0 @X0 1 e ]
+[i _waypoint1
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"63
+[; ;./BeeBot_Globals.h: 63: COORDS waypoint2 = {0.00, 0.00};
+[v _waypoint2 `S857 ~T0 @X0 1 e ]
+[i _waypoint2
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"64
+[; ;./BeeBot_Globals.h: 64: COORDS waypoint3 = {0.00, 0.00};
+[v _waypoint3 `S857 ~T0 @X0 1 e ]
+[i _waypoint3
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"65
+[; ;./BeeBot_Globals.h: 65: COORDS destination = {0.00, 0.00};
+[v _destination `S857 ~T0 @X0 1 e ]
+[i _destination
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"66
+[; ;./BeeBot_Globals.h: 66: COORDS current_coords = {0.00, 0.00};
+[v _current_coords `S857 ~T0 @X0 1 e ]
+[i _current_coords
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"68
+[; ;./BeeBot_Globals.h: 68: int temperature = 70;
+[v _temperature `i ~T0 @X0 1 e ]
+[i _temperature
+-> 70 `i
+]
+"69
+[; ;./BeeBot_Globals.h: 69: int humidity = 20;
+[v _humidity `i ~T0 @X0 1 e ]
+[i _humidity
+-> 20 `i
+]
+"70
+[; ;./BeeBot_Globals.h: 70: BYTE start = 0;
+[v _start `uc ~T0 @X0 1 e ]
+[i _start
+-> -> 0 `i `uc
+]
+"71
+[; ;./BeeBot_Globals.h: 71: BYTE mode = 1;
+[v _mode `uc ~T0 @X0 1 e ]
+[i _mode
+-> -> 1 `i `uc
+]
+"31 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 31: char MRF_param1[10] = "";
+[v _MRF_param1 `uc ~T0 @X0 -> 10 `i e ]
+[i _MRF_param1
+:U ..
+-> 0 `c
+..
+]
+"32
+[; ;./MRF89XAM.h: 32: char MRF_param2[10] = "";
+[v _MRF_param2 `uc ~T0 @X0 -> 10 `i e ]
+[i _MRF_param2
+:U ..
+-> 0 `c
+..
+]
+"33
+[; ;./MRF89XAM.h: 33: BYTE MRF_transmitting = 0;
+>>>>>>> Stashed changes
 [v _MRF_transmitting `uc ~T0 @X0 1 e ]
 [i _MRF_transmitting
 -> -> 0 `i `uc
 ]
+<<<<<<< Updated upstream
 "32
 [; ;./MRF89XAM.h: 32: char MRF_message[40] = "";
+=======
+"34
+[; ;./MRF89XAM.h: 34: char MRF_message[40] = "";
+>>>>>>> Stashed changes
 [v _MRF_message `uc ~T0 @X0 -> 40 `i e ]
 [i _MRF_message
 :U ..
 -> 0 `c
 ..
 ]
+<<<<<<< Updated upstream
 "33
 [; ;./MRF89XAM.h: 33: BYTE MRF_message_received = 0;
+=======
+"35
+[; ;./MRF89XAM.h: 35: BYTE MRF_message_received = 0;
+>>>>>>> Stashed changes
 [v _MRF_message_received `uc ~T0 @X0 1 e ]
 [i _MRF_message_received
 -> -> 0 `i `uc
@@ -1169,8 +1443,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "20
+<<<<<<< Updated upstream
 [; ;./MCP2221A.h: 20: char usb_message[40] = "";
 [v _usb_message `uc ~T0 @X0 -> 40 `i e ]
+=======
+[; ;./MCP2221A.h: 20: char usb_message[100] = "";
+[v _usb_message `uc ~T0 @X0 -> 100 `i e ]
+>>>>>>> Stashed changes
 [i _usb_message
 :U ..
 -> 0 `c
@@ -1188,12 +1467,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23
 [; ;./MCP2221A.h: 23: char USB_param2[10];
 [v _USB_param2 `uc ~T0 @X0 -> 10 `i e ]
+<<<<<<< Updated upstream
 "97 BeeBot_Main.c
 [; ;BeeBot_Main.c: 97: unsigned int timer_tick = 0;
+=======
+"95 BeeBot_Main.c
+[; ;BeeBot_Main.c: 95: unsigned int timer_tick = 0;
+>>>>>>> Stashed changes
 [v _timer_tick `ui ~T0 @X0 1 e ]
 [i _timer_tick
 -> -> 0 `i `ui
 ]
+<<<<<<< Updated upstream
 "98
 [; ;BeeBot_Main.c: 98: BYTE state = INIT;
 [v _state `uc ~T0 @X0 1 e ]
@@ -1202,12 +1487,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "99
 [; ;BeeBot_Main.c: 99: char current_report[40] = "";
+=======
+"96
+[; ;BeeBot_Main.c: 96: BYTE state = 2;
+[v _state `uc ~T0 @X0 1 e ]
+[i _state
+-> -> 2 `i `uc
+]
+"97
+[; ;BeeBot_Main.c: 97: char current_report[40] = "";
+>>>>>>> Stashed changes
 [v _current_report `uc ~T0 @X0 -> 40 `i e ]
 [i _current_report
 :U ..
 -> 0 `c
 ..
 ]
+<<<<<<< Updated upstream
 [v F6716 `uc ~T0 @X0 -> 40 `i t ]
 "100
 [; ;BeeBot_Main.c: 100: char all_reports[24][40];
@@ -1254,10 +1550,84 @@ Version 4.0 HI-TECH Software Intermediate Code
 "133
 [; ;BeeBot_Main.c: 133:                 init_interrupts();
 [e ( _init_interrupts ..  ]
+=======
+[v F7058 `uc ~T0 @X0 -> 40 `i t ]
+"98
+[; ;BeeBot_Main.c: 98: char all_reports[24][40];
+[v _all_reports `F7058 ~T0 @X0 -> 24 `i e ]
+"99
+[; ;BeeBot_Main.c: 99: BYTE last_message_id = 0;
+[v _last_message_id `uc ~T0 @X0 1 e ]
+[i _last_message_id
+-> -> 0 `i `uc
+]
+"100
+[; ;BeeBot_Main.c: 100: BYTE left_joystick = 0;
+[v _left_joystick `uc ~T0 @X0 1 e ]
+[i _left_joystick
+-> -> 0 `i `uc
+]
+"101
+[; ;BeeBot_Main.c: 101: BYTE right_joystick = 0;
+[v _right_joystick `uc ~T0 @X0 1 e ]
+[i _right_joystick
+-> -> 0 `i `uc
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"113
+[; ;BeeBot_Main.c: 113: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"114
+[; ;BeeBot_Main.c: 114: {
+{
+[e :U _main ]
+[f ]
+"115
+[; ;BeeBot_Main.c: 115:     BYTE previous_state;
+[v _previous_state `uc ~T0 @X0 1 a ]
+"116
+[; ;BeeBot_Main.c: 116:     char MRF_msg_code[4];
+[v _MRF_msg_code `uc ~T0 @X0 -> 4 `i a ]
+"118
+[; ;BeeBot_Main.c: 118:     OSCCON = 0b01100111;
+[e = _OSCCON -> -> 103 `i `uc ]
+"119
+[; ;BeeBot_Main.c: 119:     _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[v F7067 `uc ~T0 @X0 -> 16 `i s ]
+[i F7067
+:U ..
+"123
+[; ;BeeBot_Main.c: 123:     char test_string[16] = "";
+-> 0 `c
+..
+]
+[v _test_string `uc ~T0 @X0 -> 16 `i a ]
+[e = _test_string F7067 ]
+"125
+[; ;BeeBot_Main.c: 125:     while(1)
+[e :U 860 ]
+"126
+[; ;BeeBot_Main.c: 126:     {
+{
+"129
+[; ;BeeBot_Main.c: 129:         switch(state)
+[e $U 863  ]
+"130
+[; ;BeeBot_Main.c: 130:         {
+{
+"131
+[; ;BeeBot_Main.c: 131:             case 2:
+[e :U 864 ]
+"133
+[; ;BeeBot_Main.c: 133:                 init_pins ();
+[e ( _init_pins ..  ]
+>>>>>>> Stashed changes
 "134
 [; ;BeeBot_Main.c: 134:                 init_uart2 ();
 [e ( _init_uart2 ..  ]
 "135
+<<<<<<< Updated upstream
 [; ;BeeBot_Main.c: 135:                 previous_state = INIT;
 [e = _previous_state -> . `E6705 0 `uc ]
 "136
@@ -1284,10 +1654,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 "145
 [; ;BeeBot_Main.c: 145:                     if(!strcmp(MRF_msg_code, "NAV"))
 [e $ ! ! != ( _strcmp (2 , -> &U _MRF_msg_code `*Cuc :s 2C -> 0 `i 864  ]
+=======
+[; ;BeeBot_Main.c: 135:                 init_spi ();
+[e ( _init_spi ..  ]
+"136
+[; ;BeeBot_Main.c: 136:                 init_MRF89XAM ();
+[e ( _init_MRF89XAM ..  ]
+"137
+[; ;BeeBot_Main.c: 137:                 init_interrupts();
+[e ( _init_interrupts ..  ]
+"138
+[; ;BeeBot_Main.c: 138:                 previous_state = 2;
+[e = _previous_state -> -> 2 `i `uc ]
+"139
+[; ;BeeBot_Main.c: 139:                 state = 3;
+[e = _state -> -> 3 `i `uc ]
+"140
+[; ;BeeBot_Main.c: 140:                 break;
+[e $U 862  ]
+"141
+[; ;BeeBot_Main.c: 141:             case 3:
+[e :U 865 ]
+"143
+[; ;BeeBot_Main.c: 143:                 while(1)
+[e :U 867 ]
+"144
+[; ;BeeBot_Main.c: 144:                 {
+{
+"145
+[; ;BeeBot_Main.c: 145:                     if(MRF_message_received)
+[e $ ! != -> _MRF_message_received `i -> 0 `i 869  ]
+>>>>>>> Stashed changes
 "146
 [; ;BeeBot_Main.c: 146:                     {
 {
 "147
+<<<<<<< Updated upstream
 [; ;BeeBot_Main.c: 147:                         state = AUTO;
 [e = _state -> . `E6705 2 `uc ]
 "148
@@ -1555,10 +1957,330 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 "263
 [; ;BeeBot_Main.c: 263:     char temp_receive_string[40] = "";
+=======
+[; ;BeeBot_Main.c: 147:                         _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"148
+[; ;BeeBot_Main.c: 148:                         MRF_message_received = 0;
+[e = _MRF_message_received -> -> 0 `i `uc ]
+"149
+[; ;BeeBot_Main.c: 149:                         if(!strcmp(MRF_message, "hello\n\n\n"))
+[e $ ! ! != ( _strcmp (2 , -> &U _MRF_message `*Cuc :s 2C -> 0 `i 870  ]
+"150
+[; ;BeeBot_Main.c: 150:                         {
+{
+"151
+[; ;BeeBot_Main.c: 151:                             transmit_string_MRF89XAM("HI");
+[e ( _transmit_string_MRF89XAM (1 :s 3C ]
+"152
+[; ;BeeBot_Main.c: 152:                         }
+}
+[e :U 870 ]
+"153
+[; ;BeeBot_Main.c: 153:                         strcpy(MRF_message, "");
+[e ( _strcpy (2 , &U _MRF_message :s 4C ]
+"154
+[; ;BeeBot_Main.c: 154:                     }
+}
+[e :U 869 ]
+"155
+[; ;BeeBot_Main.c: 155:                     if(usb_message_received)
+[e $ ! != -> _usb_message_received `i -> 0 `i 871  ]
+"156
+[; ;BeeBot_Main.c: 156:                     {
+{
+"157
+[; ;BeeBot_Main.c: 157:                         usb_message_received = 0;
+[e = _usb_message_received -> -> 0 `i `uc ]
+"158
+[; ;BeeBot_Main.c: 158:                         transmit_string_usb(usb_message);
+[e ( _transmit_string_usb (1 &U _usb_message ]
+"159
+[; ;BeeBot_Main.c: 159:                         strcpy(usb_message, "");
+[e ( _strcpy (2 , &U _usb_message :s 5C ]
+"160
+[; ;BeeBot_Main.c: 160:                     }
+}
+[e :U 871 ]
+"161
+[; ;BeeBot_Main.c: 161:                 }
+}
+[e :U 866 ]
+[e $U 867  ]
+[e :U 868 ]
+"164
+[; ;BeeBot_Main.c: 164:                 if(MRF_message_received)
+[e $ ! != -> _MRF_message_received `i -> 0 `i 872  ]
+"165
+[; ;BeeBot_Main.c: 165:                 {
+{
+"166
+[; ;BeeBot_Main.c: 166:                     LATAbits.LA0 = 1;
+[e = . . _LATAbits 1 0 -> -> 1 `i `uc ]
+"167
+[; ;BeeBot_Main.c: 167:                     MRF_message_received = 0;
+[e = _MRF_message_received -> -> 0 `i `uc ]
+"170
+[; ;BeeBot_Main.c: 170:                     if(!strcmp(MRF_msg_code, "NAV"))
+[e $ ! ! != ( _strcmp (2 , -> &U _MRF_msg_code `*Cuc :s 7C -> 0 `i 873  ]
+"171
+[; ;BeeBot_Main.c: 171:                     {
+{
+"172
+[; ;BeeBot_Main.c: 172:                         state = 1;
+[e = _state -> -> 1 `i `uc ]
+"173
+[; ;BeeBot_Main.c: 173:                         previous_state = 3;
+[e = _previous_state -> -> 3 `i `uc ]
+"174
+[; ;BeeBot_Main.c: 174:                     }
+}
+[e $U 874  ]
+"175
+[; ;BeeBot_Main.c: 175:                     else if(!strcmp(MRF_msg_code, "M"))
+[e :U 873 ]
+[e $ ! ! != ( _strcmp (2 , -> &U _MRF_msg_code `*Cuc :s 9C -> 0 `i 875  ]
+"176
+[; ;BeeBot_Main.c: 176:                     {
+{
+"177
+[; ;BeeBot_Main.c: 177:                         state = 0;
+[e = _state -> -> 0 `i `uc ]
+"178
+[; ;BeeBot_Main.c: 178:                         previous_state = 3;
+[e = _previous_state -> -> 3 `i `uc ]
+"179
+[; ;BeeBot_Main.c: 179:                     }
+}
+[e :U 875 ]
+[e :U 874 ]
+"180
+[; ;BeeBot_Main.c: 180:                 }
+}
+[e :U 872 ]
+"181
+[; ;BeeBot_Main.c: 181:                 break;
+[e $U 862  ]
+"182
+[; ;BeeBot_Main.c: 182:             case 1:
+[e :U 876 ]
+"184
+[; ;BeeBot_Main.c: 184:                 break;
+[e $U 862  ]
+"185
+[; ;BeeBot_Main.c: 185:             case 0:
+[e :U 877 ]
+"187
+[; ;BeeBot_Main.c: 187:                 break;
+[e $U 862  ]
+"188
+[; ;BeeBot_Main.c: 188:             case 4:
+[e :U 878 ]
+"191
+[; ;BeeBot_Main.c: 191:                 if((!PORTDbits.RD5))
+[e $ ! ! != -> . . _PORTDbits 0 5 `i -> 0 `i 879  ]
+"192
+[; ;BeeBot_Main.c: 192:                 {
+{
+"193
+[; ;BeeBot_Main.c: 193:                     state = previous_state;
+[e = _state _previous_state ]
+"194
+[; ;BeeBot_Main.c: 194:                     previous_state = 4;
+[e = _previous_state -> -> 4 `i `uc ]
+"195
+[; ;BeeBot_Main.c: 195:                 }
+}
+[e :U 879 ]
+"197
+[; ;BeeBot_Main.c: 197:                 if(strcmp(usb_message, ""))
+[e $ ! != ( _strcmp (2 , -> &U _usb_message `*Cuc :s 11C -> 0 `i 880  ]
+"198
+[; ;BeeBot_Main.c: 198:                 {
+{
+"199
+[; ;BeeBot_Main.c: 199:                     parse_usb_message(usb_message);
+[e ( _parse_usb_message (1 &U _usb_message ]
+"200
+[; ;BeeBot_Main.c: 200:                     strcpy(usb_message, "");
+[e ( _strcpy (2 , &U _usb_message :s 12C ]
+"201
+[; ;BeeBot_Main.c: 201:                 }
+}
+[e :U 880 ]
+"202
+[; ;BeeBot_Main.c: 202:                 break;
+[e $U 862  ]
+"203
+[; ;BeeBot_Main.c: 203:             case 5:
+[e :U 881 ]
+"206
+[; ;BeeBot_Main.c: 206:                 break;
+[e $U 862  ]
+"207
+[; ;BeeBot_Main.c: 207:         }
+}
+[e $U 862  ]
+[e :U 863 ]
+[e [\ -> _state `i , $ -> 2 `i 864
+ , $ -> 3 `i 865
+ , $ -> 1 `i 876
+ , $ -> 0 `i 877
+ , $ -> 4 `i 878
+ , $ -> 5 `i 881
+ 862 ]
+[e :U 862 ]
+"208
+[; ;BeeBot_Main.c: 208:     }
+}
+[e :U 859 ]
+[e $U 860  ]
+[e :U 861 ]
+"209
+[; ;BeeBot_Main.c: 209:     return;
+[e $UE 858  ]
+"210
+[; ;BeeBot_Main.c: 210: }
+[e :UE 858 ]
+}
+"215
+[; ;BeeBot_Main.c: 215: void init_pins(void)
+[v _init_pins `(v ~T0 @X0 1 ef ]
+"216
+[; ;BeeBot_Main.c: 216: {
+{
+[e :U _init_pins ]
+[f ]
+"218
+[; ;BeeBot_Main.c: 218:     TRISDbits.RD6 = 1;
+[e = . . _TRISDbits 1 6 -> -> 1 `i `uc ]
+"219
+[; ;BeeBot_Main.c: 219:     TRISDbits.RD6 = 1;
+[e = . . _TRISDbits 1 6 -> -> 1 `i `uc ]
+"220
+[; ;BeeBot_Main.c: 220:     TRISDbits.RD7 = 1;
+[e = . . _TRISDbits 1 7 -> -> 1 `i `uc ]
+"223
+[; ;BeeBot_Main.c: 223:     TRISBbits.RB1 = 1;
+[e = . . _TRISBbits 1 1 -> -> 1 `i `uc ]
+"224
+[; ;BeeBot_Main.c: 224:     TRISBbits.RB2 = 1;
+[e = . . _TRISBbits 1 2 -> -> 1 `i `uc ]
+"225
+[; ;BeeBot_Main.c: 225:     TRISCbits.RC0 = 0;
+[e = . . _TRISCbits 1 0 -> -> 0 `i `uc ]
+"226
+[; ;BeeBot_Main.c: 226:     TRISCbits.RC1 = 0;
+[e = . . _TRISCbits 1 1 -> -> 0 `i `uc ]
+"227
+[; ;BeeBot_Main.c: 227:     TRISCbits.RC2 = 1;
+[e = . . _TRISCbits 1 2 -> -> 1 `i `uc ]
+"228
+[; ;BeeBot_Main.c: 228:     TRISCbits.RC3 = 0;
+[e = . . _TRISCbits 1 3 -> -> 0 `i `uc ]
+"229
+[; ;BeeBot_Main.c: 229:     TRISCbits.RC4 = 1;
+[e = . . _TRISCbits 1 4 -> -> 1 `i `uc ]
+"230
+[; ;BeeBot_Main.c: 230:     TRISCbits.RC5 = 0;
+[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
+"231
+[; ;BeeBot_Main.c: 231:     LATCbits.LC0 = 1;
+[e = . . _LATCbits 1 0 -> -> 1 `i `uc ]
+"232
+[; ;BeeBot_Main.c: 232:     LATCbits.LC1 = 1;
+[e = . . _LATCbits 1 1 -> -> 1 `i `uc ]
+"235
+[; ;BeeBot_Main.c: 235:     TRISAbits.RA0 = 0;
+[e = . . _TRISAbits 1 0 -> -> 0 `i `uc ]
+"236
+[; ;BeeBot_Main.c: 236:     LATAbits.LA0 = 0;
+[e = . . _LATAbits 1 0 -> -> 0 `i `uc ]
+"239
+[; ;BeeBot_Main.c: 239:     ANSELA = 0;
+[e = _ANSELA -> -> 0 `i `uc ]
+"240
+[; ;BeeBot_Main.c: 240:     ANSELB = 0;
+[e = _ANSELB -> -> 0 `i `uc ]
+"241
+[; ;BeeBot_Main.c: 241:     ANSELC = 0;
+[e = _ANSELC -> -> 0 `i `uc ]
+"242
+[; ;BeeBot_Main.c: 242:     ANSELD = 0;
+[e = _ANSELD -> -> 0 `i `uc ]
+"243
+[; ;BeeBot_Main.c: 243:     ANSELE = 0;
+[e = _ANSELE -> -> 0 `i `uc ]
+"244
+[; ;BeeBot_Main.c: 244:     return;
+[e $UE 882  ]
+"245
+[; ;BeeBot_Main.c: 245: }
+[e :UE 882 ]
+}
+"250
+[; ;BeeBot_Main.c: 250: void init_interrupts(void)
+[v _init_interrupts `(v ~T0 @X0 1 ef ]
+"251
+[; ;BeeBot_Main.c: 251: {
+{
+[e :U _init_interrupts ]
+[f ]
+"252
+[; ;BeeBot_Main.c: 252:     RCONbits.IPEN = 0;
+[e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
+"253
+[; ;BeeBot_Main.c: 253:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+"256
+[; ;BeeBot_Main.c: 256:     PIE3bits.RC2IE = 1;
+[e = . . _PIE3bits 0 5 -> -> 1 `i `uc ]
+"259
+[; ;BeeBot_Main.c: 259:     INTCON3bits.INT1IE = 1;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"260
+[; ;BeeBot_Main.c: 260:     INTCON2bits.INTEDG1 = 1;
+[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
+"263
+[; ;BeeBot_Main.c: 263:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"264
+[; ;BeeBot_Main.c: 264:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"265
+[; ;BeeBot_Main.c: 265:     T0CONbits.TMR0ON = 1;
+[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
+"266
+[; ;BeeBot_Main.c: 266:     return;
+[e $UE 883  ]
+"267
+[; ;BeeBot_Main.c: 267: }
+[e :UE 883 ]
+}
+[v $root$_ISR `(v ~T0 @X0 0 e ]
+"272
+[; ;BeeBot_Main.c: 272: void __attribute__((picinterrupt(("")))) ISR(void)
+[v _ISR `(v ~T1 @X0 1 ef ]
+"273
+[; ;BeeBot_Main.c: 273: {
+{
+[e :U _ISR ]
+[f ]
+"274
+[; ;BeeBot_Main.c: 274:     char MRF_input = 0;
+[v _MRF_input `uc ~T0 @X0 1 a ]
+[e = _MRF_input -> -> 0 `i `uc ]
+[v F7073 `uc ~T0 @X0 -> 40 `i s ]
+[i F7073
+:U ..
+"275
+[; ;BeeBot_Main.c: 275:     char temp_receive_string[40] = "";
+>>>>>>> Stashed changes
 -> 0 `c
 ..
 ]
 [v _temp_receive_string `uc ~T0 @X0 -> 40 `i a ]
+<<<<<<< Updated upstream
 [e = _temp_receive_string F6726 ]
 "267
 [; ;BeeBot_Main.c: 267:     char usb_input = 0;
@@ -1656,3 +2378,546 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 6C 0 ]
 [a 7C 0 ]
 [a 8C 0 ]
+=======
+[e = _temp_receive_string F7073 ]
+"278
+[; ;BeeBot_Main.c: 278:     char usb_input = 0;
+[v _usb_input `uc ~T0 @X0 1 a ]
+[e = _usb_input -> -> 0 `i `uc ]
+"279
+[; ;BeeBot_Main.c: 279:     if(PIR3bits.RC2IF && PIE3bits.RC2IE)
+[e $ ! && != -> . . _PIR3bits 0 5 `i -> 0 `i != -> . . _PIE3bits 0 5 `i -> 0 `i 885  ]
+"280
+[; ;BeeBot_Main.c: 280:     {
+{
+"281
+[; ;BeeBot_Main.c: 281:         usb_input = read_byte_usb();
+[e = _usb_input -> ( _read_byte_usb ..  `uc ]
+"282
+[; ;BeeBot_Main.c: 282:         if(usb_input == '\n')
+[e $ ! == -> _usb_input `ui -> 10 `ui 886  ]
+"283
+[; ;BeeBot_Main.c: 283:             usb_message_received = 1;
+[e = _usb_message_received -> -> 1 `i `uc ]
+[e $U 887  ]
+"284
+[; ;BeeBot_Main.c: 284:         else
+[e :U 886 ]
+"285
+[; ;BeeBot_Main.c: 285:             append_string(usb_message, usb_input);
+[e ( _append_string (2 , &U _usb_message _usb_input ]
+[e :U 887 ]
+"286
+[; ;BeeBot_Main.c: 286:     }
+}
+[e :U 885 ]
+"289
+[; ;BeeBot_Main.c: 289:     if(INTCON3bits.INT1IE && INTCON3bits.INT1F)
+[e $ ! && != -> . . _INTCON3bits 0 3 `i -> 0 `i != -> . . _INTCON3bits 1 0 `i -> 0 `i 888  ]
+"290
+[; ;BeeBot_Main.c: 290:     {
+{
+"291
+[; ;BeeBot_Main.c: 291:         INTCON3bits.INT1F = 0;
+[e = . . _INTCON3bits 1 0 -> -> 0 `i `uc ]
+"292
+[; ;BeeBot_Main.c: 292:         if(MRF_message_received == 0)
+[e $ ! == -> _MRF_message_received `i -> 0 `i 889  ]
+"293
+[; ;BeeBot_Main.c: 293:         {
+{
+"294
+[; ;BeeBot_Main.c: 294:             MRF_input = (char) receive_MRF89XAM();
+[e = _MRF_input -> ( _receive_MRF89XAM ..  `uc ]
+"295
+[; ;BeeBot_Main.c: 295:             append_string(MRF_message, MRF_input);
+[e ( _append_string (2 , &U _MRF_message _MRF_input ]
+"296
+[; ;BeeBot_Main.c: 296:             if(strlen(MRF_message) == 8)
+[e $ ! == ( _strlen (1 -> &U _MRF_message `*Cuc -> -> 8 `i `ui 890  ]
+"297
+[; ;BeeBot_Main.c: 297:             {
+{
+"298
+[; ;BeeBot_Main.c: 298:                 MRF_message_received = 1;
+[e = _MRF_message_received -> -> 1 `i `uc ]
+"299
+[; ;BeeBot_Main.c: 299:             }
+}
+[e $U 891  ]
+"300
+[; ;BeeBot_Main.c: 300:             else
+[e :U 890 ]
+"301
+[; ;BeeBot_Main.c: 301:                 MRF_message_received = 0;
+[e = _MRF_message_received -> -> 0 `i `uc ]
+[e :U 891 ]
+"302
+[; ;BeeBot_Main.c: 302:         }
+}
+[e :U 889 ]
+"303
+[; ;BeeBot_Main.c: 303:     }
+}
+[e :U 888 ]
+"304
+[; ;BeeBot_Main.c: 304:     return;
+[e $UE 884  ]
+"305
+[; ;BeeBot_Main.c: 305: }
+[e :UE 884 ]
+}
+"310
+[; ;BeeBot_Main.c: 310: char parse_MRF_message()
+[v _parse_MRF_message `(uc ~T0 @X0 1 ef ]
+"311
+[; ;BeeBot_Main.c: 311: {
+{
+[e :U _parse_MRF_message ]
+[f ]
+"312
+[; ;BeeBot_Main.c: 312:     char message_id = MRF_message[0];
+[v _message_id `uc ~T0 @X0 1 a ]
+[e = _message_id *U + &U _MRF_message * -> -> -> 0 `i `ui `ux -> -> # *U &U _MRF_message `ui `ux ]
+[v F7078 `uc ~T0 @X0 -> 9 `i s ]
+[i F7078
+:U ..
+"313
+[; ;BeeBot_Main.c: 313:     char temp_string[9] = "";
+-> 0 `c
+..
+]
+[v _temp_string `uc ~T0 @X0 -> 9 `i a ]
+[e = _temp_string F7078 ]
+[v F7080 `uc ~T0 @X0 -> 9 `i s ]
+[i F7080
+:U ..
+"314
+[; ;BeeBot_Main.c: 314:     char response[9] = "";
+-> 0 `c
+..
+]
+[v _response `uc ~T0 @X0 -> 9 `i a ]
+[e = _response F7080 ]
+"315
+[; ;BeeBot_Main.c: 315:     BYTE counter;
+[v _counter `uc ~T0 @X0 1 a ]
+"318
+[; ;BeeBot_Main.c: 318:     if (strcmp(MRF_message, "\n\n\n\n\n\n\n\n"))
+[e $ ! != ( _strcmp (2 , -> &U _MRF_message `*Cuc :s 14C -> 0 `i 893  ]
+"319
+[; ;BeeBot_Main.c: 319:     {
+{
+"320
+[; ;BeeBot_Main.c: 320:         if (last_message_id == 0)
+[e $ ! == -> _last_message_id `i -> 0 `i 894  ]
+"321
+[; ;BeeBot_Main.c: 321:         {
+{
+"323
+[; ;BeeBot_Main.c: 323:             switch (last_message_id)
+[e $U 896  ]
+"324
+[; ;BeeBot_Main.c: 324:             {
+{
+"325
+[; ;BeeBot_Main.c: 325:                 case 1:
+[e :U 897 ]
+"326
+[; ;BeeBot_Main.c: 326:                     waypoint1.longitude = atol(MRF_message);
+[e = . _waypoint1 0 -> ( _atol (1 -> &U _MRF_message `*Cuc `f ]
+"327
+[; ;BeeBot_Main.c: 327:                     last_message_id = 11;
+[e = _last_message_id -> -> 11 `i `uc ]
+"328
+[; ;BeeBot_Main.c: 328:                     break;
+[e $U 895  ]
+"329
+[; ;BeeBot_Main.c: 329:                 case 11:
+[e :U 898 ]
+"330
+[; ;BeeBot_Main.c: 330:                     waypoint1.latitude = atol(MRF_message);
+[e = . _waypoint1 1 -> ( _atol (1 -> &U _MRF_message `*Cuc `f ]
+"331
+[; ;BeeBot_Main.c: 331:                     last_message_id = 0;
+[e = _last_message_id -> -> 0 `i `uc ]
+"332
+[; ;BeeBot_Main.c: 332:                     transmit_string_MRF89XAM("W1 Set");
+[e ( _transmit_string_MRF89XAM (1 :s 15C ]
+"333
+[; ;BeeBot_Main.c: 333:                     break;
+[e $U 895  ]
+"334
+[; ;BeeBot_Main.c: 334:                 case 2:
+[e :U 899 ]
+"335
+[; ;BeeBot_Main.c: 335:                     waypoint2.longitude = atol(MRF_message);
+[e = . _waypoint2 0 -> ( _atol (1 -> &U _MRF_message `*Cuc `f ]
+"336
+[; ;BeeBot_Main.c: 336:                     last_message_id = 22;
+[e = _last_message_id -> -> 22 `i `uc ]
+"337
+[; ;BeeBot_Main.c: 337:                     break;
+[e $U 895  ]
+"338
+[; ;BeeBot_Main.c: 338:                 case 22:
+[e :U 900 ]
+"339
+[; ;BeeBot_Main.c: 339:                     waypoint2.latitude = atol(MRF_message);
+[e = . _waypoint2 1 -> ( _atol (1 -> &U _MRF_message `*Cuc `f ]
+"340
+[; ;BeeBot_Main.c: 340:                     last_message_id = 0;
+[e = _last_message_id -> -> 0 `i `uc ]
+"341
+[; ;BeeBot_Main.c: 341:                     transmit_string_MRF89XAM("W2 Set");
+[e ( _transmit_string_MRF89XAM (1 :s 16C ]
+"342
+[; ;BeeBot_Main.c: 342:                     break;
+[e $U 895  ]
+"343
+[; ;BeeBot_Main.c: 343:                 case 3:
+[e :U 901 ]
+"344
+[; ;BeeBot_Main.c: 344:                     waypoint3.longitude = atol(MRF_message);
+[e = . _waypoint3 0 -> ( _atol (1 -> &U _MRF_message `*Cuc `f ]
+"345
+[; ;BeeBot_Main.c: 345:                     last_message_id = 33;
+[e = _last_message_id -> -> 33 `i `uc ]
+"346
+[; ;BeeBot_Main.c: 346:                     break;
+[e $U 895  ]
+"347
+[; ;BeeBot_Main.c: 347:                 case 33:
+[e :U 902 ]
+"348
+[; ;BeeBot_Main.c: 348:                     waypoint3.latitude = atol(MRF_message);
+[e = . _waypoint3 1 -> ( _atol (1 -> &U _MRF_message `*Cuc `f ]
+"349
+[; ;BeeBot_Main.c: 349:                     last_message_id = 0;
+[e = _last_message_id -> -> 0 `i `uc ]
+"350
+[; ;BeeBot_Main.c: 350:                     transmit_string_MRF89XAM("W3 Set");
+[e ( _transmit_string_MRF89XAM (1 :s 17C ]
+"351
+[; ;BeeBot_Main.c: 351:                     break;
+[e $U 895  ]
+"352
+[; ;BeeBot_Main.c: 352:                 case 4:
+[e :U 903 ]
+"353
+[; ;BeeBot_Main.c: 353:                     waypoint1.longitude = atol(MRF_message);
+[e = . _waypoint1 0 -> ( _atol (1 -> &U _MRF_message `*Cuc `f ]
+"354
+[; ;BeeBot_Main.c: 354:                     last_message_id = 11;
+[e = _last_message_id -> -> 11 `i `uc ]
+"355
+[; ;BeeBot_Main.c: 355:                     break;
+[e $U 895  ]
+"356
+[; ;BeeBot_Main.c: 356:                 case 44:
+[e :U 904 ]
+"357
+[; ;BeeBot_Main.c: 357:                     waypoint1.latitude = atol(MRF_message);
+[e = . _waypoint1 1 -> ( _atol (1 -> &U _MRF_message `*Cuc `f ]
+"358
+[; ;BeeBot_Main.c: 358:                     last_message_id = 0;
+[e = _last_message_id -> -> 0 `i `uc ]
+"359
+[; ;BeeBot_Main.c: 359:                     transmit_string_MRF89XAM("Dest Set");
+[e ( _transmit_string_MRF89XAM (1 :s 18C ]
+"360
+[; ;BeeBot_Main.c: 360:                     break;
+[e $U 895  ]
+"361
+[; ;BeeBot_Main.c: 361:             }
+}
+[e $U 895  ]
+[e :U 896 ]
+[e [\ -> _last_message_id `i , $ -> 1 `i 897
+ , $ -> 11 `i 898
+ , $ -> 2 `i 899
+ , $ -> 22 `i 900
+ , $ -> 3 `i 901
+ , $ -> 33 `i 902
+ , $ -> 4 `i 903
+ , $ -> 44 `i 904
+ 895 ]
+[e :U 895 ]
+"362
+[; ;BeeBot_Main.c: 362:         }
+}
+[e $U 905  ]
+"363
+[; ;BeeBot_Main.c: 363:         else
+[e :U 894 ]
+"364
+[; ;BeeBot_Main.c: 364:         {
+{
+"366
+[; ;BeeBot_Main.c: 366:             switch (message_id)
+[e $U 907  ]
+"367
+[; ;BeeBot_Main.c: 367:             {
+{
+"369
+[; ;BeeBot_Main.c: 369:                 case 'R':
+[e :U 908 ]
+"371
+[; ;BeeBot_Main.c: 371:                     strcpy (response, "RT");
+[e ( _strcpy (2 , &U _response :s 19C ]
+"372
+[; ;BeeBot_Main.c: 372:                     append_string(response, (char) temperature);
+[e ( _append_string (2 , &U _response -> _temperature `uc ]
+"373
+[; ;BeeBot_Main.c: 373:                     strcat (response, "H");
+[e ( _strcat (2 , &U _response :s 20C ]
+"374
+[; ;BeeBot_Main.c: 374:                     append_string(response, (char) humidity);
+[e ( _append_string (2 , &U _response -> _humidity `uc ]
+"375
+[; ;BeeBot_Main.c: 375:                     transmit_string_MRF89XAM(response);
+[e ( _transmit_string_MRF89XAM (1 &U _response ]
+"378
+[; ;BeeBot_Main.c: 378:                     ltoa( (long) (current_coords.longitude * 100000), temp_string);
+[e ( _ltoa (2 , -> * . _current_coords 0 -> -> 100000 `l `f `l &U _temp_string ]
+"379
+[; ;BeeBot_Main.c: 379:                     transmit_string_MRF89XAM(temp_string);
+[e ( _transmit_string_MRF89XAM (1 &U _temp_string ]
+"380
+[; ;BeeBot_Main.c: 380:                     ltoa( (long) (current_coords.latitude * 100000), temp_string);
+[e ( _ltoa (2 , -> * . _current_coords 1 -> -> 100000 `l `f `l &U _temp_string ]
+"381
+[; ;BeeBot_Main.c: 381:                     transmit_string_MRF89XAM(temp_string);
+[e ( _transmit_string_MRF89XAM (1 &U _temp_string ]
+"382
+[; ;BeeBot_Main.c: 382:                     break;
+[e $U 906  ]
+"385
+[; ;BeeBot_Main.c: 385:                 case 'H':
+[e :U 909 ]
+"386
+[; ;BeeBot_Main.c: 386:                     home = current_coords;
+[e = _home _current_coords ]
+"387
+[; ;BeeBot_Main.c: 387:                     break;
+[e $U 906  ]
+"390
+[; ;BeeBot_Main.c: 390:                 case 'C':
+[e :U 910 ]
+"391
+[; ;BeeBot_Main.c: 391:                     destination = home;
+[e = _destination _home ]
+"392
+[; ;BeeBot_Main.c: 392:                     break;
+[e $U 906  ]
+"395
+[; ;BeeBot_Main.c: 395:                 case '1':
+[e :U 911 ]
+"396
+[; ;BeeBot_Main.c: 396:                     last_message_id = 1;
+[e = _last_message_id -> -> 1 `i `uc ]
+"397
+[; ;BeeBot_Main.c: 397:                     break;
+[e $U 906  ]
+"400
+[; ;BeeBot_Main.c: 400:                 case '2':
+[e :U 912 ]
+"401
+[; ;BeeBot_Main.c: 401:                     last_message_id = 2;
+[e = _last_message_id -> -> 2 `i `uc ]
+"402
+[; ;BeeBot_Main.c: 402:                     break;
+[e $U 906  ]
+"405
+[; ;BeeBot_Main.c: 405:                 case '3':
+[e :U 913 ]
+"406
+[; ;BeeBot_Main.c: 406:                     last_message_id = 3;
+[e = _last_message_id -> -> 3 `i `uc ]
+"407
+[; ;BeeBot_Main.c: 407:                     break;
+[e $U 906  ]
+"410
+[; ;BeeBot_Main.c: 410:                 case 'D':
+[e :U 914 ]
+"411
+[; ;BeeBot_Main.c: 411:                     last_message_id = 4;
+[e = _last_message_id -> -> 4 `i `uc ]
+"412
+[; ;BeeBot_Main.c: 412:                     break;
+[e $U 906  ]
+"415
+[; ;BeeBot_Main.c: 415:                 case 'S':
+[e :U 915 ]
+"416
+[; ;BeeBot_Main.c: 416:                     start = 1;
+[e = _start -> -> 1 `i `uc ]
+"417
+[; ;BeeBot_Main.c: 417:                     break;
+[e $U 906  ]
+"420
+[; ;BeeBot_Main.c: 420:                 case 'X':
+[e :U 916 ]
+"421
+[; ;BeeBot_Main.c: 421:                     start = 0;
+[e = _start -> -> 0 `i `uc ]
+"422
+[; ;BeeBot_Main.c: 422:                     break;
+[e $U 906  ]
+"425
+[; ;BeeBot_Main.c: 425:                 case 'M':
+[e :U 917 ]
+"426
+[; ;BeeBot_Main.c: 426:                     mode = 0;
+[e = _mode -> -> 0 `i `uc ]
+"427
+[; ;BeeBot_Main.c: 427:                     break;
+[e $U 906  ]
+"430
+[; ;BeeBot_Main.c: 430:                 case 'A':
+[e :U 918 ]
+"431
+[; ;BeeBot_Main.c: 431:                     mode = 1;
+[e = _mode -> -> 1 `i `uc ]
+"432
+[; ;BeeBot_Main.c: 432:                     break;
+[e $U 906  ]
+"435
+[; ;BeeBot_Main.c: 435:                 case 'J':
+[e :U 919 ]
+"436
+[; ;BeeBot_Main.c: 436:                     for(counter = 1; counter < 8; counter++)
+{
+[e = _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 8 `i 920  ]
+[e $U 921  ]
+[e :U 920 ]
+"437
+[; ;BeeBot_Main.c: 437:                     {
+{
+"439
+[; ;BeeBot_Main.c: 439:                         if(counter <= 3 || counter == 5)
+[e $ ! || <= -> _counter `i -> 3 `i == -> _counter `i -> 5 `i 923  ]
+"440
+[; ;BeeBot_Main.c: 440:                             append_string(temp_string, MRF_message[counter]);
+[e ( _append_string (2 , &U _temp_string *U + &U _MRF_message * -> _counter `ux -> -> # *U &U _MRF_message `ui `ux ]
+[e $U 924  ]
+"441
+[; ;BeeBot_Main.c: 441:                         else if(counter == 4)
+[e :U 923 ]
+[e $ ! == -> _counter `i -> 4 `i 925  ]
+"442
+[; ;BeeBot_Main.c: 442:                         {
+{
+"443
+[; ;BeeBot_Main.c: 443:                             left_joystick = atoi(temp_string);
+[e = _left_joystick -> ( _atoi (1 -> &U _temp_string `*Cuc `uc ]
+"444
+[; ;BeeBot_Main.c: 444:                             strcpy(temp_string, "");
+[e ( _strcpy (2 , &U _temp_string :s 21C ]
+"445
+[; ;BeeBot_Main.c: 445:                             append_string(temp_string, MRF_message[counter]);
+[e ( _append_string (2 , &U _temp_string *U + &U _MRF_message * -> _counter `ux -> -> # *U &U _MRF_message `ui `ux ]
+"446
+[; ;BeeBot_Main.c: 446:                         }
+}
+[e $U 926  ]
+"447
+[; ;BeeBot_Main.c: 447:                         else if(counter == 6)
+[e :U 925 ]
+[e $ ! == -> _counter `i -> 6 `i 927  ]
+"448
+[; ;BeeBot_Main.c: 448:                         {
+{
+"449
+[; ;BeeBot_Main.c: 449:                             append_string(temp_string, MRF_message[counter]);
+[e ( _append_string (2 , &U _temp_string *U + &U _MRF_message * -> _counter `ux -> -> # *U &U _MRF_message `ui `ux ]
+"450
+[; ;BeeBot_Main.c: 450:                             right_joystick = atoi(temp_string);
+[e = _right_joystick -> ( _atoi (1 -> &U _temp_string `*Cuc `uc ]
+"451
+[; ;BeeBot_Main.c: 451:                         }
+}
+[e :U 927 ]
+[e :U 926 ]
+[e :U 924 ]
+"452
+[; ;BeeBot_Main.c: 452:                     }
+}
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 8 `i 920  ]
+[e :U 921 ]
+}
+"453
+[; ;BeeBot_Main.c: 453:                     break;
+[e $U 906  ]
+"456
+[; ;BeeBot_Main.c: 456:                 default:
+[e :U 928 ]
+"457
+[; ;BeeBot_Main.c: 457:                     message_id = 0x00;
+[e = _message_id -> -> 0 `i `uc ]
+"458
+[; ;BeeBot_Main.c: 458:                     transmit_string_MRF89XAM("UNKNOWN");
+[e ( _transmit_string_MRF89XAM (1 :s 22C ]
+"459
+[; ;BeeBot_Main.c: 459:                     break;
+[e $U 906  ]
+"460
+[; ;BeeBot_Main.c: 460:             }
+}
+[e $U 906  ]
+[e :U 907 ]
+[e [\ -> _message_id `i , $ -> -> 82 `ui `i 908
+ , $ -> -> 72 `ui `i 909
+ , $ -> -> 67 `ui `i 910
+ , $ -> -> 49 `ui `i 911
+ , $ -> -> 50 `ui `i 912
+ , $ -> -> 51 `ui `i 913
+ , $ -> -> 68 `ui `i 914
+ , $ -> -> 83 `ui `i 915
+ , $ -> -> 88 `ui `i 916
+ , $ -> -> 77 `ui `i 917
+ , $ -> -> 65 `ui `i 918
+ , $ -> -> 74 `ui `i 919
+ 928 ]
+[e :U 906 ]
+"461
+[; ;BeeBot_Main.c: 461:         }
+}
+[e :U 905 ]
+"462
+[; ;BeeBot_Main.c: 462:     }
+}
+[e :U 893 ]
+"463
+[; ;BeeBot_Main.c: 463:     return message_id;
+[e ) _message_id ]
+[e $UE 892  ]
+"464
+[; ;BeeBot_Main.c: 464: }
+[e :UE 892 ]
+}
+[a 18C 68 101 115 116 32 83 101 116 0 ]
+[a 17C 87 51 32 83 101 116 0 ]
+[a 16C 87 50 32 83 101 116 0 ]
+[a 15C 87 49 32 83 101 116 0 ]
+[a 6C 78 65 86 0 ]
+[a 7C 78 65 86 0 ]
+[a 19C 82 84 0 ]
+[a 22C 85 78 75 78 79 87 78 0 ]
+[a 8C 77 0 ]
+[a 9C 77 0 ]
+[a 3C 72 73 0 ]
+[a 20C 72 0 ]
+[a 1C 104 101 108 108 111 10 10 10 0 ]
+[a 2C 104 101 108 108 111 10 10 10 0 ]
+[a 13C 10 10 10 10 10 10 10 10 0 ]
+[a 14C 10 10 10 10 10 10 10 10 0 ]
+[a 4C 0 ]
+[a 5C 0 ]
+[a 10C 0 ]
+[a 11C 0 ]
+[a 12C 0 ]
+[a 21C 0 ]
+>>>>>>> Stashed changes

@@ -22,6 +22,10 @@ void transmit_MRF89XAM       (BYTE data);                   //Transmit single by
 void transmit_string_MRF89XAM(char tx_str[]);               //Transmit string on MRF89XAM.
 BYTE receive_MRF89XAM        (void);                        //Receive byte from MRF89XAM.
 void MRF_parse_message(char message[], char code[]);        //Return message content and parameters.
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 /******************************************************************************/
 /*                              Global Variables                              */

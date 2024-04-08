@@ -10114,13 +10114,196 @@ int isxdigit_l(int, locale_t);
 int tolower_l(int, locale_t);
 int toupper_l(int, locale_t);
 # 19 "./BeeBot_Globals.h" 2
+<<<<<<< Updated upstream
 # 41 "./BeeBot_Globals.h"
+=======
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 20 "./BeeBot_Globals.h" 2
+# 46 "./BeeBot_Globals.h"
+>>>>>>> Stashed changes
 typedef unsigned char BYTE;
 
 
 
 
+struct coords
+{
+    float longitude;
+    float latitude;
+};
+typedef struct coords COORDS;
+
+
+
+
+COORDS home = {0.00, 0.00};
+COORDS waypoint1 = {0.00, 0.00};
+COORDS waypoint2 = {0.00, 0.00};
+COORDS waypoint3 = {0.00, 0.00};
+COORDS destination = {0.00, 0.00};
+COORDS current_coords = {0.00, 0.00};
+
+int temperature = 70;
+int humidity = 20;
+BYTE start = 0;
+BYTE mode = 1;
+
+
+
+
 void append_string(char str[], char ch);
+<<<<<<< Updated upstream
+=======
+void bubbleSort(BYTE arr[], BYTE n);
+void itoa(int n, char s[]);
+void reverse_string(char s[]);
+void ftoa(float num, char *str, int decimalPlaces);
+void ltoa(long n, char s[]);
+>>>>>>> Stashed changes
 # 14 "./MCP2221A.h" 2
 
 
@@ -10128,7 +10311,11 @@ void append_string(char str[], char ch);
 
 
 BYTE usb_message_received = 0;
+<<<<<<< Updated upstream
 char usb_message[40] = "";
+=======
+char usb_message[100] = "";
+>>>>>>> Stashed changes
 BYTE usb_received = 0;
 char USB_param1[10];
 char USB_param2[10];
@@ -10141,6 +10328,10 @@ BYTE read_byte_usb (void);
 void transmit_byte_usb (BYTE message);
 void transmit_string_usb(char message[]);
 void parse_usb_message (char message[]);
+<<<<<<< Updated upstream
+=======
+COORDS get_coords_usb (void);
+>>>>>>> Stashed changes
 # 8 "MCP2221A.c" 2
 
 
@@ -10166,7 +10357,11 @@ void init_uart2(void)
 
 BYTE read_byte_usb(void)
 {
+<<<<<<< Updated upstream
     BYTE content = RCREG1;
+=======
+    BYTE content = RCREG2;
+>>>>>>> Stashed changes
 
 
     if(RCSTA2bits.OERR)
@@ -10182,7 +10377,11 @@ BYTE read_byte_usb(void)
 
 void transmit_byte_usb(BYTE message)
 {
+<<<<<<< Updated upstream
     TXREG1 = message;
+=======
+    TXREG2 = message;
+>>>>>>> Stashed changes
     return;
 }
 
@@ -10195,10 +10394,18 @@ void transmit_string_usb(char message[])
     transmit_byte_usb('\n');
     for(counter = 0; counter <= strlen(message); counter++)
     {
+<<<<<<< Updated upstream
         while(PIR1bits.TX1IF == 0);
         transmit_byte_usb(message[counter]);
     }
     transmit_byte_usb('\n');
+=======
+        while(PIR3bits.TX2IF == 0);
+        transmit_byte_usb(message[counter]);
+    }
+    transmit_byte_usb('\n');
+    return;
+>>>>>>> Stashed changes
 }
 
 
@@ -10211,6 +10418,7 @@ void parse_usb_message(char message[])
     BYTE counter;
     BYTE param1_full;
     BYTE length;
+<<<<<<< Updated upstream
 
 
     if(!strcmp(usb_message, "R"))
@@ -10220,10 +10428,96 @@ void parse_usb_message(char message[])
     }
     else if(!strcmp(usb_message, "RA"))
     {
+=======
+    char response[100] = "";
+    char temp_string[10] = "";
+
+    usb_message_received = 0;
+
+
+    if(!strncmp(usb_message, "REPORT", 6))
+    {
+
+        strcpy(response, "Report:");
+        strcat(response, "Temperature = ");
+        itoa (temperature, temp_string);
+        strcat(response, temp_string);
+        strcat(response, ", Humidity = ");
+        itoa (humidity, temp_string);
+        strcat(response, temp_string);
+        strcat(response, ", Current Location = (");
+        ftoa (current_coords.longitude, temp_string, 5);
+        strcat(response, temp_string);
+        strcat(response, ", ");
+        ftoa (current_coords.latitude, temp_string, 5);
+        strcat(response, temp_string);
+        strcat(response, ")");
+        transmit_string_usb(response);
+    }
+    else if(!strncmp(usb_message, "REPORT_ALL", 10))
+    {
+
+    }
+    else if(!strncmp(usb_message, "SET_HOME", 8))
+    {
+
+        home = current_coords;
+    }
+    else if(!strncmp(usb_message, "RECALL", 6))
+    {
+
+        destination = home;
+    }
+    else if(!strncmp(usb_message, "WAYPOINT1", 9))
+    {
+
+        waypoint1 = get_coords_usb();
+    }
+    else if(!strncmp(usb_message, "WAYPOINT2", 9))
+    {
+
+        waypoint2 = get_coords_usb();
+    }
+    else if(!strncmp(usb_message, "WAYPOINT3", 9))
+    {
+
+        waypoint3 = get_coords_usb();
+    }
+    else if(!strncmp(usb_message, "DESTINATION", 11))
+    {
+
+        destination = get_coords_usb();
+    }
+    else if(!strncmp(usb_message, "START", 5))
+    {
+
+    }
+    else if(!strncmp(usb_message, "STOP", 4))
+    {
+
+    }
+    else if(!strncmp(usb_message, "AUTO", 4))
+    {
+
+    }
+    else if(!strncmp(usb_message, "MANUAL", 6))
+    {
+
+    }
+    else
+    {
+
+    }
+
+
+    return;
+}
+>>>>>>> Stashed changes
 
 
 
 
+<<<<<<< Updated upstream
 
 
 
@@ -10256,4 +10550,43 @@ void parse_usb_message(char message[])
 
     }
     return;
+=======
+COORDS get_coords_usb(void)
+{
+    COORDS msg_coords;
+    BYTE counter = 0;
+    BYTE long_counter = 0;
+    BYTE lat_counter = 0;
+    char longitude[20] = "";
+    char latitude[20] = "";
+
+
+    while(!(0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10))
+        counter++;
+
+
+    while((0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10) || usb_message[counter] == '.')
+    {
+        longitude[long_counter] = usb_message[counter];
+        long_counter++;
+        counter++;
+    }
+
+
+    while(!(0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10))
+        counter++;
+
+
+    while((0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10) || usb_message[counter] == '.')
+    {
+        longitude[long_counter] = usb_message[counter];
+        long_counter++;
+        counter++;
+    }
+
+
+    msg_coords.longitude = (float) atof(longitude);
+    msg_coords.latitude = (float) atof(latitude);
+    return msg_coords;
+>>>>>>> Stashed changes
 }

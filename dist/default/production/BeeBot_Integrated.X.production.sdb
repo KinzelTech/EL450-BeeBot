@@ -3,6 +3,7 @@
 [d edition pro ]
 [d chip 18F46K22 ]
 [d frameptr 4065 ]
+<<<<<<< Updated upstream
 "98 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Main.c
 [e E6705 states `uc
 INIT 0
@@ -27,6 +28,62 @@ DEPLOYED 5
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
+=======
+"14 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Globals.c
+[v _append_string append_string `(v  1 e 1 0 ]
+"30
+[v _reverse_string reverse_string `(v  1 e 1 0 ]
+"46
+[v _itoa itoa `(v  1 e 1 0 ]
+"87
+[v _ftoa ftoa `(v  1 e 1 0 ]
+"109
+[v _ltoa ltoa `(v  1 e 1 0 ]
+"113 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Main.c
+[v _main main `(v  1 e 1 0 ]
+"215
+[v _init_pins init_pins `(v  1 e 1 0 ]
+"250
+[v _init_interrupts init_interrupts `(v  1 e 1 0 ]
+"272
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+"1 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\atol.c
+[v _atol atol `(l  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"133 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\doprnt.c
+[v _pad pad `(v  1 s 1 pad ]
+"443
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
+"1007
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1520
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+>>>>>>> Stashed changes
 "86 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
 "54 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\ftdiv.c
@@ -37,6 +94,25 @@ DEPLOYED 5
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isdigit.c
 [v _isdigit isdigit `(i  1 e 2 0 ]
+<<<<<<< Updated upstream
+=======
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\islower.c
+[v _islower islower `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isspace.c
+[v _isspace isspace `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isxdigit.c
+[v _isxdigit isxdigit `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nanf.c
+[v _nanf nanf `(f  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+>>>>>>> Stashed changes
 "10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -45,6 +121,11 @@ DEPLOYED 5
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
+<<<<<<< Updated upstream
+=======
+"3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strcat.c
+[v _strcat strcat `(*.39uc  1 e 2 0 ]
+>>>>>>> Stashed changes
 "3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
 "3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strcpy.c
@@ -53,16 +134,35 @@ DEPLOYED 5
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 [v i2_strlen strlen `(ui  1 e 2 0 ]
+<<<<<<< Updated upstream
+=======
+"3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+"95 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strtof.c
+[v _strtof strtof `(f  1 e 4 0 ]
+"423
+[v _atof atof `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+>>>>>>> Stashed changes
 "15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
+<<<<<<< Updated upstream
+=======
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+>>>>>>> Stashed changes
 "13 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MCP2221A.c
 [v _init_uart2 init_uart2 `(v  1 e 1 0 ]
 "30
 [v _read_byte_usb read_byte_usb `(uc  1 e 1 0 ]
 "46
 [v _transmit_byte_usb transmit_byte_usb `(v  1 e 1 0 ]
+<<<<<<< Updated upstream
 "72
 [v _parse_usb_message parse_usb_message `(v  1 e 1 0 ]
 "16 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MRF89XAM.c
@@ -97,6 +197,69 @@ DEPLOYED 5
 [v _timer_tick timer_tick `ui  1 e 2 0 ]
 "98
 [v _state state `uc  1 e 1 0 ]
+=======
+"55
+[v _transmit_string_usb transmit_string_usb `(v  1 e 1 0 ]
+"73
+[v _parse_usb_message parse_usb_message `(v  1 e 1 0 ]
+"52 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X/BeeBot_Globals.h
+[s S24 coords 8 `f 1 longitude 4 0 `f 1 latitude 4 4 ]
+"165 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MCP2221A.c
+[v _get_coords_usb get_coords_usb `(S24  1 e 8 0 ]
+"13 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MRF89XAM.c
+[v _init_spi init_spi `(v  1 e 1 0 ]
+"28
+[v _write_spi_reg write_spi_reg `(v  1 e 1 0 ]
+"88
+[v _write_spi_data write_spi_data `(v  1 e 1 0 ]
+"111
+[v _read_spi_data read_spi_data `(uc  1 e 1 0 ]
+"134
+[v _init_MRF89XAM init_MRF89XAM `(v  1 e 1 0 ]
+"175
+[v _transmit_string_MRF89XAM transmit_string_MRF89XAM `(v  1 e 1 0 ]
+"212
+[v _receive_MRF89XAM receive_MRF89XAM `(uc  1 e 1 0 ]
+[s S24 coords 8 `f 1 longitude 4 0 `f 1 latitude 4 4 ]
+"61 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X/BeeBot_Globals.h
+[v _home home `S24  1 e 8 0 ]
+"62
+[v _waypoint1 waypoint1 `S24  1 e 8 0 ]
+"63
+[v _waypoint2 waypoint2 `S24  1 e 8 0 ]
+"64
+[v _waypoint3 waypoint3 `S24  1 e 8 0 ]
+"65
+[v _destination destination `S24  1 e 8 0 ]
+"66
+[v _current_coords current_coords `S24  1 e 8 0 ]
+"70
+[v _start start `uc  1 e 1 0 ]
+"71
+[v _mode mode `uc  1 e 1 0 ]
+"19 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X/MCP2221A.h
+[v _usb_message_received usb_message_received `uc  1 e 1 0 ]
+"20
+[v _usb_message usb_message `[100]uc  1 e 100 0 ]
+"31 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X/MRF89XAM.h
+[v _MRF_param1 MRF_param1 `[10]uc  1 e 10 0 ]
+"32
+[v _MRF_param2 MRF_param2 `[10]uc  1 e 10 0 ]
+"33
+[v _MRF_transmitting MRF_transmitting `uc  1 e 1 0 ]
+"34
+[v _MRF_message MRF_message `[40]uc  1 e 40 0 ]
+"35
+[v _MRF_message_received MRF_message_received `uc  1 e 1 0 ]
+"96 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Main.c
+[v _state state `uc  1 e 1 0 ]
+"99
+[v _last_message_id last_message_id `uc  1 e 1 0 ]
+"100
+[v _left_joystick left_joystick `uc  1 e 1 0 ]
+"101
+[v _right_joystick right_joystick `uc  1 e 1 0 ]
+>>>>>>> Stashed changes
 "52 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
 "97
@@ -107,6 +270,7 @@ DEPLOYED 5
 [v _ANSELD ANSELD `VEuc  1 e 1 @3899 ]
 "260
 [v _ANSELE ANSELE `VEuc  1 e 1 @3900 ]
+<<<<<<< Updated upstream
 [s S815 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
@@ -218,6 +382,9 @@ DEPLOYED 5
 "4268
 [v _SSP2BUF SSP2BUF `VEuc  1 e 1 @3951 ]
 [s S1312 . 1 `uc 1 RX9D 1 0 :1:0 
+=======
+[s S1573 . 1 `uc 1 RX9D 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -227,10 +394,17 @@ DEPLOYED 5
 `uc 1 SPEN 1 0 :1:7 
 ]
 "4595
+<<<<<<< Updated upstream
 [s S1321 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
 [s S1324 . 1 `uc 1 RX9D2 1 0 :1:0 
+=======
+[s S1582 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S1585 . 1 `uc 1 RX9D2 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 OERR2 1 0 :1:1 
 `uc 1 FERR2 1 0 :1:2 
 `uc 1 ADDEN2 1 0 :1:3 
@@ -239,6 +413,7 @@ DEPLOYED 5
 `uc 1 RX92 1 0 :1:6 
 `uc 1 SPEN2 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S1333 . 1 `uc 1 RCD82 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC8_92 1 0 :1:6 
@@ -249,6 +424,18 @@ DEPLOYED 5
 [u S1340 . 1 `S1312 1 . 1 0 `S1321 1 . 1 0 `S1324 1 . 1 0 `S1333 1 . 1 0 `S1337 1 . 1 0 ]
 [v _RCSTA2bits RCSTA2bits `VES1340  1 e 1 @3953 ]
 [s S1262 . 1 `uc 1 TX9D 1 0 :1:0 
+=======
+[s S1594 . 1 `uc 1 RCD82 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC8_92 1 0 :1:6 
+]
+[s S1598 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC92 1 0 :1:6 
+]
+[u S1601 . 1 `S1573 1 . 1 0 `S1582 1 . 1 0 `S1585 1 . 1 0 `S1594 1 . 1 0 `S1598 1 . 1 0 ]
+[v _RCSTA2bits RCSTA2bits `VES1601  1 e 1 @3953 ]
+[s S1523 . 1 `uc 1 TX9D 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -258,7 +445,11 @@ DEPLOYED 5
 `uc 1 CSRC 1 0 :1:7 
 ]
 "4875
+<<<<<<< Updated upstream
 [s S1271 . 1 `uc 1 TX9D2 1 0 :1:0 
+=======
+[s S1532 . 1 `uc 1 TX9D2 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 TRMT2 1 0 :1:1 
 `uc 1 BRGH2 1 0 :1:2 
 `uc 1 SENDB2 1 0 :1:3 
@@ -267,6 +458,7 @@ DEPLOYED 5
 `uc 1 TX92 1 0 :1:6 
 `uc 1 CSRC2 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S1280 . 1 `uc 1 TXD82 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 TX8_92 1 0 :1:6 
@@ -276,6 +468,21 @@ DEPLOYED 5
 "5166
 [v _SPBRG2 SPBRG2 `VEuc  1 e 1 @3957 ]
 [s S229 . 1 `uc 1 RB0 1 0 :1:0 
+=======
+[s S1541 . 1 `uc 1 TXD82 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_92 1 0 :1:6 
+]
+[u S1545 . 1 `S1523 1 . 1 0 `S1532 1 . 1 0 `S1541 1 . 1 0 ]
+[v _TXSTA2bits TXSTA2bits `VES1545  1 e 1 @3954 ]
+"5090
+[v _TXREG2 TXREG2 `VEuc  1 e 1 @3955 ]
+"5128
+[v _RCREG2 RCREG2 `VEuc  1 e 1 @3956 ]
+"5166
+[v _SPBRG2 SPBRG2 `VEuc  1 e 1 @3957 ]
+[s S277 . 1 `uc 1 RB0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -285,7 +492,11 @@ DEPLOYED 5
 `uc 1 RB7 1 0 :1:7 
 ]
 "6635
+<<<<<<< Updated upstream
 [s S1059 . 1 `uc 1 INT0 1 0 :1:0 
+=======
+[s S1252 . 1 `uc 1 INT0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 CCP2 1 0 :1:3 
@@ -294,7 +505,11 @@ DEPLOYED 5
 `uc 1 KBI2 1 0 :1:6 
 `uc 1 KBI3 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S1068 . 1 `uc 1 AN12 1 0 :1:0 
+=======
+[s S1261 . 1 `uc 1 AN12 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 AN10 1 0 :1:1 
 `uc 1 AN8 1 0 :1:2 
 `uc 1 AN9 1 0 :1:3 
@@ -303,37 +518,62 @@ DEPLOYED 5
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S1077 . 1 `uc 1 FLT0 1 0 :1:0 
+=======
+[s S1270 . 1 `uc 1 FLT0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 C12IN3M 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 C12IN2M 1 0 :1:3 
 `uc 1 T5G 1 0 :1:4 
 `uc 1 T1G 1 0 :1:5 
 ]
+<<<<<<< Updated upstream
 [s S1084 . 1 `uc 1 SRI 1 0 :1:0 
+=======
+[s S1277 . 1 `uc 1 SRI 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 C12IN3N 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 C12IN2N 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 CCP3 1 0 :1:5 
 ]
+<<<<<<< Updated upstream
 [s S1091 . 1 `uc 1 . 1 0 :2:0 
+=======
+[s S1284 . 1 `uc 1 . 1 0 :2:0 
+>>>>>>> Stashed changes
 `uc 1 CTED1 1 0 :1:2 
 `uc 1 CTED2 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 T3CKI 1 0 :1:5 
 ]
+<<<<<<< Updated upstream
 [s S1097 . 1 `uc 1 . 1 0 :3:0 
+=======
+[s S1290 . 1 `uc 1 . 1 0 :3:0 
+>>>>>>> Stashed changes
 `uc 1 P2A 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 P3A 1 0 :1:5 
 ]
+<<<<<<< Updated upstream
 [s S1102 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
 [u S1105 . 1 `S229 1 . 1 0 `S1059 1 . 1 0 `S1068 1 . 1 0 `S1077 1 . 1 0 `S1084 1 . 1 0 `S1091 1 . 1 0 `S1097 1 . 1 0 `S1102 1 . 1 0 ]
 [v _PORTBbits PORTBbits `VES1105  1 e 1 @3969 ]
 [s S62 . 1 `uc 1 RD0 1 0 :1:0 
+=======
+[s S1295 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S1298 . 1 `S277 1 . 1 0 `S1252 1 . 1 0 `S1261 1 . 1 0 `S1270 1 . 1 0 `S1277 1 . 1 0 `S1284 1 . 1 0 `S1290 1 . 1 0 `S1295 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES1298  1 e 1 @3969 ]
+[s S116 . 1 `uc 1 RD0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -343,7 +583,11 @@ DEPLOYED 5
 `uc 1 RD7 1 0 :1:7 
 ]
 "7205
+<<<<<<< Updated upstream
 [s S71 . 1 `uc 1 . 1 0 :2:0 
+=======
+[s S125 . 1 `uc 1 . 1 0 :2:0 
+>>>>>>> Stashed changes
 `uc 1 P2B 1 0 :1:2 
 `uc 1 P2C 1 0 :1:3 
 `uc 1 P2D 1 0 :1:4 
@@ -351,16 +595,27 @@ DEPLOYED 5
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S79 . 1 `uc 1 . 1 0 :1:0 
+=======
+[s S133 . 1 `uc 1 . 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 CCP4 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 TX2 1 0 :1:6 
 `uc 1 RX2 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S85 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_SS2 1 0 :1:3 
 ]
 [s S88 . 1 `uc 1 SCK2 1 0 :1:0 
+=======
+[s S139 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_SS2 1 0 :1:3 
+]
+[s S142 . 1 `uc 1 SCK2 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 SDI2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 nSS2 1 0 :1:3 
@@ -369,12 +624,20 @@ DEPLOYED 5
 `uc 1 CK2 1 0 :1:6 
 `uc 1 DT2 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S97 . 1 `uc 1 SCL2 1 0 :1:0 
+=======
+[s S151 . 1 `uc 1 SCL2 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 SDA2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SS2 1 0 :1:3 
 ]
+<<<<<<< Updated upstream
 [s S102 . 1 `uc 1 AN20 1 0 :1:0 
+=======
+[s S156 . 1 `uc 1 AN20 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 AN21 1 0 :1:1 
 `uc 1 AN22 1 0 :1:2 
 `uc 1 AN23 1 0 :1:3 
@@ -383,9 +646,36 @@ DEPLOYED 5
 `uc 1 AN26 1 0 :1:6 
 `uc 1 AN27 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [u S111 . 1 `S62 1 . 1 0 `S71 1 . 1 0 `S79 1 . 1 0 `S85 1 . 1 0 `S88 1 . 1 0 `S97 1 . 1 0 `S102 1 . 1 0 ]
 [v _PORTDbits PORTDbits `VES111  1 e 1 @3971 ]
 [s S300 . 1 `uc 1 LATC0 1 0 :1:0 
+=======
+[u S165 . 1 `S116 1 . 1 0 `S125 1 . 1 0 `S133 1 . 1 0 `S139 1 . 1 0 `S142 1 . 1 0 `S151 1 . 1 0 `S156 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES165  1 e 1 @3971 ]
+[s S76 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"7587
+[s S85 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+`uc 1 LA7 1 0 :1:7 
+]
+[u S94 . 1 `S76 1 . 1 0 `S85 1 . 1 0 ]
+[v _LATAbits LATAbits `VES94  1 e 1 @3977 ]
+[s S348 . 1 `uc 1 LATC0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -395,7 +685,11 @@ DEPLOYED 5
 `uc 1 LATC7 1 0 :1:7 
 ]
 "7811
+<<<<<<< Updated upstream
 [s S309 . 1 `uc 1 LC0 1 0 :1:0 
+=======
+[s S357 . 1 `uc 1 LC0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -404,9 +698,36 @@ DEPLOYED 5
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [u S318 . 1 `S300 1 . 1 0 `S309 1 . 1 0 ]
 [v _LATCbits LATCbits `VES318  1 e 1 @3979 ]
 [s S220 . 1 `uc 1 TRISB0 1 0 :1:0 
+=======
+[u S366 . 1 `S348 1 . 1 0 `S357 1 . 1 0 ]
+[v _LATCbits LATCbits `VES366  1 e 1 @3979 ]
+[s S388 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"8092
+[s S397 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+[u S406 . 1 `S388 1 . 1 0 `S397 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES406  1 e 1 @3986 ]
+[s S268 . 1 `uc 1 TRISB0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -416,9 +737,15 @@ DEPLOYED 5
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "8314
+<<<<<<< Updated upstream
 [u S238 . 1 `S220 1 . 1 0 `S229 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES238  1 e 1 @3987 ]
 [s S260 . 1 `uc 1 TRISC0 1 0 :1:0 
+=======
+[u S286 . 1 `S268 1 . 1 0 `S277 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES286  1 e 1 @3987 ]
+[s S308 . 1 `uc 1 TRISC0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -428,7 +755,11 @@ DEPLOYED 5
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "8536
+<<<<<<< Updated upstream
 [s S269 . 1 `uc 1 RC0 1 0 :1:0 
+=======
+[s S317 . 1 `uc 1 RC0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -437,9 +768,15 @@ DEPLOYED 5
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [u S278 . 1 `S260 1 . 1 0 `S269 1 . 1 0 ]
 [v _TRISCbits TRISCbits `VES278  1 e 1 @3988 ]
 [s S180 . 1 `uc 1 TRISD0 1 0 :1:0 
+=======
+[u S326 . 1 `S308 1 . 1 0 `S317 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES326  1 e 1 @3988 ]
+[s S228 . 1 `uc 1 TRISD0 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -449,6 +786,7 @@ DEPLOYED 5
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "8758
+<<<<<<< Updated upstream
 [u S198 . 1 `S180 1 . 1 0 `S62 1 . 1 0 ]
 [v _TRISDbits TRISDbits `VES198  1 e 1 @3989 ]
 [s S565 . 1 `uc 1 TMR1IE 1 0 :1:0 
@@ -484,6 +822,11 @@ DEPLOYED 5
 [u S548 . 1 `S535 1 . 1 0 `S543 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES548  1 e 1 @3998 ]
 [s S461 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+=======
+[u S246 . 1 `S228 1 . 1 0 `S116 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES246  1 e 1 @3989 ]
+[s S549 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 TMR3GIE 1 0 :1:1 
 `uc 1 TMR5GIE 1 0 :1:2 
 `uc 1 CTMUIE 1 0 :1:3 
@@ -493,17 +836,26 @@ DEPLOYED 5
 `uc 1 SSP2IE 1 0 :1:7 
 ]
 "9933
+<<<<<<< Updated upstream
 [s S470 . 1 `uc 1 RXB0IE 1 0 :1:0 
+=======
+[s S558 . 1 `uc 1 RXB0IE 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 RXB1IE 1 0 :1:1 
 `uc 1 TXB0IE 1 0 :1:2 
 `uc 1 TXB1IE 1 0 :1:3 
 `uc 1 TXB2IE 1 0 :1:4 
 ]
+<<<<<<< Updated upstream
 [s S476 . 1 `uc 1 . 1 0 :1:0 
+=======
+[s S564 . 1 `uc 1 . 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 RXBNIE 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIE 1 0 :1:4 
 ]
+<<<<<<< Updated upstream
 [u S481 . 1 `S461 1 . 1 0 `S470 1 . 1 0 `S476 1 . 1 0 ]
 [v _PIE3bits PIE3bits `VES481  1 e 1 @4003 ]
 "11210
@@ -526,6 +878,151 @@ DEPLOYED 5
 `uc 1 NOT_RI 1 0 :1:4 
 ]
 [s S359 . 1 `uc 1 nBOR 1 0 :1:0 
+=======
+[u S569 . 1 `S549 1 . 1 0 `S558 1 . 1 0 `S564 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES569  1 e 1 @4003 ]
+[s S695 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+`uc 1 TMR3GIF 1 0 :1:1 
+`uc 1 TMR5GIF 1 0 :1:2 
+`uc 1 CTMUIF 1 0 :1:3 
+`uc 1 TX2IF 1 0 :1:4 
+`uc 1 RC2IF 1 0 :1:5 
+`uc 1 BCL2IF 1 0 :1:6 
+`uc 1 SSP2IF 1 0 :1:7 
+]
+"10036
+[s S704 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBNIF 1 0 :1:4 
+]
+[u S709 . 1 `S695 1 . 1 0 `S704 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES709  1 e 1 @4004 ]
+"14137
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @4038 ]
+[s S1153 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"14172
+[s S1159 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[s S1164 . 1 `uc 1 SSPM01 1 0 :1:0 
+`uc 1 SSPM11 1 0 :1:1 
+`uc 1 SSPM21 1 0 :1:2 
+`uc 1 SSPM31 1 0 :1:3 
+`uc 1 CKP1 1 0 :1:4 
+`uc 1 SSPEN1 1 0 :1:5 
+`uc 1 SSPOV1 1 0 :1:6 
+`uc 1 WCOL1 1 0 :1:7 
+]
+[u S1173 . 1 `S1153 1 . 1 0 `S1159 1 . 1 0 `S1164 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES1173  1 e 1 @4038 ]
+[s S979 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"14481
+[s S982 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S985 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S994 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S999 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 A 1 0 :1:5 
+]
+[s S1004 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S1009 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S1014 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S1017 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S1020 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S1025 . 1 `uc 1 BF1 1 0 :1:0 
+`uc 1 UA1 1 0 :1:1 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 DA 1 0 :1:5 
+`uc 1 CKE1 1 0 :1:6 
+`uc 1 SMP1 1 0 :1:7 
+]
+[s S1034 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 START 1 0 :1:3 
+`uc 1 STOP 1 0 :1:4 
+`uc 1 DA1 1 0 :1:5 
+]
+[s S1040 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+`uc 1 START1 1 0 :1:3 
+`uc 1 STOP1 1 0 :1:4 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S1046 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S1051 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+]
+[s S1054 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S1057 . 1 `S979 1 . 1 0 `S982 1 . 1 0 `S985 1 . 1 0 `S994 1 . 1 0 `S999 1 . 1 0 `S1004 1 . 1 0 `S1009 1 . 1 0 `S1014 1 . 1 0 `S1017 1 . 1 0 `S1020 1 . 1 0 `S1025 1 . 1 0 `S1034 1 . 1 0 `S1040 1 . 1 0 `S1046 1 . 1 0 `S1051 1 . 1 0 `S1054 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES1057  1 e 1 @4039 ]
+"15259
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @4041 ]
+[s S433 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"15871
+[s S435 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S438 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S441 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S444 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S447 . 1 `uc 1 nBOR 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -534,12 +1031,17 @@ DEPLOYED 5
 `uc 1 SBOREN 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S368 . 1 `uc 1 BOR 1 0 :1:0 
+=======
+[s S456 . 1 `uc 1 BOR 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
 `uc 1 RI 1 0 :1:4 
 ]
+<<<<<<< Updated upstream
 [u S374 . 1 `S345 1 . 1 0 `S347 1 . 1 0 `S350 1 . 1 0 `S353 1 . 1 0 `S356 1 . 1 0 `S359 1 . 1 0 `S368 1 . 1 0 ]
 [v _RCONbits RCONbits `VES374  1 e 1 @4048 ]
 "16046
@@ -547,6 +1049,13 @@ DEPLOYED 5
 "16129
 [v _T0CON T0CON `VEuc  1 e 1 @4053 ]
 [s S509 . 1 `uc 1 T0PS 1 0 :3:0 
+=======
+[u S462 . 1 `S433 1 . 1 0 `S435 1 . 1 0 `S438 1 . 1 0 `S441 1 . 1 0 `S444 1 . 1 0 `S447 1 . 1 0 `S456 1 . 1 0 ]
+[v _RCONbits RCONbits `VES462  1 e 1 @4048 ]
+"16046
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+[s S669 . 1 `uc 1 T0PS 1 0 :3:0 
+>>>>>>> Stashed changes
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -554,6 +1063,7 @@ DEPLOYED 5
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "16149
+<<<<<<< Updated upstream
 [s S516 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
@@ -565,6 +1075,15 @@ DEPLOYED 5
 "16226
 [v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
 [s S607 . 1 `uc 1 INT1IF 1 0 :1:0 
+=======
+[s S676 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S680 . 1 `S669 1 . 1 0 `S676 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES680  1 e 1 @4053 ]
+[s S594 . 1 `uc 1 INT1IF 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 INT2IF 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 INT1IE 1 0 :1:3 
@@ -574,7 +1093,11 @@ DEPLOYED 5
 `uc 1 INT2IP 1 0 :1:7 
 ]
 "16791
+<<<<<<< Updated upstream
 [s S616 . 1 `uc 1 INT1F 1 0 :1:0 
+=======
+[s S603 . 1 `uc 1 INT1F 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 INT2F 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 INT1E 1 0 :1:3 
@@ -583,9 +1106,33 @@ DEPLOYED 5
 `uc 1 INT1P 1 0 :1:6 
 `uc 1 INT2P 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [u S625 . 1 `S607 1 . 1 0 `S616 1 . 1 0 ]
 [v _INTCON3bits INTCON3bits `VES625  1 e 1 @4080 ]
 [s S412 . 1 `uc 1 RBIF 1 0 :1:0 
+=======
+[u S612 . 1 `S594 1 . 1 0 `S603 1 . 1 0 ]
+[v _INTCON3bits INTCON3bits `VES612  1 e 1 @4080 ]
+[s S634 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"16881
+[s S637 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S646 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S649 . 1 `S634 1 . 1 0 `S637 1 . 1 0 `S646 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES649  1 e 1 @4081 ]
+[s S500 . 1 `uc 1 RBIF 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -595,7 +1142,11 @@ DEPLOYED 5
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "16958
+<<<<<<< Updated upstream
 [s S421 . 1 `uc 1 . 1 0 :1:0 
+=======
+[s S509 . 1 `uc 1 . 1 0 :1:0 
+>>>>>>> Stashed changes
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -604,6 +1155,7 @@ DEPLOYED 5
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
+<<<<<<< Updated upstream
 [s S430 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
@@ -664,6 +1216,51 @@ DEPLOYED 5
 [v MRF_parse_message@message message `*.39uc  1 p 2 17 ]
 [v MRF_parse_message@code code `*.39uc  1 p 2 19 ]
 "289
+=======
+[s S518 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S522 . 1 `S500 1 . 1 0 `S509 1 . 1 0 `S518 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES522  1 e 1 @4082 ]
+"99 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"100
+[v _flags flags `uc  1 s 1 flags ]
+"125
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"113 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"123
+[v main@test_string test_string `[16]uc  1 a 16 131 ]
+"116
+[v main@MRF_msg_code MRF_msg_code `[4]uc  1 a 4 147 ]
+"115
+[v main@previous_state previous_state `uc  1 a 1 151 ]
+"210
+} 0
+"175 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MRF89XAM.c
+[v _transmit_string_MRF89XAM transmit_string_MRF89XAM `(v  1 e 1 0 ]
+{
+"177
+[v transmit_string_MRF89XAM@length length `ui  1 a 2 9 ]
+"178
+[v transmit_string_MRF89XAM@counter counter `uc  1 a 1 11 ]
+"175
+[v transmit_string_MRF89XAM@tx_str tx_str `*.35uc  1 p 2 4 ]
+"207
+} 0
+"88
+[v _write_spi_data write_spi_data `(v  1 e 1 0 ]
+{
+[v write_spi_data@data data `uc  1 a 1 wreg ]
+[v write_spi_data@data data `uc  1 a 1 wreg ]
+"93
+[v write_spi_data@data data `uc  1 a 1 0 ]
+"106
+>>>>>>> Stashed changes
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -672,12 +1269,559 @@ DEPLOYED 5
 [v strcmp@r r `*.25Cuc  1 p 2 2 ]
 "7
 } 0
+<<<<<<< Updated upstream
+=======
+"73 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MCP2221A.c
+[v _parse_usb_message parse_usb_message `(v  1 e 1 0 ]
+{
+"78
+[v parse_usb_message@response response `[100]uc  1 a 100 0 ]
+"79
+[v parse_usb_message@temp_string temp_string `[10]uc  1 a 10 100 ]
+"73
+[v parse_usb_message@message message `*.39uc  1 p 2 127 ]
+"160
+} 0
+"55
+[v _transmit_string_usb transmit_string_usb `(v  1 e 1 0 ]
+{
+"57
+[v transmit_string_usb@counter counter `i  1 a 2 6 ]
+"55
+[v transmit_string_usb@message message `*.39uc  1 p 2 4 ]
+"66
+} 0
+"46
+[v _transmit_byte_usb transmit_byte_usb `(v  1 e 1 0 ]
+{
+[v transmit_byte_usb@message message `uc  1 a 1 wreg ]
+[v transmit_byte_usb@message message `uc  1 a 1 wreg ]
+"48
+[v transmit_byte_usb@message message `uc  1 a 1 0 ]
+"50
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+{
+"5
+[v strncmp@r r `*.25Cuc  1 a 2 9 ]
+[v strncmp@l l `*.39Cuc  1 a 2 7 ]
+"3
+[v strncmp@_l _l `*.39Cuc  1 p 2 0 ]
+[v strncmp@_r _r `*.25Cuc  1 p 2 2 ]
+[v strncmp@n n `ui  1 p 2 4 ]
+"9
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strcat.c
+[v _strcat strcat `(*.39uc  1 e 2 0 ]
+{
+[v strcat@dest dest `*.39uc  1 p 2 14 ]
+[v strcat@src src `*.35Cuc  1 p 2 16 ]
+"7
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+{
+"6
+[v strcpy@d d `*.39uc  1 a 2 12 ]
+"5
+[v strcpy@s s `*.35Cuc  1 a 2 10 ]
+"3
+[v strcpy@dest dest `*.39uc  1 p 2 4 ]
+[v strcpy@src src `*.35Cuc  1 p 2 6 ]
+"9
+} 0
+"46 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Globals.c
+[v _itoa itoa `(v  1 e 1 0 ]
+{
+"48
+[v itoa@i i `i  1 a 2 18 ]
+[v itoa@sign sign `i  1 a 2 16 ]
+"46
+[v itoa@n n `i  1 p 2 12 ]
+[v itoa@s s `*.39uc  1 p 2 14 ]
+"62
+} 0
+"30
+[v _reverse_string reverse_string `(v  1 e 1 0 ]
+{
+"32
+[v reverse_string@j j `i  1 a 2 10 ]
+[v reverse_string@i i `i  1 a 2 8 ]
+"33
+[v reverse_string@c c `uc  1 a 1 7 ]
+"30
+[v reverse_string@s s `*.39uc  1 p 2 4 ]
+"41
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
+} 0
+"52 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X/BeeBot_Globals.h
+[s S24 coords 8 `f 1 longitude 4 0 `f 1 latitude 4 4 ]
+"165 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MCP2221A.c
+[v _get_coords_usb get_coords_usb `(S24  1 e 8 0 ]
+{
+"171
+[v get_coords_usb@longitude longitude `[20]uc  1 a 20 81 ]
+"172
+[v get_coords_usb@latitude latitude `[20]uc  1 a 20 61 ]
+"167
+[v get_coords_usb@msg_coords msg_coords `S24  1 a 8 101 ]
+"168
+[v get_coords_usb@counter counter `uc  1 a 1 110 ]
+"169
+[v get_coords_usb@long_counter long_counter `uc  1 a 1 109 ]
+"202
+} 0
+"423 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strtof.c
+[v _atof atof `(d  1 e 4 0 ]
+{
+[v atof@s s `*.39Cuc  1 p 2 46 ]
+"426
+} 0
+"95
+[v _strtof strtof `(f  1 e 4 0 ]
+{
+[u S2445 . 4 `f 1 _l 4 0 `ul 1 _v 4 0 ]
+"113
+[v strtof@_u _u `S2445  1 a 4 41 ]
+"109
+[v strtof@eexp eexp `i  1 a 2 39 ]
+"108
+[v strtof@expon expon `i  1 a 2 37 ]
+"97
+[v strtof@i i `uc  1 a 1 45 ]
+[v strtof@flags flags `uc  1 a 1 36 ]
+"107
+[v strtof@digit digit `uc  1 a 1 35 ]
+"95
+[v strtof@s s `*.39Cuc  1 p 2 25 ]
+[v strtof@res res `*.2*.39uc  1 p 2 27 ]
+"420
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+{
+[v toupper@c c `i  1 p 2 4 ]
+"8
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\islower.c
+[v _islower islower `(i  1 e 2 0 ]
+{
+[v islower@c c `i  1 p 2 0 ]
+"8
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nanf.c
+[v _nanf nanf `(f  1 e 4 0 ]
+{
+[u S2512 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"6
+[v nanf@u u `S2512  1 a 4 4 ]
+"4
+[v nanf@s s `*.25Cuc  1 p 2 0 ]
+"9
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isxdigit.c
+[v _isxdigit isxdigit `(i  1 e 2 0 ]
+{
+[v isxdigit@c c `i  1 p 2 4 ]
+"7
+} 0
+>>>>>>> Stashed changes
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isdigit.c
 [v _isdigit isdigit `(i  1 e 2 0 ]
 {
 [v isdigit@c c `i  1 p 2 0 ]
 "8
 } 0
+<<<<<<< Updated upstream
+=======
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\isspace.c
+[v _isspace isspace `(i  1 e 2 0 ]
+{
+[v isspace@c c `i  1 p 2 0 ]
+"8
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+{
+[v ___flneg@f1 f1 `d  1 p 4 0 ]
+"20
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 0 ]
+[v ___flge@ff2 ff2 `d  1 p 4 4 ]
+"19
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+{
+[v ___fleq@ff1 ff1 `d  1 p 4 0 ]
+[v ___fleq@ff2 ff2 `d  1 p 4 4 ]
+"12
+} 0
+"11 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 19 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 12 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 17 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 24 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 23 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 16 ]
+"11
+[v ___fldiv@b b `d  1 p 4 0 ]
+[v ___fldiv@a a `d  1 p 4 4 ]
+"185
+} 0
+"87 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Globals.c
+[v _ftoa ftoa `(v  1 e 1 0 ]
+{
+"98
+[v ftoa@digit digit `i  1 a 2 119 ]
+"96
+[v ftoa@i i `i  1 a 2 121 ]
+"90
+[v ftoa@decimalPart decimalPart `f  1 a 4 123 ]
+"89
+[v ftoa@wholePart wholePart `i  1 a 2 117 ]
+"87
+[v ftoa@num num `f  1 p 4 107 ]
+[v ftoa@str str `*.39uc  1 p 2 111 ]
+[v ftoa@decimalPlaces decimalPlaces `i  1 p 2 113 ]
+"104
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.35Cuc  1 a 2 2 ]
+"5
+[v strlen@s s `*.35Cuc  1 p 2 0 ]
+"12
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[u S2272 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+"13
+[s S2275 _IO_FILE 11 `S2272 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S2275  1 a 11 96 ]
+"12
+[v sprintf@ap ap `[1]*.39v  1 a 2 94 ]
+"9
+[v sprintf@s s `*.39uc  1 p 2 88 ]
+[v sprintf@fmt fmt `*.25Cuc  1 p 2 90 ]
+"23
+} 0
+"1520 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1523
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 86 ]
+[s S2307 _IO_FILE 0 ]
+"1520
+[v vfprintf@fp fp `*.39S2307  1 p 2 80 ]
+[v vfprintf@fmt fmt `*.25Cuc  1 p 2 82 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 84 ]
+"1543
+} 0
+"1007
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[u S2325 . 8 `o 1 ll 8 0 `uo 1 llu 8 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
+"1016
+[v vfpfcnvrt@convarg convarg `S2325  1 a 8 70 ]
+"1009
+[v vfpfcnvrt@cp cp `*.25uc  1 a 2 78 ]
+[s S2307 _IO_FILE 0 ]
+"1007
+[v vfpfcnvrt@fp fp `*.39S2307  1 p 2 62 ]
+[v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 64 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 66 ]
+"1517
+} 0
+"443
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
+{
+"447
+[v dtoa@n n `o  1 a 8 51 ]
+"446
+[v dtoa@i i `i  1 a 2 59 ]
+[v dtoa@w w `i  1 a 2 49 ]
+[v dtoa@p p `i  1 a 2 47 ]
+"445
+[v dtoa@s s `uc  1 a 1 61 ]
+[s S2307 _IO_FILE 0 ]
+"443
+[v dtoa@fp fp `*.39S2307  1 p 2 27 ]
+[v dtoa@d d `o  1 p 8 29 ]
+"502
+} 0
+"133
+[v _pad pad `(v  1 s 1 pad ]
+{
+"135
+[v pad@w w `i  1 a 2 25 ]
+[v pad@i i `i  1 a 2 23 ]
+[s S2307 _IO_FILE 0 ]
+"133
+[v pad@fp fp `*.39S2307  1 p 2 16 ]
+[v pad@buf buf `*.39uc  1 p 2 18 ]
+[v pad@p p `i  1 p 2 20 ]
+"164
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+"11
+[v fputs@i i `i  1 a 2 14 ]
+"10
+[v fputs@c c `uc  1 a 1 13 ]
+"8
+[v fputs@s s `*.39Cuc  1 p 2 9 ]
+[u S2272 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S2275 _IO_FILE 11 `S2272 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.39S2275  1 p 2 11 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 0 ]
+[u S2272 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S2275 _IO_FILE 11 `S2272 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S2275  1 p 2 2 ]
+"24
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+"9
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 18 ]
+"4
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+{
+"12
+[v ___aomod@sign sign `uc  1 a 1 17 ]
+[v ___aomod@counter counter `uc  1 a 1 16 ]
+"9
+[v ___aomod@dividend dividend `o  1 p 8 0 ]
+[v ___aomod@divisor divisor `o  1 p 8 8 ]
+"36
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+{
+"12
+[v ___aodiv@quotient quotient `o  1 a 8 18 ]
+"13
+[v ___aodiv@sign sign `uc  1 a 1 17 ]
+[v ___aodiv@counter counter `uc  1 a 1 16 ]
+"9
+[v ___aodiv@dividend dividend `o  1 p 8 0 ]
+[v ___aodiv@divisor divisor `o  1 p 8 8 ]
+"43
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 9 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 8 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 0 ]
+"70
+} 0
+"245 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@b b `d  1 p 4 16 ]
+[v ___flsub@a a `d  1 p 4 20 ]
+"250
+} 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 15 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 14 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 13 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 12 ]
+"10
+[v ___fladd@b b `d  1 p 4 0 ]
+[v ___fladd@a a `d  1 p 4 4 ]
+"237
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S2102 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S2107 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S2110 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2102 1 fAsBytes 4 0 `S2107 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S2110  1 a 4 19 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 13 ]
+[s S2178 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S2181 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2178 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2181  1 a 2 23 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 18 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 17 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 12 ]
+"8
+[v ___flmul@b b `d  1 p 4 0 ]
+[v ___flmul@a a `d  1 p 4 4 ]
+"205
+} 0
+"13 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MCP2221A.c
+[v _init_uart2 init_uart2 `(v  1 e 1 0 ]
+{
+"25
+} 0
+"13 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MRF89XAM.c
+[v _init_spi init_spi `(v  1 e 1 0 ]
+{
+"20
+} 0
+"215 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Main.c
+[v _init_pins init_pins `(v  1 e 1 0 ]
+{
+"245
+} 0
+"250
+[v _init_interrupts init_interrupts `(v  1 e 1 0 ]
+{
+"267
+} 0
+"134 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MRF89XAM.c
+[v _init_MRF89XAM init_MRF89XAM `(v  1 e 1 0 ]
+{
+"145
+} 0
+"28
+[v _write_spi_reg write_spi_reg `(v  1 e 1 0 ]
+{
+[v write_spi_reg@reg_address reg_address `uc  1 a 1 wreg ]
+"30
+[v write_spi_reg@address_byte address_byte `uc  1 a 1 2 ]
+"28
+[v write_spi_reg@reg_address reg_address `uc  1 a 1 wreg ]
+[v write_spi_reg@data data `uc  1 p 1 0 ]
+"30
+[v write_spi_reg@reg_address reg_address `uc  1 a 1 1 ]
+"52
+} 0
+"272 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Main.c
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+{
+"275
+[v ISR@temp_receive_string temp_receive_string `[40]uc  1 a 40 27 ]
+"278
+[v ISR@usb_input usb_input `uc  1 a 1 68 ]
+"274
+[v ISR@MRF_input MRF_input `uc  1 a 1 67 ]
+[v ISR@F7073 F7073 `[40]uc  1 s 40 F7073 ]
+"305
+} 0
+"212 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MRF89XAM.c
+[v _receive_MRF89XAM receive_MRF89XAM `(uc  1 e 1 0 ]
+{
+"216
+} 0
+"111
+[v _read_spi_data read_spi_data `(uc  1 e 1 0 ]
+{
+"114
+[v read_spi_data@data data `uc  1 a 1 0 ]
+"129
+} 0
+"30 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MCP2221A.c
+[v _read_byte_usb read_byte_usb `(uc  1 e 1 0 ]
+{
+"32
+[v read_byte_usb@content content `uc  1 a 1 0 ]
+"41
+} 0
+>>>>>>> Stashed changes
 "14 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\BeeBot_Globals.c
 [v _append_string append_string `(v  1 e 1 0 ]
 {
@@ -689,6 +1833,7 @@ DEPLOYED 5
 "25
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strlen.c
+<<<<<<< Updated upstream
 [v _strlen strlen `(ui  1 e 2 0 ]
 {
 "7
@@ -739,6 +1884,14 @@ DEPLOYED 5
 [v i2strlen@a a `*.39Cuc  1 a 2 2 ]
 "5
 [v i2strlen@s s `*.39Cuc  1 p 2 0 ]
+=======
+[v i2_strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v i2strlen@a a `*.35Cuc  1 a 2 2 ]
+"5
+[v i2strlen@s s `*.35Cuc  1 p 2 0 ]
+>>>>>>> Stashed changes
 "12
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\strcpy.c
@@ -753,6 +1906,7 @@ DEPLOYED 5
 [v i2strcpy@src src `*.35Cuc  1 p 2 2 ]
 "9
 } 0
+<<<<<<< Updated upstream
 "171 C:\Users\willi\MPLABXProjects\SeniorProject\BeeBot_Integrated.X\MRF89XAM.c
 [v _receive_MRF89XAM receive_MRF89XAM `(uc  1 e 1 0 ]
 {
@@ -772,3 +1926,5 @@ DEPLOYED 5
 [v read_byte_usb@content content `uc  1 a 1 0 ]
 "41
 } 0
+=======
+>>>>>>> Stashed changes

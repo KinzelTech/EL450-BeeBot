@@ -1,4 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
+<<<<<<< Updated upstream
+=======
+"52 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 52: {
+[s S857 `f 1 `f 1 ]
+[n S857 coords longitude latitude ]
+>>>>>>> Stashed changes
 "4849 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4849:     struct {
 [s S230 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -63,6 +70,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8758
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8758: extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
 [v _TRISDbits `VS412 ~T0 @X0 0 e@3989 ]
+<<<<<<< Updated upstream
 "11288
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11288: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
 [v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
@@ -96,6 +104,56 @@ Version 4.0 HI-TECH Software Intermediate Code
 "46 ./BeeBot_Globals.h
 [; ;./BeeBot_Globals.h: 46: void append_string(char str[], char ch);
 [v _append_string `(v ~T0 @X0 0 ef2`*uc`uc ]
+=======
+"5128
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5128: extern volatile unsigned char RCREG2 __attribute__((address(0xF74)));
+[v _RCREG2 `Vuc ~T0 @X0 0 e@3956 ]
+"5090
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5090: extern volatile unsigned char TXREG2 __attribute__((address(0xF73)));
+[v _TXREG2 `Vuc ~T0 @X0 0 e@3955 ]
+"10019
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10019:     struct {
+[s S463 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S463 . TMR1GIF TMR3GIF TMR5GIF CTMUIF TX2IF RC2IF BCL2IF SSP2IF ]
+"10029
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10029:     struct {
+[s S464 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S464 . . RXBNIF . TXBNIF ]
+"10018
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10018: typedef union {
+[u S462 `S463 1 `S464 1 ]
+[n S462 . . . ]
+"10036
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10036: extern volatile PIR3bits_t PIR3bits __attribute__((address(0xFA4)));
+[v _PIR3bits `VS462 ~T0 @X0 0 e@4004 ]
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"40
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 40: int strncmp (const char *, const char *, size_t);
+[v _strncmp `(i ~T0 @X0 0 ef3`*Cuc`*Cuc`ui ]
+"33
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"36
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 36: char *strcat (char *restrict, const char *restrict);
+[v _strcat `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"78 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 78: void itoa(int n, char s[]);
+[v _itoa `(v ~T0 @X0 0 ef2`i`*uc ]
+"80
+[; ;./BeeBot_Globals.h: 80: void ftoa(float num, char *str, int decimalPlaces);
+[v _ftoa `(v ~T0 @X0 0 ef3`f`*uc`i ]
+"33 ./MCP2221A.h
+[; ;./MCP2221A.h: 33: COORDS get_coords_usb (void);
+[v _get_coords_usb `(S857 ~T0 @X0 0 ef ]
+"14 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\ctype.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\ctype.h: 14: int isdigit(int);
+[v _isdigit `(i ~T0 @X0 0 ef1`i ]
+"26 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h: 26: double atof (const char *);
+[v _atof `(d ~T0 @X0 0 ef1`*Cuc ]
+>>>>>>> Stashed changes
 "54 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -855,6 +913,99 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17406
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+<<<<<<< Updated upstream
+=======
+"61 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 61: COORDS home = {0.00, 0.00};
+[v _home `S857 ~T0 @X0 1 e ]
+[i _home
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"62
+[; ;./BeeBot_Globals.h: 62: COORDS waypoint1 = {0.00, 0.00};
+[v _waypoint1 `S857 ~T0 @X0 1 e ]
+[i _waypoint1
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"63
+[; ;./BeeBot_Globals.h: 63: COORDS waypoint2 = {0.00, 0.00};
+[v _waypoint2 `S857 ~T0 @X0 1 e ]
+[i _waypoint2
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"64
+[; ;./BeeBot_Globals.h: 64: COORDS waypoint3 = {0.00, 0.00};
+[v _waypoint3 `S857 ~T0 @X0 1 e ]
+[i _waypoint3
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"65
+[; ;./BeeBot_Globals.h: 65: COORDS destination = {0.00, 0.00};
+[v _destination `S857 ~T0 @X0 1 e ]
+[i _destination
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"66
+[; ;./BeeBot_Globals.h: 66: COORDS current_coords = {0.00, 0.00};
+[v _current_coords `S857 ~T0 @X0 1 e ]
+[i _current_coords
+:U ..
+:U ..
+-> .0.00 `f
+-> .0.00 `f
+..
+..
+]
+"68
+[; ;./BeeBot_Globals.h: 68: int temperature = 70;
+[v _temperature `i ~T0 @X0 1 e ]
+[i _temperature
+-> 70 `i
+]
+"69
+[; ;./BeeBot_Globals.h: 69: int humidity = 20;
+[v _humidity `i ~T0 @X0 1 e ]
+[i _humidity
+-> 20 `i
+]
+"70
+[; ;./BeeBot_Globals.h: 70: BYTE start = 0;
+[v _start `uc ~T0 @X0 1 e ]
+[i _start
+-> -> 0 `i `uc
+]
+"71
+[; ;./BeeBot_Globals.h: 71: BYTE mode = 1;
+[v _mode `uc ~T0 @X0 1 e ]
+[i _mode
+-> -> 1 `i `uc
+]
+>>>>>>> Stashed changes
 "19 ./MCP2221A.h
 [; ;./MCP2221A.h: 19: BYTE usb_message_received = 0;
 [v _usb_message_received `uc ~T0 @X0 1 e ]
@@ -862,8 +1013,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "20
+<<<<<<< Updated upstream
 [; ;./MCP2221A.h: 20: char usb_message[40] = "";
 [v _usb_message `uc ~T0 @X0 -> 40 `i e ]
+=======
+[; ;./MCP2221A.h: 20: char usb_message[100] = "";
+[v _usb_message `uc ~T0 @X0 -> 100 `i e ]
+>>>>>>> Stashed changes
 [i _usb_message
 :U ..
 -> 0 `c
@@ -918,10 +1074,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _TXSTA2bits 0 5 -> -> 1 `i `uc ]
 "24
 [; ;MCP2221A.c: 24:     return;
+<<<<<<< Updated upstream
 [e $UE 855  ]
 "25
 [; ;MCP2221A.c: 25: }
 [e :UE 855 ]
+=======
+[e $UE 858  ]
+"25
+[; ;MCP2221A.c: 25: }
+[e :UE 858 ]
+>>>>>>> Stashed changes
 }
 "30
 [; ;MCP2221A.c: 30: BYTE read_byte_usb(void)
@@ -932,12 +1095,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _read_byte_usb ]
 [f ]
 "32
+<<<<<<< Updated upstream
 [; ;MCP2221A.c: 32:     BYTE content = RCREG1;
 [v _content `uc ~T0 @X0 1 a ]
 [e = _content _RCREG1 ]
 "35
 [; ;MCP2221A.c: 35:     if(RCSTA2bits.OERR)
 [e $ ! != -> . . _RCSTA2bits 0 1 `i -> 0 `i 857  ]
+=======
+[; ;MCP2221A.c: 32:     BYTE content = RCREG2;
+[v _content `uc ~T0 @X0 1 a ]
+[e = _content _RCREG2 ]
+"35
+[; ;MCP2221A.c: 35:     if(RCSTA2bits.OERR)
+[e $ ! != -> . . _RCSTA2bits 0 1 `i -> 0 `i 860  ]
+>>>>>>> Stashed changes
 "36
 [; ;MCP2221A.c: 36:     {
 {
@@ -950,6 +1122,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39
 [; ;MCP2221A.c: 39:     }
 }
+<<<<<<< Updated upstream
 [e :U 857 ]
 "40
 [; ;MCP2221A.c: 40:     return content;
@@ -958,6 +1131,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [; ;MCP2221A.c: 41: }
 [e :UE 856 ]
+=======
+[e :U 860 ]
+"40
+[; ;MCP2221A.c: 40:     return content;
+[e ) _content ]
+[e $UE 859  ]
+"41
+[; ;MCP2221A.c: 41: }
+[e :UE 859 ]
+>>>>>>> Stashed changes
 }
 "46
 [; ;MCP2221A.c: 46: void transmit_byte_usb(BYTE message)
@@ -973,6 +1156,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MCP2221A.c: 47: {
 [f ]
 "48
+<<<<<<< Updated upstream
 [; ;MCP2221A.c: 48:     TXREG1 = message;
 [e = _TXREG1 _message ]
 "49
@@ -981,6 +1165,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50
 [; ;MCP2221A.c: 50: }
 [e :UE 858 ]
+=======
+[; ;MCP2221A.c: 48:     TXREG2 = message;
+[e = _TXREG2 _message ]
+"49
+[; ;MCP2221A.c: 49:     return;
+[e $UE 861  ]
+"50
+[; ;MCP2221A.c: 50: }
+[e :UE 861 ]
+>>>>>>> Stashed changes
 }
 "55
 [; ;MCP2221A.c: 55: void transmit_string_usb(char message[])
@@ -1005,18 +1199,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MCP2221A.c: 59:     for(counter = 0; counter <= strlen(message); counter++)
 {
 [e = _counter -> 0 `i ]
+<<<<<<< Updated upstream
 [e $U 863  ]
 [e :U 860 ]
+=======
+[e $U 866  ]
+[e :U 863 ]
+>>>>>>> Stashed changes
 "60
 [; ;MCP2221A.c: 60:     {
 {
 "61
+<<<<<<< Updated upstream
 [; ;MCP2221A.c: 61:         while(PIR1bits.TX1IF == 0);
 [e $U 864  ]
 [e :U 865 ]
 [e :U 864 ]
 [e $ == -> . . _PIR1bits 0 4 `i -> 0 `i 865  ]
 [e :U 866 ]
+=======
+[; ;MCP2221A.c: 61:         while(PIR3bits.TX2IF == 0);
+[e $U 867  ]
+[e :U 868 ]
+[e :U 867 ]
+[e $ == -> . . _PIR3bits 0 4 `i -> 0 `i 868  ]
+[e :U 869 ]
+>>>>>>> Stashed changes
 "62
 [; ;MCP2221A.c: 62:         transmit_byte_usb(message[counter]);
 [e ( _transmit_byte_usb (1 -> *U + _message * -> _counter `x -> -> # *U _message `i `x `uc ]
@@ -1024,14 +1232,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MCP2221A.c: 63:     }
 }
 [e ++ _counter -> 1 `i ]
+<<<<<<< Updated upstream
 [e :U 863 ]
 [e $ <= -> _counter `ui ( _strlen (1 -> _message `*Cuc 860  ]
 [e :U 861 ]
+=======
+[e :U 866 ]
+[e $ <= -> _counter `ui ( _strlen (1 -> _message `*Cuc 863  ]
+[e :U 864 ]
+>>>>>>> Stashed changes
 }
 "64
 [; ;MCP2221A.c: 64:     transmit_byte_usb('\n');
 [e ( _transmit_byte_usb (1 -> -> 10 `ui `uc ]
 "65
+<<<<<<< Updated upstream
 [; ;MCP2221A.c: 65: }
 [e :UE 859 ]
 }
@@ -1157,10 +1372,162 @@ Version 4.0 HI-TECH Software Intermediate Code
 "117
 [; ;MCP2221A.c: 117:     else
 [e :U 874 ]
+=======
+[; ;MCP2221A.c: 65:     return;
+[e $UE 862  ]
+"66
+[; ;MCP2221A.c: 66: }
+[e :UE 862 ]
+}
+"73
+[; ;MCP2221A.c: 73: void parse_usb_message(char message[])
+[v _parse_usb_message `(v ~T0 @X0 1 ef1`*uc ]
+"74
+[; ;MCP2221A.c: 74: {
+{
+[e :U _parse_usb_message ]
+"73
+[; ;MCP2221A.c: 73: void parse_usb_message(char message[])
+[v _message `*uc ~T0 @X0 1 r1 ]
+"74
+[; ;MCP2221A.c: 74: {
+[f ]
+"75
+[; ;MCP2221A.c: 75:     BYTE counter;
+[v _counter `uc ~T0 @X0 1 a ]
+"76
+[; ;MCP2221A.c: 76:     BYTE param1_full;
+[v _param1_full `uc ~T0 @X0 1 a ]
+"77
+[; ;MCP2221A.c: 77:     BYTE length;
+[v _length `uc ~T0 @X0 1 a ]
+[v F7044 `uc ~T0 @X0 -> 100 `i s ]
+[i F7044
+:U ..
+"78
+[; ;MCP2221A.c: 78:     char response[100] = "";
+-> 0 `c
+..
+]
+[v _response `uc ~T0 @X0 -> 100 `i a ]
+[e = _response F7044 ]
+[v F7046 `uc ~T0 @X0 -> 10 `i s ]
+[i F7046
+:U ..
+"79
+[; ;MCP2221A.c: 79:     char temp_string[10] = "";
+-> 0 `c
+..
+]
+[v _temp_string `uc ~T0 @X0 -> 10 `i a ]
+[e = _temp_string F7046 ]
+"81
+[; ;MCP2221A.c: 81:     usb_message_received = 0;
+[e = _usb_message_received -> -> 0 `i `uc ]
+"84
+[; ;MCP2221A.c: 84:     if(!strncmp(usb_message, "REPORT", 6))
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 2C -> -> 6 `i `ui -> 0 `i 871  ]
+"85
+[; ;MCP2221A.c: 85:     {
+{
+"87
+[; ;MCP2221A.c: 87:         strcpy(response, "Report:");
+[e ( _strcpy (2 , &U _response :s 3C ]
+"88
+[; ;MCP2221A.c: 88:         strcat(response, "Temperature = ");
+[e ( _strcat (2 , &U _response :s 4C ]
+"89
+[; ;MCP2221A.c: 89:         itoa (temperature, temp_string);
+[e ( _itoa (2 , _temperature &U _temp_string ]
+"90
+[; ;MCP2221A.c: 90:         strcat(response, temp_string);
+[e ( _strcat (2 , &U _response -> &U _temp_string `*Cuc ]
+"91
+[; ;MCP2221A.c: 91:         strcat(response, ", Humidity = ");
+[e ( _strcat (2 , &U _response :s 5C ]
+"92
+[; ;MCP2221A.c: 92:         itoa (humidity, temp_string);
+[e ( _itoa (2 , _humidity &U _temp_string ]
+"93
+[; ;MCP2221A.c: 93:         strcat(response, temp_string);
+[e ( _strcat (2 , &U _response -> &U _temp_string `*Cuc ]
+"94
+[; ;MCP2221A.c: 94:         strcat(response, ", Current Location = (");
+[e ( _strcat (2 , &U _response :s 6C ]
+"95
+[; ;MCP2221A.c: 95:         ftoa (current_coords.longitude, temp_string, 5);
+[e ( _ftoa (3 , , . _current_coords 0 &U _temp_string -> 5 `i ]
+"96
+[; ;MCP2221A.c: 96:         strcat(response, temp_string);
+[e ( _strcat (2 , &U _response -> &U _temp_string `*Cuc ]
+"97
+[; ;MCP2221A.c: 97:         strcat(response, ", ");
+[e ( _strcat (2 , &U _response :s 7C ]
+"98
+[; ;MCP2221A.c: 98:         ftoa (current_coords.latitude, temp_string, 5);
+[e ( _ftoa (3 , , . _current_coords 1 &U _temp_string -> 5 `i ]
+"99
+[; ;MCP2221A.c: 99:         strcat(response, temp_string);
+[e ( _strcat (2 , &U _response -> &U _temp_string `*Cuc ]
+"100
+[; ;MCP2221A.c: 100:         strcat(response, ")");
+[e ( _strcat (2 , &U _response :s 8C ]
+"101
+[; ;MCP2221A.c: 101:         transmit_string_usb(response);
+[e ( _transmit_string_usb (1 &U _response ]
+"102
+[; ;MCP2221A.c: 102:     }
+}
+[e $U 872  ]
+"103
+[; ;MCP2221A.c: 103:     else if(!strncmp(usb_message, "REPORT_ALL", 10))
+[e :U 871 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 10C -> -> 10 `i `ui -> 0 `i 873  ]
+"104
+[; ;MCP2221A.c: 104:     {
+{
+"106
+[; ;MCP2221A.c: 106:     }
+}
+[e $U 874  ]
+"107
+[; ;MCP2221A.c: 107:     else if(!strncmp(usb_message, "SET_HOME", 8))
+[e :U 873 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 12C -> -> 8 `i `ui -> 0 `i 875  ]
+"108
+[; ;MCP2221A.c: 108:     {
+{
+"110
+[; ;MCP2221A.c: 110:         home = current_coords;
+[e = _home _current_coords ]
+"111
+[; ;MCP2221A.c: 111:     }
+}
+[e $U 876  ]
+"112
+[; ;MCP2221A.c: 112:     else if(!strncmp(usb_message, "RECALL", 6))
+[e :U 875 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 14C -> -> 6 `i `ui -> 0 `i 877  ]
+"113
+[; ;MCP2221A.c: 113:     {
+{
+"115
+[; ;MCP2221A.c: 115:         destination = home;
+[e = _destination _home ]
+"116
+[; ;MCP2221A.c: 116:     }
+}
+[e $U 878  ]
+"117
+[; ;MCP2221A.c: 117:     else if(!strncmp(usb_message, "WAYPOINT1", 9))
+[e :U 877 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 16C -> -> 9 `i `ui -> 0 `i 879  ]
+>>>>>>> Stashed changes
 "118
 [; ;MCP2221A.c: 118:     {
 {
 "120
+<<<<<<< Updated upstream
 [; ;MCP2221A.c: 120:     }
 }
 [e :U 883 ]
@@ -1183,3 +1550,284 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 2C 82 0 ]
 [a 3C 82 65 0 ]
 [a 4C 82 65 0 ]
+=======
+[; ;MCP2221A.c: 120:         waypoint1 = get_coords_usb();
+[e = _waypoint1 ( _get_coords_usb ..  ]
+"121
+[; ;MCP2221A.c: 121:     }
+}
+[e $U 880  ]
+"122
+[; ;MCP2221A.c: 122:     else if(!strncmp(usb_message, "WAYPOINT2", 9))
+[e :U 879 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 18C -> -> 9 `i `ui -> 0 `i 881  ]
+"123
+[; ;MCP2221A.c: 123:     {
+{
+"125
+[; ;MCP2221A.c: 125:         waypoint2 = get_coords_usb();
+[e = _waypoint2 ( _get_coords_usb ..  ]
+"126
+[; ;MCP2221A.c: 126:     }
+}
+[e $U 882  ]
+"127
+[; ;MCP2221A.c: 127:     else if(!strncmp(usb_message, "WAYPOINT3", 9))
+[e :U 881 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 20C -> -> 9 `i `ui -> 0 `i 883  ]
+"128
+[; ;MCP2221A.c: 128:     {
+{
+"130
+[; ;MCP2221A.c: 130:         waypoint3 = get_coords_usb();
+[e = _waypoint3 ( _get_coords_usb ..  ]
+"131
+[; ;MCP2221A.c: 131:     }
+}
+[e $U 884  ]
+"132
+[; ;MCP2221A.c: 132:     else if(!strncmp(usb_message, "DESTINATION", 11))
+[e :U 883 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 22C -> -> 11 `i `ui -> 0 `i 885  ]
+"133
+[; ;MCP2221A.c: 133:     {
+{
+"135
+[; ;MCP2221A.c: 135:         destination = get_coords_usb();
+[e = _destination ( _get_coords_usb ..  ]
+"136
+[; ;MCP2221A.c: 136:     }
+}
+[e $U 886  ]
+"137
+[; ;MCP2221A.c: 137:     else if(!strncmp(usb_message, "START", 5))
+[e :U 885 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 24C -> -> 5 `i `ui -> 0 `i 887  ]
+"138
+[; ;MCP2221A.c: 138:     {
+{
+"140
+[; ;MCP2221A.c: 140:     }
+}
+[e $U 888  ]
+"141
+[; ;MCP2221A.c: 141:     else if(!strncmp(usb_message, "STOP", 4))
+[e :U 887 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 26C -> -> 4 `i `ui -> 0 `i 889  ]
+"142
+[; ;MCP2221A.c: 142:     {
+{
+"144
+[; ;MCP2221A.c: 144:     }
+}
+[e $U 890  ]
+"145
+[; ;MCP2221A.c: 145:     else if(!strncmp(usb_message, "AUTO", 4))
+[e :U 889 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 28C -> -> 4 `i `ui -> 0 `i 891  ]
+"146
+[; ;MCP2221A.c: 146:     {
+{
+"148
+[; ;MCP2221A.c: 148:     }
+}
+[e $U 892  ]
+"149
+[; ;MCP2221A.c: 149:     else if(!strncmp(usb_message, "MANUAL", 6))
+[e :U 891 ]
+[e $ ! ! != ( _strncmp (3 , , -> &U _usb_message `*Cuc :s 30C -> -> 6 `i `ui -> 0 `i 893  ]
+"150
+[; ;MCP2221A.c: 150:     {
+{
+"152
+[; ;MCP2221A.c: 152:     }
+}
+[e $U 894  ]
+"153
+[; ;MCP2221A.c: 153:     else
+[e :U 893 ]
+"154
+[; ;MCP2221A.c: 154:     {
+{
+"156
+[; ;MCP2221A.c: 156:     }
+}
+[e :U 894 ]
+[e :U 892 ]
+[e :U 890 ]
+[e :U 888 ]
+[e :U 886 ]
+[e :U 884 ]
+[e :U 882 ]
+[e :U 880 ]
+[e :U 878 ]
+[e :U 876 ]
+[e :U 874 ]
+[e :U 872 ]
+"159
+[; ;MCP2221A.c: 159:     return;
+[e $UE 870  ]
+"160
+[; ;MCP2221A.c: 160: }
+[e :UE 870 ]
+}
+"165
+[; ;MCP2221A.c: 165: COORDS get_coords_usb(void)
+[v _get_coords_usb `(S857 ~T0 @X0 1 ef ]
+"166
+[; ;MCP2221A.c: 166: {
+{
+[e :U _get_coords_usb ]
+[f ]
+"167
+[; ;MCP2221A.c: 167:     COORDS msg_coords;
+[v _msg_coords `S857 ~T0 @X0 1 a ]
+"168
+[; ;MCP2221A.c: 168:     BYTE counter = 0;
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+"169
+[; ;MCP2221A.c: 169:     BYTE long_counter = 0;
+[v _long_counter `uc ~T0 @X0 1 a ]
+[e = _long_counter -> -> 0 `i `uc ]
+"170
+[; ;MCP2221A.c: 170:     BYTE lat_counter = 0;
+[v _lat_counter `uc ~T0 @X0 1 a ]
+[e = _lat_counter -> -> 0 `i `uc ]
+[v F7053 `uc ~T0 @X0 -> 20 `i s ]
+[i F7053
+:U ..
+"171
+[; ;MCP2221A.c: 171:     char longitude[20] = "";
+-> 0 `c
+..
+]
+[v _longitude `uc ~T0 @X0 -> 20 `i a ]
+[e = _longitude F7053 ]
+[v F7055 `uc ~T0 @X0 -> 20 `i s ]
+[i F7055
+:U ..
+"172
+[; ;MCP2221A.c: 172:     char latitude[20] = "";
+-> 0 `c
+..
+]
+[v _latitude `uc ~T0 @X0 -> 20 `i a ]
+[e = _latitude F7055 ]
+"175
+[; ;MCP2221A.c: 175:     while(!(0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10))
+[e $U 896  ]
+[e :U 897 ]
+"176
+[; ;MCP2221A.c: 176:         counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+[e :U 896 ]
+"175
+[; ;MCP2221A.c: 175:     while(!(0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10))
+[e $ ! != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `i -> 0 `i `i -> < - -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i 897  ]
+[e :U 898 ]
+"179
+[; ;MCP2221A.c: 179:     while((0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10) || usb_message[counter] == '.')
+[e $U 899  ]
+[e :U 900 ]
+"180
+[; ;MCP2221A.c: 180:     {
+{
+"181
+[; ;MCP2221A.c: 181:         longitude[long_counter] = usb_message[counter];
+[e = *U + &U _longitude * -> _long_counter `ux -> -> # *U &U _longitude `ui `ux *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux ]
+"182
+[; ;MCP2221A.c: 182:         long_counter++;
+[e ++ _long_counter -> -> 1 `i `uc ]
+"183
+[; ;MCP2221A.c: 183:         counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"184
+[; ;MCP2221A.c: 184:     }
+}
+[e :U 899 ]
+"179
+[; ;MCP2221A.c: 179:     while((0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10) || usb_message[counter] == '.')
+[e $ || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `i -> 0 `i `i -> < - -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `ui -> 46 `ui 900  ]
+[e :U 901 ]
+"187
+[; ;MCP2221A.c: 187:     while(!(0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10))
+[e $U 902  ]
+[e :U 903 ]
+"188
+[; ;MCP2221A.c: 188:         counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+[e :U 902 ]
+"187
+[; ;MCP2221A.c: 187:     while(!(0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10))
+[e $ ! != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `i -> 0 `i `i -> < - -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i 903  ]
+[e :U 904 ]
+"191
+[; ;MCP2221A.c: 191:     while((0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10) || usb_message[counter] == '.')
+[e $U 905  ]
+[e :U 906 ]
+"192
+[; ;MCP2221A.c: 192:     {
+{
+"193
+[; ;MCP2221A.c: 193:         longitude[long_counter] = usb_message[counter];
+[e = *U + &U _longitude * -> _long_counter `ux -> -> # *U &U _longitude `ui `ux *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux ]
+"194
+[; ;MCP2221A.c: 194:         long_counter++;
+[e ++ _long_counter -> -> 1 `i `uc ]
+"195
+[; ;MCP2221A.c: 195:         counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"196
+[; ;MCP2221A.c: 196:     }
+}
+[e :U 905 ]
+"191
+[; ;MCP2221A.c: 191:     while((0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10) || usb_message[counter] == '.')
+[e $ || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `i -> 0 `i `i -> < - -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + &U _usb_message * -> _counter `ux -> -> # *U &U _usb_message `ui `ux `ui -> 46 `ui 906  ]
+[e :U 907 ]
+"199
+[; ;MCP2221A.c: 199:     msg_coords.longitude = (float) atof(longitude);
+[e = . _msg_coords 0 -> ( _atof (1 -> &U _longitude `*Cuc `f ]
+"200
+[; ;MCP2221A.c: 200:     msg_coords.latitude = (float) atof(latitude);
+[e = . _msg_coords 1 -> ( _atof (1 -> &U _latitude `*Cuc `f ]
+"201
+[; ;MCP2221A.c: 201:     return msg_coords;
+[e ) _msg_coords ]
+[e $UE 895  ]
+"202
+[; ;MCP2221A.c: 202: }
+[e :UE 895 ]
+}
+[a 1C 82 69 80 79 82 84 0 ]
+[a 2C 82 69 80 79 82 84 0 ]
+[a 23C 83 84 65 82 84 0 ]
+[a 24C 83 84 65 82 84 0 ]
+[a 25C 83 84 79 80 0 ]
+[a 26C 83 84 79 80 0 ]
+[a 27C 65 85 84 79 0 ]
+[a 28C 65 85 84 79 0 ]
+[a 21C 68 69 83 84 73 78 65 84 73 79 78 0 ]
+[a 22C 68 69 83 84 73 78 65 84 73 79 78 0 ]
+[a 9C 82 69 80 79 82 84 95 65 76 76 0 ]
+[a 10C 82 69 80 79 82 84 95 65 76 76 0 ]
+[a 13C 82 69 67 65 76 76 0 ]
+[a 14C 82 69 67 65 76 76 0 ]
+[a 29C 77 65 78 85 65 76 0 ]
+[a 30C 77 65 78 85 65 76 0 ]
+[a 11C 83 69 84 95 72 79 77 69 0 ]
+[a 12C 83 69 84 95 72 79 77 69 0 ]
+[a 3C 82 101 112 111 114 116 58 0 ]
+[a 19C 87 65 89 80 79 73 78 84 51 0 ]
+[a 20C 87 65 89 80 79 73 78 84 51 0 ]
+[a 17C 87 65 89 80 79 73 78 84 50 0 ]
+[a 18C 87 65 89 80 79 73 78 84 50 0 ]
+[a 15C 87 65 89 80 79 73 78 84 49 0 ]
+[a 16C 87 65 89 80 79 73 78 84 49 0 ]
+[a 8C 41 0 ]
+[a 6C 44 32 67 117 114 114 101 110 116 32 76 111 99 97 116 105 111 110 32 61 32 40 0 ]
+[a 5C 44 32 72 117 109 105 100 105 116 121 32 61 32 0 ]
+[a 4C 84 101 109 112 101 114 97 116 117 114 101 32 61 32 0 ]
+[a 7C 44 32 0 ]
+>>>>>>> Stashed changes

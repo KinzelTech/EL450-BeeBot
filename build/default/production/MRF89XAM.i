@@ -10114,19 +10114,203 @@ int isxdigit_l(int, locale_t);
 int tolower_l(int, locale_t);
 int toupper_l(int, locale_t);
 # 19 "./BeeBot_Globals.h" 2
+<<<<<<< Updated upstream
 # 41 "./BeeBot_Globals.h"
+=======
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 20 "./BeeBot_Globals.h" 2
+# 46 "./BeeBot_Globals.h"
+>>>>>>> Stashed changes
 typedef unsigned char BYTE;
 
 
 
 
+struct coords
+{
+    float longitude;
+    float latitude;
+};
+typedef struct coords COORDS;
+
+
+
+
+COORDS home = {0.00, 0.00};
+COORDS waypoint1 = {0.00, 0.00};
+COORDS waypoint2 = {0.00, 0.00};
+COORDS waypoint3 = {0.00, 0.00};
+COORDS destination = {0.00, 0.00};
+COORDS current_coords = {0.00, 0.00};
+
+int temperature = 70;
+int humidity = 20;
+BYTE start = 0;
+BYTE mode = 1;
+
+
+
+
 void append_string(char str[], char ch);
+void bubbleSort(BYTE arr[], BYTE n);
+void itoa(int n, char s[]);
+void reverse_string(char s[]);
+void ftoa(float num, char *str, int decimalPlaces);
+void ltoa(long n, char s[]);
 # 11 "./MRF89XAM.h" 2
 
 
 
 
 
+<<<<<<< Updated upstream
+=======
+void init_spi (void);
+>>>>>>> Stashed changes
 void init_MRF89XAM (void);
 void write_spi_reg (BYTE reg_address, BYTE data);
 BYTE read_spi_reg (BYTE reg_address);
@@ -10136,6 +10320,10 @@ void transmit_MRF89XAM (BYTE data);
 void transmit_string_MRF89XAM(char tx_str[]);
 BYTE receive_MRF89XAM (void);
 void MRF_parse_message(char message[], char code[]);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 
 
@@ -10277,7 +10465,12 @@ void init_MRF89XAM(void)
 
 void transmit_MRF89XAM(BYTE data)
 {
+<<<<<<< Updated upstream
     data <<= data;
+=======
+    BYTE filler = (BYTE)('\n' << 1);
+
+>>>>>>> Stashed changes
 
     MRF_transmitting = 1;
     write_spi_reg(0x00, 0b00100010);
@@ -10298,11 +10491,38 @@ void transmit_string_MRF89XAM(char tx_str[])
     unsigned int length = strlen(tx_str);
     BYTE counter;
 
+<<<<<<< Updated upstream
     for(counter = 0; counter < length; counter++)
     {
         transmit_MRF89XAM((BYTE) tx_str[counter]);
     }
     transmit_MRF89XAM('\n');
+=======
+
+
+        write_spi_reg(0x00, 0b00100010);
+        MRF_transmitting = 1;
+        INTCON3bits.INT1IE = 0;
+        if(length <= 8)
+        {
+            for(counter = 0; counter < 8; counter++)
+            {
+                if(counter < length)
+                    write_spi_data((BYTE)(tx_str[counter] << 1));
+                else
+                    write_spi_data((BYTE)('\n' << 1));
+            }
+        }
+        write_spi_reg(0x00, 0b10000010);
+
+        while(PORTBbits.RB1 == 0);
+        while(PORTBbits.RB2 == 0);
+
+        write_spi_reg(0x00, 0b01100010);
+        MRF_transmitting = 0;
+        INTCON3bits.INT1IF = 0;
+        INTCON3bits.INT1IE = 1;
+>>>>>>> Stashed changes
     return;
 }
 

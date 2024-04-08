@@ -10174,17 +10174,204 @@ int isxdigit_l(int, locale_t);
 int tolower_l(int, locale_t);
 int toupper_l(int, locale_t);
 # 19 "./BeeBot_Globals.h" 2
+<<<<<<< Updated upstream
 # 41 "./BeeBot_Globals.h"
+=======
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 20 "./BeeBot_Globals.h" 2
+# 46 "./BeeBot_Globals.h"
+>>>>>>> Stashed changes
 typedef unsigned char BYTE;
 
 
 
 
+struct coords
+{
+    float longitude;
+    float latitude;
+};
+typedef struct coords COORDS;
+
+
+
+
+COORDS home = {0.00, 0.00};
+COORDS waypoint1 = {0.00, 0.00};
+COORDS waypoint2 = {0.00, 0.00};
+COORDS waypoint3 = {0.00, 0.00};
+COORDS destination = {0.00, 0.00};
+COORDS current_coords = {0.00, 0.00};
+
+int temperature = 70;
+int humidity = 20;
+BYTE start = 0;
+BYTE mode = 1;
+
+
+
+
 void append_string(char str[], char ch);
+<<<<<<< Updated upstream
+=======
+void bubbleSort(BYTE arr[], BYTE n);
+void itoa(int n, char s[]);
+void reverse_string(char s[]);
+void ftoa(float num, char *str, int decimalPlaces);
+void ltoa(long n, char s[]);
+>>>>>>> Stashed changes
 # 69 "BeeBot_Main.c" 2
 
 # 1 "./MRF89XAM.h" 1
 # 16 "./MRF89XAM.h"
+<<<<<<< Updated upstream
+=======
+void init_spi (void);
+>>>>>>> Stashed changes
 void init_MRF89XAM (void);
 void write_spi_reg (BYTE reg_address, BYTE data);
 BYTE read_spi_reg (BYTE reg_address);
@@ -10194,6 +10381,10 @@ void transmit_MRF89XAM (BYTE data);
 void transmit_string_MRF89XAM(char tx_str[]);
 BYTE receive_MRF89XAM (void);
 void MRF_parse_message(char message[], char code[]);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 
 
@@ -10208,7 +10399,11 @@ BYTE MRF_message_received = 0;
 # 1 "./MCP2221A.h" 1
 # 19 "./MCP2221A.h"
 BYTE usb_message_received = 0;
+<<<<<<< Updated upstream
 char usb_message[40] = "";
+=======
+char usb_message[100] = "";
+>>>>>>> Stashed changes
 BYTE usb_received = 0;
 char USB_param1[10];
 char USB_param2[10];
@@ -10221,12 +10416,26 @@ BYTE read_byte_usb (void);
 void transmit_byte_usb (BYTE message);
 void transmit_string_usb(char message[]);
 void parse_usb_message (char message[]);
+<<<<<<< Updated upstream
 # 71 "BeeBot_Main.c" 2
+=======
+COORDS get_coords_usb (void);
+# 71 "BeeBot_Main.c" 2
+# 95 "BeeBot_Main.c"
+unsigned int timer_tick = 0;
+BYTE state = 2;
+char current_report[40] = "";
+char all_reports[24][40];
+BYTE last_message_id = 0;
+BYTE left_joystick = 0;
+BYTE right_joystick = 0;
+>>>>>>> Stashed changes
 
 
 
 
 
+<<<<<<< Updated upstream
 
 enum states
 {
@@ -10247,13 +10456,18 @@ char all_reports[24][40];
 
 
 
+=======
+>>>>>>> Stashed changes
 void init_pins (void);
 void init_interrupts(void);
 
 
+<<<<<<< Updated upstream
 
 
 
+=======
+>>>>>>> Stashed changes
 
 
 void main(void)
@@ -10265,12 +10479,19 @@ void main(void)
     _delay((unsigned long)((200)*(8000000/4000.0)));
 
 
+<<<<<<< Updated upstream
+=======
+
+    char test_string[16] = "";
+
+>>>>>>> Stashed changes
     while(1)
     {
 
 
         switch(state)
         {
+<<<<<<< Updated upstream
             case INIT:
 
                 init_pins ();
@@ -10305,12 +10526,76 @@ void main(void)
 
                 break;
             case DEBUG:
+=======
+            case 2:
+
+                init_pins ();
+                init_uart2 ();
+                init_spi ();
+                init_MRF89XAM ();
+                init_interrupts();
+                previous_state = 2;
+                state = 3;
+                break;
+            case 3:
+
+                while(1)
+                {
+                    if(MRF_message_received)
+                    {
+                        _delay((unsigned long)((10)*(8000000/4000.0)));
+                        MRF_message_received = 0;
+                        if(!strcmp(MRF_message, "hello\n\n\n"))
+                        {
+                            transmit_string_MRF89XAM("HI");
+                        }
+                        strcpy(MRF_message, "");
+                    }
+                    if(usb_message_received)
+                    {
+                        usb_message_received = 0;
+                        transmit_string_usb(usb_message);
+                        strcpy(usb_message, "");
+                    }
+                }
+
+
+                if(MRF_message_received)
+                {
+                    LATAbits.LA0 = 1;
+                    MRF_message_received = 0;
+
+
+                    if(!strcmp(MRF_msg_code, "NAV"))
+                    {
+                        state = 1;
+                        previous_state = 3;
+                    }
+                    else if(!strcmp(MRF_msg_code, "M"))
+                    {
+                        state = 0;
+                        previous_state = 3;
+                    }
+                }
+                break;
+            case 1:
+
+                break;
+            case 0:
+
+                break;
+            case 4:
+>>>>>>> Stashed changes
 
 
                 if((!PORTDbits.RD5))
                 {
                     state = previous_state;
+<<<<<<< Updated upstream
                     previous_state = DEBUG;
+=======
+                    previous_state = 4;
+>>>>>>> Stashed changes
                 }
 
                 if(strcmp(usb_message, ""))
@@ -10319,11 +10604,16 @@ void main(void)
                     strcpy(usb_message, "");
                 }
                 break;
+<<<<<<< Updated upstream
             case DEPLOYED:
+=======
+            case 5:
+>>>>>>> Stashed changes
 
 
                 break;
         }
+<<<<<<< Updated upstream
 
 
         if(PORTDbits.RD5 && state != DEBUG)
@@ -10332,6 +10622,8 @@ void main(void)
             state = DEBUG;
             strcpy(usb_message, "");
         }
+=======
+>>>>>>> Stashed changes
     }
     return;
 }
@@ -10343,6 +10635,11 @@ void main(void)
 
 void init_pins(void)
 {
+    TRISDbits.RD6 = 1;
+    TRISDbits.RD6 = 1;
+    TRISDbits.RD7 = 1;
+
+
     TRISDbits.RD6 = 1;
     TRISDbits.RD6 = 1;
     TRISDbits.RD7 = 1;
@@ -10361,6 +10658,14 @@ void init_pins(void)
     LATCbits.LC0 = 1;
     LATCbits.LC1 = 1;
 
+<<<<<<< Updated upstream
+=======
+
+    TRISAbits.RA0 = 0;
+    LATAbits.LA0 = 0;
+
+
+>>>>>>> Stashed changes
     ANSELA = 0;
     ANSELB = 0;
     ANSELC = 0;
@@ -10378,18 +10683,16 @@ void init_interrupts(void)
     INTCONbits.GIE = 0;
 
 
+<<<<<<< Updated upstream
+=======
+    PIE3bits.RC2IE = 1;
+>>>>>>> Stashed changes
 
 
 
     PIE3bits.RC2IE = 1;
 
 
-
-
-    T0CON = 0x08;
-    TMR0H = 0xF8;
-    TMR0L = 0x2F;
-    INTCONbits.TMR0IE = 1;
 
 
     INTCONbits.PEIE = 1;
@@ -10407,6 +10710,7 @@ void __attribute__((picinterrupt(("")))) ISR(void)
     char temp_receive_string[40] = "";
 
 
+<<<<<<< Updated upstream
 
     char usb_input = 0;
     if(PIR1bits.RC1IF && PIE1bits.RC1IE)
@@ -10433,9 +10737,198 @@ void __attribute__((picinterrupt(("")))) ISR(void)
         {
             MRF_message_received = 1;
             strcpy(MRF_message, temp_receive_string);
+=======
+    char usb_input = 0;
+    if(PIR3bits.RC2IF && PIE3bits.RC2IE)
+    {
+        usb_input = read_byte_usb();
+        if(usb_input == '\n')
+            usb_message_received = 1;
+        else
+            append_string(usb_message, usb_input);
+    }
+
+
+    if(INTCON3bits.INT1IE && INTCON3bits.INT1F)
+    {
+        INTCON3bits.INT1F = 0;
+        if(MRF_message_received == 0)
+        {
+            MRF_input = (char) receive_MRF89XAM();
+            append_string(MRF_message, MRF_input);
+            if(strlen(MRF_message) == 8)
+            {
+                MRF_message_received = 1;
+            }
+            else
+                MRF_message_received = 0;
+        }
+    }
+    return;
+}
+
+
+
+
+char parse_MRF_message()
+{
+    char message_id = MRF_message[0];
+    char temp_string[9] = "";
+    char response[9] = "";
+    BYTE counter;
+
+
+    if (strcmp(MRF_message, "\n\n\n\n\n\n\n\n"))
+    {
+        if (last_message_id == 0)
+        {
+
+            switch (last_message_id)
+            {
+                case 1:
+                    waypoint1.longitude = atol(MRF_message);
+                    last_message_id = 11;
+                    break;
+                case 11:
+                    waypoint1.latitude = atol(MRF_message);
+                    last_message_id = 0;
+                    transmit_string_MRF89XAM("W1 Set");
+                    break;
+                case 2:
+                    waypoint2.longitude = atol(MRF_message);
+                    last_message_id = 22;
+                    break;
+                case 22:
+                    waypoint2.latitude = atol(MRF_message);
+                    last_message_id = 0;
+                    transmit_string_MRF89XAM("W2 Set");
+                    break;
+                case 3:
+                    waypoint3.longitude = atol(MRF_message);
+                    last_message_id = 33;
+                    break;
+                case 33:
+                    waypoint3.latitude = atol(MRF_message);
+                    last_message_id = 0;
+                    transmit_string_MRF89XAM("W3 Set");
+                    break;
+                case 4:
+                    waypoint1.longitude = atol(MRF_message);
+                    last_message_id = 11;
+                    break;
+                case 44:
+                    waypoint1.latitude = atol(MRF_message);
+                    last_message_id = 0;
+                    transmit_string_MRF89XAM("Dest Set");
+                    break;
+            }
+        }
+        else
+        {
+
+            switch (message_id)
+            {
+
+                case 'R':
+
+                    strcpy (response, "RT");
+                    append_string(response, (char) temperature);
+                    strcat (response, "H");
+                    append_string(response, (char) humidity);
+                    transmit_string_MRF89XAM(response);
+
+
+                    ltoa( (long) (current_coords.longitude * 100000), temp_string);
+                    transmit_string_MRF89XAM(temp_string);
+                    ltoa( (long) (current_coords.latitude * 100000), temp_string);
+                    transmit_string_MRF89XAM(temp_string);
+                    break;
+
+
+                case 'H':
+                    home = current_coords;
+                    break;
+
+
+                case 'C':
+                    destination = home;
+                    break;
+
+
+                case '1':
+                    last_message_id = 1;
+                    break;
+
+
+                case '2':
+                    last_message_id = 2;
+                    break;
+
+
+                case '3':
+                    last_message_id = 3;
+                    break;
+
+
+                case 'D':
+                    last_message_id = 4;
+                    break;
+
+
+                case 'S':
+                    start = 1;
+                    break;
+
+
+                case 'X':
+                    start = 0;
+                    break;
+
+
+                case 'M':
+                    mode = 0;
+                    break;
+
+
+                case 'A':
+                    mode = 1;
+                    break;
+
+
+                case 'J':
+                    for(counter = 1; counter < 8; counter++)
+                    {
+
+                        if(counter <= 3 || counter == 5)
+                            append_string(temp_string, MRF_message[counter]);
+                        else if(counter == 4)
+                        {
+                            left_joystick = atoi(temp_string);
+                            strcpy(temp_string, "");
+                            append_string(temp_string, MRF_message[counter]);
+                        }
+                        else if(counter == 6)
+                        {
+                            append_string(temp_string, MRF_message[counter]);
+                            right_joystick = atoi(temp_string);
+                        }
+                    }
+                    break;
+
+
+                default:
+                    message_id = 0x00;
+                    transmit_string_MRF89XAM("UNKNOWN");
+                    break;
+            }
+>>>>>>> Stashed changes
         }
         else
             append_string(temp_receive_string, MRF_input);
     }
+<<<<<<< Updated upstream
     return;
+=======
+    return message_id;
+>>>>>>> Stashed changes
 }

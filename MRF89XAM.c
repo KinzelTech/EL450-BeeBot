@@ -136,7 +136,12 @@ void init_MRF89XAM(void)
 /******************************************************************************/
 void transmit_MRF89XAM(BYTE data)
 {
+<<<<<<< Updated upstream
     data <<= data;  //Necessary evil, transmission right shifts data
+=======
+    BYTE filler = (BYTE)('\n' << 1);
+    //data = data << 1; //Necessary evil, transmission right shifts data
+>>>>>>> Stashed changes
     
     MRF_transmitting = TRUE;
     write_spi_reg(0x00, 0b00100010);    //Set transceiver into standby mode
@@ -157,11 +162,38 @@ void transmit_string_MRF89XAM(char tx_str[])
     unsigned int length = strlen(tx_str);
     BYTE counter;
     
+<<<<<<< Updated upstream
     for(counter = 0; counter < length; counter++)
     {
         transmit_MRF89XAM((BYTE) tx_str[counter]);
     }
     transmit_MRF89XAM('\n');
+=======
+    //while(loop)
+    //{
+        write_spi_reg(0x00, 0b00100010);    //Set transceiver into standby mode
+        MRF_transmitting = TRUE;
+        INTCON3bits.INT1IE = 0;
+        if(length <= 8)
+        {
+            for(counter = 0; counter < 8; counter++)
+            {
+                if(counter < length)
+                    write_spi_data((BYTE)(tx_str[counter] << 1));
+                else
+                    write_spi_data((BYTE)('\n' << 1));
+            }
+        }
+        write_spi_reg(0x00, 0b10000010);    //Set transceiver into transmit mode
+    
+        while(PORTBbits.RB1 == 0);              //Wait for transmission to start        (IRQ0=1)
+        while(PORTBbits.RB2 == 0);              //Wait for transmission to end          (IRQ1=1)
+    
+        write_spi_reg(0x00, 0b01100010);    //Write GCONREG to receive mode, 915MHz FSK
+        MRF_transmitting = FALSE;
+        INTCON3bits.INT1IF = 0;
+        INTCON3bits.INT1IE = 1;
+>>>>>>> Stashed changes
     return;
 }
 
