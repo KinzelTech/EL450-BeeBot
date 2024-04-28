@@ -1,0 +1,3806 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"61 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 61: {
+[s S857 `l 1 `l 1 ]
+[n S857 coords longitude latitude ]
+"7566 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7566:     struct {
+[s S380 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S380 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"7576
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7576:     struct {
+[s S381 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S381 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
+"7565
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7565: typedef union {
+[u S379 `S380 1 `S381 1 ]
+[n S379 . . . ]
+"7587
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7587: extern volatile LATAbits_t LATAbits __attribute__((address(0xF89)));
+[v _LATAbits `VS379 ~T0 @X0 0 e@3977 ]
+"109 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+[p mainexit ]
+"16046 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16046: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+[v F192 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:\Program Files\Microchip\xc8\v2.40\pic\include\builtins.h
+[v __delay `JF192 ~T0 @X0 0 e ]
+[p i __delay ]
+"120 BeeBot_Main.c
+[; ;BeeBot_Main.c: 120: void init_pins (void);
+[v _init_pins `(v ~T0 @X0 0 ef ]
+"11 ./GPS.h
+[; ;./GPS.h: 11: void init_uart1 (void);
+[v _init_uart1 `(v ~T0 @X0 0 ef ]
+"35 ./MCP2221A.h
+[; ;./MCP2221A.h: 35: void init_uart2 (void);
+[v _init_uart2 `(v ~T0 @X0 0 ef ]
+"16 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 16: void init_spi (void);
+[v _init_spi `(v ~T0 @X0 0 ef ]
+"124 BeeBot_Main.c
+[; ;BeeBot_Main.c: 124: void init_adc (void);
+[v _init_adc `(v ~T0 @X0 0 ef ]
+"17 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 17: void init_MRF89XAM (void);
+[v _init_MRF89XAM `(v ~T0 @X0 0 ef ]
+"121 BeeBot_Main.c
+[; ;BeeBot_Main.c: 121: void init_interrupts (void);
+[v _init_interrupts `(v ~T0 @X0 0 ef ]
+"131
+[; ;BeeBot_Main.c: 131: void stop_motor (BYTE motor);
+[v _stop_motor `(v ~T0 @X0 0 ef1`uc ]
+"122
+[; ;BeeBot_Main.c: 122: void parse_MRF_message (void);
+[v _parse_MRF_message `(v ~T0 @X0 0 ef ]
+"33 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"39 ./MCP2221A.h
+[; ;./MCP2221A.h: 39: void parse_usb_message (char message[]);
+[v _parse_usb_message `(v ~T0 @X0 0 ef1`*uc ]
+"132 BeeBot_Main.c
+[; ;BeeBot_Main.c: 132: void move_motor (BYTE motor, BYTE dir);
+[v _move_motor `(v ~T0 @X0 0 ef2`uc`uc ]
+"38 ./MCP2221A.h
+[; ;./MCP2221A.h: 38: void transmit_string_usb(char message[]);
+[v _transmit_string_usb `(v ~T0 @X0 0 ef1`*uc ]
+"236 BeeBot_Main.c
+[; ;BeeBot_Main.c: 236:                     move_motor(0, FORWARD);
+[c E6984 0 1 2 .. ]
+[n E6984 joystick_states FORWARD BACKWARDS NO_MOVEMENT  ]
+"129
+[; ;BeeBot_Main.c: 129: void get_temperature_humidity(void);
+[v _get_temperature_humidity `(v ~T0 @X0 0 ef ]
+"126
+[; ;BeeBot_Main.c: 126: float adc_to_actual (BYTE adc_value);
+[v _adc_to_actual `(f ~T0 @X0 0 ef1`uc ]
+"123
+[; ;BeeBot_Main.c: 123: BYTE get_battery_level (void);
+[v _get_battery_level `(uc ~T0 @X0 0 ef ]
+"127
+[; ;BeeBot_Main.c: 127: float calculate_battery_percentage(float voltage);
+[v _calculate_battery_percentage `(f ~T0 @X0 0 ef1`f ]
+"22 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 22: void transmit_string_MRF89XAM(char tx_str[]);
+[v _transmit_string_MRF89XAM `(v ~T0 @X0 0 ef1`*uc ]
+"34 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 34: char *strncpy (char *restrict, const char *restrict, size_t);
+[v _strncpy `(*uc ~T0 @X0 0 ef3`*uc`*Cuc`ui ]
+"130 BeeBot_Main.c
+[; ;BeeBot_Main.c: 130: void send_hourly_report (void);
+[v _send_hourly_report `(v ~T0 @X0 0 ef ]
+"8737 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8737:     struct {
+[s S413 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S413 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"8747
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8747:     struct {
+[s S414 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S414 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"8736
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8736: typedef union {
+[u S412 `S413 1 `S414 1 ]
+[n S412 . . . ]
+"8758
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8758: extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
+[v _TRISDbits `VS412 ~T0 @X0 0 e@3989 ]
+"8293
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8293:     struct {
+[s S401 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S401 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"8303
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8303:     struct {
+[s S402 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S402 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"8292
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8292: typedef union {
+[u S400 `S401 1 `S402 1 ]
+[n S400 . . . ]
+"8314
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8314: extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
+[v _TRISBbits `VS400 ~T0 @X0 0 e@3987 ]
+"8515
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8515:     struct {
+[s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S407 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"8525
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8525:     struct {
+[s S408 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S408 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"8514
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8514: typedef union {
+[u S406 `S407 1 `S408 1 ]
+[n S406 . . . ]
+"8536
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8536: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
+[v _TRISCbits `VS406 ~T0 @X0 0 e@3988 ]
+"7790
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7790:     struct {
+[s S386 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S386 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"7800
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7800:     struct {
+[s S387 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S387 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+"7789
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7789: typedef union {
+[u S385 `S386 1 `S387 1 ]
+[n S385 . . . ]
+"7811
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7811: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
+[v _LATCbits `VS385 ~T0 @X0 0 e@3979 ]
+"8071
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8071:     struct {
+[s S395 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S395 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"8081
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8081:     struct {
+[s S396 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S396 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"8070
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8070: typedef union {
+[u S394 `S395 1 `S396 1 ]
+[n S394 . . . ]
+"8092
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8092: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
+[v _TRISAbits `VS394 ~T0 @X0 0 e@3986 ]
+"8959
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8959:     struct {
+[s S419 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S419 . TRISE0 TRISE1 TRISE2 . WPUE3 ]
+"8966
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8966:     struct {
+[s S420 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S420 . RE0 RE1 RE2 ]
+"8958
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8958: typedef union {
+[u S418 `S419 1 `S420 1 ]
+[n S418 . . . ]
+"8972
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8972: extern volatile TRISEbits_t TRISEbits __attribute__((address(0xF96)));
+[v _TRISEbits `VS418 ~T0 @X0 0 e@3990 ]
+"52
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 52: extern volatile unsigned char ANSELA __attribute__((address(0xF38)));
+[v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
+"97
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 97: extern volatile unsigned char ANSELB __attribute__((address(0xF39)));
+[v _ANSELB `Vuc ~T0 @X0 0 e@3897 ]
+"147
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 147: extern volatile unsigned char ANSELC __attribute__((address(0xF3A)));
+[v _ANSELC `Vuc ~T0 @X0 0 e@3898 ]
+"198
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 198: extern volatile unsigned char ANSELD __attribute__((address(0xF3B)));
+[v _ANSELD `Vuc ~T0 @X0 0 e@3899 ]
+"260
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 260: extern volatile unsigned char ANSELE __attribute__((address(0xF3C)));
+[v _ANSELE `Vuc ~T0 @X0 0 e@3900 ]
+"13478
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13478:     struct {
+[s S641 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S641 . ADCS ACQT . ADFM ]
+"13484
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13484:     struct {
+[s S642 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S642 . ADCS0 ADCS1 ADCS2 ACQT0 ACQT1 ACQT2 ]
+"13477
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13477: typedef union {
+[u S640 `S641 1 `S642 1 ]
+[n S640 . . . ]
+"13493
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13493: extern volatile ADCON2bits_t ADCON2bits __attribute__((address(0xFC0)));
+[v _ADCON2bits `VS640 ~T0 @X0 0 e@4032 ]
+"13549
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13549:     struct {
+[s S644 :2 `uc 1 :2 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S644 . NVCFG PVCFG . TRIGSEL ]
+"13555
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13555:     struct {
+[s S645 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S645 . NVCFG0 NVCFG1 PVCFG0 PVCFG1 ]
+"13561
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13561:     struct {
+[s S646 :3 `uc 1 :1 `uc 1 ]
+[n S646 . . CHSN3 ]
+"13548
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13548: typedef union {
+[u S643 `S644 1 `S645 1 `S646 1 ]
+[n S643 . . . . ]
+"13566
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13566: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0xFC1)));
+[v _ADCON1bits `VS643 ~T0 @X0 0 e@4033 ]
+"9497
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9497:     struct {
+[s S441 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S441 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+"9506
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9506:     struct {
+[s S442 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S442 . . SSPIF TXIF RCIF ]
+"9496
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9496: typedef union {
+[u S440 `S441 1 `S442 1 ]
+[n S440 . . . ]
+"9513
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
+[v _PIR1bits `VS440 ~T0 @X0 0 e@3998 ]
+"13617
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13617:     struct {
+[s S648 :1 `uc 1 :1 `uc 1 ]
+[n S648 . . GO_NOT_DONE ]
+"13621
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13621:     struct {
+[s S649 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S649 . ADON GO_nDONE CHS ]
+"13626
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13626:     struct {
+[s S650 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S650 . . GO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"13635
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13635:     struct {
+[s S651 :1 `uc 1 :1 `uc 1 ]
+[n S651 . . DONE ]
+"13639
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13639:     struct {
+[s S652 :1 `uc 1 :1 `uc 1 ]
+[n S652 . . NOT_DONE ]
+"13643
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13643:     struct {
+[s S653 :1 `uc 1 :1 `uc 1 ]
+[n S653 . . nDONE ]
+"13647
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13647:     struct {
+[s S654 :1 `uc 1 :1 `uc 1 ]
+[n S654 . . GO_DONE ]
+"13651
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13651:     struct {
+[s S655 :1 `uc 1 :1 `uc 1 ]
+[n S655 . . GODONE ]
+"13616
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13616: typedef union {
+[u S647 `S648 1 `S649 1 `S650 1 `S651 1 `S652 1 `S653 1 `S654 1 `S655 1 ]
+[n S647 . . . . . . . . . ]
+"13656
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13656: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
+[v _ADCON0bits `VS647 ~T0 @X0 0 e@4034 ]
+"15834
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15834:     struct {
+[s S753 :1 `uc 1 ]
+[n S753 . NOT_BOR ]
+"15837
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15837:     struct {
+[s S754 :1 `uc 1 :1 `uc 1 ]
+[n S754 . . NOT_POR ]
+"15841
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15841:     struct {
+[s S755 :2 `uc 1 :1 `uc 1 ]
+[n S755 . . NOT_PD ]
+"15845
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15845:     struct {
+[s S756 :3 `uc 1 :1 `uc 1 ]
+[n S756 . . NOT_TO ]
+"15849
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15849:     struct {
+[s S757 :4 `uc 1 :1 `uc 1 ]
+[n S757 . . NOT_RI ]
+"15853
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15853:     struct {
+[s S758 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S758 . nBOR nPOR nPD nTO nRI . SBOREN IPEN ]
+"15863
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15863:     struct {
+[s S759 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S759 . BOR POR PD TO RI ]
+"15833
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15833: typedef union {
+[u S752 `S753 1 `S754 1 `S755 1 `S756 1 `S757 1 `S758 1 `S759 1 ]
+[n S752 . . . . . . . . ]
+"15871
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15871: extern volatile RCONbits_t RCONbits __attribute__((address(0xFD0)));
+[v _RCONbits `VS752 ~T0 @X0 0 e@4048 ]
+"16932
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16932:     struct {
+[s S826 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S826 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"16942
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16942:     struct {
+[s S827 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S827 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"16952
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16952:     struct {
+[s S828 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S828 . . GIEL GIEH ]
+"16931
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16931: typedef union {
+[u S825 `S826 1 `S827 1 `S828 1 ]
+[n S825 . . . . ]
+"16958
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16958: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS825 ~T0 @X0 0 e@4082 ]
+"9420
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9420:     struct {
+[s S438 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S438 . TMR1IE TMR2IE CCP1IE SSP1IE TX1IE RC1IE ADIE ]
+"9429
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9429:     struct {
+[s S439 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S439 . . SSPIE TXIE RCIE ]
+"9419
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9419: typedef union {
+[u S437 `S438 1 `S439 1 ]
+[n S437 . . . ]
+"9436
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9436: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
+[v _PIE1bits `VS437 ~T0 @X0 0 e@3997 ]
+"9909
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9909:     struct {
+[s S459 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S459 . TMR1GIE TMR3GIE TMR5GIE CTMUIE TX2IE RC2IE BCL2IE SSP2IE ]
+"9919
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9919:     struct {
+[s S460 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S460 . RXB0IE RXB1IE TXB0IE TXB1IE TXB2IE ]
+"9926
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9926:     struct {
+[s S461 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S461 . . RXBNIE . TXBNIE ]
+"9908
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9908: typedef union {
+[u S458 `S459 1 `S460 1 `S461 1 ]
+[n S458 . . . . ]
+"9933
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9933: extern volatile PIE3bits_t PIE3bits __attribute__((address(0xFA3)));
+[v _PIE3bits `VS458 ~T0 @X0 0 e@4003 ]
+"16770
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16770:     struct {
+[s S819 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S819 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
+"16780
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16780:     struct {
+[s S820 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S820 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
+"16769
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16769: typedef union {
+[u S818 `S819 1 `S820 1 ]
+[n S818 . . . ]
+"16791
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16791: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
+[v _INTCON3bits `VS818 ~T0 @X0 0 e@4080 ]
+"16862
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16862:     struct {
+[s S822 :7 `uc 1 :1 `uc 1 ]
+[n S822 . . NOT_RBPU ]
+"16866
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16866:     struct {
+[s S823 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S823 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
+"16876
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16876:     struct {
+[s S824 :7 `uc 1 :1 `uc 1 ]
+[n S824 . . RBPU ]
+"16861
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16861: typedef union {
+[u S821 `S822 1 `S823 1 `S824 1 ]
+[n S821 . . . . ]
+"16881
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16881: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
+[v _INTCON2bits `VS821 ~T0 @X0 0 e@4081 ]
+"16129
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16129: extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
+[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
+"16226
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16226: extern volatile unsigned char TMR0H __attribute__((address(0xFD7)));
+[v _TMR0H `Vuc ~T0 @X0 0 e@4055 ]
+"16206
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16206: extern volatile unsigned char TMR0L __attribute__((address(0xFD6)));
+[v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
+"16135
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16135:     struct {
+[s S769 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S769 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
+"16143
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16143:     struct {
+[s S770 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S770 . T0PS0 T0PS1 T0PS2 ]
+"16134
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16134: typedef union {
+[u S768 `S769 1 `S770 1 ]
+[n S768 . . . ]
+"16149
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16149: extern volatile T0CONbits_t T0CONbits __attribute__((address(0xFD5)));
+[v _T0CONbits `VS768 ~T0 @X0 0 e@4053 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"12 ./GPS.h
+[; ;./GPS.h: 12: BYTE read_byte_gps (void);
+[v _read_byte_gps `(uc ~T0 @X0 0 ef ]
+"13
+[; ;./GPS.h: 13: void parse_gps_data(char* latitude, char* longitude, char* time, char* speed, char* date, char* longitude_dir, char* latitude_dir);
+[v _parse_gps_data `(v ~T0 @X0 0 ef7`*uc`*uc`*uc`*uc`*uc`*uc`*uc ]
+"128 BeeBot_Main.c
+[; ;BeeBot_Main.c: 128: void update_coords (void);
+[v _update_coords `(v ~T0 @X0 0 ef ]
+"10019 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10019:     struct {
+[s S463 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S463 . TMR1GIF TMR3GIF TMR5GIF CTMUIF TX2IF RC2IF BCL2IF SSP2IF ]
+"10029
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10029:     struct {
+[s S464 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S464 . . RXBNIF . TXBNIF ]
+"10018
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10018: typedef union {
+[u S462 `S463 1 `S464 1 ]
+[n S462 . . . ]
+"10036
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10036: extern volatile PIR3bits_t PIR3bits __attribute__((address(0xFA4)));
+[v _PIR3bits `VS462 ~T0 @X0 0 e@4004 ]
+"36 ./MCP2221A.h
+[; ;./MCP2221A.h: 36: BYTE read_byte_usb (void);
+[v _read_byte_usb `(uc ~T0 @X0 0 ef ]
+"91 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 91: void append_string(char str[], char ch);
+[v _append_string `(v ~T0 @X0 0 ef2`*uc`uc ]
+"20289 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 20289: extern volatile __bit TMR0IE __attribute__((address(0x7F95)));
+[v _TMR0IE `Vb ~T0 @X0 0 e@32661 ]
+"20292
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 20292: extern volatile __bit TMR0IF __attribute__((address(0x7F92)));
+[v _TMR0IF `Vb ~T0 @X0 0 e@32658 ]
+"23 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 23: BYTE receive_MRF89XAM (void);
+[v _receive_MRF89XAM `(uc ~T0 @X0 0 ef ]
+"39 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 39: int strcmp (const char *, const char *);
+[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"40
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 40: int strncmp (const char *, const char *, size_t);
+[v _strncmp `(i ~T0 @X0 0 ef3`*Cuc`*Cuc`ui ]
+"36
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 36: char *strcat (char *restrict, const char *restrict);
+[v _strcat `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"125 BeeBot_Main.c
+[; ;BeeBot_Main.c: 125: long extractHexadecimalValue(const char *str);
+[v _extractHexadecimalValue `(l ~T0 @X0 0 ef1`*Cuc ]
+"96 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 96: void ltoa(long n, char s[]);
+[v _ltoa `(v ~T0 @X0 0 ef2`l`*uc ]
+"23 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h: 23: int atoi (const char *);
+[v _atoi `(i ~T0 @X0 0 ef1`*Cuc ]
+"34
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h: 34: long strtol (const char *restrict, char **restrict, int);
+[v _strtol `(l ~T0 @X0 0 ef3`*Cuc`**uc`i ]
+"6286 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6286:     struct {
+[s S332 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S332 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"6296
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6296:     struct {
+[s S333 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S333 . AN0 AN1 AN2 AN3 . AN4 ]
+"6304
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6304:     struct {
+[s S334 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S334 . C12IN0M C12IN1M C2INP C1INP C1OUT C2OUT ]
+"6312
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6312:     struct {
+[s S335 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S335 . C12IN0N C12IN1N VREFM VREFP T0CKI SS ]
+"6320
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6320:     struct {
+[s S336 :5 `uc 1 :1 `uc 1 ]
+[n S336 . . NOT_SS ]
+"6324
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6324:     struct {
+[s S337 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S337 . . VREFN . SRQ nSS ]
+"6331
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6331:     struct {
+[s S338 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S338 . . CVREF . LVDIN ]
+"6337
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6337:     struct {
+[s S339 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S339 . . DACOUT . HLVDIN ]
+"6343
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6343:     struct {
+[s S340 :5 `uc 1 :1 `uc 1 ]
+[n S340 . . SS1 ]
+"6347
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6347:     struct {
+[s S341 :5 `uc 1 :1 `uc 1 ]
+[n S341 . . NOT_SS1 ]
+"6351
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6351:     struct {
+[s S342 :5 `uc 1 :1 `uc 1 ]
+[n S342 . . nSS1 ]
+"6355
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6355:     struct {
+[s S343 :5 `uc 1 :1 `uc 1 ]
+[n S343 . . SRNQ ]
+"6359
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6359:     struct {
+[s S344 :1 `uc 1 :6 `uc 1 :1 `uc 1 ]
+[n S344 . ULPWUIN . RJPU ]
+"6285
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6285: typedef union {
+[u S331 `S332 1 `S333 1 `S334 1 `S335 1 `S336 1 `S337 1 `S338 1 `S339 1 `S340 1 `S341 1 `S342 1 `S343 1 `S344 1 ]
+[n S331 . . . . . . . . . . . . . . ]
+"6365
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6365: extern volatile PORTAbits_t PORTAbits __attribute__((address(0xF80)));
+[v _PORTAbits `VS331 ~T0 @X0 0 e@3968 ]
+"7902
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7902:     struct {
+[s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S389 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"7912
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7912:     struct {
+[s S390 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S390 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
+"7901
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7901: typedef union {
+[u S388 `S389 1 `S390 1 ]
+[n S388 . . . ]
+"7923
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7923: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
+[v _LATDbits `VS388 ~T0 @X0 0 e@3980 ]
+"8014
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8014:     struct {
+[s S392 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S392 . LATE0 LATE1 LATE2 ]
+"8019
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8019:     struct {
+[s S393 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S393 . LE0 LE1 LE2 ]
+"8013
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8013: typedef union {
+[u S391 `S392 1 `S393 1 ]
+[n S391 . . . ]
+"8025
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8025: extern volatile LATEbits_t LATEbits __attribute__((address(0xF8D)));
+[v _LATEbits `VS391 ~T0 @X0 0 e@3981 ]
+"26 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdlib.h: 26: double atof (const char *);
+[v _atof `(d ~T0 @X0 0 ef1`*Cuc ]
+"133 BeeBot_Main.c
+[; ;BeeBot_Main.c: 133: void minutes_to_degrees(COORDS* coordinates);
+[v _minutes_to_degrees `(v ~T0 @X0 0 ef1`*S857 ]
+"6 BeeBot_Main.c
+[p x FOSC  =  INTIO67    ]
+"7
+[p x PLLCFG  =  OFF      ]
+"8
+[p x PRICLKEN  =  ON     ]
+"9
+[p x FCMEN  =  OFF       ]
+"10
+[p x IESO  =  OFF        ]
+"13
+[p x PWRTEN  =  OFF      ]
+"14
+[p x BOREN  =  SBORDIS   ]
+"15
+[p x BORV  =  190        ]
+"18
+[p x WDTEN  =  OFF       ]
+"19
+[p x WDTPS  =  32768     ]
+"22
+[p x CCP2MX  =  PORTC1   ]
+"23
+[p x PBADEN  =  ON       ]
+"24
+[p x CCP3MX  =  PORTB5   ]
+"25
+[p x HFOFST  =  ON       ]
+"26
+[p x T3CMX  =  PORTC0    ]
+"27
+[p x P2BMX  =  PORTD2    ]
+"28
+[p x MCLRE  =  EXTMCLR   ]
+"31
+[p x STVREN  =  ON       ]
+"32
+[p x LVP  =  ON          ]
+"33
+[p x XINST  =  OFF       ]
+"36
+[p x CP0  =  OFF         ]
+"37
+[p x CP1  =  OFF         ]
+"38
+[p x CP2  =  OFF         ]
+"39
+[p x CP3  =  OFF         ]
+"42
+[p x CPB  =  OFF         ]
+"43
+[p x CPD  =  OFF         ]
+"46
+[p x WRT0  =  OFF        ]
+"47
+[p x WRT1  =  OFF        ]
+"48
+[p x WRT2  =  OFF        ]
+"49
+[p x WRT3  =  OFF        ]
+"52
+[p x WRTC  =  OFF        ]
+"53
+[p x WRTB  =  OFF        ]
+"54
+[p x WRTD  =  OFF        ]
+"57
+[p x EBTR0  =  OFF       ]
+"58
+[p x EBTR1  =  OFF       ]
+"59
+[p x EBTR2  =  OFF       ]
+"60
+[p x EBTR3  =  OFF       ]
+"63
+[p x EBTRB  =  OFF       ]
+"54 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
+[; <" ANSELA equ 0F38h ;# ">
+"99
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 99: __asm("ANSELB equ 0F39h");
+[; <" ANSELB equ 0F39h ;# ">
+"149
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 149: __asm("ANSELC equ 0F3Ah");
+[; <" ANSELC equ 0F3Ah ;# ">
+"200
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 200: __asm("ANSELD equ 0F3Bh");
+[; <" ANSELD equ 0F3Bh ;# ">
+"262
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 262: __asm("ANSELE equ 0F3Ch");
+[; <" ANSELE equ 0F3Ch ;# ">
+"294
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 294: __asm("PMD2 equ 0F3Dh");
+[; <" PMD2 equ 0F3Dh ;# ">
+"332
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 332: __asm("PMD1 equ 0F3Eh");
+[; <" PMD1 equ 0F3Eh ;# ">
+"397
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 397: __asm("PMD0 equ 0F3Fh");
+[; <" PMD0 equ 0F3Fh ;# ">
+"474
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 474: __asm("VREFCON2 equ 0F40h");
+[; <" VREFCON2 equ 0F40h ;# ">
+"479
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 479: __asm("DACCON1 equ 0F40h");
+[; <" DACCON1 equ 0F40h ;# ">
+"576
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 576: __asm("VREFCON1 equ 0F41h");
+[; <" VREFCON1 equ 0F41h ;# ">
+"581
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 581: __asm("DACCON0 equ 0F41h");
+[; <" DACCON0 equ 0F41h ;# ">
+"696
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 696: __asm("VREFCON0 equ 0F42h");
+[; <" VREFCON0 equ 0F42h ;# ">
+"701
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 701: __asm("FVRCON equ 0F42h");
+[; <" FVRCON equ 0F42h ;# ">
+"790
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 790: __asm("CTMUICON equ 0F43h");
+[; <" CTMUICON equ 0F43h ;# ">
+"795
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 795: __asm("CTMUICONH equ 0F43h");
+[; <" CTMUICONH equ 0F43h ;# ">
+"940
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 940: __asm("CTMUCONL equ 0F44h");
+[; <" CTMUCONL equ 0F44h ;# ">
+"945
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 945: __asm("CTMUCON1 equ 0F44h");
+[; <" CTMUCON1 equ 0F44h ;# ">
+"1094
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1094: __asm("CTMUCONH equ 0F45h");
+[; <" CTMUCONH equ 0F45h ;# ">
+"1099
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1099: __asm("CTMUCON0 equ 0F45h");
+[; <" CTMUCON0 equ 0F45h ;# ">
+"1206
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1206: __asm("SRCON1 equ 0F46h");
+[; <" SRCON1 equ 0F46h ;# ">
+"1268
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1268: __asm("SRCON0 equ 0F47h");
+[; <" SRCON0 equ 0F47h ;# ">
+"1339
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1339: __asm("CCPTMRS1 equ 0F48h");
+[; <" CCPTMRS1 equ 0F48h ;# ">
+"1391
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1391: __asm("CCPTMRS0 equ 0F49h");
+[; <" CCPTMRS0 equ 0F49h ;# ">
+"1465
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1465: __asm("T6CON equ 0F4Ah");
+[; <" T6CON equ 0F4Ah ;# ">
+"1536
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1536: __asm("PR6 equ 0F4Bh");
+[; <" PR6 equ 0F4Bh ;# ">
+"1556
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1556: __asm("TMR6 equ 0F4Ch");
+[; <" TMR6 equ 0F4Ch ;# ">
+"1576
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1576: __asm("T5GCON equ 0F4Dh");
+[; <" T5GCON equ 0F4Dh ;# ">
+"1671
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1671: __asm("T5CON equ 0F4Eh");
+[; <" T5CON equ 0F4Eh ;# ">
+"1780
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1780: __asm("TMR5 equ 0F4Fh");
+[; <" TMR5 equ 0F4Fh ;# ">
+"1787
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1787: __asm("TMR5L equ 0F4Fh");
+[; <" TMR5L equ 0F4Fh ;# ">
+"1807
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1807: __asm("TMR5H equ 0F50h");
+[; <" TMR5H equ 0F50h ;# ">
+"1827
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1827: __asm("T4CON equ 0F51h");
+[; <" T4CON equ 0F51h ;# ">
+"1898
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1898: __asm("PR4 equ 0F52h");
+[; <" PR4 equ 0F52h ;# ">
+"1918
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1918: __asm("TMR4 equ 0F53h");
+[; <" TMR4 equ 0F53h ;# ">
+"1938
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 1938: __asm("CCP5CON equ 0F54h");
+[; <" CCP5CON equ 0F54h ;# ">
+"2002
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2002: __asm("CCPR5 equ 0F55h");
+[; <" CCPR5 equ 0F55h ;# ">
+"2009
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2009: __asm("CCPR5L equ 0F55h");
+[; <" CCPR5L equ 0F55h ;# ">
+"2029
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2029: __asm("CCPR5H equ 0F56h");
+[; <" CCPR5H equ 0F56h ;# ">
+"2049
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2049: __asm("CCP4CON equ 0F57h");
+[; <" CCP4CON equ 0F57h ;# ">
+"2113
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2113: __asm("CCPR4 equ 0F58h");
+[; <" CCPR4 equ 0F58h ;# ">
+"2120
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2120: __asm("CCPR4L equ 0F58h");
+[; <" CCPR4L equ 0F58h ;# ">
+"2140
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2140: __asm("CCPR4H equ 0F59h");
+[; <" CCPR4H equ 0F59h ;# ">
+"2160
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2160: __asm("PSTR3CON equ 0F5Ah");
+[; <" PSTR3CON equ 0F5Ah ;# ">
+"2236
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2236: __asm("ECCP3AS equ 0F5Bh");
+[; <" ECCP3AS equ 0F5Bh ;# ">
+"2241
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2241: __asm("CCP3AS equ 0F5Bh");
+[; <" CCP3AS equ 0F5Bh ;# ">
+"2478
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2478: __asm("PWM3CON equ 0F5Ch");
+[; <" PWM3CON equ 0F5Ch ;# ">
+"2548
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2548: __asm("CCP3CON equ 0F5Dh");
+[; <" CCP3CON equ 0F5Dh ;# ">
+"2630
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2630: __asm("CCPR3 equ 0F5Eh");
+[; <" CCPR3 equ 0F5Eh ;# ">
+"2637
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2637: __asm("CCPR3L equ 0F5Eh");
+[; <" CCPR3L equ 0F5Eh ;# ">
+"2657
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2657: __asm("CCPR3H equ 0F5Fh");
+[; <" CCPR3H equ 0F5Fh ;# ">
+"2677
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2677: __asm("SLRCON equ 0F60h");
+[; <" SLRCON equ 0F60h ;# ">
+"2721
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2721: __asm("WPUB equ 0F61h");
+[; <" WPUB equ 0F61h ;# ">
+"2783
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2783: __asm("IOCB equ 0F62h");
+[; <" IOCB equ 0F62h ;# ">
+"2822
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2822: __asm("PSTR2CON equ 0F63h");
+[; <" PSTR2CON equ 0F63h ;# ">
+"2962
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2962: __asm("ECCP2AS equ 0F64h");
+[; <" ECCP2AS equ 0F64h ;# ">
+"2967
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 2967: __asm("CCP2AS equ 0F64h");
+[; <" CCP2AS equ 0F64h ;# ">
+"3204
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3204: __asm("PWM2CON equ 0F65h");
+[; <" PWM2CON equ 0F65h ;# ">
+"3274
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3274: __asm("CCP2CON equ 0F66h");
+[; <" CCP2CON equ 0F66h ;# ">
+"3356
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3356: __asm("CCPR2 equ 0F67h");
+[; <" CCPR2 equ 0F67h ;# ">
+"3363
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3363: __asm("CCPR2L equ 0F67h");
+[; <" CCPR2L equ 0F67h ;# ">
+"3383
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3383: __asm("CCPR2H equ 0F68h");
+[; <" CCPR2H equ 0F68h ;# ">
+"3403
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3403: __asm("SSP2CON3 equ 0F69h");
+[; <" SSP2CON3 equ 0F69h ;# ">
+"3465
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3465: __asm("SSP2MSK equ 0F6Ah");
+[; <" SSP2MSK equ 0F6Ah ;# ">
+"3535
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3535: __asm("SSP2CON2 equ 0F6Bh");
+[; <" SSP2CON2 equ 0F6Bh ;# ">
+"3680
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3680: __asm("SSP2CON1 equ 0F6Ch");
+[; <" SSP2CON1 equ 0F6Ch ;# ">
+"3800
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3800: __asm("SSP2STAT equ 0F6Dh");
+[; <" SSP2STAT equ 0F6Dh ;# ">
+"4200
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4200: __asm("SSP2ADD equ 0F6Eh");
+[; <" SSP2ADD equ 0F6Eh ;# ">
+"4270
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4270: __asm("SSP2BUF equ 0F6Fh");
+[; <" SSP2BUF equ 0F6Fh ;# ">
+"4290
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4290: __asm("BAUDCON2 equ 0F70h");
+[; <" BAUDCON2 equ 0F70h ;# ">
+"4295
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4295: __asm("BAUD2CON equ 0F70h");
+[; <" BAUD2CON equ 0F70h ;# ">
+"4552
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4552: __asm("RCSTA2 equ 0F71h");
+[; <" RCSTA2 equ 0F71h ;# ">
+"4557
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4557: __asm("RC2STA equ 0F71h");
+[; <" RC2STA equ 0F71h ;# ">
+"4840
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4840: __asm("TXSTA2 equ 0F72h");
+[; <" TXSTA2 equ 0F72h ;# ">
+"4845
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4845: __asm("TX2STA equ 0F72h");
+[; <" TX2STA equ 0F72h ;# ">
+"5092
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5092: __asm("TXREG2 equ 0F73h");
+[; <" TXREG2 equ 0F73h ;# ">
+"5097
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5097: __asm("TX2REG equ 0F73h");
+[; <" TX2REG equ 0F73h ;# ">
+"5130
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5130: __asm("RCREG2 equ 0F74h");
+[; <" RCREG2 equ 0F74h ;# ">
+"5135
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5135: __asm("RC2REG equ 0F74h");
+[; <" RC2REG equ 0F74h ;# ">
+"5168
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5168: __asm("SPBRG2 equ 0F75h");
+[; <" SPBRG2 equ 0F75h ;# ">
+"5173
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5173: __asm("SP2BRG equ 0F75h");
+[; <" SP2BRG equ 0F75h ;# ">
+"5206
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5206: __asm("SPBRGH2 equ 0F76h");
+[; <" SPBRGH2 equ 0F76h ;# ">
+"5211
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5211: __asm("SP2BRGH equ 0F76h");
+[; <" SP2BRGH equ 0F76h ;# ">
+"5244
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5244: __asm("CM2CON1 equ 0F77h");
+[; <" CM2CON1 equ 0F77h ;# ">
+"5249
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5249: __asm("CM12CON equ 0F77h");
+[; <" CM12CON equ 0F77h ;# ">
+"5366
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5366: __asm("CM2CON0 equ 0F78h");
+[; <" CM2CON0 equ 0F78h ;# ">
+"5371
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5371: __asm("CM2CON equ 0F78h");
+[; <" CM2CON equ 0F78h ;# ">
+"5646
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5646: __asm("CM1CON0 equ 0F79h");
+[; <" CM1CON0 equ 0F79h ;# ">
+"5651
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 5651: __asm("CM1CON equ 0F79h");
+[; <" CM1CON equ 0F79h ;# ">
+"6068
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6068: __asm("PIE4 equ 0F7Ah");
+[; <" PIE4 equ 0F7Ah ;# ">
+"6100
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6100: __asm("PIR4 equ 0F7Bh");
+[; <" PIR4 equ 0F7Bh ;# ">
+"6132
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6132: __asm("IPR4 equ 0F7Ch");
+[; <" IPR4 equ 0F7Ch ;# ">
+"6172
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6172: __asm("PIE5 equ 0F7Dh");
+[; <" PIE5 equ 0F7Dh ;# ">
+"6204
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6204: __asm("PIR5 equ 0F7Eh");
+[; <" PIR5 equ 0F7Eh ;# ">
+"6236
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6236: __asm("IPR5 equ 0F7Fh");
+[; <" IPR5 equ 0F7Fh ;# ">
+"6282
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6282: __asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+"6567
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6567: __asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+"6837
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6837: __asm("PORTC equ 0F82h");
+[; <" PORTC equ 0F82h ;# ">
+"7144
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7144: __asm("PORTD equ 0F83h");
+[; <" PORTD equ 0F83h ;# ">
+"7387
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7387: __asm("PORTE equ 0F84h");
+[; <" PORTE equ 0F84h ;# ">
+"7562
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7562: __asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+"7674
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7674: __asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+"7786
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7786: __asm("LATC equ 0F8Bh");
+[; <" LATC equ 0F8Bh ;# ">
+"7898
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7898: __asm("LATD equ 0F8Ch");
+[; <" LATD equ 0F8Ch ;# ">
+"8010
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8010: __asm("LATE equ 0F8Dh");
+[; <" LATE equ 0F8Dh ;# ">
+"8062
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8062: __asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+"8067
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8067: __asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+"8284
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8284: __asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+"8289
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8289: __asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+"8506
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8506: __asm("TRISC equ 0F94h");
+[; <" TRISC equ 0F94h ;# ">
+"8511
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8511: __asm("DDRC equ 0F94h");
+[; <" DDRC equ 0F94h ;# ">
+"8728
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8728: __asm("TRISD equ 0F95h");
+[; <" TRISD equ 0F95h ;# ">
+"8733
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8733: __asm("DDRD equ 0F95h");
+[; <" DDRD equ 0F95h ;# ">
+"8950
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8950: __asm("TRISE equ 0F96h");
+[; <" TRISE equ 0F96h ;# ">
+"8955
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 8955: __asm("DDRE equ 0F96h");
+[; <" DDRE equ 0F96h ;# ">
+"9066
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9066: __asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"9136
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9136: __asm("HLVDCON equ 0F9Ch");
+[; <" HLVDCON equ 0F9Ch ;# ">
+"9141
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9141: __asm("LVDCON equ 0F9Ch");
+[; <" LVDCON equ 0F9Ch ;# ">
+"9416
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9416: __asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+"9493
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9493: __asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+"9570
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9570: __asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+"9647
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9647: __asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+"9733
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9733: __asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+"9819
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9819: __asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+"9905
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 9905: __asm("PIE3 equ 0FA3h");
+[; <" PIE3 equ 0FA3h ;# ">
+"10015
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10015: __asm("PIR3 equ 0FA4h");
+[; <" PIR3 equ 0FA4h ;# ">
+"10093
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10093: __asm("IPR3 equ 0FA5h");
+[; <" IPR3 equ 0FA5h ;# ">
+"10171
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10171: __asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+"10237
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10237: __asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+"10257
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10257: __asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+"10277
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10277: __asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+"10347
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10347: __asm("EEADRH equ 0FAAh");
+[; <" EEADRH equ 0FAAh ;# ">
+"10381
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10381: __asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+"10386
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10386: __asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+"10390
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10390: __asm("RC1STA equ 0FABh");
+[; <" RC1STA equ 0FABh ;# ">
+"10837
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10837: __asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+"10842
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10842: __asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+"10846
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 10846: __asm("TX1STA equ 0FACh");
+[; <" TX1STA equ 0FACh ;# ">
+"11212
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11212: __asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+"11217
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11217: __asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+"11221
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11221: __asm("TX1REG equ 0FADh");
+[; <" TX1REG equ 0FADh ;# ">
+"11290
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11290: __asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+"11295
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11295: __asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+"11299
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11299: __asm("RC1REG equ 0FAEh");
+[; <" RC1REG equ 0FAEh ;# ">
+"11368
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11368: __asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+"11373
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11373: __asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+"11377
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11377: __asm("SP1BRG equ 0FAFh");
+[; <" SP1BRG equ 0FAFh ;# ">
+"11446
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11446: __asm("SPBRGH1 equ 0FB0h");
+[; <" SPBRGH1 equ 0FB0h ;# ">
+"11451
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11451: __asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+"11455
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11455: __asm("SP1BRGH equ 0FB0h");
+[; <" SP1BRGH equ 0FB0h ;# ">
+"11524
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11524: __asm("T3CON equ 0FB1h");
+[; <" T3CON equ 0FB1h ;# ">
+"11632
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11632: __asm("TMR3 equ 0FB2h");
+[; <" TMR3 equ 0FB2h ;# ">
+"11639
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11639: __asm("TMR3L equ 0FB2h");
+[; <" TMR3L equ 0FB2h ;# ">
+"11659
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11659: __asm("TMR3H equ 0FB3h");
+[; <" TMR3H equ 0FB3h ;# ">
+"11679
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11679: __asm("T3GCON equ 0FB4h");
+[; <" T3GCON equ 0FB4h ;# ">
+"11774
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11774: __asm("ECCP1AS equ 0FB6h");
+[; <" ECCP1AS equ 0FB6h ;# ">
+"11779
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 11779: __asm("ECCPAS equ 0FB6h");
+[; <" ECCPAS equ 0FB6h ;# ">
+"12156
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 12156: __asm("PWM1CON equ 0FB7h");
+[; <" PWM1CON equ 0FB7h ;# ">
+"12161
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 12161: __asm("PWMCON equ 0FB7h");
+[; <" PWMCON equ 0FB7h ;# ">
+"12410
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 12410: __asm("BAUDCON1 equ 0FB8h");
+[; <" BAUDCON1 equ 0FB8h ;# ">
+"12415
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 12415: __asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+"12419
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 12419: __asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+"12423
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 12423: __asm("BAUD1CON equ 0FB8h");
+[; <" BAUD1CON equ 0FB8h ;# ">
+"13084
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13084: __asm("PSTR1CON equ 0FB9h");
+[; <" PSTR1CON equ 0FB9h ;# ">
+"13089
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13089: __asm("PSTRCON equ 0FB9h");
+[; <" PSTRCON equ 0FB9h ;# ">
+"13234
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13234: __asm("T2CON equ 0FBAh");
+[; <" T2CON equ 0FBAh ;# ">
+"13305
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13305: __asm("PR2 equ 0FBBh");
+[; <" PR2 equ 0FBBh ;# ">
+"13325
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13325: __asm("TMR2 equ 0FBCh");
+[; <" TMR2 equ 0FBCh ;# ">
+"13345
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13345: __asm("CCP1CON equ 0FBDh");
+[; <" CCP1CON equ 0FBDh ;# ">
+"13427
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13427: __asm("CCPR1 equ 0FBEh");
+[; <" CCPR1 equ 0FBEh ;# ">
+"13434
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13434: __asm("CCPR1L equ 0FBEh");
+[; <" CCPR1L equ 0FBEh ;# ">
+"13454
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13454: __asm("CCPR1H equ 0FBFh");
+[; <" CCPR1H equ 0FBFh ;# ">
+"13474
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13474: __asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+"13545
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13545: __asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+"13613
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13613: __asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+"13738
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13738: __asm("ADRES equ 0FC3h");
+[; <" ADRES equ 0FC3h ;# ">
+"13745
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13745: __asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+"13765
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13765: __asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+"13785
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13785: __asm("SSP1CON2 equ 0FC5h");
+[; <" SSP1CON2 equ 0FC5h ;# ">
+"13790
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 13790: __asm("SSPCON2 equ 0FC5h");
+[; <" SSPCON2 equ 0FC5h ;# ">
+"14139
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14139: __asm("SSP1CON1 equ 0FC6h");
+[; <" SSP1CON1 equ 0FC6h ;# ">
+"14144
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14144: __asm("SSPCON1 equ 0FC6h");
+[; <" SSPCON1 equ 0FC6h ;# ">
+"14377
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14377: __asm("SSP1STAT equ 0FC7h");
+[; <" SSP1STAT equ 0FC7h ;# ">
+"14382
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14382: __asm("SSPSTAT equ 0FC7h");
+[; <" SSPSTAT equ 0FC7h ;# ">
+"15007
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15007: __asm("SSP1ADD equ 0FC8h");
+[; <" SSP1ADD equ 0FC8h ;# ">
+"15012
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15012: __asm("SSPADD equ 0FC8h");
+[; <" SSPADD equ 0FC8h ;# ">
+"15261
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15261: __asm("SSP1BUF equ 0FC9h");
+[; <" SSP1BUF equ 0FC9h ;# ">
+"15266
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15266: __asm("SSPBUF equ 0FC9h");
+[; <" SSPBUF equ 0FC9h ;# ">
+"15315
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15315: __asm("SSP1MSK equ 0FCAh");
+[; <" SSP1MSK equ 0FCAh ;# ">
+"15320
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15320: __asm("SSPMSK equ 0FCAh");
+[; <" SSPMSK equ 0FCAh ;# ">
+"15453
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15453: __asm("SSP1CON3 equ 0FCBh");
+[; <" SSP1CON3 equ 0FCBh ;# ">
+"15458
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15458: __asm("SSPCON3 equ 0FCBh");
+[; <" SSPCON3 equ 0FCBh ;# ">
+"15575
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15575: __asm("T1GCON equ 0FCCh");
+[; <" T1GCON equ 0FCCh ;# ">
+"15670
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15670: __asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+"15783
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15783: __asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+"15790
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15790: __asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+"15810
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15810: __asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+"15830
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15830: __asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+"15963
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15963: __asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+"15991
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15991: __asm("OSCCON2 equ 0FD2h");
+[; <" OSCCON2 equ 0FD2h ;# ">
+"16048
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16048: __asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+"16131
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16131: __asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+"16201
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16201: __asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+"16208
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16208: __asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+"16228
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16228: __asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+"16248
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16248: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"16319
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16319: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"16326
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16326: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"16346
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16346: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"16353
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16353: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"16373
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16373: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"16393
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16393: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"16413
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16413: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"16433
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16433: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"16453
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16453: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"16460
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16460: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"16467
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16467: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"16487
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16487: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"16494
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16494: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"16514
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16514: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"16534
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16534: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"16554
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16554: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"16574
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16574: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"16594
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16594: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"16632
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16632: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"16639
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16639: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"16659
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16659: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"16666
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16666: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"16686
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16686: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"16706
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16706: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"16726
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16726: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"16746
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16746: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"16766
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16766: __asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+"16858
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16858: __asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+"16928
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16928: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"17045
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17045: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"17052
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17052: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"17072
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17072: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"17092
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17092: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"17114
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17114: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"17121
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17121: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"17141
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17141: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"17161
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17161: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"17192
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17192: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"17199
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17199: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"17206
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17206: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"17226
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17226: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"17246
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17246: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"17253
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17253: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"17359
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17359: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"17366
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17366: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"17386
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17386: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"17406
+[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"70 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 70: COORDS home = {0, 0};
+[v _home `S857 ~T0 @X0 1 e ]
+[i _home
+:U ..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+..
+]
+"72
+[; ;./BeeBot_Globals.h: 72: COORDS waypoints[4] = {{0,0}, {0,0}, {0,0}, {0,0}};
+[v _waypoints `S857 ~T0 @X0 -> 4 `i e ]
+[i _waypoints
+:U ..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+..
+]
+"73
+[; ;./BeeBot_Globals.h: 73: COORDS current_coords = {12345678, 34512121};
+[v _current_coords `S857 ~T0 @X0 1 e ]
+[i _current_coords
+:U ..
+:U ..
+-> 12345678 `l
+-> 34512121 `l
+..
+..
+]
+"75
+[; ;./BeeBot_Globals.h: 75: int temperature = 70;
+[v _temperature `i ~T0 @X0 1 e ]
+[i _temperature
+-> 70 `i
+]
+"76
+[; ;./BeeBot_Globals.h: 76: int humidity = 20;
+[v _humidity `i ~T0 @X0 1 e ]
+[i _humidity
+-> 20 `i
+]
+"77
+[; ;./BeeBot_Globals.h: 77: BYTE start = 0;
+[v _start `uc ~T0 @X0 1 e ]
+[i _start
+-> -> 0 `i `uc
+]
+"78
+[; ;./BeeBot_Globals.h: 78: BYTE mode = 1;
+[v _mode `uc ~T0 @X0 1 e ]
+[i _mode
+-> -> 1 `i `uc
+]
+"79
+[; ;./BeeBot_Globals.h: 79: BYTE left_joystick = 1;
+[v _left_joystick `uc ~T0 @X0 1 e ]
+[i _left_joystick
+-> -> 1 `i `uc
+]
+"80
+[; ;./BeeBot_Globals.h: 80: BYTE right_joystick = 1;
+[v _right_joystick `uc ~T0 @X0 1 e ]
+[i _right_joystick
+-> -> 1 `i `uc
+]
+"81
+[; ;./BeeBot_Globals.h: 81: float battery_percentage;
+[v _battery_percentage `f ~T0 @X0 1 e ]
+"82
+[; ;./BeeBot_Globals.h: 82: float battery_voltage = 0.0f;
+[v _battery_voltage `f ~T0 @X0 1 e ]
+[i _battery_voltage
+-> .0.0 `f
+]
+"84
+[; ;./BeeBot_Globals.h: 84: char time_utc[10] = "";
+[v _time_utc `uc ~T0 @X0 -> 10 `i e ]
+[i _time_utc
+:U ..
+-> 0 `c
+..
+]
+"85
+[; ;./BeeBot_Globals.h: 85: char date_utc[10] = "";
+[v _date_utc `uc ~T0 @X0 -> 10 `i e ]
+[i _date_utc
+:U ..
+-> 0 `c
+..
+]
+"86
+[; ;./BeeBot_Globals.h: 86: BYTE hour_counter = 0;
+[v _hour_counter `uc ~T0 @X0 1 e ]
+[i _hour_counter
+-> -> 0 `i `uc
+]
+"30 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 30: char MRF_param1[10] = "";
+[v _MRF_param1 `uc ~T0 @X0 -> 10 `i e ]
+[i _MRF_param1
+:U ..
+-> 0 `c
+..
+]
+"31
+[; ;./MRF89XAM.h: 31: char MRF_param2[10] = "";
+[v _MRF_param2 `uc ~T0 @X0 -> 10 `i e ]
+[i _MRF_param2
+:U ..
+-> 0 `c
+..
+]
+"32
+[; ;./MRF89XAM.h: 32: BYTE MRF_transmitting = 0;
+[v _MRF_transmitting `uc ~T0 @X0 1 e ]
+[i _MRF_transmitting
+-> -> 0 `i `uc
+]
+"33
+[; ;./MRF89XAM.h: 33: char MRF_message[40] = "";
+[v _MRF_message `uc ~T0 @X0 -> 40 `i e ]
+[i _MRF_message
+:U ..
+-> 0 `c
+..
+]
+"34
+[; ;./MRF89XAM.h: 34: BYTE MRF_message_received = 0;
+[v _MRF_message_received `uc ~T0 @X0 1 e ]
+[i _MRF_message_received
+-> -> 0 `i `uc
+]
+"19 ./MCP2221A.h
+[; ;./MCP2221A.h: 19: BYTE usb_message_received = 0;
+[v _usb_message_received `uc ~T0 @X0 1 e ]
+[i _usb_message_received
+-> -> 0 `i `uc
+]
+"20
+[; ;./MCP2221A.h: 20: char usb_message[100] = "";
+[v _usb_message `uc ~T0 @X0 -> 100 `i e ]
+[i _usb_message
+:U ..
+-> 0 `c
+..
+]
+"21
+[; ;./MCP2221A.h: 21: BYTE usb_received = 0;
+[v _usb_received `uc ~T0 @X0 1 e ]
+[i _usb_received
+-> -> 0 `i `uc
+]
+"22
+[; ;./MCP2221A.h: 22: char USB_param1[10];
+[v _USB_param1 `uc ~T0 @X0 -> 10 `i e ]
+"23
+[; ;./MCP2221A.h: 23: char USB_param2[10];
+[v _USB_param2 `uc ~T0 @X0 -> 10 `i e ]
+[v F7050 `uc ~T0 @X0 -> 9 `i t ]
+"25
+[; ;./MCP2221A.h: 25: char temperatures[25][9];
+[v _temperatures `F7050 ~T0 @X0 -> 25 `i e ]
+[v F7052 `uc ~T0 @X0 -> 9 `i t ]
+"26
+[; ;./MCP2221A.h: 26: char humidities[25][9];
+[v _humidities `F7052 ~T0 @X0 -> 25 `i e ]
+[v F7054 `uc ~T0 @X0 -> 9 `i t ]
+"27
+[; ;./MCP2221A.h: 27: char batteries[25][9];
+[v _batteries `F7054 ~T0 @X0 -> 25 `i e ]
+[v F7056 `uc ~T0 @X0 -> 9 `i t ]
+"28
+[; ;./MCP2221A.h: 28: char times[25][9];
+[v _times `F7056 ~T0 @X0 -> 25 `i e ]
+"15 ./GPS.h
+[; ;./GPS.h: 15: char gps_data[500] = "";
+[v _gps_data `uc ~T0 @X0 -> 500 `i e ]
+[i _gps_data
+:U ..
+-> 0 `c
+..
+]
+"16
+[; ;./GPS.h: 16: char latitude_str[20] = "";
+[v _latitude_str `uc ~T0 @X0 -> 20 `i e ]
+[i _latitude_str
+:U ..
+-> 0 `c
+..
+]
+"17
+[; ;./GPS.h: 17: char longitude_str[20] = "";
+[v _longitude_str `uc ~T0 @X0 -> 20 `i e ]
+[i _longitude_str
+:U ..
+-> 0 `c
+..
+]
+"18
+[; ;./GPS.h: 18: char time_str[20] = "";
+[v _time_str `uc ~T0 @X0 -> 20 `i e ]
+[i _time_str
+:U ..
+-> 0 `c
+..
+]
+"19
+[; ;./GPS.h: 19: char speed_str[20] = "";
+[v _speed_str `uc ~T0 @X0 -> 20 `i e ]
+[i _speed_str
+:U ..
+-> 0 `c
+..
+]
+"20
+[; ;./GPS.h: 20: char date_str[20] = "";
+[v _date_str `uc ~T0 @X0 -> 20 `i e ]
+[i _date_str
+:U ..
+-> 0 `c
+..
+]
+"21
+[; ;./GPS.h: 21: char latitude_dir_str[20] = "";
+[v _latitude_dir_str `uc ~T0 @X0 -> 20 `i e ]
+[i _latitude_dir_str
+:U ..
+-> 0 `c
+..
+]
+"22
+[; ;./GPS.h: 22: char longitude_dir_str[20] = "";
+[v _longitude_dir_str `uc ~T0 @X0 -> 20 `i e ]
+[i _longitude_dir_str
+:U ..
+-> 0 `c
+..
+]
+"106 BeeBot_Main.c
+[; ;BeeBot_Main.c: 106: unsigned int timer_tick = 0;
+[v _timer_tick `ui ~T0 @X0 1 e ]
+[i _timer_tick
+-> -> 0 `i `ui
+]
+"107
+[; ;BeeBot_Main.c: 107: volatile int* adc_out = (volatile int *) 0xFC4;
+[v _adc_out `*Vi ~T0 @X0 1 e ]
+[i _adc_out
+-> -> 4036 `i `*Vi
+]
+"108
+[; ;BeeBot_Main.c: 108: BYTE warning_sent = 0;
+[v _warning_sent `uc ~T0 @X0 1 e ]
+[i _warning_sent
+-> -> 0 `i `uc
+]
+"109
+[; ;BeeBot_Main.c: 109: BYTE coord_mode = 0;
+[v _coord_mode `uc ~T0 @X0 1 e ]
+[i _coord_mode
+-> -> 0 `i `uc
+]
+"110
+[; ;BeeBot_Main.c: 110: unsigned int gps_counter = 0;
+[v _gps_counter `ui ~T0 @X0 1 e ]
+[i _gps_counter
+-> -> 0 `i `ui
+]
+"111
+[; ;BeeBot_Main.c: 111: unsigned long th_timer_tick = 0;
+[v _th_timer_tick `ul ~T0 @X0 1 e ]
+[i _th_timer_tick
+-> -> -> 0 `i `l `ul
+]
+"112
+[; ;BeeBot_Main.c: 112: unsigned long j_timer_tick = 0;
+[v _j_timer_tick `ul ~T0 @X0 1 e ]
+[i _j_timer_tick
+-> -> -> 0 `i `l `ul
+]
+"113
+[; ;BeeBot_Main.c: 113: unsigned long last_joystick_tick = 0;
+[v _last_joystick_tick `ul ~T0 @X0 1 e ]
+[i _last_joystick_tick
+-> -> -> 0 `i `l `ul
+]
+"114
+[; ;BeeBot_Main.c: 114: unsigned long hourly_timer_tick = 0;
+[v _hourly_timer_tick `ul ~T0 @X0 1 e ]
+[i _hourly_timer_tick
+-> -> -> 0 `i `l `ul
+]
+[v F7096 `uc ~T0 @X0 -> 9 `i t ]
+"115
+[; ;BeeBot_Main.c: 115: char reports[60][9];
+[v _reports `F7096 ~T0 @X0 -> 60 `i e ]
+"138
+[; ;BeeBot_Main.c: 138: void set_strobe(void) {LATAbits.LA0 = !LATAbits.LA0;}
+[v _set_strobe `(v ~T0 @X0 1 ef ]
+{
+[e :U _set_strobe ]
+[f ]
+[e = . . _LATAbits 1 0 -> -> ! != -> . . _LATAbits 1 0 `i -> 0 `i `i `uc ]
+[e :UE 858 ]
+}
+"139
+[; ;BeeBot_Main.c: 139: void appendHexToBuffer(long value, char *buffer) { sprintf(buffer + strlen(buffer), "%lx", value);}
+[v _appendHexToBuffer `(v ~T0 @X0 1 ef2`l`*uc ]
+{
+[e :U _appendHexToBuffer ]
+[v _value `l ~T0 @X0 1 r1 ]
+[v _buffer `*uc ~T0 @X0 1 r2 ]
+[f ]
+[e ( _sprintf (1 , (. , + _buffer * -> ( _strlen (1 -> _buffer `*Cuc `ux -> -> # *U _buffer `ui `ux :s 1C _value ]
+[e :UE 859 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"144
+[; ;BeeBot_Main.c: 144: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"145
+[; ;BeeBot_Main.c: 145: {
+{
+[e :U _main ]
+[f ]
+[v F7123 `uc ~T0 @X0 -> 40 `i s ]
+[i F7123
+:U ..
+"146
+[; ;BeeBot_Main.c: 146:     char temp_string[40] = "";
+-> 0 `c
+..
+]
+[v _temp_string `uc ~T0 @X0 -> 40 `i a ]
+[e = _temp_string F7123 ]
+"149
+[; ;BeeBot_Main.c: 149:     OSCCON = 0b01100111;
+[e = _OSCCON -> -> 103 `i `uc ]
+"150
+[; ;BeeBot_Main.c: 150:     _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"153
+[; ;BeeBot_Main.c: 153:     init_pins ();
+[e ( _init_pins ..  ]
+"154
+[; ;BeeBot_Main.c: 154:     init_uart1 ();
+[e ( _init_uart1 ..  ]
+"155
+[; ;BeeBot_Main.c: 155:     init_uart2 ();
+[e ( _init_uart2 ..  ]
+"156
+[; ;BeeBot_Main.c: 156:     init_spi ();
+[e ( _init_spi ..  ]
+"157
+[; ;BeeBot_Main.c: 157:     init_adc ();
+[e ( _init_adc ..  ]
+"158
+[; ;BeeBot_Main.c: 158:     init_MRF89XAM ();
+[e ( _init_MRF89XAM ..  ]
+"159
+[; ;BeeBot_Main.c: 159:     init_interrupts();
+[e ( _init_interrupts ..  ]
+"160
+[; ;BeeBot_Main.c: 160:     stop_motor(0);
+[e ( _stop_motor (1 -> -> 0 `i `uc ]
+"161
+[; ;BeeBot_Main.c: 161:     stop_motor(1);
+[e ( _stop_motor (1 -> -> 1 `i `uc ]
+"162
+[; ;BeeBot_Main.c: 162:     mode = 1;
+[e = _mode -> -> 1 `i `uc ]
+"164
+[; ;BeeBot_Main.c: 164:     while(1)
+[e :U 862 ]
+"165
+[; ;BeeBot_Main.c: 165:     {
+{
+"167
+[; ;BeeBot_Main.c: 167:         if(MRF_message_received)
+[e $ ! != -> _MRF_message_received `i -> 0 `i 864  ]
+"168
+[; ;BeeBot_Main.c: 168:         {
+{
+"169
+[; ;BeeBot_Main.c: 169:             _delay((unsigned long)((25)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"170
+[; ;BeeBot_Main.c: 170:             parse_MRF_message();
+[e ( _parse_MRF_message ..  ]
+"171
+[; ;BeeBot_Main.c: 171:             MRF_message_received = 0;
+[e = _MRF_message_received -> -> 0 `i `uc ]
+"172
+[; ;BeeBot_Main.c: 172:             strcpy(MRF_message, "");
+[e ( _strcpy (2 , &U _MRF_message :s 2C ]
+"173
+[; ;BeeBot_Main.c: 173:         }
+}
+[e $U 865  ]
+"174
+[; ;BeeBot_Main.c: 174:         else if(usb_message_received)
+[e :U 864 ]
+[e $ ! != -> _usb_message_received `i -> 0 `i 866  ]
+"175
+[; ;BeeBot_Main.c: 175:         {
+{
+"176
+[; ;BeeBot_Main.c: 176:             _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"177
+[; ;BeeBot_Main.c: 177:             parse_usb_message(usb_message);
+[e ( _parse_usb_message (1 &U _usb_message ]
+"178
+[; ;BeeBot_Main.c: 178:             usb_message_received = 0;
+[e = _usb_message_received -> -> 0 `i `uc ]
+"179
+[; ;BeeBot_Main.c: 179:             strcpy(usb_message, "");
+[e ( _strcpy (2 , &U _usb_message :s 3C ]
+"180
+[; ;BeeBot_Main.c: 180:         }
+}
+[e :U 866 ]
+[e :U 865 ]
+"183
+[; ;BeeBot_Main.c: 183:         if(mode == 1)
+[e $ ! == -> _mode `i -> 1 `i 867  ]
+"184
+[; ;BeeBot_Main.c: 184:         {
+{
+"186
+[; ;BeeBot_Main.c: 186:            stop_motor(0);
+[e ( _stop_motor (1 -> -> 0 `i `uc ]
+"187
+[; ;BeeBot_Main.c: 187:            stop_motor(1);
+[e ( _stop_motor (1 -> -> 1 `i `uc ]
+"188
+[; ;BeeBot_Main.c: 188:            LATAbits.LA0 = 0;
+[e = . . _LATAbits 1 0 -> -> 0 `i `uc ]
+"189
+[; ;BeeBot_Main.c: 189:         }
+}
+[e $U 868  ]
+"192
+[; ;BeeBot_Main.c: 192:         else if(mode == 0)
+[e :U 867 ]
+[e $ ! == -> _mode `i -> 0 `i 869  ]
+"193
+[; ;BeeBot_Main.c: 193:         {
+{
+"195
+[; ;BeeBot_Main.c: 195:             if(j_timer_tick - last_joystick_tick > 1000)
+[e $ ! > - _j_timer_tick _last_joystick_tick -> -> -> 1000 `i `l `ul 870  ]
+"196
+[; ;BeeBot_Main.c: 196:             {
+{
+"197
+[; ;BeeBot_Main.c: 197:                 left_joystick = right_joystick = 1;
+[e = _left_joystick = _right_joystick -> -> 1 `i `uc ]
+"198
+[; ;BeeBot_Main.c: 198:             }
+}
+[e :U 870 ]
+"202
+[; ;BeeBot_Main.c: 202:             if(left_joystick > 200)
+[e $ ! > -> _left_joystick `i -> 200 `i 871  ]
+"203
+[; ;BeeBot_Main.c: 203:             {
+{
+"204
+[; ;BeeBot_Main.c: 204:                 LATAbits.LA0 = 1;
+[e = . . _LATAbits 1 0 -> -> 1 `i `uc ]
+"205
+[; ;BeeBot_Main.c: 205:                 move_motor(1, 0);
+[e ( _move_motor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+"208
+[; ;BeeBot_Main.c: 208:                 move_motor(0, 0);
+[e ( _move_motor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"209
+[; ;BeeBot_Main.c: 209:                 transmit_string_usb("FORWARDS\n");
+[e ( _transmit_string_usb (1 :s 4C ]
+"210
+[; ;BeeBot_Main.c: 210:             }
+}
+[e $U 872  ]
+"211
+[; ;BeeBot_Main.c: 211:             else if(left_joystick == 0)
+[e :U 871 ]
+[e $ ! == -> _left_joystick `i -> 0 `i 873  ]
+"212
+[; ;BeeBot_Main.c: 212:             {
+{
+"213
+[; ;BeeBot_Main.c: 213:                 if(right_joystick <= 1 || right_joystick >= 200)
+[e $ ! || <= -> _right_joystick `i -> 1 `i >= -> _right_joystick `i -> 200 `i 874  ]
+"214
+[; ;BeeBot_Main.c: 214:                 {
+{
+"215
+[; ;BeeBot_Main.c: 215:                     LATAbits.LA0 = 1;
+[e = . . _LATAbits 1 0 -> -> 1 `i `uc ]
+"216
+[; ;BeeBot_Main.c: 216:                     move_motor(0, 1);
+[e ( _move_motor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"217
+[; ;BeeBot_Main.c: 217:                     move_motor(1, 1);
+[e ( _move_motor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"218
+[; ;BeeBot_Main.c: 218:                     transmit_string_usb("BACKWARDS\n");
+[e ( _transmit_string_usb (1 :s 5C ]
+"219
+[; ;BeeBot_Main.c: 219:                 }
+}
+[e :U 874 ]
+"220
+[; ;BeeBot_Main.c: 220:             }
+}
+[e $U 875  ]
+"221
+[; ;BeeBot_Main.c: 221:             else
+[e :U 873 ]
+"222
+[; ;BeeBot_Main.c: 222:             {
+{
+"223
+[; ;BeeBot_Main.c: 223:                 LATAbits.LA0 = 0;
+[e = . . _LATAbits 1 0 -> -> 0 `i `uc ]
+"224
+[; ;BeeBot_Main.c: 224:                 stop_motor(0);
+[e ( _stop_motor (1 -> -> 0 `i `uc ]
+"225
+[; ;BeeBot_Main.c: 225:                 stop_motor(1);
+[e ( _stop_motor (1 -> -> 1 `i `uc ]
+"226
+[; ;BeeBot_Main.c: 226:                 transmit_string_usb("STOPPING\n");
+[e ( _transmit_string_usb (1 :s 6C ]
+"227
+[; ;BeeBot_Main.c: 227:             }
+}
+[e :U 875 ]
+[e :U 872 ]
+"230
+[; ;BeeBot_Main.c: 230:             if(right_joystick > 200)
+[e $ ! > -> _right_joystick `i -> 200 `i 876  ]
+"231
+[; ;BeeBot_Main.c: 231:             {
+{
+"232
+[; ;BeeBot_Main.c: 232:                 if(left_joystick > 200)
+[e $ ! > -> _left_joystick `i -> 200 `i 877  ]
+"233
+[; ;BeeBot_Main.c: 233:                 {
+{
+"234
+[; ;BeeBot_Main.c: 234:                     stop_motor(0);
+[e ( _stop_motor (1 -> -> 0 `i `uc ]
+"235
+[; ;BeeBot_Main.c: 235:                     _delay((unsigned long)((60)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"236
+[; ;BeeBot_Main.c: 236:                     move_motor(0, FORWARD);
+[e ( _move_motor (2 , -> -> 0 `i `uc -> . `E6984 0 `uc ]
+"237
+[; ;BeeBot_Main.c: 237:                 }
+}
+[e $U 878  ]
+"238
+[; ;BeeBot_Main.c: 238:                 else if(left_joystick == 0)
+[e :U 877 ]
+[e $ ! == -> _left_joystick `i -> 0 `i 879  ]
+"239
+[; ;BeeBot_Main.c: 239:                 {
+{
+"240
+[; ;BeeBot_Main.c: 240:                     stop_motor(1);
+[e ( _stop_motor (1 -> -> 1 `i `uc ]
+"241
+[; ;BeeBot_Main.c: 241:                     _delay((unsigned long)((60)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"242
+[; ;BeeBot_Main.c: 242:                     move_motor(1, 1);
+[e ( _move_motor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"243
+[; ;BeeBot_Main.c: 243:                 }
+}
+[e $U 880  ]
+"244
+[; ;BeeBot_Main.c: 244:                 else
+[e :U 879 ]
+"245
+[; ;BeeBot_Main.c: 245:                 {
+{
+"246
+[; ;BeeBot_Main.c: 246:                     LATAbits.LA0 = 1;
+[e = . . _LATAbits 1 0 -> -> 1 `i `uc ]
+"247
+[; ;BeeBot_Main.c: 247:                     move_motor(1, 0);
+[e ( _move_motor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+"248
+[; ;BeeBot_Main.c: 248:                     move_motor(0, 1);
+[e ( _move_motor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"249
+[; ;BeeBot_Main.c: 249:                 }
+}
+[e :U 880 ]
+[e :U 878 ]
+"250
+[; ;BeeBot_Main.c: 250:                 transmit_string_usb("RIGHT TURN\n\n");
+[e ( _transmit_string_usb (1 :s 7C ]
+"251
+[; ;BeeBot_Main.c: 251:             }
+}
+[e $U 881  ]
+"252
+[; ;BeeBot_Main.c: 252:             else if(right_joystick == 0)
+[e :U 876 ]
+[e $ ! == -> _right_joystick `i -> 0 `i 882  ]
+"253
+[; ;BeeBot_Main.c: 253:             {
+{
+"254
+[; ;BeeBot_Main.c: 254:                 if(left_joystick <= 1 || left_joystick >= 200)
+[e $ ! || <= -> _left_joystick `i -> 1 `i >= -> _left_joystick `i -> 200 `i 883  ]
+"255
+[; ;BeeBot_Main.c: 255:                 {
+{
+"256
+[; ;BeeBot_Main.c: 256:                     if(left_joystick > 200)
+[e $ ! > -> _left_joystick `i -> 200 `i 884  ]
+"257
+[; ;BeeBot_Main.c: 257:                     {
+{
+"258
+[; ;BeeBot_Main.c: 258:                         stop_motor(1);
+[e ( _stop_motor (1 -> -> 1 `i `uc ]
+"259
+[; ;BeeBot_Main.c: 259:                         _delay((unsigned long)((60)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"260
+[; ;BeeBot_Main.c: 260:                         move_motor(1, FORWARD);
+[e ( _move_motor (2 , -> -> 1 `i `uc -> . `E6984 0 `uc ]
+"261
+[; ;BeeBot_Main.c: 261:                     }
+}
+[e $U 885  ]
+"262
+[; ;BeeBot_Main.c: 262:                     else if(left_joystick == 0)
+[e :U 884 ]
+[e $ ! == -> _left_joystick `i -> 0 `i 886  ]
+"263
+[; ;BeeBot_Main.c: 263:                     {
+{
+"264
+[; ;BeeBot_Main.c: 264:                         stop_motor(0);
+[e ( _stop_motor (1 -> -> 0 `i `uc ]
+"265
+[; ;BeeBot_Main.c: 265:                         _delay((unsigned long)((60)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"266
+[; ;BeeBot_Main.c: 266:                         move_motor(0, 1);
+[e ( _move_motor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"267
+[; ;BeeBot_Main.c: 267:                     }
+}
+[e $U 887  ]
+"268
+[; ;BeeBot_Main.c: 268:                     else
+[e :U 886 ]
+"269
+[; ;BeeBot_Main.c: 269:                     {
+{
+"270
+[; ;BeeBot_Main.c: 270:                         LATAbits.LA0 = 1;
+[e = . . _LATAbits 1 0 -> -> 1 `i `uc ]
+"271
+[; ;BeeBot_Main.c: 271:                         move_motor(1, 1);
+[e ( _move_motor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"272
+[; ;BeeBot_Main.c: 272:                         move_motor(0, 0);
+[e ( _move_motor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"273
+[; ;BeeBot_Main.c: 273:                     }
+}
+[e :U 887 ]
+[e :U 885 ]
+"274
+[; ;BeeBot_Main.c: 274:                     transmit_string_usb("LEFT TURN\n\n");
+[e ( _transmit_string_usb (1 :s 8C ]
+"275
+[; ;BeeBot_Main.c: 275:                 }
+}
+[e :U 883 ]
+"276
+[; ;BeeBot_Main.c: 276:             }
+}
+[e :U 882 ]
+[e :U 881 ]
+"277
+[; ;BeeBot_Main.c: 277:         }
+}
+[e $U 888  ]
+"278
+[; ;BeeBot_Main.c: 278:         else if(!start)
+[e :U 869 ]
+[e $ ! ! != -> _start `i -> 0 `i 889  ]
+"279
+[; ;BeeBot_Main.c: 279:         {
+{
+"281
+[; ;BeeBot_Main.c: 281:         }
+}
+[e :U 889 ]
+[e :U 888 ]
+[e :U 868 ]
+"284
+[; ;BeeBot_Main.c: 284:         if(th_timer_tick >= 5000)
+[e $ ! >= _th_timer_tick -> -> -> 5000 `i `l `ul 890  ]
+"285
+[; ;BeeBot_Main.c: 285:         {
+{
+"286
+[; ;BeeBot_Main.c: 286:             th_timer_tick = 0;
+[e = _th_timer_tick -> -> -> 0 `i `l `ul ]
+"289
+[; ;BeeBot_Main.c: 289:             get_temperature_humidity();
+[e ( _get_temperature_humidity ..  ]
+"292
+[; ;BeeBot_Main.c: 292:             battery_voltage = adc_to_actual(get_battery_level());
+[e = _battery_voltage ( _adc_to_actual (1 ( _get_battery_level ..  ]
+"293
+[; ;BeeBot_Main.c: 293:             battery_percentage = calculate_battery_percentage(battery_voltage);
+[e = _battery_percentage ( _calculate_battery_percentage (1 _battery_voltage ]
+"294
+[; ;BeeBot_Main.c: 294:             if(battery_voltage <= 9.3)
+[e $ ! <= -> _battery_voltage `d .9.3 891  ]
+"295
+[; ;BeeBot_Main.c: 295:             {
+{
+"296
+[; ;BeeBot_Main.c: 296:                 if(!warning_sent)
+[e $ ! ! != -> _warning_sent `i -> 0 `i 892  ]
+"297
+[; ;BeeBot_Main.c: 297:                 {
+{
+"298
+[; ;BeeBot_Main.c: 298:                     transmit_string_usb("LOW BATTERY");
+[e ( _transmit_string_usb (1 :s 9C ]
+"299
+[; ;BeeBot_Main.c: 299:                     transmit_string_MRF89XAM("LOWBATT");
+[e ( _transmit_string_MRF89XAM (1 :s 10C ]
+"300
+[; ;BeeBot_Main.c: 300:                 }
+}
+[e :U 892 ]
+"301
+[; ;BeeBot_Main.c: 301:             }
+}
+[e :U 891 ]
+"304
+[; ;BeeBot_Main.c: 304:             strncpy(time_utc, time_str, 6);
+[e ( _strncpy (3 , , &U _time_utc -> &U _time_str `*Cuc -> -> 6 `i `ui ]
+"305
+[; ;BeeBot_Main.c: 305:             strncpy(date_utc, date_str, 6);
+[e ( _strncpy (3 , , &U _date_utc -> &U _date_str `*Cuc -> -> 6 `i `ui ]
+"308
+[; ;BeeBot_Main.c: 308:             if(hourly_timer_tick >= 3100000)
+[e $ ! >= _hourly_timer_tick -> -> 3100000 `l `ul 893  ]
+"309
+[; ;BeeBot_Main.c: 309:             {
+{
+"310
+[; ;BeeBot_Main.c: 310:                 hourly_timer_tick = 0;
+[e = _hourly_timer_tick -> -> -> 0 `i `l `ul ]
+"311
+[; ;BeeBot_Main.c: 311:                 hour_counter++;
+[e ++ _hour_counter -> -> 1 `i `uc ]
+"312
+[; ;BeeBot_Main.c: 312:                 send_hourly_report();
+[e ( _send_hourly_report ..  ]
+"313
+[; ;BeeBot_Main.c: 313:             }
+}
+[e :U 893 ]
+"314
+[; ;BeeBot_Main.c: 314:         }
+}
+[e :U 890 ]
+"315
+[; ;BeeBot_Main.c: 315:     }
+}
+[e :U 861 ]
+[e $U 862  ]
+[e :U 863 ]
+"316
+[; ;BeeBot_Main.c: 316:     return;
+[e $UE 860  ]
+"317
+[; ;BeeBot_Main.c: 317: }
+[e :UE 860 ]
+}
+"322
+[; ;BeeBot_Main.c: 322: void init_pins(void)
+[v _init_pins `(v ~T0 @X0 1 ef ]
+"323
+[; ;BeeBot_Main.c: 323: {
+{
+[e :U _init_pins ]
+[f ]
+"325
+[; ;BeeBot_Main.c: 325:     TRISDbits.RD6 = 1;
+[e = . . _TRISDbits 1 6 -> -> 1 `i `uc ]
+"326
+[; ;BeeBot_Main.c: 326:     TRISDbits.RD6 = 1;
+[e = . . _TRISDbits 1 6 -> -> 1 `i `uc ]
+"327
+[; ;BeeBot_Main.c: 327:     TRISDbits.RD7 = 1;
+[e = . . _TRISDbits 1 7 -> -> 1 `i `uc ]
+"330
+[; ;BeeBot_Main.c: 330:     TRISBbits.RB1 = 1;
+[e = . . _TRISBbits 1 1 -> -> 1 `i `uc ]
+"331
+[; ;BeeBot_Main.c: 331:     TRISBbits.RB2 = 1;
+[e = . . _TRISBbits 1 2 -> -> 1 `i `uc ]
+"332
+[; ;BeeBot_Main.c: 332:     TRISCbits.RC0 = 0;
+[e = . . _TRISCbits 1 0 -> -> 0 `i `uc ]
+"333
+[; ;BeeBot_Main.c: 333:     TRISCbits.RC1 = 0;
+[e = . . _TRISCbits 1 1 -> -> 0 `i `uc ]
+"334
+[; ;BeeBot_Main.c: 334:     TRISCbits.RC2 = 1;
+[e = . . _TRISCbits 1 2 -> -> 1 `i `uc ]
+"335
+[; ;BeeBot_Main.c: 335:     TRISCbits.RC3 = 0;
+[e = . . _TRISCbits 1 3 -> -> 0 `i `uc ]
+"336
+[; ;BeeBot_Main.c: 336:     TRISCbits.RC4 = 1;
+[e = . . _TRISCbits 1 4 -> -> 1 `i `uc ]
+"337
+[; ;BeeBot_Main.c: 337:     TRISCbits.RC5 = 0;
+[e = . . _TRISCbits 1 5 -> -> 0 `i `uc ]
+"338
+[; ;BeeBot_Main.c: 338:     LATCbits.LC0 = 1;
+[e = . . _LATCbits 1 0 -> -> 1 `i `uc ]
+"339
+[; ;BeeBot_Main.c: 339:     LATCbits.LC1 = 1;
+[e = . . _LATCbits 1 1 -> -> 1 `i `uc ]
+"342
+[; ;BeeBot_Main.c: 342:     TRISAbits.RA0 = 0;
+[e = . . _TRISAbits 1 0 -> -> 0 `i `uc ]
+"343
+[; ;BeeBot_Main.c: 343:     LATAbits.LA0 = 0;
+[e = . . _LATAbits 1 0 -> -> 0 `i `uc ]
+"346
+[; ;BeeBot_Main.c: 346:     TRISDbits.RD2 = 1;
+[e = . . _TRISDbits 1 2 -> -> 1 `i `uc ]
+"349
+[; ;BeeBot_Main.c: 349:     TRISAbits.RA3 = 0;
+[e = . . _TRISAbits 1 3 -> -> 0 `i `uc ]
+"350
+[; ;BeeBot_Main.c: 350:     TRISAbits.RA4 = 0;
+[e = . . _TRISAbits 1 4 -> -> 0 `i `uc ]
+"351
+[; ;BeeBot_Main.c: 351:     TRISAbits.RA5 = 0;
+[e = . . _TRISAbits 1 5 -> -> 0 `i `uc ]
+"352
+[; ;BeeBot_Main.c: 352:     TRISAbits.RA6 = 0;
+[e = . . _TRISAbits 1 6 -> -> 0 `i `uc ]
+"353
+[; ;BeeBot_Main.c: 353:     TRISAbits.RA7 = 0;
+[e = . . _TRISAbits 1 7 -> -> 0 `i `uc ]
+"354
+[; ;BeeBot_Main.c: 354:     TRISBbits.RB4 = 1;
+[e = . . _TRISBbits 1 4 -> -> 1 `i `uc ]
+"357
+[; ;BeeBot_Main.c: 357:     TRISDbits.RD1 = 0;
+[e = . . _TRISDbits 1 1 -> -> 0 `i `uc ]
+"358
+[; ;BeeBot_Main.c: 358:     TRISEbits.RE0 = 0;
+[e = . . _TRISEbits 1 0 -> -> 0 `i `uc ]
+"359
+[; ;BeeBot_Main.c: 359:     LATAbits.LA3 = 0;
+[e = . . _LATAbits 1 3 -> -> 0 `i `uc ]
+"360
+[; ;BeeBot_Main.c: 360:     LATAbits.LA4 = 0;
+[e = . . _LATAbits 1 4 -> -> 0 `i `uc ]
+"361
+[; ;BeeBot_Main.c: 361:     LATAbits.LA5 = 0;
+[e = . . _LATAbits 1 5 -> -> 0 `i `uc ]
+"362
+[; ;BeeBot_Main.c: 362:     LATAbits.LA6 = 0;
+[e = . . _LATAbits 1 6 -> -> 0 `i `uc ]
+"363
+[; ;BeeBot_Main.c: 363:     LATAbits.LA7 = 0;
+[e = . . _LATAbits 1 7 -> -> 0 `i `uc ]
+"366
+[; ;BeeBot_Main.c: 366:     TRISCbits.RC6 = 1;
+[e = . . _TRISCbits 1 6 -> -> 1 `i `uc ]
+"367
+[; ;BeeBot_Main.c: 367:     TRISAbits.RA2 = 0;
+[e = . . _TRISAbits 1 2 -> -> 0 `i `uc ]
+"368
+[; ;BeeBot_Main.c: 368:     LATAbits.LA2 = 0;
+[e = . . _LATAbits 1 2 -> -> 0 `i `uc ]
+"371
+[; ;BeeBot_Main.c: 371:     ANSELA = 0x00;
+[e = _ANSELA -> -> 0 `i `uc ]
+"372
+[; ;BeeBot_Main.c: 372:     ANSELB = 0x00;
+[e = _ANSELB -> -> 0 `i `uc ]
+"373
+[; ;BeeBot_Main.c: 373:     ANSELC = 0x00;
+[e = _ANSELC -> -> 0 `i `uc ]
+"374
+[; ;BeeBot_Main.c: 374:     ANSELD = 0x04;
+[e = _ANSELD -> -> 4 `i `uc ]
+"375
+[; ;BeeBot_Main.c: 375:     ANSELE = 0x00;
+[e = _ANSELE -> -> 0 `i `uc ]
+"376
+[; ;BeeBot_Main.c: 376:     return;
+[e $UE 894  ]
+"377
+[; ;BeeBot_Main.c: 377: }
+[e :UE 894 ]
+}
+"382
+[; ;BeeBot_Main.c: 382: void init_adc(void)
+[v _init_adc `(v ~T0 @X0 1 ef ]
+"383
+[; ;BeeBot_Main.c: 383: {
+{
+[e :U _init_adc ]
+[f ]
+"384
+[; ;BeeBot_Main.c: 384:     ADCON2bits.ACQT = 2;
+[e = . . _ADCON2bits 0 1 -> -> 2 `i `uc ]
+"385
+[; ;BeeBot_Main.c: 385:     ADCON2bits.ADFM = 0;
+[e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
+"386
+[; ;BeeBot_Main.c: 386:     ADCON2bits.ADCS = 5;
+[e = . . _ADCON2bits 0 0 -> -> 5 `i `uc ]
+"387
+[; ;BeeBot_Main.c: 387:     ADCON1bits.PVCFG = 0;
+[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+"388
+[; ;BeeBot_Main.c: 388:     ADCON1bits.NVCFG = 0;
+[e = . . _ADCON1bits 0 0 -> -> 0 `i `uc ]
+"389
+[; ;BeeBot_Main.c: 389:     return;
+[e $UE 895  ]
+"390
+[; ;BeeBot_Main.c: 390: }
+[e :UE 895 ]
+}
+"395
+[; ;BeeBot_Main.c: 395: BYTE get_battery_level(void)
+[v _get_battery_level `(uc ~T0 @X0 1 ef ]
+"396
+[; ;BeeBot_Main.c: 396: {
+{
+[e :U _get_battery_level ]
+[f ]
+"397
+[; ;BeeBot_Main.c: 397:     BYTE result;
+[v _result `uc ~T0 @X0 1 a ]
+"400
+[; ;BeeBot_Main.c: 400:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"401
+[; ;BeeBot_Main.c: 401:     ADCON0bits.CHS = 22;
+[e = . . _ADCON0bits 1 2 -> -> 22 `i `uc ]
+"402
+[; ;BeeBot_Main.c: 402:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+"405
+[; ;BeeBot_Main.c: 405:     ADCON0bits.GODONE = 1;
+[e = . . _ADCON0bits 7 1 -> -> 1 `i `uc ]
+"406
+[; ;BeeBot_Main.c: 406:     while(PIR1bits.ADIF != 1) {}
+[e $U 897  ]
+[e :U 898 ]
+{
+}
+[e :U 897 ]
+[e $ != -> . . _PIR1bits 0 6 `i -> 1 `i 898  ]
+[e :U 899 ]
+"407
+[; ;BeeBot_Main.c: 407:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"408
+[; ;BeeBot_Main.c: 408:     result = (BYTE) *adc_out;
+[e = _result -> *U _adc_out `uc ]
+"410
+[; ;BeeBot_Main.c: 410:     ADCON0bits.ADON = 0;
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+"411
+[; ;BeeBot_Main.c: 411:     return result;
+[e ) _result ]
+[e $UE 896  ]
+"412
+[; ;BeeBot_Main.c: 412: }
+[e :UE 896 ]
+}
+"417
+[; ;BeeBot_Main.c: 417: void init_interrupts(void)
+[v _init_interrupts `(v ~T0 @X0 1 ef ]
+"418
+[; ;BeeBot_Main.c: 418: {
+{
+[e :U _init_interrupts ]
+[f ]
+"419
+[; ;BeeBot_Main.c: 419:     RCONbits.IPEN = 0;
+[e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
+"420
+[; ;BeeBot_Main.c: 420:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+"423
+[; ;BeeBot_Main.c: 423:     PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"426
+[; ;BeeBot_Main.c: 426:     PIE3bits.RC2IE = 1;
+[e = . . _PIE3bits 0 5 -> -> 1 `i `uc ]
+"429
+[; ;BeeBot_Main.c: 429:     INTCON3bits.INT1IE = 1;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"430
+[; ;BeeBot_Main.c: 430:     INTCON2bits.INTEDG1 = 1;
+[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
+"433
+[; ;BeeBot_Main.c: 433:     T0CON = 0x08;
+[e = _T0CON -> -> 8 `i `uc ]
+"434
+[; ;BeeBot_Main.c: 434:     TMR0H = 0xF8;
+[e = _TMR0H -> -> 248 `i `uc ]
+"435
+[; ;BeeBot_Main.c: 435:     TMR0L = 0x2F;
+[e = _TMR0L -> -> 47 `i `uc ]
+"436
+[; ;BeeBot_Main.c: 436:     INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+"439
+[; ;BeeBot_Main.c: 439:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"440
+[; ;BeeBot_Main.c: 440:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"441
+[; ;BeeBot_Main.c: 441:     T0CONbits.TMR0ON = 1;
+[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
+"442
+[; ;BeeBot_Main.c: 442:     return;
+[e $UE 900  ]
+"443
+[; ;BeeBot_Main.c: 443: }
+[e :UE 900 ]
+}
+[v $root$_ISR `(v ~T0 @X0 0 e ]
+"448
+[; ;BeeBot_Main.c: 448: void __attribute__((picinterrupt(("")))) ISR(void)
+[v _ISR `(v ~T1 @X0 1 ef ]
+"449
+[; ;BeeBot_Main.c: 449: {
+{
+[e :U _ISR ]
+[f ]
+"450
+[; ;BeeBot_Main.c: 450:     char MRF_input = 0;
+[v _MRF_input `uc ~T0 @X0 1 a ]
+[e = _MRF_input -> -> 0 `i `uc ]
+"451
+[; ;BeeBot_Main.c: 451:     char gps_input = 0;
+[v _gps_input `uc ~T0 @X0 1 a ]
+[e = _gps_input -> -> 0 `i `uc ]
+[v F7133 `uc ~T0 @X0 -> 40 `i s ]
+[i F7133
+:U ..
+"452
+[; ;BeeBot_Main.c: 452:     char temp_receive_string[40] = "";
+-> 0 `c
+..
+]
+[v _temp_receive_string `uc ~T0 @X0 -> 40 `i a ]
+[e = _temp_receive_string F7133 ]
+"455
+[; ;BeeBot_Main.c: 455:     if(PIR1bits.RC1IF && PIE1bits.RC1IE)
+[e $ ! && != -> . . _PIR1bits 0 5 `i -> 0 `i != -> . . _PIE1bits 0 5 `i -> 0 `i 902  ]
+"456
+[; ;BeeBot_Main.c: 456:     {
+{
+"457
+[; ;BeeBot_Main.c: 457:         gps_input = read_byte_gps();
+[e = _gps_input -> ( _read_byte_gps ..  `uc ]
+"458
+[; ;BeeBot_Main.c: 458:         if(gps_counter < 300)
+[e $ ! < _gps_counter -> -> 300 `i `ui 903  ]
+"459
+[; ;BeeBot_Main.c: 459:         {
+{
+"460
+[; ;BeeBot_Main.c: 460:             gps_data[gps_counter] = gps_input;
+[e = *U + &U _gps_data * -> _gps_counter `ux -> -> # *U &U _gps_data `ui `ux _gps_input ]
+"461
+[; ;BeeBot_Main.c: 461:             gps_counter++;
+[e ++ _gps_counter -> -> 1 `i `ui ]
+"462
+[; ;BeeBot_Main.c: 462:         }
+}
+[e $U 904  ]
+"463
+[; ;BeeBot_Main.c: 463:         else if(gps_counter < 500)
+[e :U 903 ]
+[e $ ! < _gps_counter -> -> 500 `i `ui 905  ]
+"464
+[; ;BeeBot_Main.c: 464:         {
+{
+"465
+[; ;BeeBot_Main.c: 465:             gps_counter++;
+[e ++ _gps_counter -> -> 1 `i `ui ]
+"466
+[; ;BeeBot_Main.c: 466:         }
+}
+[e $U 906  ]
+"467
+[; ;BeeBot_Main.c: 467:         else
+[e :U 905 ]
+"468
+[; ;BeeBot_Main.c: 468:         {
+{
+"469
+[; ;BeeBot_Main.c: 469:             PIE1bits.RC1IE = 0;
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+"470
+[; ;BeeBot_Main.c: 470:             parse_gps_data(latitude_str, longitude_str, time_str, speed_str, date_str, latitude_dir_str, longitude_dir_str);
+[e ( _parse_gps_data (4 , , , , , , &U _latitude_str &U _longitude_str &U _time_str &U _speed_str &U _date_str &U _latitude_dir_str &U _longitude_dir_str ]
+"471
+[; ;BeeBot_Main.c: 471:             gps_counter = 0;
+[e = _gps_counter -> -> 0 `i `ui ]
+"472
+[; ;BeeBot_Main.c: 472:             update_coords();
+[e ( _update_coords ..  ]
+"473
+[; ;BeeBot_Main.c: 473:             PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"474
+[; ;BeeBot_Main.c: 474:         }
+}
+[e :U 906 ]
+[e :U 904 ]
+"475
+[; ;BeeBot_Main.c: 475:     }
+}
+[e :U 902 ]
+"478
+[; ;BeeBot_Main.c: 478:     char usb_input = 0;
+[v _usb_input `uc ~T0 @X0 1 a ]
+[e = _usb_input -> -> 0 `i `uc ]
+"479
+[; ;BeeBot_Main.c: 479:     if(PIR3bits.RC2IF && PIE3bits.RC2IE)
+[e $ ! && != -> . . _PIR3bits 0 5 `i -> 0 `i != -> . . _PIE3bits 0 5 `i -> 0 `i 907  ]
+"480
+[; ;BeeBot_Main.c: 480:     {
+{
+"481
+[; ;BeeBot_Main.c: 481:         usb_input = read_byte_usb();
+[e = _usb_input -> ( _read_byte_usb ..  `uc ]
+"482
+[; ;BeeBot_Main.c: 482:         if(usb_input == '\n')
+[e $ ! == -> _usb_input `ui -> 10 `ui 908  ]
+"483
+[; ;BeeBot_Main.c: 483:             usb_message_received = 1;
+[e = _usb_message_received -> -> 1 `i `uc ]
+[e $U 909  ]
+"484
+[; ;BeeBot_Main.c: 484:         else
+[e :U 908 ]
+"485
+[; ;BeeBot_Main.c: 485:             append_string(usb_message, usb_input);
+[e ( _append_string (2 , &U _usb_message _usb_input ]
+[e :U 909 ]
+"486
+[; ;BeeBot_Main.c: 486:     }
+}
+[e :U 907 ]
+"488
+[; ;BeeBot_Main.c: 488:     if(TMR0IE && TMR0IF)
+[e $ ! && _TMR0IE _TMR0IF 910  ]
+"489
+[; ;BeeBot_Main.c: 489:     {
+{
+"490
+[; ;BeeBot_Main.c: 490:         TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"491
+[; ;BeeBot_Main.c: 491:         timer_tick++;
+[e ++ _timer_tick -> -> 1 `i `ui ]
+"492
+[; ;BeeBot_Main.c: 492:         TMR0H = 0xF8;
+[e = _TMR0H -> -> 248 `i `uc ]
+"493
+[; ;BeeBot_Main.c: 493:         TMR0L = 0x2F;
+[e = _TMR0L -> -> 47 `i `uc ]
+"494
+[; ;BeeBot_Main.c: 494:         th_timer_tick++;
+[e ++ _th_timer_tick -> -> -> 1 `i `l `ul ]
+"495
+[; ;BeeBot_Main.c: 495:         j_timer_tick++;
+[e ++ _j_timer_tick -> -> -> 1 `i `l `ul ]
+"496
+[; ;BeeBot_Main.c: 496:         hourly_timer_tick++;
+[e ++ _hourly_timer_tick -> -> -> 1 `i `l `ul ]
+"497
+[; ;BeeBot_Main.c: 497:     }
+}
+[e :U 910 ]
+"500
+[; ;BeeBot_Main.c: 500:     if(INTCON3bits.INT1IE && INTCON3bits.INT1F)
+[e $ ! && != -> . . _INTCON3bits 0 3 `i -> 0 `i != -> . . _INTCON3bits 1 0 `i -> 0 `i 911  ]
+"501
+[; ;BeeBot_Main.c: 501:     {
+{
+"502
+[; ;BeeBot_Main.c: 502:         INTCON3bits.INT1F = 0;
+[e = . . _INTCON3bits 1 0 -> -> 0 `i `uc ]
+"503
+[; ;BeeBot_Main.c: 503:         if(MRF_message_received == 0)
+[e $ ! == -> _MRF_message_received `i -> 0 `i 912  ]
+"504
+[; ;BeeBot_Main.c: 504:         {
+{
+"505
+[; ;BeeBot_Main.c: 505:             MRF_input = (char) receive_MRF89XAM();
+[e = _MRF_input -> ( _receive_MRF89XAM ..  `uc ]
+"506
+[; ;BeeBot_Main.c: 506:             append_string(MRF_message, MRF_input);
+[e ( _append_string (2 , &U _MRF_message _MRF_input ]
+"507
+[; ;BeeBot_Main.c: 507:             if(strlen(MRF_message) == 8)
+[e $ ! == ( _strlen (1 -> &U _MRF_message `*Cuc -> -> 8 `i `ui 913  ]
+"508
+[; ;BeeBot_Main.c: 508:                 MRF_message_received = 1;
+[e = _MRF_message_received -> -> 1 `i `uc ]
+[e $U 914  ]
+"509
+[; ;BeeBot_Main.c: 509:             else
+[e :U 913 ]
+"510
+[; ;BeeBot_Main.c: 510:                 MRF_message_received = 0;
+[e = _MRF_message_received -> -> 0 `i `uc ]
+[e :U 914 ]
+"511
+[; ;BeeBot_Main.c: 511:         }
+}
+[e :U 912 ]
+"512
+[; ;BeeBot_Main.c: 512:     }
+}
+[e :U 911 ]
+"513
+[; ;BeeBot_Main.c: 513:     return;
+[e $UE 901  ]
+"514
+[; ;BeeBot_Main.c: 514: }
+[e :UE 901 ]
+}
+"519
+[; ;BeeBot_Main.c: 519: void parse_MRF_message(void)
+[v _parse_MRF_message `(v ~T0 @X0 1 ef ]
+"520
+[; ;BeeBot_Main.c: 520: {
+{
+[e :U _parse_MRF_message ]
+[f ]
+"521
+[; ;BeeBot_Main.c: 521:     char message_id = MRF_message[0];
+[v _message_id `uc ~T0 @X0 1 a ]
+[e = _message_id *U + &U _MRF_message * -> -> -> 0 `i `ui `ux -> -> # *U &U _MRF_message `ui `ux ]
+[v F7138 `uc ~T0 @X0 -> 40 `i s ]
+[i F7138
+:U ..
+"522
+[; ;BeeBot_Main.c: 522:     char temp_string[40] = "";
+-> 0 `c
+..
+]
+[v _temp_string `uc ~T0 @X0 -> 40 `i a ]
+[e = _temp_string F7138 ]
+[v F7140 `uc ~T0 @X0 -> 9 `i s ]
+[i F7140
+:U ..
+"523
+[; ;BeeBot_Main.c: 523:     char response[9] = "";
+-> 0 `c
+..
+]
+[v _response `uc ~T0 @X0 -> 9 `i a ]
+[e = _response F7140 ]
+"524
+[; ;BeeBot_Main.c: 524:     BYTE counter;
+[v _counter `uc ~T0 @X0 1 a ]
+"527
+[; ;BeeBot_Main.c: 527:     if (strcmp(MRF_message, "\n\n\n\n\n\n\n\n"))
+[e $ ! != ( _strcmp (2 , -> &U _MRF_message `*Cuc :s 12C -> 0 `i 916  ]
+"528
+[; ;BeeBot_Main.c: 528:     {
+{
+"530
+[; ;BeeBot_Main.c: 530:         if (!strncmp(MRF_message, "hello", 5))
+[e $ ! ! != ( _strncmp (3 , , -> &U _MRF_message `*Cuc :s 14C -> -> 5 `i `ui -> 0 `i 917  ]
+"531
+[; ;BeeBot_Main.c: 531:         {
+{
+"532
+[; ;BeeBot_Main.c: 532:             transmit_string_MRF89XAM("HI!");
+[e ( _transmit_string_MRF89XAM (1 :s 15C ]
+"533
+[; ;BeeBot_Main.c: 533:         }
+}
+[e :U 917 ]
+"534
+[; ;BeeBot_Main.c: 534:         switch (message_id)
+[e $U 919  ]
+"535
+[; ;BeeBot_Main.c: 535:         {
+{
+"537
+[; ;BeeBot_Main.c: 537:             case 'R':
+[e :U 920 ]
+"539
+[; ;BeeBot_Main.c: 539:                 strcpy(response, "RT");
+[e ( _strcpy (2 , &U _response :s 16C ]
+"540
+[; ;BeeBot_Main.c: 540:                 append_string(response, (char) temperature);
+[e ( _append_string (2 , &U _response -> _temperature `uc ]
+"541
+[; ;BeeBot_Main.c: 541:                 strcat(response, "H");
+[e ( _strcat (2 , &U _response :s 17C ]
+"542
+[; ;BeeBot_Main.c: 542:                 append_string(response, (char) humidity);
+[e ( _append_string (2 , &U _response -> _humidity `uc ]
+"543
+[; ;BeeBot_Main.c: 543:                 strcat(response, "B");
+[e ( _strcat (2 , &U _response :s 18C ]
+"544
+[; ;BeeBot_Main.c: 544:                 append_string(response, (char) battery_percentage);
+[e ( _append_string (2 , &U _response -> _battery_percentage `uc ]
+"545
+[; ;BeeBot_Main.c: 545:                 append_string(response, (char) hour_counter+20);
+[e ( _append_string (2 , &U _response -> + -> -> _hour_counter `uc `i -> 20 `i `uc ]
+"546
+[; ;BeeBot_Main.c: 546:                 transmit_string_usb(response);
+[e ( _transmit_string_usb (1 &U _response ]
+"547
+[; ;BeeBot_Main.c: 547:                 transmit_string_MRF89XAM(response);
+[e ( _transmit_string_MRF89XAM (1 &U _response ]
+"548
+[; ;BeeBot_Main.c: 548:                 strcpy(reports[hour_counter], response);
+[e ( _strcpy (2 , &U *U + &U _reports * -> _hour_counter `ux -> * -> # *U &U *U &U _reports `ui -> -> 9 `i `ui `ux -> &U _response `*Cuc ]
+"551
+[; ;BeeBot_Main.c: 551:                 _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"552
+[; ;BeeBot_Main.c: 552:                 strcpy(response, "O");
+[e ( _strcpy (2 , &U _response :s 19C ]
+"553
+[; ;BeeBot_Main.c: 553:                 appendHexToBuffer(current_coords.longitude, response);
+[e ( _appendHexToBuffer (2 , . _current_coords 0 &U _response ]
+"554
+[; ;BeeBot_Main.c: 554:                 transmit_string_MRF89XAM(response);
+[e ( _transmit_string_MRF89XAM (1 &U _response ]
+"555
+[; ;BeeBot_Main.c: 555:                 _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"556
+[; ;BeeBot_Main.c: 556:                 strcpy(response, "A");
+[e ( _strcpy (2 , &U _response :s 20C ]
+"557
+[; ;BeeBot_Main.c: 557:                 appendHexToBuffer(current_coords.latitude, response);
+[e ( _appendHexToBuffer (2 , . _current_coords 1 &U _response ]
+"558
+[; ;BeeBot_Main.c: 558:                 transmit_string_MRF89XAM(response);
+[e ( _transmit_string_MRF89XAM (1 &U _response ]
+"559
+[; ;BeeBot_Main.c: 559:                 break;
+[e $U 918  ]
+"562
+[; ;BeeBot_Main.c: 562:             case 'L':
+[e :U 921 ]
+"563
+[; ;BeeBot_Main.c: 563:                 for(counter = 0; counter <= hour_counter; counter++)
+{
+[e = _counter -> -> 0 `i `uc ]
+[e $U 925  ]
+[e :U 922 ]
+"564
+[; ;BeeBot_Main.c: 564:                 {
+{
+"565
+[; ;BeeBot_Main.c: 565:                     transmit_string_MRF89XAM(reports[counter]);
+[e ( _transmit_string_MRF89XAM (1 &U *U + &U _reports * -> _counter `ux -> * -> # *U &U *U &U _reports `ui -> -> 9 `i `ui `ux ]
+"566
+[; ;BeeBot_Main.c: 566:                     _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"567
+[; ;BeeBot_Main.c: 567:                 }
+}
+[e ++ _counter -> -> 1 `i `uc ]
+[e :U 925 ]
+[e $ <= -> _counter `i -> _hour_counter `i 922  ]
+[e :U 923 ]
+}
+"568
+[; ;BeeBot_Main.c: 568:                 break;
+[e $U 918  ]
+"571
+[; ;BeeBot_Main.c: 571:             case 'H':
+[e :U 926 ]
+"572
+[; ;BeeBot_Main.c: 572:                 home = current_coords;
+[e = _home _current_coords ]
+"573
+[; ;BeeBot_Main.c: 573:                  _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"574
+[; ;BeeBot_Main.c: 574:                 strcpy(response, "O");
+[e ( _strcpy (2 , &U _response :s 21C ]
+"575
+[; ;BeeBot_Main.c: 575:                 appendHexToBuffer(home.longitude, response);
+[e ( _appendHexToBuffer (2 , . _home 0 &U _response ]
+"576
+[; ;BeeBot_Main.c: 576:                 transmit_string_MRF89XAM(response);
+[e ( _transmit_string_MRF89XAM (1 &U _response ]
+"577
+[; ;BeeBot_Main.c: 577:                 _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"578
+[; ;BeeBot_Main.c: 578:                 strcpy(response, "A");
+[e ( _strcpy (2 , &U _response :s 22C ]
+"579
+[; ;BeeBot_Main.c: 579:                 appendHexToBuffer(home.latitude, response);
+[e ( _appendHexToBuffer (2 , . _home 1 &U _response ]
+"580
+[; ;BeeBot_Main.c: 580:                 transmit_string_MRF89XAM(response);
+[e ( _transmit_string_MRF89XAM (1 &U _response ]
+"581
+[; ;BeeBot_Main.c: 581:                 break;
+[e $U 918  ]
+"584
+[; ;BeeBot_Main.c: 584:             case 'C':
+[e :U 927 ]
+"585
+[; ;BeeBot_Main.c: 585:                 waypoints[3] = home;
+[e = *U + &U _waypoints * -> -> -> 3 `i `ui `ux -> -> # *U &U _waypoints `ui `ux _home ]
+"587
+[; ;BeeBot_Main.c: 587:                 _delay((unsigned long)((1500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"588
+[; ;BeeBot_Main.c: 588:                 strcpy(response, "O");
+[e ( _strcpy (2 , &U _response :s 23C ]
+"589
+[; ;BeeBot_Main.c: 589:                 appendHexToBuffer(waypoints[3].longitude, response);
+[e ( _appendHexToBuffer (2 , . *U + &U _waypoints * -> -> -> 3 `i `ui `ux -> -> # *U &U _waypoints `ui `ux 0 &U _response ]
+"590
+[; ;BeeBot_Main.c: 590:                 transmit_string_MRF89XAM(response);
+[e ( _transmit_string_MRF89XAM (1 &U _response ]
+"591
+[; ;BeeBot_Main.c: 591:                 _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"592
+[; ;BeeBot_Main.c: 592:                 strcpy(response, "A");
+[e ( _strcpy (2 , &U _response :s 24C ]
+"593
+[; ;BeeBot_Main.c: 593:                 appendHexToBuffer(waypoints[3].latitude, response);
+[e ( _appendHexToBuffer (2 , . *U + &U _waypoints * -> -> -> 3 `i `ui `ux -> -> # *U &U _waypoints `ui `ux 1 &U _response ]
+"594
+[; ;BeeBot_Main.c: 594:                 transmit_string_MRF89XAM(response);
+[e ( _transmit_string_MRF89XAM (1 &U _response ]
+"595
+[; ;BeeBot_Main.c: 595:                 break;
+[e $U 918  ]
+"598
+[; ;BeeBot_Main.c: 598:             case '1':
+[e :U 928 ]
+"599
+[; ;BeeBot_Main.c: 599:                 transmit_string_usb("Setting Waypoint 1");
+[e ( _transmit_string_usb (1 :s 25C ]
+"600
+[; ;BeeBot_Main.c: 600:                 coord_mode = 1;
+[e = _coord_mode -> -> 1 `i `uc ]
+"601
+[; ;BeeBot_Main.c: 601:                 break;
+[e $U 918  ]
+"603
+[; ;BeeBot_Main.c: 603:             case '2':
+[e :U 929 ]
+"604
+[; ;BeeBot_Main.c: 604:                 transmit_string_usb("Setting Waypoint 2");
+[e ( _transmit_string_usb (1 :s 26C ]
+"605
+[; ;BeeBot_Main.c: 605:                 coord_mode = 2;
+[e = _coord_mode -> -> 2 `i `uc ]
+"606
+[; ;BeeBot_Main.c: 606:                 break;
+[e $U 918  ]
+"609
+[; ;BeeBot_Main.c: 609:             case '3':
+[e :U 930 ]
+"610
+[; ;BeeBot_Main.c: 610:                 transmit_string_usb("Setting Waypoint 3");
+[e ( _transmit_string_usb (1 :s 27C ]
+"611
+[; ;BeeBot_Main.c: 611:                 coord_mode = 3;
+[e = _coord_mode -> -> 3 `i `uc ]
+"612
+[; ;BeeBot_Main.c: 612:                 break;
+[e $U 918  ]
+"615
+[; ;BeeBot_Main.c: 615:             case 'D':
+[e :U 931 ]
+"616
+[; ;BeeBot_Main.c: 616:                 transmit_string_usb("Setting Destination");
+[e ( _transmit_string_usb (1 :s 28C ]
+"617
+[; ;BeeBot_Main.c: 617:                 coord_mode = 4;
+[e = _coord_mode -> -> 4 `i `uc ]
+"618
+[; ;BeeBot_Main.c: 618:                 break;
+[e $U 918  ]
+"620
+[; ;BeeBot_Main.c: 620:             case 'O':
+[e :U 932 ]
+"621
+[; ;BeeBot_Main.c: 621:                 if (coord_mode > 0 && coord_mode < 5)
+[e $ ! && > -> _coord_mode `i -> 0 `i < -> _coord_mode `i -> 5 `i 933  ]
+"622
+[; ;BeeBot_Main.c: 622:                 {
+{
+"623
+[; ;BeeBot_Main.c: 623:                     waypoints[coord_mode - 1].latitude = extractHexadecimalValue(MRF_message);
+[e = . *U + &U _waypoints * -> -> - -> _coord_mode `i -> 1 `i `ui `ux -> -> # *U &U _waypoints `ui `ux 1 ( _extractHexadecimalValue (1 -> &U _MRF_message `*Cuc ]
+"624
+[; ;BeeBot_Main.c: 624:                     ltoa(waypoints[coord_mode - 1].latitude, temp_string);
+[e ( _ltoa (2 , . *U + &U _waypoints * -> -> - -> _coord_mode `i -> 1 `i `ui `ux -> -> # *U &U _waypoints `ui `ux 1 &U _temp_string ]
+"625
+[; ;BeeBot_Main.c: 625:                     transmit_string_usb("latitude: ");
+[e ( _transmit_string_usb (1 :s 29C ]
+"626
+[; ;BeeBot_Main.c: 626:                     transmit_string_usb(temp_string);
+[e ( _transmit_string_usb (1 &U _temp_string ]
+"627
+[; ;BeeBot_Main.c: 627:                 }
+}
+[e :U 933 ]
+"628
+[; ;BeeBot_Main.c: 628:                 break;
+[e $U 918  ]
+"630
+[; ;BeeBot_Main.c: 630:             case 'A':
+[e :U 934 ]
+"631
+[; ;BeeBot_Main.c: 631:                 if (coord_mode > 0 && coord_mode < 5)
+[e $ ! && > -> _coord_mode `i -> 0 `i < -> _coord_mode `i -> 5 `i 935  ]
+"632
+[; ;BeeBot_Main.c: 632:                 {
+{
+"633
+[; ;BeeBot_Main.c: 633:                     waypoints[coord_mode - 1].longitude = extractHexadecimalValue(MRF_message);
+[e = . *U + &U _waypoints * -> -> - -> _coord_mode `i -> 1 `i `ui `ux -> -> # *U &U _waypoints `ui `ux 0 ( _extractHexadecimalValue (1 -> &U _MRF_message `*Cuc ]
+"634
+[; ;BeeBot_Main.c: 634:                     ltoa(waypoints[coord_mode - 1].longitude, temp_string);
+[e ( _ltoa (2 , . *U + &U _waypoints * -> -> - -> _coord_mode `i -> 1 `i `ui `ux -> -> # *U &U _waypoints `ui `ux 0 &U _temp_string ]
+"635
+[; ;BeeBot_Main.c: 635:                     transmit_string_usb("longitude: ");
+[e ( _transmit_string_usb (1 :s 30C ]
+"636
+[; ;BeeBot_Main.c: 636:                     transmit_string_usb(temp_string);
+[e ( _transmit_string_usb (1 &U _temp_string ]
+"637
+[; ;BeeBot_Main.c: 637:                 }
+}
+[e :U 935 ]
+"638
+[; ;BeeBot_Main.c: 638:                 coord_mode = 0;
+[e = _coord_mode -> -> 0 `i `uc ]
+"639
+[; ;BeeBot_Main.c: 639:                 break;
+[e $U 918  ]
+"642
+[; ;BeeBot_Main.c: 642:             case 'S':
+[e :U 936 ]
+"643
+[; ;BeeBot_Main.c: 643:                 start = 1;
+[e = _start -> -> 1 `i `uc ]
+"644
+[; ;BeeBot_Main.c: 644:                 transmit_string_usb("\n*****STARTING*****");
+[e ( _transmit_string_usb (1 :s 31C ]
+"645
+[; ;BeeBot_Main.c: 645:                 break;
+[e $U 918  ]
+"648
+[; ;BeeBot_Main.c: 648:             case 'X':
+[e :U 937 ]
+"649
+[; ;BeeBot_Main.c: 649:                 start = 0;
+[e = _start -> -> 0 `i `uc ]
+"650
+[; ;BeeBot_Main.c: 650:                 transmit_string_usb("\n*****STOPPING*****");
+[e ( _transmit_string_usb (1 :s 32C ]
+"651
+[; ;BeeBot_Main.c: 651:                 break;
+[e $U 918  ]
+"654
+[; ;BeeBot_Main.c: 654:             case 'M':
+[e :U 938 ]
+"655
+[; ;BeeBot_Main.c: 655:                 mode = 0;
+[e = _mode -> -> 0 `i `uc ]
+"656
+[; ;BeeBot_Main.c: 656:                 last_joystick_tick = j_timer_tick = 0;
+[e = _last_joystick_tick = _j_timer_tick -> -> -> 0 `i `l `ul ]
+"657
+[; ;BeeBot_Main.c: 657:                 transmit_string_usb("\n*****MANUAL MODE SET*****");
+[e ( _transmit_string_usb (1 :s 33C ]
+"658
+[; ;BeeBot_Main.c: 658:                 break;
+[e $U 918  ]
+"661
+[; ;BeeBot_Main.c: 661:             case 'U':
+[e :U 939 ]
+"662
+[; ;BeeBot_Main.c: 662:                 mode = 1;
+[e = _mode -> -> 1 `i `uc ]
+"663
+[; ;BeeBot_Main.c: 663:                 transmit_string_usb("\n*****AUTO MODE SET*****");
+[e ( _transmit_string_usb (1 :s 34C ]
+"664
+[; ;BeeBot_Main.c: 664:                 break;
+[e $U 918  ]
+"667
+[; ;BeeBot_Main.c: 667:             case 'J':
+[e :U 940 ]
+"668
+[; ;BeeBot_Main.c: 668:                 last_joystick_tick = j_timer_tick;
+[e = _last_joystick_tick _j_timer_tick ]
+"669
+[; ;BeeBot_Main.c: 669:                 for (counter = 1; counter < 8; counter++)
+{
+[e = _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 8 `i 941  ]
+[e $U 942  ]
+[e :U 941 ]
+"670
+[; ;BeeBot_Main.c: 670:                 {
+{
+"672
+[; ;BeeBot_Main.c: 672:                     if (counter < 4)
+[e $ ! < -> _counter `i -> 4 `i 944  ]
+"673
+[; ;BeeBot_Main.c: 673:                         append_string(temp_string, MRF_message[counter]);
+[e ( _append_string (2 , &U _temp_string *U + &U _MRF_message * -> _counter `ux -> -> # *U &U _MRF_message `ui `ux ]
+[e $U 945  ]
+"674
+[; ;BeeBot_Main.c: 674:                     else if (counter == 4)
+[e :U 944 ]
+[e $ ! == -> _counter `i -> 4 `i 946  ]
+"675
+[; ;BeeBot_Main.c: 675:                     {
+{
+"677
+[; ;BeeBot_Main.c: 677:                         left_joystick = (BYTE) atoi(temp_string);
+[e = _left_joystick -> ( _atoi (1 -> &U _temp_string `*Cuc `uc ]
+"678
+[; ;BeeBot_Main.c: 678:                         strcpy(temp_string, "");
+[e ( _strcpy (2 , &U _temp_string :s 35C ]
+"679
+[; ;BeeBot_Main.c: 679:                         append_string(temp_string, MRF_message[counter]);
+[e ( _append_string (2 , &U _temp_string *U + &U _MRF_message * -> _counter `ux -> -> # *U &U _MRF_message `ui `ux ]
+"680
+[; ;BeeBot_Main.c: 680:                     }
+}
+[e $U 947  ]
+"681
+[; ;BeeBot_Main.c: 681:                     else if(counter == 5)
+[e :U 946 ]
+[e $ ! == -> _counter `i -> 5 `i 948  ]
+"682
+[; ;BeeBot_Main.c: 682:                         append_string(temp_string, MRF_message[counter]);
+[e ( _append_string (2 , &U _temp_string *U + &U _MRF_message * -> _counter `ux -> -> # *U &U _MRF_message `ui `ux ]
+[e $U 949  ]
+"683
+[; ;BeeBot_Main.c: 683:                     else if (counter == 6)
+[e :U 948 ]
+[e $ ! == -> _counter `i -> 6 `i 950  ]
+"684
+[; ;BeeBot_Main.c: 684:                     {
+{
+"685
+[; ;BeeBot_Main.c: 685:                         append_string(temp_string, MRF_message[counter]);
+[e ( _append_string (2 , &U _temp_string *U + &U _MRF_message * -> _counter `ux -> -> # *U &U _MRF_message `ui `ux ]
+"686
+[; ;BeeBot_Main.c: 686:                         right_joystick = (BYTE) atoi(temp_string);
+[e = _right_joystick -> ( _atoi (1 -> &U _temp_string `*Cuc `uc ]
+"688
+[; ;BeeBot_Main.c: 688:                         sprintf(temp_string, "Left Joy = %d, Right Joy = %d", left_joystick, right_joystick);
+[e ( _sprintf (1 , , (. , &U _temp_string :s 36C -> _left_joystick `i -> _right_joystick `i ]
+"689
+[; ;BeeBot_Main.c: 689:                         transmit_string_usb(temp_string);
+[e ( _transmit_string_usb (1 &U _temp_string ]
+"690
+[; ;BeeBot_Main.c: 690:                     }
+}
+[e :U 950 ]
+[e :U 949 ]
+[e :U 947 ]
+[e :U 945 ]
+"691
+[; ;BeeBot_Main.c: 691:                 }
+}
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 8 `i 941  ]
+[e :U 942 ]
+}
+"692
+[; ;BeeBot_Main.c: 692:                 break;
+[e $U 918  ]
+"693
+[; ;BeeBot_Main.c: 693:             default:
+[e :U 951 ]
+"694
+[; ;BeeBot_Main.c: 694:                 message_id = 0x00;
+[e = _message_id -> -> 0 `i `uc ]
+"696
+[; ;BeeBot_Main.c: 696:                 break;
+[e $U 918  ]
+"697
+[; ;BeeBot_Main.c: 697:         }
+}
+[e $U 918  ]
+[e :U 919 ]
+[e [\ -> _message_id `i , $ -> -> 82 `ui `i 920
+ , $ -> -> 76 `ui `i 921
+ , $ -> -> 72 `ui `i 926
+ , $ -> -> 67 `ui `i 927
+ , $ -> -> 49 `ui `i 928
+ , $ -> -> 50 `ui `i 929
+ , $ -> -> 51 `ui `i 930
+ , $ -> -> 68 `ui `i 931
+ , $ -> -> 79 `ui `i 932
+ , $ -> -> 65 `ui `i 934
+ , $ -> -> 83 `ui `i 936
+ , $ -> -> 88 `ui `i 937
+ , $ -> -> 77 `ui `i 938
+ , $ -> -> 85 `ui `i 939
+ , $ -> -> 74 `ui `i 940
+ 951 ]
+[e :U 918 ]
+"698
+[; ;BeeBot_Main.c: 698:     }
+}
+[e :U 916 ]
+"699
+[; ;BeeBot_Main.c: 699:     return;
+[e $UE 915  ]
+"700
+[; ;BeeBot_Main.c: 700: }
+[e :UE 915 ]
+}
+"705
+[; ;BeeBot_Main.c: 705: long extractHexadecimalValue(const char *str)
+[v _extractHexadecimalValue `(l ~T0 @X0 1 ef1`*Cuc ]
+"706
+[; ;BeeBot_Main.c: 706: {
+{
+[e :U _extractHexadecimalValue ]
+"705
+[; ;BeeBot_Main.c: 705: long extractHexadecimalValue(const char *str)
+[v _str `*Cuc ~T0 @X0 1 r1 ]
+"706
+[; ;BeeBot_Main.c: 706: {
+[f ]
+"707
+[; ;BeeBot_Main.c: 707:     str++;
+[e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
+"708
+[; ;BeeBot_Main.c: 708:     long hexValue = strtol(str, ((void*)0), 16);
+[v _hexValue `l ~T0 @X0 1 a ]
+[e = _hexValue ( _strtol (3 , , _str -> -> -> 0 `i `*v `**uc -> 16 `i ]
+"709
+[; ;BeeBot_Main.c: 709:     return hexValue;
+[e ) _hexValue ]
+[e $UE 952  ]
+"710
+[; ;BeeBot_Main.c: 710: }
+[e :UE 952 ]
+}
+"715
+[; ;BeeBot_Main.c: 715: float adc_to_actual(BYTE adc_value)
+[v _adc_to_actual `(f ~T0 @X0 1 ef1`uc ]
+"716
+[; ;BeeBot_Main.c: 716: {
+{
+[e :U _adc_to_actual ]
+"715
+[; ;BeeBot_Main.c: 715: float adc_to_actual(BYTE adc_value)
+[v _adc_value `uc ~T0 @X0 1 r1 ]
+"716
+[; ;BeeBot_Main.c: 716: {
+[f ]
+"717
+[; ;BeeBot_Main.c: 717:     float voltage = 0;
+[v _voltage `f ~T0 @X0 1 a ]
+[e = _voltage -> -> 0 `i `f ]
+"718
+[; ;BeeBot_Main.c: 718:     float ref_voltage = 3.3f;
+[v _ref_voltage `f ~T0 @X0 1 a ]
+[e = _ref_voltage -> .3.3 `f ]
+"720
+[; ;BeeBot_Main.c: 720:     voltage = ((float) adc_value) * (ref_voltage/256.0f);
+[e = _voltage * -> _adc_value `f / _ref_voltage -> .256.0 `f ]
+"721
+[; ;BeeBot_Main.c: 721:     voltage *= 4.0f;
+[e =* _voltage -> .4.0 `f ]
+"722
+[; ;BeeBot_Main.c: 722:     return voltage;
+[e ) _voltage ]
+[e $UE 953  ]
+"723
+[; ;BeeBot_Main.c: 723: }
+[e :UE 953 ]
+}
+"728
+[; ;BeeBot_Main.c: 728: float calculate_battery_percentage(float voltage)
+[v _calculate_battery_percentage `(f ~T0 @X0 1 ef1`f ]
+"729
+[; ;BeeBot_Main.c: 729: {
+{
+[e :U _calculate_battery_percentage ]
+"728
+[; ;BeeBot_Main.c: 728: float calculate_battery_percentage(float voltage)
+[v _voltage `f ~T0 @X0 1 r1 ]
+"729
+[; ;BeeBot_Main.c: 729: {
+[f ]
+"731
+[; ;BeeBot_Main.c: 731:     float minVoltage = 9.0;
+[v _minVoltage `f ~T0 @X0 1 a ]
+[e = _minVoltage -> .9.0 `f ]
+"732
+[; ;BeeBot_Main.c: 732:     float maxVoltage = 12.6;
+[v _maxVoltage `f ~T0 @X0 1 a ]
+[e = _maxVoltage -> .12.6 `f ]
+"733
+[; ;BeeBot_Main.c: 733:     float minPercentage = 0.0;
+[v _minPercentage `f ~T0 @X0 1 a ]
+[e = _minPercentage -> .0.0 `f ]
+"734
+[; ;BeeBot_Main.c: 734:     float maxPercentage = 100.0;
+[v _maxPercentage `f ~T0 @X0 1 a ]
+[e = _maxPercentage -> .100.0 `f ]
+"737
+[; ;BeeBot_Main.c: 737:     float percentage = minPercentage + ((voltage - minVoltage) / (maxVoltage - minVoltage)) * (maxPercentage - minPercentage);
+[v _percentage `f ~T0 @X0 1 a ]
+[e = _percentage + _minPercentage * / - _voltage _minVoltage - _maxVoltage _minVoltage - _maxPercentage _minPercentage ]
+"740
+[; ;BeeBot_Main.c: 740:     if (percentage < minPercentage)
+[e $ ! < _percentage _minPercentage 955  ]
+"741
+[; ;BeeBot_Main.c: 741:         percentage = minPercentage;
+[e = _percentage _minPercentage ]
+[e $U 956  ]
+"742
+[; ;BeeBot_Main.c: 742:     else if (percentage > maxPercentage)
+[e :U 955 ]
+[e $ ! > _percentage _maxPercentage 957  ]
+"743
+[; ;BeeBot_Main.c: 743:         percentage = maxPercentage;
+[e = _percentage _maxPercentage ]
+[e :U 957 ]
+[e :U 956 ]
+"745
+[; ;BeeBot_Main.c: 745:     return percentage;
+[e ) _percentage ]
+[e $UE 954  ]
+"746
+[; ;BeeBot_Main.c: 746: }
+[e :UE 954 ]
+}
+"753
+[; ;BeeBot_Main.c: 753: void get_temperature_humidity(void)
+[v _get_temperature_humidity `(v ~T0 @X0 1 ef ]
+"754
+[; ;BeeBot_Main.c: 754: {
+{
+[e :U _get_temperature_humidity ]
+[f ]
+"755
+[; ;BeeBot_Main.c: 755:     BYTE counter;
+[v _counter `uc ~T0 @X0 1 a ]
+[v F7161 `uc ~T0 @X0 -> 40 `i s ]
+[i F7161
+:U ..
+"756
+[; ;BeeBot_Main.c: 756:     BYTE th_reading[40] = {0};
+-> -> 0 `i `uc
+..
+]
+[v _th_reading `uc ~T0 @X0 -> 40 `i a ]
+[e = _th_reading F7161 ]
+"759
+[; ;BeeBot_Main.c: 759:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+"762
+[; ;BeeBot_Main.c: 762:     TRISAbits.RA1 = 0;
+[e = . . _TRISAbits 1 1 -> -> 0 `i `uc ]
+"763
+[; ;BeeBot_Main.c: 763:     LATAbits.LA1 = 0;
+[e = . . _LATAbits 1 1 -> -> 0 `i `uc ]
+"764
+[; ;BeeBot_Main.c: 764:     _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"765
+[; ;BeeBot_Main.c: 765:     LATAbits.LA1 = 1;
+[e = . . _LATAbits 1 1 -> -> 1 `i `uc ]
+"768
+[; ;BeeBot_Main.c: 768:     _delay((unsigned long)((45)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 45 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"769
+[; ;BeeBot_Main.c: 769:     TRISAbits.RA1 = 1;
+[e = . . _TRISAbits 1 1 -> -> 1 `i `uc ]
+"770
+[; ;BeeBot_Main.c: 770:     if(PORTAbits.RA1 == 0)
+[e $ ! == -> . . _PORTAbits 0 1 `i -> 0 `i 959  ]
+"771
+[; ;BeeBot_Main.c: 771:     {
+{
+"773
+[; ;BeeBot_Main.c: 773:         while(PORTAbits.RA1 == 0);
+[e $U 960  ]
+[e :U 961 ]
+[e :U 960 ]
+[e $ == -> . . _PORTAbits 0 1 `i -> 0 `i 961  ]
+[e :U 962 ]
+"775
+[; ;BeeBot_Main.c: 775:         while(PORTAbits.RA1 == 1);
+[e $U 963  ]
+[e :U 964 ]
+[e :U 963 ]
+[e $ == -> . . _PORTAbits 0 1 `i -> 1 `i 964  ]
+[e :U 965 ]
+"781
+[; ;BeeBot_Main.c: 781:         for(counter = 0; counter < 40; counter++)
+{
+[e = _counter -> -> 0 `i `uc ]
+[e $ < -> _counter `i -> 40 `i 966  ]
+[e $U 967  ]
+[e :U 966 ]
+"782
+[; ;BeeBot_Main.c: 782:         {
+{
+"784
+[; ;BeeBot_Main.c: 784:             while(PORTAbits.RA1 == 0);
+[e $U 969  ]
+[e :U 970 ]
+[e :U 969 ]
+[e $ == -> . . _PORTAbits 0 1 `i -> 0 `i 970  ]
+[e :U 971 ]
+"787
+[; ;BeeBot_Main.c: 787:             _delay((unsigned long)((40)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"788
+[; ;BeeBot_Main.c: 788:             th_reading[counter] = PORTAbits.RA1;
+[e = *U + &U _th_reading * -> _counter `ux -> -> # *U &U _th_reading `ui `ux . . _PORTAbits 0 1 ]
+"791
+[; ;BeeBot_Main.c: 791:             while(PORTAbits.RA1 == 1);
+[e $U 972  ]
+[e :U 973 ]
+[e :U 972 ]
+[e $ == -> . . _PORTAbits 0 1 `i -> 1 `i 973  ]
+[e :U 974 ]
+"792
+[; ;BeeBot_Main.c: 792:         }
+}
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 40 `i 966  ]
+[e :U 967 ]
+}
+"793
+[; ;BeeBot_Main.c: 793:     }
+}
+[e :U 959 ]
+"796
+[; ;BeeBot_Main.c: 796:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"802
+[; ;BeeBot_Main.c: 802:     temperature = humidity = 0x00;
+[e = _temperature = _humidity -> 0 `i ]
+"803
+[; ;BeeBot_Main.c: 803:     for(counter = 0; counter < 16; counter++)
+{
+[e = _counter -> -> 0 `i `uc ]
+[e $ < -> _counter `i -> 16 `i 975  ]
+[e $U 976  ]
+[e :U 975 ]
+"804
+[; ;BeeBot_Main.c: 804:     {
+{
+"805
+[; ;BeeBot_Main.c: 805:         if(th_reading[counter] == 1)
+[e $ ! == -> *U + &U _th_reading * -> _counter `ux -> -> # *U &U _th_reading `ui `ux `i -> 1 `i 978  ]
+"806
+[; ;BeeBot_Main.c: 806:             humidity = humidity | (0x01 << (15-counter));
+[e = _humidity | _humidity << -> 1 `i - -> 15 `i -> _counter `i ]
+[e :U 978 ]
+"807
+[; ;BeeBot_Main.c: 807:         if(th_reading[counter + 16] == 1)
+[e $ ! == -> *U + &U _th_reading * -> -> + -> _counter `i -> 16 `i `ui `ux -> -> # *U &U _th_reading `ui `ux `i -> 1 `i 979  ]
+"808
+[; ;BeeBot_Main.c: 808:             temperature = temperature | (0x01 << (15-counter));
+[e = _temperature | _temperature << -> 1 `i - -> 15 `i -> _counter `i ]
+[e :U 979 ]
+"809
+[; ;BeeBot_Main.c: 809:     }
+}
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 16 `i 975  ]
+[e :U 976 ]
+}
+"812
+[; ;BeeBot_Main.c: 812:     temperature /= 10;
+[e =/ _temperature -> 10 `i ]
+"813
+[; ;BeeBot_Main.c: 813:     humidity /= 10;
+[e =/ _humidity -> 10 `i ]
+"816
+[; ;BeeBot_Main.c: 816:     temperature = (int) ((float) temperature * 9.0f/5.0f + 32.0f);
+[e = _temperature -> + / * -> _temperature `f -> .9.0 `f -> .5.0 `f -> .32.0 `f `i ]
+"818
+[; ;BeeBot_Main.c: 818:     return;
+[e $UE 958  ]
+"819
+[; ;BeeBot_Main.c: 819: }
+[e :UE 958 ]
+}
+"821
+[; ;BeeBot_Main.c: 821: void send_hourly_report(void)
+[v _send_hourly_report `(v ~T0 @X0 1 ef ]
+"822
+[; ;BeeBot_Main.c: 822: {
+{
+[e :U _send_hourly_report ]
+[f ]
+"824
+[; ;BeeBot_Main.c: 824:     strcpy(MRF_message, "R");
+[e ( _strcpy (2 , &U _MRF_message :s 37C ]
+"825
+[; ;BeeBot_Main.c: 825:     parse_MRF_message();
+[e ( _parse_MRF_message ..  ]
+"826
+[; ;BeeBot_Main.c: 826:     strcpy(MRF_message, "");
+[e ( _strcpy (2 , &U _MRF_message :s 38C ]
+"830
+[; ;BeeBot_Main.c: 830:     strcpy(usb_message, "REPORT");
+[e ( _strcpy (2 , &U _usb_message :s 39C ]
+"831
+[; ;BeeBot_Main.c: 831:     parse_usb_message(usb_message);
+[e ( _parse_usb_message (1 &U _usb_message ]
+"832
+[; ;BeeBot_Main.c: 832:     strcpy(usb_message, "");
+[e ( _strcpy (2 , &U _usb_message :s 40C ]
+"833
+[; ;BeeBot_Main.c: 833:     return;
+[e $UE 980  ]
+"834
+[; ;BeeBot_Main.c: 834: }
+[e :UE 980 ]
+}
+"836
+[; ;BeeBot_Main.c: 836: void move_motor(BYTE motor, BYTE dir)
+[v _move_motor `(v ~T0 @X0 1 ef2`uc`uc ]
+"837
+[; ;BeeBot_Main.c: 837: {
+{
+[e :U _move_motor ]
+"836
+[; ;BeeBot_Main.c: 836: void move_motor(BYTE motor, BYTE dir)
+[v _motor `uc ~T0 @X0 1 r1 ]
+[v _dir `uc ~T0 @X0 1 r2 ]
+"837
+[; ;BeeBot_Main.c: 837: {
+[f ]
+"838
+[; ;BeeBot_Main.c: 838:     if(motor == 1)
+[e $ ! == -> _motor `i -> 1 `i 982  ]
+"839
+[; ;BeeBot_Main.c: 839:     {
+{
+"840
+[; ;BeeBot_Main.c: 840:         if(dir == 0)
+[e $ ! == -> _dir `i -> 0 `i 983  ]
+"841
+[; ;BeeBot_Main.c: 841:         {
+{
+"842
+[; ;BeeBot_Main.c: 842:             LATDbits.LD1 = 0;
+[e = . . _LATDbits 1 1 -> -> 0 `i `uc ]
+"843
+[; ;BeeBot_Main.c: 843:             LATAbits.LA4 = 1;
+[e = . . _LATAbits 1 4 -> -> 1 `i `uc ]
+"844
+[; ;BeeBot_Main.c: 844:         }
+}
+[e $U 984  ]
+"845
+[; ;BeeBot_Main.c: 845:         else
+[e :U 983 ]
+"846
+[; ;BeeBot_Main.c: 846:         {
+{
+"847
+[; ;BeeBot_Main.c: 847:             LATDbits.LD1 = 1;
+[e = . . _LATDbits 1 1 -> -> 1 `i `uc ]
+"848
+[; ;BeeBot_Main.c: 848:             LATAbits.LA4 = 0;
+[e = . . _LATAbits 1 4 -> -> 0 `i `uc ]
+"849
+[; ;BeeBot_Main.c: 849:         }
+}
+[e :U 984 ]
+"850
+[; ;BeeBot_Main.c: 850:     }
+}
+[e $U 985  ]
+"851
+[; ;BeeBot_Main.c: 851:     else if(motor == 0)
+[e :U 982 ]
+[e $ ! == -> _motor `i -> 0 `i 986  ]
+"852
+[; ;BeeBot_Main.c: 852:     {
+{
+"853
+[; ;BeeBot_Main.c: 853:         if(dir == 0)
+[e $ ! == -> _dir `i -> 0 `i 987  ]
+"854
+[; ;BeeBot_Main.c: 854:         {
+{
+"855
+[; ;BeeBot_Main.c: 855:             LATEbits.LE0 = 0;
+[e = . . _LATEbits 1 0 -> -> 0 `i `uc ]
+"856
+[; ;BeeBot_Main.c: 856:             LATAbits.LA3 = 1;
+[e = . . _LATAbits 1 3 -> -> 1 `i `uc ]
+"857
+[; ;BeeBot_Main.c: 857:         }
+}
+[e $U 988  ]
+"858
+[; ;BeeBot_Main.c: 858:         else
+[e :U 987 ]
+"859
+[; ;BeeBot_Main.c: 859:         {
+{
+"860
+[; ;BeeBot_Main.c: 860:             LATEbits.LE0 = 1;
+[e = . . _LATEbits 1 0 -> -> 1 `i `uc ]
+"861
+[; ;BeeBot_Main.c: 861:             LATAbits.LA3 = 0;
+[e = . . _LATAbits 1 3 -> -> 0 `i `uc ]
+"862
+[; ;BeeBot_Main.c: 862:         }
+}
+[e :U 988 ]
+"863
+[; ;BeeBot_Main.c: 863:     }
+}
+[e :U 986 ]
+[e :U 985 ]
+"864
+[; ;BeeBot_Main.c: 864:     return;
+[e $UE 981  ]
+"865
+[; ;BeeBot_Main.c: 865: }
+[e :UE 981 ]
+}
+"867
+[; ;BeeBot_Main.c: 867: void stop_motor(BYTE motor)
+[v _stop_motor `(v ~T0 @X0 1 ef1`uc ]
+"868
+[; ;BeeBot_Main.c: 868: {
+{
+[e :U _stop_motor ]
+"867
+[; ;BeeBot_Main.c: 867: void stop_motor(BYTE motor)
+[v _motor `uc ~T0 @X0 1 r1 ]
+"868
+[; ;BeeBot_Main.c: 868: {
+[f ]
+"869
+[; ;BeeBot_Main.c: 869:     if(motor == 1)
+[e $ ! == -> _motor `i -> 1 `i 990  ]
+"870
+[; ;BeeBot_Main.c: 870:         LATDbits.LD1 = LATAbits.LA4 = 0;
+[e = . . _LATDbits 1 1 = . . _LATAbits 1 4 -> -> 0 `i `uc ]
+[e $U 991  ]
+"871
+[; ;BeeBot_Main.c: 871:     else if(motor == 0)
+[e :U 990 ]
+[e $ ! == -> _motor `i -> 0 `i 992  ]
+"872
+[; ;BeeBot_Main.c: 872:         LATEbits.LE0 = LATAbits.LA3 = 0;
+[e = . . _LATEbits 1 0 = . . _LATAbits 1 3 -> -> 0 `i `uc ]
+[e :U 992 ]
+[e :U 991 ]
+"873
+[; ;BeeBot_Main.c: 873:     return;
+[e $UE 989  ]
+"874
+[; ;BeeBot_Main.c: 874: }
+[e :UE 989 ]
+}
+"879
+[; ;BeeBot_Main.c: 879: void update_coords(void)
+[v _update_coords `(v ~T0 @X0 1 ef ]
+"880
+[; ;BeeBot_Main.c: 880: {
+{
+[e :U _update_coords ]
+[f ]
+"881
+[; ;BeeBot_Main.c: 881:     float temp_f_lat = 0.0f;
+[v _temp_f_lat `f ~T0 @X0 1 a ]
+[e = _temp_f_lat -> .0.0 `f ]
+"882
+[; ;BeeBot_Main.c: 882:     float temp_f_long = 0.0f;
+[v _temp_f_long `f ~T0 @X0 1 a ]
+[e = _temp_f_long -> .0.0 `f ]
+"884
+[; ;BeeBot_Main.c: 884:     temp_f_lat = (float) atof(latitude_str) * 1000.0f;
+[e = _temp_f_lat * -> ( _atof (1 -> &U _latitude_str `*Cuc `f -> .1000.0 `f ]
+"885
+[; ;BeeBot_Main.c: 885:     temp_f_long = (float) atof(longitude_str) * 1000.0f;
+[e = _temp_f_long * -> ( _atof (1 -> &U _longitude_str `*Cuc `f -> .1000.0 `f ]
+"887
+[; ;BeeBot_Main.c: 887:     current_coords.latitude = (long) temp_f_lat;
+[e = . _current_coords 1 -> _temp_f_lat `l ]
+"888
+[; ;BeeBot_Main.c: 888:     current_coords.longitude = (long) temp_f_long;
+[e = . _current_coords 0 -> _temp_f_long `l ]
+"890
+[; ;BeeBot_Main.c: 890:     minutes_to_degrees(&current_coords);
+[e ( _minutes_to_degrees (1 &U _current_coords ]
+"892
+[; ;BeeBot_Main.c: 892:     return;
+[e $UE 993  ]
+"893
+[; ;BeeBot_Main.c: 893: }
+[e :UE 993 ]
+}
+"895
+[; ;BeeBot_Main.c: 895: void minutes_to_degrees(COORDS* coordinates)
+[v _minutes_to_degrees `(v ~T0 @X0 1 ef1`*S857 ]
+"896
+[; ;BeeBot_Main.c: 896: {
+{
+[e :U _minutes_to_degrees ]
+"895
+[; ;BeeBot_Main.c: 895: void minutes_to_degrees(COORDS* coordinates)
+[v _coordinates `*S857 ~T0 @X0 1 r1 ]
+"896
+[; ;BeeBot_Main.c: 896: {
+[f ]
+"897
+[; ;BeeBot_Main.c: 897:     long whole_long;
+[v _whole_long `l ~T0 @X0 1 a ]
+"898
+[; ;BeeBot_Main.c: 898:     long whole_lat;
+[v _whole_lat `l ~T0 @X0 1 a ]
+"899
+[; ;BeeBot_Main.c: 899:     long dec_long;
+[v _dec_long `l ~T0 @X0 1 a ]
+"900
+[; ;BeeBot_Main.c: 900:     long dec_lat;
+[v _dec_lat `l ~T0 @X0 1 a ]
+"903
+[; ;BeeBot_Main.c: 903:     whole_long = coordinates->longitude / 100000;
+[e = _whole_long / . *U _coordinates 0 -> 100000 `l ]
+"904
+[; ;BeeBot_Main.c: 904:     whole_long *= 100000;
+[e =* _whole_long -> 100000 `l ]
+"905
+[; ;BeeBot_Main.c: 905:     whole_lat = coordinates->latitude / 100000;
+[e = _whole_lat / . *U _coordinates 1 -> 100000 `l ]
+"906
+[; ;BeeBot_Main.c: 906:     whole_lat *= 100000;
+[e =* _whole_lat -> 100000 `l ]
+"909
+[; ;BeeBot_Main.c: 909:     dec_long = (coordinates->longitude - whole_long) * 100;
+[e = _dec_long * - . *U _coordinates 0 _whole_long -> -> 100 `i `l ]
+"910
+[; ;BeeBot_Main.c: 910:     dec_lat = (coordinates->latitude - whole_lat) * 100;
+[e = _dec_lat * - . *U _coordinates 1 _whole_lat -> -> 100 `i `l ]
+"913
+[; ;BeeBot_Main.c: 913:     dec_long /= 60;
+[e =/ _dec_long -> -> 60 `i `l ]
+"914
+[; ;BeeBot_Main.c: 914:     dec_lat /= 60;
+[e =/ _dec_lat -> -> 60 `i `l ]
+"917
+[; ;BeeBot_Main.c: 917:     coordinates->longitude = whole_long + dec_long;
+[e = . *U _coordinates 0 + _whole_long _dec_long ]
+"918
+[; ;BeeBot_Main.c: 918:     coordinates->latitude = whole_lat + dec_lat;
+[e = . *U _coordinates 1 + _whole_lat _dec_lat ]
+"919
+[; ;BeeBot_Main.c: 919:     return;
+[e $UE 994  ]
+"920
+[; ;BeeBot_Main.c: 920: }
+[e :UE 994 ]
+}
+[p f _sprintf 12583056 ]
+[a 1C 37 108 120 0 ]
+[a 13C 104 101 108 108 111 0 ]
+[a 14C 104 101 108 108 111 0 ]
+[a 28C 83 101 116 116 105 110 103 32 68 101 115 116 105 110 97 116 105 111 110 0 ]
+[a 36C 76 101 102 116 32 74 111 121 32 61 32 37 100 44 32 82 105 103 104 116 32 74 111 121 32 61 32 37 100 0 ]
+[a 9C 76 79 87 32 66 65 84 84 69 82 89 0 ]
+[a 10C 76 79 87 66 65 84 84 0 ]
+[a 39C 82 69 80 79 82 84 0 ]
+[a 16C 82 84 0 ]
+[a 37C 82 0 ]
+[a 19C 79 0 ]
+[a 21C 79 0 ]
+[a 23C 79 0 ]
+[a 17C 72 0 ]
+[a 18C 66 0 ]
+[a 20C 65 0 ]
+[a 22C 65 0 ]
+[a 24C 65 0 ]
+[a 27C 83 101 116 116 105 110 103 32 87 97 121 112 111 105 110 116 32 51 0 ]
+[a 26C 83 101 116 116 105 110 103 32 87 97 121 112 111 105 110 116 32 50 0 ]
+[a 25C 83 101 116 116 105 110 103 32 87 97 121 112 111 105 110 116 32 49 0 ]
+[a 34C 10 42 42 42 42 42 65 85 84 79 32 77 79 68 69 32 83 69 84 42 42 42 42 42 0 ]
+[a 33C 10 42 42 42 42 42 77 65 78 85 65 76 32 77 79 68 69 32 83 69 84 42 42 42 42 42 0 ]
+[a 31C 10 42 42 42 42 42 83 84 65 82 84 73 78 71 42 42 42 42 42 0 ]
+[a 32C 10 42 42 42 42 42 83 84 79 80 80 73 78 71 42 42 42 42 42 0 ]
+[a 15C 72 73 33 0 ]
+[a 29C 108 97 116 105 116 117 100 101 58 32 0 ]
+[a 30C 108 111 110 103 105 116 117 100 101 58 32 0 ]
+[a 4C 70 79 82 87 65 82 68 83 10 0 ]
+[a 5C 66 65 67 75 87 65 82 68 83 10 0 ]
+[a 6C 83 84 79 80 80 73 78 71 10 0 ]
+[a 7C 82 73 71 72 84 32 84 85 82 78 10 10 0 ]
+[a 8C 76 69 70 84 32 84 85 82 78 10 10 0 ]
+[a 11C 10 10 10 10 10 10 10 10 0 ]
+[a 12C 10 10 10 10 10 10 10 10 0 ]
+[a 2C 0 ]
+[a 3C 0 ]
+[a 35C 0 ]
+[a 38C 0 ]
+[a 40C 0 ]
