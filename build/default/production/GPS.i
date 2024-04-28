@@ -1,4 +1,4 @@
-# 1 "MRF89XAM.c"
+# 1 "GPS.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "MRF89XAM.c" 2
+# 1 "GPS.c" 2
+# 1 "./GPS.h" 1
 
 
 
@@ -14,8 +15,6 @@
 
 
 
-# 1 "./MRF89XAM.h" 1
-# 11 "./MRF89XAM.h"
 # 1 "./BeeBot_Globals.h" 1
 # 15 "./BeeBot_Globals.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\xc.h" 1 3
@@ -10313,182 +10312,131 @@ void itoa(int n, char s[]);
 void reverse_string(char s[]);
 void ftoa(float num, char *str, int decimalPlaces);
 void ltoa(long n, char s[]);
-# 11 "./MRF89XAM.h" 2
+# 8 "./GPS.h" 2
+
+# 1 "./MCP2221A.h" 1
+# 19 "./MCP2221A.h"
+BYTE usb_message_received = 0;
+char usb_message[100] = "";
+BYTE usb_received = 0;
+char USB_param1[10];
+char USB_param2[10];
+
+char temperatures[25][9];
+char humidities[25][9];
+char batteries[25][9];
+char times[25][9];
 
 
 
 
 
-void init_spi (void);
-void init_MRF89XAM (void);
-void write_spi_reg (BYTE reg_address, BYTE data);
 
-void write_spi_data (BYTE data);
-BYTE read_spi_data (void);
-void transmit_string_MRF89XAM(char tx_str[]);
-BYTE receive_MRF89XAM (void);
-void MRF_parse_message(char message[], char code[]);
-
-
+void init_uart2 (void);
+BYTE read_byte_usb (void);
+void transmit_byte_usb (BYTE message);
+void transmit_string_usb(char message[]);
+void parse_usb_message (char message[]);
+COORDS get_coords_usb (void);
+void insertPeriod(char *str);
+# 9 "./GPS.h" 2
 
 
+void init_uart1 (void);
+BYTE read_byte_gps (void);
+void parse_gps_data(char* latitude, char* longitude, char* time, char* speed, char* date, char* longitude_dir, char* latitude_dir);
 
-char MRF_param1[10] = "";
-char MRF_param2[10] = "";
-BYTE MRF_transmitting = 0;
-char MRF_message[40] = "";
-BYTE MRF_message_received = 0;
-# 8 "MRF89XAM.c" 2
+char gps_data[500] = "";
+char latitude_str[20] = "";
+char longitude_str[20] = "";
+char time_str[20] = "";
+char speed_str[20] = "";
+char date_str[20] = "";
+char latitude_dir_str[20] = "";
+char longitude_dir_str[20] = "";
+# 1 "GPS.c" 2
 
 
 
 
 
-void init_spi(void)
+void init_uart1(void)
 {
-    SSP1CON1 = 0b00100001;
-    SSP1STATbits.SMP = 0;
-    SSP1STATbits.CKE = 1;
-    SSP1CON1bits.CKP = 0;
+    TXSTA1bits.BRGH = 1;
+    SPBRG1 = 51;
+    TXSTA1bits.SYNC = 0;
+    RCSTA1bits.SPEN = 1;
+    TRISCbits.TRISC7 = 1;
+    TXSTA1bits.TX9 = 0;
+    RCSTA1bits.RX9 = 0;
+    RCSTA1bits.CREN = 1;
+    TXSTA1bits.TXEN = 1;
     return;
 }
 
 
 
 
-
-
-
-void write_spi_reg(BYTE reg_address, BYTE data)
+BYTE read_byte_gps(void)
 {
-    BYTE address_byte = (BYTE)(reg_address << 1);
-    address_byte &= 0b00111110;
-
-    BYTE dummy = 0x00;
+    BYTE content = RCREG1;
 
 
-    LATCbits.LC0 = 0;
-
-
-    dummy = SSP1BUF;
-    SSP1BUF = address_byte;
-    while (!SSP1STATbits.BF);
-
-
-    dummy = SSP1BUF;
-    SSP1BUF = data;
-    while (!SSP1STATbits.BF);
-    dummy = SSP1BUF;
-
-
-    LATCbits.LC0 = 1;
-    return;
-}
-# 88 "MRF89XAM.c"
-void write_spi_data(BYTE data)
-{
-    BYTE dummy;
-
-
-    LATCbits.LC1 = 0;
-
-
-    dummy = SSP1BUF;
-    SSP1BUF = data;
-
-    while (!SSP1STATbits.BF);
-    dummy = SSP1BUF;
-
-
-    LATCbits.LC1 = 1;
-
-    return;
+    if(RCSTA1bits.OERR)
+    {
+        RCSTA1bits.CREN = 0;
+        RCSTA1bits.CREN = 1;
+    }
+    return content;
 }
 
 
 
-
-BYTE read_spi_data(void)
+void parse_gps_data(char* latitude, char* longitude, char* time, char* speed, char* date, char* longitude_dir, char* latitude_dir)
 {
-    BYTE dummy;
-    BYTE data = 0x00;
-
-
-    LATCbits.LC1 = 0;
-
-
-    dummy = SSP1BUF;
-    SSP1BUF = 0x00;
-    while (!SSP1STATbits.BF);
-    data = SSP1BUF;
-
-
-    LATCbits.LC1 = 1;
-
-    return data;
-}
+    char *token;
+    char temp_string[40] = "";
 
 
 
 
-void init_MRF89XAM(void)
-{
-    write_spi_reg(0x00, 0b01100010);
-    write_spi_reg(0x01, 0b10101100);
-    write_spi_reg(0x05, 0b11001000);
-    write_spi_reg(0x0D, 0b10111000);
-    write_spi_reg(0x0E, 0b00011101);
-    write_spi_reg(0x0F, 0b11111111);
-    write_spi_reg(0x1B, 0b00111100);
-    write_spi_reg(0x1C, 0b00001000);
-
-    return;
-}
+    token = strtok(gps_data, ",");
 
 
+    while (token != ((void*)0))
+    {
 
 
-void transmit_string_MRF89XAM(char tx_str[])
-{
-    unsigned int length = strlen(tx_str);
-    BYTE counter;
-    BYTE loop = 1;
-    BYTE loop_counter = 0;
-
-
-
-        write_spi_reg(0x00, 0b00100010);
-        MRF_transmitting = 1;
-        INTCON3bits.INT1IE = 0;
-
-        if(length <= 8)
+        if(strstr(token, "GPRMC") != ((void*)0))
         {
+            token = strtok(((void*)0), ",");
+            strcpy(time_str, token);
 
-            for(counter = 0; counter < 8; counter++)
-            {
-                if(counter < length)
-                    write_spi_data((BYTE)(tx_str[counter] << 1));
-                else
-                    write_spi_data((BYTE)('\n' << 1));
-            }
+            token = strtok(((void*)0), ",");
+
+            token = strtok(((void*)0), ",");
+            strcpy(latitude_str, token);
+
+            token = strtok(((void*)0), ",");
+            strcpy(latitude_dir_str, token);
+
+            token = strtok(((void*)0), ",");
+            strcpy(longitude_str, token);
+
+            token = strtok(((void*)0), ",");
+            strcpy(longitude_dir_str, token);
+
+            token = strtok(((void*)0), ",");
+            strcpy(speed_str, token);
+
+            token = strtok(((void*)0), ",");
+
+            token = strtok(((void*)0), ",");
+            strcpy(date_str, token);
+
+            break;
         }
-        write_spi_reg(0x00, 0b10000010);
-
-        while(PORTBbits.RB1 == 0);
-        while(PORTBbits.RB2 == 0);
-
-        write_spi_reg(0x00, 0b01100010);
-        MRF_transmitting = 0;
-        INTCON3bits.INT1IF = 0;
-        INTCON3bits.INT1IE = 1;
+        token = strtok(((void*)0), ",");
+    }
     return;
-}
-
-
-
-
-BYTE receive_MRF89XAM(void)
-{
-
-    return read_spi_data();
 }

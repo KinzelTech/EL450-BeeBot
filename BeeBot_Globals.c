@@ -14,7 +14,7 @@
 void append_string(char *str, char ch)
 {
     unsigned int length = strlen(str);
-    if(length < MSG_MAX - 1)
+    if(length < 500 - 1)
     {
         str[length]     = ch;
         str[length + 1] = '\0';
@@ -32,7 +32,8 @@ void reverse_string(char s[])
     int i, j;
     char c;
  
-    for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+    for (i = 0, j = ((char)strlen(s))-1; i<j; i++, j--) 
+    {
         c = s[i];
         s[i] = s[j];
         s[j] = c;
@@ -64,7 +65,7 @@ void itoa(int n, char s[])
 /******************************************************************************/
 /*                         Sort an array in numeric order                     */
 /******************************************************************************/
-void bubbleSort(BYTE arr[], BYTE n) 
+/*void bubbleSort(BYTE arr[], BYTE n) 
 {
     BYTE i, j, temp;
     for (i = 0; i < n-1; i++) {
@@ -79,7 +80,7 @@ void bubbleSort(BYTE arr[], BYTE n)
         }
     }
     return;
-}
+}*/
 
 /******************************************************************************/
 /*                  Convert a double to an equivalent string                  */
@@ -96,7 +97,7 @@ void ftoa(float num, char *str, int decimalPlaces)
     for (int i = 0; i < decimalPlaces; i++) {
         decimalPart *= 10;
         int digit = (int)decimalPart;
-        str[i + strlen(str)] = '0' + (char) digit;
+        str[i + (char) strlen(str)] =  '0' + (char) digit;
         decimalPart -= digit;
     }
     str[strlen(str)] = '\0'; // Null-terminate the string

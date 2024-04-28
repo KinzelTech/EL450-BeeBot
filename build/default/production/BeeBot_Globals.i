@@ -10113,9 +10113,6 @@ int isxdigit_l(int, locale_t);
 int tolower_l(int, locale_t);
 int toupper_l(int, locale_t);
 # 19 "./BeeBot_Globals.h" 2
-<<<<<<< Updated upstream
-# 41 "./BeeBot_Globals.h"
-=======
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
@@ -10262,8 +10259,17 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 20 "./BeeBot_Globals.h" 2
-# 46 "./BeeBot_Globals.h"
->>>>>>> Stashed changes
+# 45 "./BeeBot_Globals.h"
+enum joystick_states
+{
+    FORWARD,
+    BACKWARDS,
+    NO_MOVEMENT
+};
+
+
+
+
 typedef unsigned char BYTE;
 
 
@@ -10271,25 +10277,31 @@ typedef unsigned char BYTE;
 
 struct coords
 {
-    float longitude;
-    float latitude;
+    long longitude;
+    long latitude;
 };
 typedef struct coords COORDS;
 
 
 
 
-COORDS home = {0.00, 0.00};
-COORDS waypoint1 = {0.00, 0.00};
-COORDS waypoint2 = {0.00, 0.00};
-COORDS waypoint3 = {0.00, 0.00};
-COORDS destination = {0.00, 0.00};
-COORDS current_coords = {0.00, 0.00};
+COORDS home = {0, 0};
+
+COORDS waypoints[4] = {{0,0}, {0,0}, {0,0}, {0,0}};
+COORDS current_coords = {12345678, 34512121};
 
 int temperature = 70;
 int humidity = 20;
 BYTE start = 0;
 BYTE mode = 1;
+BYTE left_joystick = 1;
+BYTE right_joystick = 1;
+float battery_percentage;
+float battery_voltage = 0.0f;
+
+char time_utc[10] = "";
+char date_utc[10] = "";
+BYTE hour_counter = 0;
 
 
 
@@ -10309,7 +10321,7 @@ void ltoa(long n, char s[]);
 void append_string(char *str, char ch)
 {
     unsigned int length = strlen(str);
-    if(length < 40 - 1)
+    if(length < 500 - 1)
     {
         str[length] = ch;
         str[length + 1] = '\0';
@@ -10327,7 +10339,8 @@ void reverse_string(char s[])
     int i, j;
     char c;
 
-    for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+    for (i = 0, j = ((char)strlen(s))-1; i<j; i++, j--)
+    {
         c = s[i];
         s[i] = s[j];
         s[j] = c;
@@ -10355,30 +10368,7 @@ void itoa(int n, char s[])
     reverse_string(s);
     return;
 }
-
-
-
-
-void bubbleSort(BYTE arr[], BYTE n)
-{
-    BYTE i, j, temp;
-    for (i = 0; i < n-1; i++) {
-
-        for (j = 0; j < n-i-1; j++) {
-            if (arr[j] > arr[j+1]) {
-
-                temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-            }
-        }
-    }
-    return;
-}
-
-
-
-
+# 88 "BeeBot_Globals.c"
 void ftoa(float num, char *str, int decimalPlaces)
 {
     int wholePart = (int)num;
@@ -10391,7 +10381,7 @@ void ftoa(float num, char *str, int decimalPlaces)
     for (int i = 0; i < decimalPlaces; i++) {
         decimalPart *= 10;
         int digit = (int)decimalPart;
-        str[i + strlen(str)] = '0' + (char) digit;
+        str[i + (char) strlen(str)] = '0' + (char) digit;
         decimalPart -= digit;
     }
     str[strlen(str)] = '\0';

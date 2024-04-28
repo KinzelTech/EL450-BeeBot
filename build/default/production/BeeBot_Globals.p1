@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"52 ./BeeBot_Globals.h
-[; ;./BeeBot_Globals.h: 52: {
-[s S857 `f 1 `f 1 ]
+"61 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 61: {
+[s S857 `l 1 `l 1 ]
 [n S857 coords longitude latitude ]
 "54 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
 [; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 54: size_t strlen (const char *);
@@ -9,12 +9,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33
 [; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
 [v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-<<<<<<< Updated upstream
-=======
 "109 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdio.h
 [; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
->>>>>>> Stashed changes
 "54 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -774,95 +771,117 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17406
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"61 ./BeeBot_Globals.h
-[; ;./BeeBot_Globals.h: 61: COORDS home = {0.00, 0.00};
+"70 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 70: COORDS home = {0, 0};
 [v _home `S857 ~T0 @X0 1 e ]
 [i _home
 :U ..
 :U ..
--> .0.00 `f
--> .0.00 `f
+-> -> 0 `i `l
+-> -> 0 `i `l
 ..
 ..
 ]
-"62
-[; ;./BeeBot_Globals.h: 62: COORDS waypoint1 = {0.00, 0.00};
-[v _waypoint1 `S857 ~T0 @X0 1 e ]
-[i _waypoint1
+"72
+[; ;./BeeBot_Globals.h: 72: COORDS waypoints[4] = {{0,0}, {0,0}, {0,0}, {0,0}};
+[v _waypoints `S857 ~T0 @X0 -> 4 `i e ]
+[i _waypoints
 :U ..
 :U ..
--> .0.00 `f
--> .0.00 `f
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
 ..
 ..
 ]
-"63
-[; ;./BeeBot_Globals.h: 63: COORDS waypoint2 = {0.00, 0.00};
-[v _waypoint2 `S857 ~T0 @X0 1 e ]
-[i _waypoint2
-:U ..
-:U ..
--> .0.00 `f
--> .0.00 `f
-..
-..
-]
-"64
-[; ;./BeeBot_Globals.h: 64: COORDS waypoint3 = {0.00, 0.00};
-[v _waypoint3 `S857 ~T0 @X0 1 e ]
-[i _waypoint3
-:U ..
-:U ..
--> .0.00 `f
--> .0.00 `f
-..
-..
-]
-"65
-[; ;./BeeBot_Globals.h: 65: COORDS destination = {0.00, 0.00};
-[v _destination `S857 ~T0 @X0 1 e ]
-[i _destination
-:U ..
-:U ..
--> .0.00 `f
--> .0.00 `f
-..
-..
-]
-"66
-[; ;./BeeBot_Globals.h: 66: COORDS current_coords = {0.00, 0.00};
+"73
+[; ;./BeeBot_Globals.h: 73: COORDS current_coords = {12345678, 34512121};
 [v _current_coords `S857 ~T0 @X0 1 e ]
 [i _current_coords
 :U ..
 :U ..
--> .0.00 `f
--> .0.00 `f
+-> 12345678 `l
+-> 34512121 `l
 ..
 ..
 ]
-"68
-[; ;./BeeBot_Globals.h: 68: int temperature = 70;
+"75
+[; ;./BeeBot_Globals.h: 75: int temperature = 70;
 [v _temperature `i ~T0 @X0 1 e ]
 [i _temperature
 -> 70 `i
 ]
-"69
-[; ;./BeeBot_Globals.h: 69: int humidity = 20;
+"76
+[; ;./BeeBot_Globals.h: 76: int humidity = 20;
 [v _humidity `i ~T0 @X0 1 e ]
 [i _humidity
 -> 20 `i
 ]
-"70
-[; ;./BeeBot_Globals.h: 70: BYTE start = 0;
+"77
+[; ;./BeeBot_Globals.h: 77: BYTE start = 0;
 [v _start `uc ~T0 @X0 1 e ]
 [i _start
 -> -> 0 `i `uc
 ]
-"71
-[; ;./BeeBot_Globals.h: 71: BYTE mode = 1;
+"78
+[; ;./BeeBot_Globals.h: 78: BYTE mode = 1;
 [v _mode `uc ~T0 @X0 1 e ]
 [i _mode
 -> -> 1 `i `uc
+]
+"79
+[; ;./BeeBot_Globals.h: 79: BYTE left_joystick = 1;
+[v _left_joystick `uc ~T0 @X0 1 e ]
+[i _left_joystick
+-> -> 1 `i `uc
+]
+"80
+[; ;./BeeBot_Globals.h: 80: BYTE right_joystick = 1;
+[v _right_joystick `uc ~T0 @X0 1 e ]
+[i _right_joystick
+-> -> 1 `i `uc
+]
+"81
+[; ;./BeeBot_Globals.h: 81: float battery_percentage;
+[v _battery_percentage `f ~T0 @X0 1 e ]
+"82
+[; ;./BeeBot_Globals.h: 82: float battery_voltage = 0.0f;
+[v _battery_voltage `f ~T0 @X0 1 e ]
+[i _battery_voltage
+-> .0.0 `f
+]
+"84
+[; ;./BeeBot_Globals.h: 84: char time_utc[10] = "";
+[v _time_utc `uc ~T0 @X0 -> 10 `i e ]
+[i _time_utc
+:U ..
+-> 0 `c
+..
+]
+"85
+[; ;./BeeBot_Globals.h: 85: char date_utc[10] = "";
+[v _date_utc `uc ~T0 @X0 -> 10 `i e ]
+[i _date_utc
+:U ..
+-> 0 `c
+..
+]
+"86
+[; ;./BeeBot_Globals.h: 86: BYTE hour_counter = 0;
+[v _hour_counter `uc ~T0 @X0 1 e ]
+[i _hour_counter
+-> -> 0 `i `uc
 ]
 "14 BeeBot_Globals.c
 [; ;BeeBot_Globals.c: 14: void append_string(char *str, char ch)
@@ -883,12 +902,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _length `ui ~T0 @X0 1 a ]
 [e = _length ( _strlen (1 -> _str `*Cuc ]
 "17
-[; ;BeeBot_Globals.c: 17:     if(length < 40 - 1)
-<<<<<<< Updated upstream
-[e $ ! < _length -> - -> 40 `i -> 1 `i `ui 856  ]
-=======
-[e $ ! < _length -> - -> 40 `i -> 1 `i `ui 859  ]
->>>>>>> Stashed changes
+[; ;BeeBot_Globals.c: 17:     if(length < 500 - 1)
+[e $ ! < _length -> - -> 500 `i -> 1 `i `ui 859  ]
 "18
 [; ;BeeBot_Globals.c: 18:     {
 {
@@ -901,22 +916,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21
 [; ;BeeBot_Globals.c: 21:     }
 }
-<<<<<<< Updated upstream
-[e $U 857  ]
-"22
-[; ;BeeBot_Globals.c: 22:     else
-[e :U 856 ]
-"23
-[; ;BeeBot_Globals.c: 23:         strcpy(str, "");
-[e ( _strcpy (2 , _str :s 1C ]
-[e :U 857 ]
-"24
-[; ;BeeBot_Globals.c: 24:     return;
-[e $UE 855  ]
-"25
-[; ;BeeBot_Globals.c: 25: }
-[e :UE 855 ]
-=======
 [e $U 860  ]
 "22
 [; ;BeeBot_Globals.c: 22:     else
@@ -931,7 +930,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "25
 [; ;BeeBot_Globals.c: 25: }
 [e :UE 858 ]
->>>>>>> Stashed changes
 }
 "30
 [; ;BeeBot_Globals.c: 30: void reverse_string(char s[])
@@ -954,294 +952,223 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;BeeBot_Globals.c: 33:     char c;
 [v _c `uc ~T0 @X0 1 a ]
 "35
-[; ;BeeBot_Globals.c: 35:     for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+[; ;BeeBot_Globals.c: 35:     for (i = 0, j = ((char)strlen(s))-1; i<j; i++, j--)
 {
-[e ; = _i -> 0 `i = _j -> - ( _strlen (1 -> _s `*Cuc -> -> 1 `i `ui `i ]
+[e ; = _i -> 0 `i = _j - -> -> ( _strlen (1 -> _s `*Cuc `uc `i -> 1 `i ]
 [e $U 865  ]
 [e :U 862 ]
-{
 "36
-[; ;BeeBot_Globals.c: 36:         c = s[i];
-[e = _c *U + _s * -> _i `x -> -> # *U _s `i `x ]
+[; ;BeeBot_Globals.c: 36:     {
+{
 "37
-[; ;BeeBot_Globals.c: 37:         s[i] = s[j];
-[e = *U + _s * -> _i `x -> -> # *U _s `i `x *U + _s * -> _j `x -> -> # *U _s `i `x ]
+[; ;BeeBot_Globals.c: 37:         c = s[i];
+[e = _c *U + _s * -> _i `x -> -> # *U _s `i `x ]
 "38
-[; ;BeeBot_Globals.c: 38:         s[j] = c;
-[e = *U + _s * -> _j `x -> -> # *U _s `i `x _c ]
+[; ;BeeBot_Globals.c: 38:         s[i] = s[j];
+[e = *U + _s * -> _i `x -> -> # *U _s `i `x *U + _s * -> _j `x -> -> # *U _s `i `x ]
 "39
-[; ;BeeBot_Globals.c: 39:     }
+[; ;BeeBot_Globals.c: 39:         s[j] = c;
+[e = *U + _s * -> _j `x -> -> # *U _s `i `x _c ]
+"40
+[; ;BeeBot_Globals.c: 40:     }
 }
 [e ; ++ _i -> 1 `i -- _j -> 1 `i ]
 [e :U 865 ]
 [e $ < _i _j 862  ]
 [e :U 863 ]
 }
-"40
-[; ;BeeBot_Globals.c: 40:     return;
-[e $UE 861  ]
 "41
-[; ;BeeBot_Globals.c: 41: }
+[; ;BeeBot_Globals.c: 41:     return;
+[e $UE 861  ]
+"42
+[; ;BeeBot_Globals.c: 42: }
 [e :UE 861 ]
 }
-"46
-[; ;BeeBot_Globals.c: 46: void itoa(int n, char s[])
-[v _itoa `(v ~T0 @X0 1 ef2`i`*uc ]
 "47
-[; ;BeeBot_Globals.c: 47: {
+[; ;BeeBot_Globals.c: 47: void itoa(int n, char s[])
+[v _itoa `(v ~T0 @X0 1 ef2`i`*uc ]
+"48
+[; ;BeeBot_Globals.c: 48: {
 {
 [e :U _itoa ]
-"46
-[; ;BeeBot_Globals.c: 46: void itoa(int n, char s[])
+"47
+[; ;BeeBot_Globals.c: 47: void itoa(int n, char s[])
 [v _n `i ~T0 @X0 1 r1 ]
 [v _s `*uc ~T0 @X0 1 r2 ]
-"47
-[; ;BeeBot_Globals.c: 47: {
-[f ]
 "48
-[; ;BeeBot_Globals.c: 48:     int i, sign;
+[; ;BeeBot_Globals.c: 48: {
+[f ]
+"49
+[; ;BeeBot_Globals.c: 49:     int i, sign;
 [v _i `i ~T0 @X0 1 a ]
 [v _sign `i ~T0 @X0 1 a ]
-"50
-[; ;BeeBot_Globals.c: 50:     if ((sign = n) < 0)
-[e $ ! < = _sign _n -> 0 `i 867  ]
 "51
-[; ;BeeBot_Globals.c: 51:         n = -n;
+[; ;BeeBot_Globals.c: 51:     if ((sign = n) < 0)
+[e $ ! < = _sign _n -> 0 `i 867  ]
+"52
+[; ;BeeBot_Globals.c: 52:         n = -n;
 [e = _n -U _n ]
 [e :U 867 ]
-"52
-[; ;BeeBot_Globals.c: 52:     i = 0;
-[e = _i -> 0 `i ]
 "53
-[; ;BeeBot_Globals.c: 53:     do
-[e :U 870 ]
+[; ;BeeBot_Globals.c: 53:     i = 0;
+[e = _i -> 0 `i ]
 "54
-[; ;BeeBot_Globals.c: 54:     {
-{
+[; ;BeeBot_Globals.c: 54:     do
+[e :U 870 ]
 "55
-[; ;BeeBot_Globals.c: 55:         s[i++] = n % 10 + '0';
-[e = *U + _s * -> ++ _i -> 1 `i `x -> -> # *U _s `i `x -> + -> % _n -> 10 `i `ui -> 48 `ui `uc ]
+[; ;BeeBot_Globals.c: 55:     {
+{
 "56
-[; ;BeeBot_Globals.c: 56:     } while ((n /= 10) > 0);
+[; ;BeeBot_Globals.c: 56:         s[i++] = n % 10 + '0';
+[e = *U + _s * -> ++ _i -> 1 `i `x -> -> # *U _s `i `x -> + -> % _n -> 10 `i `ui -> 48 `ui `uc ]
+"57
+[; ;BeeBot_Globals.c: 57:     } while ((n /= 10) > 0);
 }
 [e $ > =/ _n -> 10 `i -> 0 `i 870  ]
 [e :U 869 ]
-"57
-[; ;BeeBot_Globals.c: 57:     if (sign < 0)
-[e $ ! < _sign -> 0 `i 871  ]
 "58
-[; ;BeeBot_Globals.c: 58:         s[i++] = '-';
+[; ;BeeBot_Globals.c: 58:     if (sign < 0)
+[e $ ! < _sign -> 0 `i 871  ]
+"59
+[; ;BeeBot_Globals.c: 59:         s[i++] = '-';
 [e = *U + _s * -> ++ _i -> 1 `i `x -> -> # *U _s `i `x -> -> 45 `ui `uc ]
 [e :U 871 ]
-"59
-[; ;BeeBot_Globals.c: 59:     s[i] = '\0';
-[e = *U + _s * -> _i `x -> -> # *U _s `i `x -> -> 0 `ui `uc ]
 "60
-[; ;BeeBot_Globals.c: 60:     reverse_string(s);
-[e ( _reverse_string (1 _s ]
+[; ;BeeBot_Globals.c: 60:     s[i] = '\0';
+[e = *U + _s * -> _i `x -> -> # *U _s `i `x -> -> 0 `ui `uc ]
 "61
-[; ;BeeBot_Globals.c: 61:     return;
-[e $UE 866  ]
+[; ;BeeBot_Globals.c: 61:     reverse_string(s);
+[e ( _reverse_string (1 _s ]
 "62
-[; ;BeeBot_Globals.c: 62: }
+[; ;BeeBot_Globals.c: 62:     return;
+[e $UE 866  ]
+"63
+[; ;BeeBot_Globals.c: 63: }
 [e :UE 866 ]
 }
-"67
-[; ;BeeBot_Globals.c: 67: void bubbleSort(BYTE arr[], BYTE n)
-[v _bubbleSort `(v ~T0 @X0 1 ef2`*uc`uc ]
-"68
-[; ;BeeBot_Globals.c: 68: {
-{
-[e :U _bubbleSort ]
-"67
-[; ;BeeBot_Globals.c: 67: void bubbleSort(BYTE arr[], BYTE n)
-[v _arr `*uc ~T0 @X0 1 r1 ]
-[v _n `uc ~T0 @X0 1 r2 ]
-"68
-[; ;BeeBot_Globals.c: 68: {
-[f ]
-"69
-[; ;BeeBot_Globals.c: 69:     BYTE i, j, temp;
-[v _i `uc ~T0 @X0 1 a ]
-[v _j `uc ~T0 @X0 1 a ]
-[v _temp `uc ~T0 @X0 1 a ]
-"70
-[; ;BeeBot_Globals.c: 70:     for (i = 0; i < n-1; i++) {
-{
-[e = _i -> -> 0 `i `uc ]
-[e $U 876  ]
-[e :U 873 ]
-{
-"72
-[; ;BeeBot_Globals.c: 72:         for (j = 0; j < n-i-1; j++) {
-{
-[e = _j -> -> 0 `i `uc ]
-[e $U 880  ]
-[e :U 877 ]
-{
-"73
-[; ;BeeBot_Globals.c: 73:             if (arr[j] > arr[j+1]) {
-[e $ ! > -> *U + _arr * -> _j `ux -> -> # *U _arr `ui `ux `i -> *U + _arr * -> + -> _j `i -> 1 `i `x -> -> # *U _arr `i `x `i 881  ]
-{
-"75
-[; ;BeeBot_Globals.c: 75:                 temp = arr[j];
-[e = _temp *U + _arr * -> _j `ux -> -> # *U _arr `ui `ux ]
-"76
-[; ;BeeBot_Globals.c: 76:                 arr[j] = arr[j+1];
-[e = *U + _arr * -> _j `ux -> -> # *U _arr `ui `ux *U + _arr * -> + -> _j `i -> 1 `i `x -> -> # *U _arr `i `x ]
-"77
-[; ;BeeBot_Globals.c: 77:                 arr[j+1] = temp;
-[e = *U + _arr * -> + -> _j `i -> 1 `i `x -> -> # *U _arr `i `x _temp ]
-"78
-[; ;BeeBot_Globals.c: 78:             }
-}
-[e :U 881 ]
-"79
-[; ;BeeBot_Globals.c: 79:         }
-}
-[e ++ _j -> -> 1 `i `uc ]
-[e :U 880 ]
-[e $ < -> _j `i - - -> _n `i -> _i `i -> 1 `i 877  ]
-[e :U 878 ]
-}
-"80
-[; ;BeeBot_Globals.c: 80:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 876 ]
-[e $ < -> _i `i - -> _n `i -> 1 `i 873  ]
-[e :U 874 ]
-}
-"81
-[; ;BeeBot_Globals.c: 81:     return;
-[e $UE 872  ]
-"82
-[; ;BeeBot_Globals.c: 82: }
-[e :UE 872 ]
-}
-"87
-[; ;BeeBot_Globals.c: 87: void ftoa(float num, char *str, int decimalPlaces)
-[v _ftoa `(v ~T0 @X0 1 ef3`f`*uc`i ]
 "88
-[; ;BeeBot_Globals.c: 88: {
+[; ;BeeBot_Globals.c: 88: void ftoa(float num, char *str, int decimalPlaces)
+[v _ftoa `(v ~T0 @X0 1 ef3`f`*uc`i ]
+"89
+[; ;BeeBot_Globals.c: 89: {
 {
 [e :U _ftoa ]
-"87
-[; ;BeeBot_Globals.c: 87: void ftoa(float num, char *str, int decimalPlaces)
+"88
+[; ;BeeBot_Globals.c: 88: void ftoa(float num, char *str, int decimalPlaces)
 [v _num `f ~T0 @X0 1 r1 ]
 [v _str `*uc ~T0 @X0 1 r2 ]
 [v _decimalPlaces `i ~T0 @X0 1 r3 ]
-"88
-[; ;BeeBot_Globals.c: 88: {
-[f ]
 "89
-[; ;BeeBot_Globals.c: 89:     int wholePart = (int)num;
+[; ;BeeBot_Globals.c: 89: {
+[f ]
+"90
+[; ;BeeBot_Globals.c: 90:     int wholePart = (int)num;
 [v _wholePart `i ~T0 @X0 1 a ]
 [e = _wholePart -> _num `i ]
-"90
-[; ;BeeBot_Globals.c: 90:     float decimalPart = num - wholePart;
+"91
+[; ;BeeBot_Globals.c: 91:     float decimalPart = num - wholePart;
 [v _decimalPart `f ~T0 @X0 1 a ]
 [e = _decimalPart - _num -> _wholePart `f ]
-"93
-[; ;BeeBot_Globals.c: 93:     sprintf(str, "%d.", wholePart);
+"94
+[; ;BeeBot_Globals.c: 94:     sprintf(str, "%d.", wholePart);
 [e ( _sprintf (1 , (. , _str :s 2C _wholePart ]
-"96
-[; ;BeeBot_Globals.c: 96:     for (int i = 0; i < decimalPlaces; i++) {
+"97
+[; ;BeeBot_Globals.c: 97:     for (int i = 0; i < decimalPlaces; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 886  ]
-[e :U 883 ]
+[e $U 876  ]
+[e :U 873 ]
 {
-"97
-[; ;BeeBot_Globals.c: 97:         decimalPart *= 10;
-[e =* _decimalPart -> -> 10 `i `f ]
 "98
-[; ;BeeBot_Globals.c: 98:         int digit = (int)decimalPart;
+[; ;BeeBot_Globals.c: 98:         decimalPart *= 10;
+[e =* _decimalPart -> -> 10 `i `f ]
+"99
+[; ;BeeBot_Globals.c: 99:         int digit = (int)decimalPart;
 [v _digit `i ~T0 @X0 1 a ]
 [e = _digit -> _decimalPart `i ]
-"99
-[; ;BeeBot_Globals.c: 99:         str[i + strlen(str)] = '0' + (char) digit;
-[e = *U + _str * -> + -> _i `ui ( _strlen (1 -> _str `*Cuc `ux -> -> # *U _str `ui `ux -> + -> 48 `ui -> -> _digit `uc `ui `uc ]
 "100
-[; ;BeeBot_Globals.c: 100:         decimalPart -= digit;
-[e =- _decimalPart -> _digit `f ]
+[; ;BeeBot_Globals.c: 100:         str[i + (char) strlen(str)] = '0' + (char) digit;
+[e = *U + _str * -> + _i -> -> ( _strlen (1 -> _str `*Cuc `uc `i `x -> -> # *U _str `i `x -> + -> 48 `ui -> -> _digit `uc `ui `uc ]
 "101
-[; ;BeeBot_Globals.c: 101:     }
+[; ;BeeBot_Globals.c: 101:         decimalPart -= digit;
+[e =- _decimalPart -> _digit `f ]
+"102
+[; ;BeeBot_Globals.c: 102:     }
 }
 [e ++ _i -> 1 `i ]
-[e :U 886 ]
-[e $ < _i _decimalPlaces 883  ]
-[e :U 884 ]
+[e :U 876 ]
+[e $ < _i _decimalPlaces 873  ]
+[e :U 874 ]
 }
-"102
-[; ;BeeBot_Globals.c: 102:     str[strlen(str)] = '\0';
-[e = *U + _str * -> ( _strlen (1 -> _str `*Cuc `ux -> -> # *U _str `ui `ux -> -> 0 `ui `uc ]
 "103
-[; ;BeeBot_Globals.c: 103:     return;
-[e $UE 882  ]
+[; ;BeeBot_Globals.c: 103:     str[strlen(str)] = '\0';
+[e = *U + _str * -> ( _strlen (1 -> _str `*Cuc `ux -> -> # *U _str `ui `ux -> -> 0 `ui `uc ]
 "104
-[; ;BeeBot_Globals.c: 104: }
-[e :UE 882 ]
+[; ;BeeBot_Globals.c: 104:     return;
+[e $UE 872  ]
+"105
+[; ;BeeBot_Globals.c: 105: }
+[e :UE 872 ]
 }
-"109
-[; ;BeeBot_Globals.c: 109: void ltoa(long n, char s[])
-[v _ltoa `(v ~T0 @X0 1 ef2`l`*uc ]
 "110
-[; ;BeeBot_Globals.c: 110: {
+[; ;BeeBot_Globals.c: 110: void ltoa(long n, char s[])
+[v _ltoa `(v ~T0 @X0 1 ef2`l`*uc ]
+"111
+[; ;BeeBot_Globals.c: 111: {
 {
 [e :U _ltoa ]
-"109
-[; ;BeeBot_Globals.c: 109: void ltoa(long n, char s[])
+"110
+[; ;BeeBot_Globals.c: 110: void ltoa(long n, char s[])
 [v _n `l ~T0 @X0 1 r1 ]
 [v _s `*uc ~T0 @X0 1 r2 ]
-"110
-[; ;BeeBot_Globals.c: 110: {
-[f ]
 "111
-[; ;BeeBot_Globals.c: 111:     long i, sign;
+[; ;BeeBot_Globals.c: 111: {
+[f ]
+"112
+[; ;BeeBot_Globals.c: 112:     long i, sign;
 [v _i `l ~T0 @X0 1 a ]
 [v _sign `l ~T0 @X0 1 a ]
-"113
-[; ;BeeBot_Globals.c: 113:     if ((sign = n) < 0)
-[e $ ! < = _sign _n -> -> 0 `i `l 888  ]
 "114
-[; ;BeeBot_Globals.c: 114:         n = -n;
-[e = _n -U _n ]
-[e :U 888 ]
+[; ;BeeBot_Globals.c: 114:     if ((sign = n) < 0)
+[e $ ! < = _sign _n -> -> 0 `i `l 878  ]
 "115
-[; ;BeeBot_Globals.c: 115:     i = 0;
-[e = _i -> -> 0 `i `l ]
+[; ;BeeBot_Globals.c: 115:         n = -n;
+[e = _n -U _n ]
+[e :U 878 ]
 "116
-[; ;BeeBot_Globals.c: 116:     do
-[e :U 891 ]
+[; ;BeeBot_Globals.c: 116:     i = 0;
+[e = _i -> -> 0 `i `l ]
 "117
-[; ;BeeBot_Globals.c: 117:     {
-{
+[; ;BeeBot_Globals.c: 117:     do
+[e :U 881 ]
 "118
-[; ;BeeBot_Globals.c: 118:         s[i++] = n % 10 + '0';
-[e = *U + _s * -> ++ _i -> -> 1 `i `l `x -> -> # *U _s `i `x -> + % _n -> -> 10 `i `l -> -> 48 `ui `l `uc ]
+[; ;BeeBot_Globals.c: 118:     {
+{
 "119
-[; ;BeeBot_Globals.c: 119:     } while ((n /= 10) > 0);
-}
-[e $ > =/ _n -> -> 10 `i `l -> -> 0 `i `l 891  ]
-[e :U 890 ]
+[; ;BeeBot_Globals.c: 119:         s[i++] = n % 10 + '0';
+[e = *U + _s * -> ++ _i -> -> 1 `i `l `x -> -> # *U _s `i `x -> + % _n -> -> 10 `i `l -> -> 48 `ui `l `uc ]
 "120
-[; ;BeeBot_Globals.c: 120:     if (sign < 0)
-[e $ ! < _sign -> -> 0 `i `l 892  ]
+[; ;BeeBot_Globals.c: 120:     } while ((n /= 10) > 0);
+}
+[e $ > =/ _n -> -> 10 `i `l -> -> 0 `i `l 881  ]
+[e :U 880 ]
 "121
-[; ;BeeBot_Globals.c: 121:         s[i++] = '-';
-[e = *U + _s * -> ++ _i -> -> 1 `i `l `x -> -> # *U _s `i `x -> -> 45 `ui `uc ]
-[e :U 892 ]
+[; ;BeeBot_Globals.c: 121:     if (sign < 0)
+[e $ ! < _sign -> -> 0 `i `l 882  ]
 "122
-[; ;BeeBot_Globals.c: 122:     s[i] = '\0';
-[e = *U + _s * -> _i `x -> -> # *U _s `i `x -> -> 0 `ui `uc ]
+[; ;BeeBot_Globals.c: 122:         s[i++] = '-';
+[e = *U + _s * -> ++ _i -> -> 1 `i `l `x -> -> # *U _s `i `x -> -> 45 `ui `uc ]
+[e :U 882 ]
 "123
-[; ;BeeBot_Globals.c: 123:     reverse_string(s);
-[e ( _reverse_string (1 _s ]
+[; ;BeeBot_Globals.c: 123:     s[i] = '\0';
+[e = *U + _s * -> _i `x -> -> # *U _s `i `x -> -> 0 `ui `uc ]
 "124
-[; ;BeeBot_Globals.c: 124: }
-[e :UE 887 ]
+[; ;BeeBot_Globals.c: 124:     reverse_string(s);
+[e ( _reverse_string (1 _s ]
+"125
+[; ;BeeBot_Globals.c: 125: }
+[e :UE 877 ]
 }
 [p f _sprintf 8388736 ]
 [a 2C 37 100 46 0 ]

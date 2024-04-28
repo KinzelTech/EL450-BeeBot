@@ -38,10 +38,16 @@
 #define MSG_AUTO         "A"    //Set robot into auto mode (default).
 #define MSG_MANUAL       "M"    //Set robot into manual mode.
 #define MSG_JOYSTICKS    "J"    //Report both joystick positions which follow.
-<<<<<<< Updated upstream
-=======
-#define _XTAL_FREQ  8000000  //Set internal clock speed to 8MHz.
->>>>>>> Stashed changes
+#define _XTAL_FREQ  8000000     //Set internal clock speed to 8MHz.
+#define LEFT 0
+#define RIGHT 1
+
+enum joystick_states
+{
+    FORWARD,
+    BACKWARDS,
+    NO_MOVEMENT
+};
 
 /******************************************************************************/
 /*                            Custom Data Types                               */
@@ -53,25 +59,31 @@ typedef unsigned char BYTE; //Single byte data type
 /******************************************************************************/
 struct coords
 {
-    float longitude;
-    float latitude;
+    long longitude;
+    long latitude;
 };
 typedef struct coords COORDS;
 
 /******************************************************************************/
 /*                             Global Variables                               */
 /******************************************************************************/
-COORDS home           = {0.00, 0.00};
-COORDS waypoint1      = {0.00, 0.00};
-COORDS waypoint2      = {0.00, 0.00};
-COORDS waypoint3      = {0.00, 0.00};
-COORDS destination    = {0.00, 0.00};
-COORDS current_coords = {0.00, 0.00};
+COORDS home           = {0, 0};
+
+COORDS waypoints[4] = {{0,0}, {0,0}, {0,0}, {0,0}}; 
+COORDS current_coords = {12345678, 34512121};
 
 int temperature = 70;
 int humidity    = 20;
 BYTE start      = FALSE;
 BYTE mode       = AUTO;
+BYTE left_joystick = 1;
+BYTE right_joystick = 1;
+float battery_percentage;
+float battery_voltage = 0.0f;
+
+char time_utc[10] = "";
+char date_utc[10] = "";
+BYTE hour_counter = 0;
 
 /******************************************************************************/
 /*                          Function Declarations                             */
@@ -82,6 +94,7 @@ void itoa(int n, char s[]);                 //Integer to an equivalent string.
 void reverse_string(char s[]);              //Reverse a string.
 void ftoa(float num, char *str, int decimalPlaces);
 void ltoa(long n, char s[]);
+//void bubbleSort(BYTE arr[], BYTE n);
 
 #endif	/* BEEBOT_GLOBALS_H */
 

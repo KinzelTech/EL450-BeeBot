@@ -1,10 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
-<<<<<<< Updated upstream
-"7790 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
-=======
-"52 ./BeeBot_Globals.h
-[; ;./BeeBot_Globals.h: 52: {
-[s S857 `f 1 `f 1 ]
+"61 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 61: {
+[s S857 `l 1 `l 1 ]
 [n S857 coords longitude latitude ]
 "14137 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14137: extern volatile unsigned char SSP1CON1 __attribute__((address(0xFC6)));
@@ -100,7 +97,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 14172: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0xFC6)));
 [v _SSP1CON1bits `VS670 ~T0 @X0 0 e@4038 ]
 "7790
->>>>>>> Stashed changes
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7790:     struct {
 [s S386 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S386 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
@@ -115,114 +111,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7811
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 7811: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
 [v _LATCbits `VS385 ~T0 @X0 0 e@3979 ]
-<<<<<<< Updated upstream
-"4268
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 4268: extern volatile unsigned char SSP2BUF __attribute__((address(0xF6F)));
-[v _SSP2BUF `Vuc ~T0 @X0 0 e@3951 ]
-"3804
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3804:     struct {
-[s S179 :2 `uc 1 :1 `uc 1 ]
-[n S179 . . R_NOT_W ]
-"3808
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3808:     struct {
-[s S180 :5 `uc 1 :1 `uc 1 ]
-[n S180 . . D_NOT_A ]
-"3812
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3812:     struct {
-[s S181 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S181 . BF UA R_nW S P D_nA CKE SMP ]
-"3822
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3822:     struct {
-[s S182 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S182 . . R . D ]
-"3828
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3828:     struct {
-[s S183 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S183 . . W . A ]
-"3834
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3834:     struct {
-[s S184 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S184 . . nW . nA ]
-"3840
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3840:     struct {
-[s S185 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S185 . . R_W . D_A ]
-"3846
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3846:     struct {
-[s S186 :2 `uc 1 :1 `uc 1 ]
-[n S186 . . NOT_WRITE ]
-"3850
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3850:     struct {
-[s S187 :5 `uc 1 :1 `uc 1 ]
-[n S187 . . NOT_ADDRESS ]
-"3854
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3854:     struct {
-[s S188 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S188 . . nWRITE . nADDRESS ]
-"3860
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3860:     struct {
-[s S189 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S189 . BF2 UA2 I2C_READ2 I2C_START2 I2C_STOP2 DA2 CKE2 SMP2 ]
-"3870
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3870:     struct {
-[s S190 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S190 . . READ_WRITE2 S2 P2 DATA_ADDRESS2 ]
-"3877
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3877:     struct {
-[s S191 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S191 . . RW2 START2 STOP2 D_A2 ]
-"3884
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3884:     struct {
-[s S192 :5 `uc 1 :1 `uc 1 ]
-[n S192 . . D_NOT_A2 ]
-"3888
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3888:     struct {
-[s S193 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S193 . . R_W2 . D_nA2 ]
-"3894
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3894:     struct {
-[s S194 :2 `uc 1 :1 `uc 1 ]
-[n S194 . . R_NOT_W2 ]
-"3898
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3898:     struct {
-[s S195 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S195 . . R_nW2 . I2C_DAT2 ]
-"3904
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3904:     struct {
-[s S196 :2 `uc 1 :1 `uc 1 ]
-[n S196 . . NOT_W2 ]
-"3908
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3908:     struct {
-[s S197 :5 `uc 1 :1 `uc 1 ]
-[n S197 . . NOT_A2 ]
-"3912
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3912:     struct {
-[s S198 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S198 . . nW2 . nA2 ]
-"3918
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3918:     struct {
-[s S199 :2 `uc 1 :1 `uc 1 ]
-[n S199 . . NOT_WRITE2 ]
-"3922
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3922:     struct {
-[s S200 :5 `uc 1 :1 `uc 1 ]
-[n S200 . . NOT_ADDRESS2 ]
-"3926
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3926:     struct {
-[s S201 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S201 . . nWRITE2 . nADDRESS2 ]
-"3803
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3803: typedef union {
-[u S178 `S179 1 `S180 1 `S181 1 `S182 1 `S183 1 `S184 1 `S185 1 `S186 1 `S187 1 `S188 1 `S189 1 `S190 1 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 `S197 1 `S198 1 `S199 1 `S200 1 `S201 1 ]
-[n S178 . . . . . . . . . . . . . . . . . . . . . . . . ]
-"3933
-[; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 3933: extern volatile SSP2STATbits_t SSP2STATbits __attribute__((address(0xF6D)));
-[v _SSP2STATbits `VS178 ~T0 @X0 0 e@3949 ]
-=======
 "15259
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 15259: extern volatile unsigned char SSP1BUF __attribute__((address(0xFC9)));
 [v _SSP1BUF `Vuc ~T0 @X0 0 e@4041 ]
-"16770
+"54 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"16770 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16770:     struct {
 [s S819 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S819 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
@@ -237,7 +132,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16791
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 16791: extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
 [v _INTCON3bits `VS818 ~T0 @X0 0 e@4080 ]
->>>>>>> Stashed changes
 "6571
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6571:     struct {
 [s S346 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -277,26 +171,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6635
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 6635: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
 [v _PORTBbits `VS345 ~T0 @X0 0 e@3969 ]
-"54 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 54: size_t strlen (const char *);
-[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
-"39
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 39: int strcmp (const char *, const char *);
-[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
-"33
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
-[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-"14 C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\ctype.h
-[; ;C:\Program Files\Microchip\xc8\v2.40\pic\include\c99\ctype.h: 14: int isdigit(int);
-[v _isdigit `(i ~T0 @X0 0 ef1`i ]
-<<<<<<< Updated upstream
-"46 ./BeeBot_Globals.h
-[; ;./BeeBot_Globals.h: 46: void append_string(char str[], char ch);
-=======
-"76 ./BeeBot_Globals.h
-[; ;./BeeBot_Globals.h: 76: void append_string(char str[], char ch);
->>>>>>> Stashed changes
-[v _append_string `(v ~T0 @X0 0 ef2`*uc`uc ]
 "54 C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -1056,157 +930,154 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17406
 [; ;C:/Users/willi/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8\pic\include\proc\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-<<<<<<< Updated upstream
-"29 ./MRF89XAM.h
-[; ;./MRF89XAM.h: 29: char MRF_param1[10];
-[v _MRF_param1 `uc ~T0 @X0 -> 10 `i e ]
-"30
-[; ;./MRF89XAM.h: 30: char MRF_param2[10];
-[v _MRF_param2 `uc ~T0 @X0 -> 10 `i e ]
-"31
-[; ;./MRF89XAM.h: 31: BYTE MRF_transmitting = 0;
-=======
-"61 ./BeeBot_Globals.h
-[; ;./BeeBot_Globals.h: 61: COORDS home = {0.00, 0.00};
+"70 ./BeeBot_Globals.h
+[; ;./BeeBot_Globals.h: 70: COORDS home = {0, 0};
 [v _home `S857 ~T0 @X0 1 e ]
 [i _home
 :U ..
 :U ..
--> .0.00 `f
--> .0.00 `f
+-> -> 0 `i `l
+-> -> 0 `i `l
 ..
 ..
 ]
-"62
-[; ;./BeeBot_Globals.h: 62: COORDS waypoint1 = {0.00, 0.00};
-[v _waypoint1 `S857 ~T0 @X0 1 e ]
-[i _waypoint1
+"72
+[; ;./BeeBot_Globals.h: 72: COORDS waypoints[4] = {{0,0}, {0,0}, {0,0}, {0,0}};
+[v _waypoints `S857 ~T0 @X0 -> 4 `i e ]
+[i _waypoints
 :U ..
 :U ..
--> .0.00 `f
--> .0.00 `f
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
+..
+:U ..
+-> -> 0 `i `l
+-> -> 0 `i `l
 ..
 ..
 ]
-"63
-[; ;./BeeBot_Globals.h: 63: COORDS waypoint2 = {0.00, 0.00};
-[v _waypoint2 `S857 ~T0 @X0 1 e ]
-[i _waypoint2
-:U ..
-:U ..
--> .0.00 `f
--> .0.00 `f
-..
-..
-]
-"64
-[; ;./BeeBot_Globals.h: 64: COORDS waypoint3 = {0.00, 0.00};
-[v _waypoint3 `S857 ~T0 @X0 1 e ]
-[i _waypoint3
-:U ..
-:U ..
--> .0.00 `f
--> .0.00 `f
-..
-..
-]
-"65
-[; ;./BeeBot_Globals.h: 65: COORDS destination = {0.00, 0.00};
-[v _destination `S857 ~T0 @X0 1 e ]
-[i _destination
-:U ..
-:U ..
--> .0.00 `f
--> .0.00 `f
-..
-..
-]
-"66
-[; ;./BeeBot_Globals.h: 66: COORDS current_coords = {0.00, 0.00};
+"73
+[; ;./BeeBot_Globals.h: 73: COORDS current_coords = {12345678, 34512121};
 [v _current_coords `S857 ~T0 @X0 1 e ]
 [i _current_coords
 :U ..
 :U ..
--> .0.00 `f
--> .0.00 `f
+-> 12345678 `l
+-> 34512121 `l
 ..
 ..
 ]
-"68
-[; ;./BeeBot_Globals.h: 68: int temperature = 70;
+"75
+[; ;./BeeBot_Globals.h: 75: int temperature = 70;
 [v _temperature `i ~T0 @X0 1 e ]
 [i _temperature
 -> 70 `i
 ]
-"69
-[; ;./BeeBot_Globals.h: 69: int humidity = 20;
+"76
+[; ;./BeeBot_Globals.h: 76: int humidity = 20;
 [v _humidity `i ~T0 @X0 1 e ]
 [i _humidity
 -> 20 `i
 ]
-"70
-[; ;./BeeBot_Globals.h: 70: BYTE start = 0;
+"77
+[; ;./BeeBot_Globals.h: 77: BYTE start = 0;
 [v _start `uc ~T0 @X0 1 e ]
 [i _start
 -> -> 0 `i `uc
 ]
-"71
-[; ;./BeeBot_Globals.h: 71: BYTE mode = 1;
+"78
+[; ;./BeeBot_Globals.h: 78: BYTE mode = 1;
 [v _mode `uc ~T0 @X0 1 e ]
 [i _mode
 -> -> 1 `i `uc
 ]
-"31 ./MRF89XAM.h
-[; ;./MRF89XAM.h: 31: char MRF_param1[10] = "";
+"79
+[; ;./BeeBot_Globals.h: 79: BYTE left_joystick = 1;
+[v _left_joystick `uc ~T0 @X0 1 e ]
+[i _left_joystick
+-> -> 1 `i `uc
+]
+"80
+[; ;./BeeBot_Globals.h: 80: BYTE right_joystick = 1;
+[v _right_joystick `uc ~T0 @X0 1 e ]
+[i _right_joystick
+-> -> 1 `i `uc
+]
+"81
+[; ;./BeeBot_Globals.h: 81: float battery_percentage;
+[v _battery_percentage `f ~T0 @X0 1 e ]
+"82
+[; ;./BeeBot_Globals.h: 82: float battery_voltage = 0.0f;
+[v _battery_voltage `f ~T0 @X0 1 e ]
+[i _battery_voltage
+-> .0.0 `f
+]
+"84
+[; ;./BeeBot_Globals.h: 84: char time_utc[10] = "";
+[v _time_utc `uc ~T0 @X0 -> 10 `i e ]
+[i _time_utc
+:U ..
+-> 0 `c
+..
+]
+"85
+[; ;./BeeBot_Globals.h: 85: char date_utc[10] = "";
+[v _date_utc `uc ~T0 @X0 -> 10 `i e ]
+[i _date_utc
+:U ..
+-> 0 `c
+..
+]
+"86
+[; ;./BeeBot_Globals.h: 86: BYTE hour_counter = 0;
+[v _hour_counter `uc ~T0 @X0 1 e ]
+[i _hour_counter
+-> -> 0 `i `uc
+]
+"30 ./MRF89XAM.h
+[; ;./MRF89XAM.h: 30: char MRF_param1[10] = "";
 [v _MRF_param1 `uc ~T0 @X0 -> 10 `i e ]
 [i _MRF_param1
 :U ..
 -> 0 `c
 ..
 ]
-"32
-[; ;./MRF89XAM.h: 32: char MRF_param2[10] = "";
+"31
+[; ;./MRF89XAM.h: 31: char MRF_param2[10] = "";
 [v _MRF_param2 `uc ~T0 @X0 -> 10 `i e ]
 [i _MRF_param2
 :U ..
 -> 0 `c
 ..
 ]
-"33
-[; ;./MRF89XAM.h: 33: BYTE MRF_transmitting = 0;
->>>>>>> Stashed changes
+"32
+[; ;./MRF89XAM.h: 32: BYTE MRF_transmitting = 0;
 [v _MRF_transmitting `uc ~T0 @X0 1 e ]
 [i _MRF_transmitting
 -> -> 0 `i `uc
 ]
-<<<<<<< Updated upstream
-"32
-[; ;./MRF89XAM.h: 32: char MRF_message[40] = "";
-=======
-"34
-[; ;./MRF89XAM.h: 34: char MRF_message[40] = "";
->>>>>>> Stashed changes
+"33
+[; ;./MRF89XAM.h: 33: char MRF_message[40] = "";
 [v _MRF_message `uc ~T0 @X0 -> 40 `i e ]
 [i _MRF_message
 :U ..
 -> 0 `c
 ..
 ]
-<<<<<<< Updated upstream
-"33
-[; ;./MRF89XAM.h: 33: BYTE MRF_message_received = 0;
-=======
-"35
-[; ;./MRF89XAM.h: 35: BYTE MRF_message_received = 0;
->>>>>>> Stashed changes
+"34
+[; ;./MRF89XAM.h: 34: BYTE MRF_message_received = 0;
 [v _MRF_message_received `uc ~T0 @X0 1 e ]
 [i _MRF_message_received
 -> -> 0 `i `uc
 ]
-<<<<<<< Updated upstream
-"16 MRF89XAM.c
-[; ;MRF89XAM.c: 16: void write_spi_reg(BYTE reg_address, BYTE data)
-=======
 "13 MRF89XAM.c
 [; ;MRF89XAM.c: 13: void init_spi(void)
 [v _init_spi `(v ~T0 @X0 1 ef ]
@@ -1236,73 +1107,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "28
 [; ;MRF89XAM.c: 28: void write_spi_reg(BYTE reg_address, BYTE data)
->>>>>>> Stashed changes
 [v _write_spi_reg `(v ~T0 @X0 1 ef2`uc`uc ]
-"17
-[; ;MRF89XAM.c: 17: {
+"29
+[; ;MRF89XAM.c: 29: {
 {
 [e :U _write_spi_reg ]
-"16
-[; ;MRF89XAM.c: 16: void write_spi_reg(BYTE reg_address, BYTE data)
+"28
+[; ;MRF89XAM.c: 28: void write_spi_reg(BYTE reg_address, BYTE data)
 [v _reg_address `uc ~T0 @X0 1 r1 ]
 [v _data `uc ~T0 @X0 1 r2 ]
-"17
-[; ;MRF89XAM.c: 17: {
+"29
+[; ;MRF89XAM.c: 29: {
 [f ]
-"18
-[; ;MRF89XAM.c: 18:     BYTE address_byte = (BYTE)(reg_address << 1);
+"30
+[; ;MRF89XAM.c: 30:     BYTE address_byte = (BYTE)(reg_address << 1);
 [v _address_byte `uc ~T0 @X0 1 a ]
 [e = _address_byte -> << -> _reg_address `i -> 1 `i `uc ]
-"19
-[; ;MRF89XAM.c: 19:     address_byte &= 0b00111110;
+"31
+[; ;MRF89XAM.c: 31:     address_byte &= 0b00111110;
 [e =& _address_byte -> -> 62 `i `uc ]
-"21
-[; ;MRF89XAM.c: 21:     BYTE dummy = 0x00;
+"33
+[; ;MRF89XAM.c: 33:     BYTE dummy = 0x00;
 [v _dummy `uc ~T0 @X0 1 a ]
 [e = _dummy -> -> 0 `i `uc ]
-"24
-[; ;MRF89XAM.c: 24:     LATCbits.LC0 = 0;
+"36
+[; ;MRF89XAM.c: 36:     LATCbits.LC0 = 0;
 [e = . . _LATCbits 1 0 -> -> 0 `i `uc ]
-<<<<<<< Updated upstream
-"27
-[; ;MRF89XAM.c: 27:     dummy = SSP2BUF;
-[e = _dummy _SSP2BUF ]
-"28
-[; ;MRF89XAM.c: 28:     SSP2BUF = address_byte;
-[e = _SSP2BUF _address_byte ]
-"29
-[; ;MRF89XAM.c: 29:     while (!SSP2STATbits.BF);
-[e $U 856  ]
-[e :U 857 ]
-[e :U 856 ]
-[e $ ! != -> . . _SSP2STATbits 2 0 `i -> 0 `i 857  ]
-[e :U 858 ]
-"32
-[; ;MRF89XAM.c: 32:     dummy = SSP2BUF;
-[e = _dummy _SSP2BUF ]
-"33
-[; ;MRF89XAM.c: 33:     SSP2BUF = data;
-[e = _SSP2BUF _data ]
-"34
-[; ;MRF89XAM.c: 34:     while (!SSP2STATbits.BF);
-[e $U 859  ]
-[e :U 860 ]
-[e :U 859 ]
-[e $ ! != -> . . _SSP2STATbits 2 0 `i -> 0 `i 860  ]
-[e :U 861 ]
-"35
-[; ;MRF89XAM.c: 35:     dummy = SSP2BUF;
-[e = _dummy _SSP2BUF ]
-"38
-[; ;MRF89XAM.c: 38:     LATCbits.LC0 = 1;
-[e = . . _LATCbits 1 0 -> -> 1 `i `uc ]
-"39
-[; ;MRF89XAM.c: 39:     return;
-[e $UE 855  ]
-"40
-[; ;MRF89XAM.c: 40: }
-[e :UE 855 ]
-=======
 "39
 [; ;MRF89XAM.c: 39:     dummy = SSP1BUF;
 [e = _dummy _SSP1BUF ]
@@ -1341,168 +1171,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "52
 [; ;MRF89XAM.c: 52: }
 [e :UE 859 ]
->>>>>>> Stashed changes
 }
-"45
-[; ;MRF89XAM.c: 45: BYTE read_spi_reg(BYTE reg_address)
-[v _read_spi_reg `(uc ~T0 @X0 1 ef1`uc ]
-"46
-[; ;MRF89XAM.c: 46: {
-{
-[e :U _read_spi_reg ]
-"45
-[; ;MRF89XAM.c: 45: BYTE read_spi_reg(BYTE reg_address)
-[v _reg_address `uc ~T0 @X0 1 r1 ]
-"46
-[; ;MRF89XAM.c: 46: {
-[f ]
-"47
-[; ;MRF89XAM.c: 47:     BYTE data = 0x00;
-[v _data `uc ~T0 @X0 1 a ]
-[e = _data -> -> 0 `i `uc ]
-"48
-[; ;MRF89XAM.c: 48:     BYTE dummy;
-[v _dummy `uc ~T0 @X0 1 a ]
-"49
-[; ;MRF89XAM.c: 49:     BYTE address_byte = (BYTE)(reg_address << 1);
-[v _address_byte `uc ~T0 @X0 1 a ]
-[e = _address_byte -> << -> _reg_address `i -> 1 `i `uc ]
-"50
-[; ;MRF89XAM.c: 50:     address_byte &= 0b00111110;
-[e =& _address_byte -> -> 62 `i `uc ]
-"51
-[; ;MRF89XAM.c: 51:     address_byte |= 0b01000000;
-[e =| _address_byte -> -> 64 `i `uc ]
-"54
-[; ;MRF89XAM.c: 54:     LATCbits.LC0 = 0;
-[e = . . _LATCbits 1 0 -> -> 0 `i `uc ]
-<<<<<<< Updated upstream
-"57
-[; ;MRF89XAM.c: 57:     dummy = SSP2BUF;
-[e = _dummy _SSP2BUF ]
-"58
-[; ;MRF89XAM.c: 58:     SSP2BUF = address_byte;
-[e = _SSP2BUF _address_byte ]
-"59
-[; ;MRF89XAM.c: 59:     while (!SSP2STATbits.BF);
-[e $U 863  ]
-[e :U 864 ]
-[e :U 863 ]
-[e $ ! != -> . . _SSP2STATbits 2 0 `i -> 0 `i 864  ]
-[e :U 865 ]
-"62
-[; ;MRF89XAM.c: 62:     dummy = SSP2BUF;
-[e = _dummy _SSP2BUF ]
-"63
-[; ;MRF89XAM.c: 63:     SSP2BUF = 0x00;
-[e = _SSP2BUF -> -> 0 `i `uc ]
-"64
-[; ;MRF89XAM.c: 64:     while (!SSP2STATbits.BF);
-[e $U 866  ]
-[e :U 867 ]
-[e :U 866 ]
-[e $ ! != -> . . _SSP2STATbits 2 0 `i -> 0 `i 867  ]
-[e :U 868 ]
-"65
-[; ;MRF89XAM.c: 65:     data = SSP2BUF;
-[e = _data _SSP2BUF ]
-"68
-[; ;MRF89XAM.c: 68:     LATCbits.LC0 = 1;
-=======
-"69
-[; ;MRF89XAM.c: 69:     dummy = SSP1BUF;
-[e = _dummy _SSP1BUF ]
-"70
-[; ;MRF89XAM.c: 70:     SSP1BUF = address_byte;
-[e = _SSP1BUF _address_byte ]
-"71
-[; ;MRF89XAM.c: 71:     while (!SSP1STATbits.BF);
-[e $U 867  ]
-[e :U 868 ]
-[e :U 867 ]
-[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 868  ]
-[e :U 869 ]
-"74
-[; ;MRF89XAM.c: 74:     dummy = SSP1BUF;
-[e = _dummy _SSP1BUF ]
-"75
-[; ;MRF89XAM.c: 75:     SSP1BUF = 0x00;
-[e = _SSP1BUF -> -> 0 `i `uc ]
-"76
-[; ;MRF89XAM.c: 76:     while (!SSP1STATbits.BF);
-[e $U 870  ]
-[e :U 871 ]
-[e :U 870 ]
-[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 871  ]
-[e :U 872 ]
-"77
-[; ;MRF89XAM.c: 77:     data = SSP1BUF;
-[e = _data _SSP1BUF ]
-"80
-[; ;MRF89XAM.c: 80:     LATCbits.LC0 = 1;
->>>>>>> Stashed changes
-[e = . . _LATCbits 1 0 -> -> 1 `i `uc ]
-"70
-[; ;MRF89XAM.c: 70:     return data;
-[e ) _data ]
-<<<<<<< Updated upstream
-[e $UE 862  ]
-"71
-[; ;MRF89XAM.c: 71: }
-[e :UE 862 ]
-=======
-[e $UE 866  ]
-"83
-[; ;MRF89XAM.c: 83: }
-[e :UE 866 ]
->>>>>>> Stashed changes
-}
-"76
-[; ;MRF89XAM.c: 76: void write_spi_data(BYTE data)
+"88
+[; ;MRF89XAM.c: 88: void write_spi_data(BYTE data)
 [v _write_spi_data `(v ~T0 @X0 1 ef1`uc ]
-"77
-[; ;MRF89XAM.c: 77: {
+"89
+[; ;MRF89XAM.c: 89: {
 {
 [e :U _write_spi_data ]
-"76
-[; ;MRF89XAM.c: 76: void write_spi_data(BYTE data)
+"88
+[; ;MRF89XAM.c: 88: void write_spi_data(BYTE data)
 [v _data `uc ~T0 @X0 1 r1 ]
-"77
-[; ;MRF89XAM.c: 77: {
+"89
+[; ;MRF89XAM.c: 89: {
 [f ]
-"78
-[; ;MRF89XAM.c: 78:     BYTE dummy;
-[v _dummy `uc ~T0 @X0 1 a ]
-"81
-[; ;MRF89XAM.c: 81:     LATCbits.LC1 = 0;
-[e = . . _LATCbits 1 1 -> -> 0 `i `uc ]
-<<<<<<< Updated upstream
-"84
-[; ;MRF89XAM.c: 84:     dummy = SSP2BUF;
-[e = _dummy _SSP2BUF ]
-"85
-[; ;MRF89XAM.c: 85:     SSP2BUF = data;
-[e = _SSP2BUF _data ]
-"86
-[; ;MRF89XAM.c: 86:     while (!SSP2STATbits.BF);
-[e $U 870  ]
-[e :U 871 ]
-[e :U 870 ]
-[e $ ! != -> . . _SSP2STATbits 2 0 `i -> 0 `i 871  ]
-[e :U 872 ]
-"87
-[; ;MRF89XAM.c: 87:     dummy = SSP2BUF;
-[e = _dummy _SSP2BUF ]
 "90
-[; ;MRF89XAM.c: 90:     LATCbits.LC1 = 1;
-[e = . . _LATCbits 1 1 -> -> 1 `i `uc ]
-"92
-[; ;MRF89XAM.c: 92:     return;
-[e $UE 869  ]
+[; ;MRF89XAM.c: 90:     BYTE dummy;
+[v _dummy `uc ~T0 @X0 1 a ]
 "93
-[; ;MRF89XAM.c: 93: }
-[e :UE 869 ]
-=======
+[; ;MRF89XAM.c: 93:     LATCbits.LC1 = 0;
+[e = . . _LATCbits 1 1 -> -> 0 `i `uc ]
 "96
 [; ;MRF89XAM.c: 96:     dummy = SSP1BUF;
 [e = _dummy _SSP1BUF ]
@@ -1511,11 +1199,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SSP1BUF _data ]
 "99
 [; ;MRF89XAM.c: 99:     while (!SSP1STATbits.BF);
-[e $U 874  ]
-[e :U 875 ]
-[e :U 874 ]
-[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 875  ]
-[e :U 876 ]
+[e $U 867  ]
+[e :U 868 ]
+[e :U 867 ]
+[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 868  ]
+[e :U 869 ]
 "100
 [; ;MRF89XAM.c: 100:     dummy = SSP1BUF;
 [e = _dummy _SSP1BUF ]
@@ -1524,58 +1212,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATCbits 1 1 -> -> 1 `i `uc ]
 "105
 [; ;MRF89XAM.c: 105:     return;
-[e $UE 873  ]
+[e $UE 866  ]
 "106
 [; ;MRF89XAM.c: 106: }
-[e :UE 873 ]
->>>>>>> Stashed changes
+[e :UE 866 ]
 }
-"98
-[; ;MRF89XAM.c: 98: BYTE read_spi_data(void)
+"111
+[; ;MRF89XAM.c: 111: BYTE read_spi_data(void)
 [v _read_spi_data `(uc ~T0 @X0 1 ef ]
-"99
-[; ;MRF89XAM.c: 99: {
+"112
+[; ;MRF89XAM.c: 112: {
 {
 [e :U _read_spi_data ]
 [f ]
-"100
-[; ;MRF89XAM.c: 100:     BYTE dummy;
+"113
+[; ;MRF89XAM.c: 113:     BYTE dummy;
 [v _dummy `uc ~T0 @X0 1 a ]
-"101
-[; ;MRF89XAM.c: 101:     BYTE data = 0x00;
+"114
+[; ;MRF89XAM.c: 114:     BYTE data = 0x00;
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data -> -> 0 `i `uc ]
-"104
-[; ;MRF89XAM.c: 104:     LATCbits.LC1 = 0;
+"117
+[; ;MRF89XAM.c: 117:     LATCbits.LC1 = 0;
 [e = . . _LATCbits 1 1 -> -> 0 `i `uc ]
-<<<<<<< Updated upstream
-"107
-[; ;MRF89XAM.c: 107:     dummy = SSP2BUF;
-[e = _dummy _SSP2BUF ]
-"108
-[; ;MRF89XAM.c: 108:     SSP2BUF = 0x00;
-[e = _SSP2BUF -> -> 0 `i `uc ]
-"109
-[; ;MRF89XAM.c: 109:     while (!SSP2STATbits.BF);
-[e $U 874  ]
-[e :U 875 ]
-[e :U 874 ]
-[e $ ! != -> . . _SSP2STATbits 2 0 `i -> 0 `i 875  ]
-[e :U 876 ]
-"110
-[; ;MRF89XAM.c: 110:     data = SSP2BUF;
-[e = _data _SSP2BUF ]
-"113
-[; ;MRF89XAM.c: 113:     LATCbits.LC1 = 1;
-[e = . . _LATCbits 1 1 -> -> 1 `i `uc ]
-"115
-[; ;MRF89XAM.c: 115:     return data;
-[e ) _data ]
-[e $UE 873  ]
-"116
-[; ;MRF89XAM.c: 116: }
-[e :UE 873 ]
-=======
 "120
 [; ;MRF89XAM.c: 120:     dummy = SSP1BUF;
 [e = _dummy _SSP1BUF ]
@@ -1584,11 +1243,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SSP1BUF -> -> 0 `i `uc ]
 "122
 [; ;MRF89XAM.c: 122:     while (!SSP1STATbits.BF);
-[e $U 878  ]
-[e :U 879 ]
-[e :U 878 ]
-[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 879  ]
-[e :U 880 ]
+[e $U 871  ]
+[e :U 872 ]
+[e :U 871 ]
+[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 872  ]
+[e :U 873 ]
 "123
 [; ;MRF89XAM.c: 123:     data = SSP1BUF;
 [e = _data _SSP1BUF ]
@@ -1598,10 +1257,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "128
 [; ;MRF89XAM.c: 128:     return data;
 [e ) _data ]
-[e $UE 877  ]
+[e $UE 870  ]
 "129
 [; ;MRF89XAM.c: 129: }
-[e :UE 877 ]
+[e :UE 870 ]
 }
 "134
 [; ;MRF89XAM.c: 134: void init_MRF89XAM(void)
@@ -1618,8 +1277,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MRF89XAM.c: 137:     write_spi_reg(0x01, 0b10101100);
 [e ( _write_spi_reg (2 , -> -> 1 `i `uc -> -> 172 `i `uc ]
 "138
-[; ;MRF89XAM.c: 138:     write_spi_reg(0x05, 0b00001000);
-[e ( _write_spi_reg (2 , -> -> 5 `i `uc -> -> 8 `i `uc ]
+[; ;MRF89XAM.c: 138:     write_spi_reg(0x05, 0b11001000);
+[e ( _write_spi_reg (2 , -> -> 5 `i `uc -> -> 200 `i `uc ]
 "139
 [; ;MRF89XAM.c: 139:     write_spi_reg(0x0D, 0b10111000);
 [e ( _write_spi_reg (2 , -> -> 13 `i `uc -> -> 184 `i `uc ]
@@ -1635,853 +1294,140 @@ Version 4.0 HI-TECH Software Intermediate Code
 "143
 [; ;MRF89XAM.c: 143:     write_spi_reg(0x1C, 0b00001000);
 [e ( _write_spi_reg (2 , -> -> 28 `i `uc -> -> 8 `i `uc ]
-"144
-[; ;MRF89XAM.c: 144:     return;
-[e $UE 881  ]
 "145
-[; ;MRF89XAM.c: 145: }
-[e :UE 881 ]
+[; ;MRF89XAM.c: 145:     return;
+[e $UE 874  ]
+"146
+[; ;MRF89XAM.c: 146: }
+[e :UE 874 ]
 }
-"150
-[; ;MRF89XAM.c: 150: void transmit_MRF89XAM(BYTE data)
-[v _transmit_MRF89XAM `(v ~T0 @X0 1 ef1`uc ]
 "151
-[; ;MRF89XAM.c: 151: {
-{
-[e :U _transmit_MRF89XAM ]
-"150
-[; ;MRF89XAM.c: 150: void transmit_MRF89XAM(BYTE data)
-[v _data `uc ~T0 @X0 1 r1 ]
-"151
-[; ;MRF89XAM.c: 151: {
-[f ]
-"152
-[; ;MRF89XAM.c: 152:     BYTE filler = (BYTE)('\n' << 1);
-[v _filler `uc ~T0 @X0 1 a ]
-[e = _filler -> << -> 10 `ui -> 1 `i `uc ]
-"155
-[; ;MRF89XAM.c: 155:     MRF_transmitting = 1;
-[e = _MRF_transmitting -> -> 1 `i `uc ]
-"156
-[; ;MRF89XAM.c: 156:     INTCON3bits.INT1IE = 0;
-[e = . . _INTCON3bits 0 3 -> -> 0 `i `uc ]
-"157
-[; ;MRF89XAM.c: 157:     write_spi_reg(0x00, 0b00100010);
-[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 34 `i `uc ]
-"158
-[; ;MRF89XAM.c: 158:     write_spi_data(data);
-[e ( _write_spi_data (1 _data ]
-"159
-[; ;MRF89XAM.c: 159:     for(int counter = 0; counter < 15; counter++)
-{
-[v _counter `i ~T0 @X0 1 a ]
-[e = _counter -> 0 `i ]
-[e $ < _counter -> 15 `i 883  ]
-[e $U 884  ]
-[e :U 883 ]
-"160
-[; ;MRF89XAM.c: 160:         write_spi_data(filler);
-[e ( _write_spi_data (1 _filler ]
-[e ++ _counter -> 1 `i ]
-[e $ < _counter -> 15 `i 883  ]
-[e :U 884 ]
-}
-"161
-[; ;MRF89XAM.c: 161:     write_spi_reg(0x00, 0b10000010);
-[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 130 `i `uc ]
-"163
-[; ;MRF89XAM.c: 163:     while(PORTBbits.RB1 == 0);
-[e $U 886  ]
-[e :U 887 ]
-[e :U 886 ]
-[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 887  ]
-[e :U 888 ]
-"164
-[; ;MRF89XAM.c: 164:     while(PORTBbits.RB2 == 0);
-[e $U 889  ]
-[e :U 890 ]
-[e :U 889 ]
-[e $ == -> . . _PORTBbits 0 2 `i -> 0 `i 890  ]
-[e :U 891 ]
-"166
-[; ;MRF89XAM.c: 166:     write_spi_reg(0x00, 0b01100010);
-[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 98 `i `uc ]
-"167
-[; ;MRF89XAM.c: 167:     MRF_transmitting = 0;
-[e = _MRF_transmitting -> -> 0 `i `uc ]
-"168
-[; ;MRF89XAM.c: 168:     INTCON3bits.INT1IE = 1;
-[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
-"169
-[; ;MRF89XAM.c: 169:     return;
-[e $UE 882  ]
-"170
-[; ;MRF89XAM.c: 170: }
-[e :UE 882 ]
-}
-"175
-[; ;MRF89XAM.c: 175: void transmit_string_MRF89XAM(char tx_str[])
+[; ;MRF89XAM.c: 151: void transmit_string_MRF89XAM(char tx_str[])
 [v _transmit_string_MRF89XAM `(v ~T0 @X0 1 ef1`*uc ]
-"176
-[; ;MRF89XAM.c: 176: {
+"152
+[; ;MRF89XAM.c: 152: {
 {
 [e :U _transmit_string_MRF89XAM ]
-"175
-[; ;MRF89XAM.c: 175: void transmit_string_MRF89XAM(char tx_str[])
+"151
+[; ;MRF89XAM.c: 151: void transmit_string_MRF89XAM(char tx_str[])
 [v _tx_str `*uc ~T0 @X0 1 r1 ]
-"176
-[; ;MRF89XAM.c: 176: {
+"152
+[; ;MRF89XAM.c: 152: {
 [f ]
-"177
-[; ;MRF89XAM.c: 177:     unsigned int length = strlen(tx_str);
+"153
+[; ;MRF89XAM.c: 153:     unsigned int length = strlen(tx_str);
 [v _length `ui ~T0 @X0 1 a ]
 [e = _length ( _strlen (1 -> _tx_str `*Cuc ]
-"178
-[; ;MRF89XAM.c: 178:     BYTE counter;
+"154
+[; ;MRF89XAM.c: 154:     BYTE counter;
 [v _counter `uc ~T0 @X0 1 a ]
-"179
-[; ;MRF89XAM.c: 179:     BYTE loop = 1;
+"155
+[; ;MRF89XAM.c: 155:     BYTE loop = 1;
 [v _loop `uc ~T0 @X0 1 a ]
 [e = _loop -> -> 1 `i `uc ]
-"180
-[; ;MRF89XAM.c: 180:     BYTE loop_counter = 0;
+"156
+[; ;MRF89XAM.c: 156:     BYTE loop_counter = 0;
 [v _loop_counter `uc ~T0 @X0 1 a ]
 [e = _loop_counter -> -> 0 `i `uc ]
-"184
-[; ;MRF89XAM.c: 184:         write_spi_reg(0x00, 0b00100010);
+"160
+[; ;MRF89XAM.c: 160:         write_spi_reg(0x00, 0b00100010);
 [e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 34 `i `uc ]
-"185
-[; ;MRF89XAM.c: 185:         MRF_transmitting = 1;
+"161
+[; ;MRF89XAM.c: 161:         MRF_transmitting = 1;
 [e = _MRF_transmitting -> -> 1 `i `uc ]
-"186
-[; ;MRF89XAM.c: 186:         INTCON3bits.INT1IE = 0;
+"162
+[; ;MRF89XAM.c: 162:         INTCON3bits.INT1IE = 0;
 [e = . . _INTCON3bits 0 3 -> -> 0 `i `uc ]
-"187
-[; ;MRF89XAM.c: 187:         if(length <= 8)
-[e $ ! <= _length -> -> 8 `i `ui 893  ]
-"188
-[; ;MRF89XAM.c: 188:         {
+"164
+[; ;MRF89XAM.c: 164:         if(length <= 8)
+[e $ ! <= _length -> -> 8 `i `ui 876  ]
+"165
+[; ;MRF89XAM.c: 165:         {
 {
-"189
-[; ;MRF89XAM.c: 189:             for(counter = 0; counter < 8; counter++)
+"167
+[; ;MRF89XAM.c: 167:             for(counter = 0; counter < 8; counter++)
 {
 [e = _counter -> -> 0 `i `uc ]
-[e $ < -> _counter `i -> 8 `i 894  ]
-[e $U 895  ]
-[e :U 894 ]
-"190
-[; ;MRF89XAM.c: 190:             {
+[e $ < -> _counter `i -> 8 `i 877  ]
+[e $U 878  ]
+[e :U 877 ]
+"168
+[; ;MRF89XAM.c: 168:             {
 {
-"191
-[; ;MRF89XAM.c: 191:                 if(counter < length)
-[e $ ! < -> _counter `ui _length 897  ]
-"192
-[; ;MRF89XAM.c: 192:                     write_spi_data((BYTE)(tx_str[counter] << 1));
+"169
+[; ;MRF89XAM.c: 169:                 if(counter < length)
+[e $ ! < -> _counter `ui _length 880  ]
+"170
+[; ;MRF89XAM.c: 170:                     write_spi_data((BYTE)(tx_str[counter] << 1));
 [e ( _write_spi_data (1 -> << -> *U + _tx_str * -> _counter `ux -> -> # *U _tx_str `ui `ux `i -> 1 `i `uc ]
-[e $U 898  ]
-"193
-[; ;MRF89XAM.c: 193:                 else
-[e :U 897 ]
-"194
-[; ;MRF89XAM.c: 194:                     write_spi_data((BYTE)('\n' << 1));
+[e $U 881  ]
+"171
+[; ;MRF89XAM.c: 171:                 else
+[e :U 880 ]
+"172
+[; ;MRF89XAM.c: 172:                     write_spi_data((BYTE)('\n' << 1));
 [e ( _write_spi_data (1 -> << -> 10 `ui -> 1 `i `uc ]
-[e :U 898 ]
-"195
-[; ;MRF89XAM.c: 195:             }
+[e :U 881 ]
+"173
+[; ;MRF89XAM.c: 173:             }
 }
 [e ++ _counter -> -> 1 `i `uc ]
-[e $ < -> _counter `i -> 8 `i 894  ]
-[e :U 895 ]
+[e $ < -> _counter `i -> 8 `i 877  ]
+[e :U 878 ]
 }
-"196
-[; ;MRF89XAM.c: 196:         }
+"174
+[; ;MRF89XAM.c: 174:         }
 }
-[e :U 893 ]
-"197
-[; ;MRF89XAM.c: 197:         write_spi_reg(0x00, 0b10000010);
+[e :U 876 ]
+"175
+[; ;MRF89XAM.c: 175:         write_spi_reg(0x00, 0b10000010);
 [e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 130 `i `uc ]
-"199
-[; ;MRF89XAM.c: 199:         while(PORTBbits.RB1 == 0);
-[e $U 899  ]
-[e :U 900 ]
-[e :U 899 ]
-[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 900  ]
-[e :U 901 ]
-"200
-[; ;MRF89XAM.c: 200:         while(PORTBbits.RB2 == 0);
-[e $U 902  ]
-[e :U 903 ]
-[e :U 902 ]
-[e $ == -> . . _PORTBbits 0 2 `i -> 0 `i 903  ]
-[e :U 904 ]
-"202
-[; ;MRF89XAM.c: 202:         write_spi_reg(0x00, 0b01100010);
-[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 98 `i `uc ]
-"203
-[; ;MRF89XAM.c: 203:         MRF_transmitting = 0;
-[e = _MRF_transmitting -> -> 0 `i `uc ]
-"204
-[; ;MRF89XAM.c: 204:         INTCON3bits.INT1IF = 0;
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-"205
-[; ;MRF89XAM.c: 205:         INTCON3bits.INT1IE = 1;
-[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
-"206
-[; ;MRF89XAM.c: 206:     return;
-[e $UE 892  ]
-"207
-[; ;MRF89XAM.c: 207: }
-[e :UE 892 ]
->>>>>>> Stashed changes
-}
-"121
-[; ;MRF89XAM.c: 121: void init_MRF89XAM(void)
-[v _init_MRF89XAM `(v ~T0 @X0 1 ef ]
-"122
-[; ;MRF89XAM.c: 122: {
-{
-[e :U _init_MRF89XAM ]
-[f ]
-"123
-[; ;MRF89XAM.c: 123:     write_spi_reg(0x00, 0b01100010);
-[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 98 `i `uc ]
-"124
-[; ;MRF89XAM.c: 124:     write_spi_reg(0x01, 0b10001100);
-[e ( _write_spi_reg (2 , -> -> 1 `i `uc -> -> 140 `i `uc ]
-"125
-[; ;MRF89XAM.c: 125:     write_spi_reg(0x05, 0b00000001);
-[e ( _write_spi_reg (2 , -> -> 5 `i `uc -> -> 1 `i `uc ]
-"126
-[; ;MRF89XAM.c: 126:     write_spi_reg(0x0D, 0b10111000);
-[e ( _write_spi_reg (2 , -> -> 13 `i `uc -> -> 184 `i `uc ]
-"127
-[; ;MRF89XAM.c: 127:     write_spi_reg(0x0E, 0b00011101);
-[e ( _write_spi_reg (2 , -> -> 14 `i `uc -> -> 29 `i `uc ]
-"128
-[; ;MRF89XAM.c: 128:     write_spi_reg(0x0F, 0b00000001);
-[e ( _write_spi_reg (2 , -> -> 15 `i `uc -> -> 1 `i `uc ]
-"129
-[; ;MRF89XAM.c: 129:     write_spi_reg(0x1B, 0b00111100);
-[e ( _write_spi_reg (2 , -> -> 27 `i `uc -> -> 60 `i `uc ]
-"130
-[; ;MRF89XAM.c: 130:     write_spi_reg(0x1C, 0b00000001);
-[e ( _write_spi_reg (2 , -> -> 28 `i `uc -> -> 1 `i `uc ]
-"131
-[; ;MRF89XAM.c: 131:     return;
-[e $UE 877  ]
-"132
-[; ;MRF89XAM.c: 132: }
-[e :UE 877 ]
-}
-"137
-[; ;MRF89XAM.c: 137: void transmit_MRF89XAM(BYTE data)
-[v _transmit_MRF89XAM `(v ~T0 @X0 1 ef1`uc ]
-"138
-[; ;MRF89XAM.c: 138: {
-{
-[e :U _transmit_MRF89XAM ]
-"137
-[; ;MRF89XAM.c: 137: void transmit_MRF89XAM(BYTE data)
-[v _data `uc ~T0 @X0 1 r1 ]
-"138
-[; ;MRF89XAM.c: 138: {
-[f ]
-"139
-[; ;MRF89XAM.c: 139:     data <<= data;
-[e =<< _data -> _data `uc ]
-"141
-[; ;MRF89XAM.c: 141:     MRF_transmitting = 1;
-[e = _MRF_transmitting -> -> 1 `i `uc ]
-"142
-[; ;MRF89XAM.c: 142:     write_spi_reg(0x00, 0b00100010);
-[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 34 `i `uc ]
-"143
-[; ;MRF89XAM.c: 143:     write_spi_data(data);
-[e ( _write_spi_data (1 _data ]
-"144
-[; ;MRF89XAM.c: 144:     write_spi_reg(0x00, 0b10000010);
-[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 130 `i `uc ]
-"146
-[; ;MRF89XAM.c: 146:     while(!PORTBbits.RB5);
-[e $U 879  ]
-[e :U 880 ]
-[e :U 879 ]
-[e $ ! != -> . . _PORTBbits 0 5 `i -> 0 `i 880  ]
-[e :U 881 ]
-"147
-[; ;MRF89XAM.c: 147:     while(!PORTBbits.RB4);
+"177
+[; ;MRF89XAM.c: 177:         while(PORTBbits.RB1 == 0);
 [e $U 882  ]
 [e :U 883 ]
 [e :U 882 ]
-[e $ ! != -> . . _PORTBbits 0 4 `i -> 0 `i 883  ]
+[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 883  ]
 [e :U 884 ]
-"148
-[; ;MRF89XAM.c: 148:     MRF_transmitting = 0;
-[e = _MRF_transmitting -> -> 0 `i `uc ]
-"149
-[; ;MRF89XAM.c: 149:     return;
-[e $UE 878  ]
-"150
-[; ;MRF89XAM.c: 150: }
-[e :UE 878 ]
-}
-"155
-[; ;MRF89XAM.c: 155: void transmit_string_MRF89XAM(char tx_str[])
-[v _transmit_string_MRF89XAM `(v ~T0 @X0 1 ef1`*uc ]
-"156
-[; ;MRF89XAM.c: 156: {
-{
-[e :U _transmit_string_MRF89XAM ]
-"155
-[; ;MRF89XAM.c: 155: void transmit_string_MRF89XAM(char tx_str[])
-[v _tx_str `*uc ~T0 @X0 1 r1 ]
-"156
-[; ;MRF89XAM.c: 156: {
-[f ]
-"157
-[; ;MRF89XAM.c: 157:     unsigned int length = strlen(tx_str);
-[v _length `ui ~T0 @X0 1 a ]
-[e = _length ( _strlen (1 -> _tx_str `*Cuc ]
-"158
-[; ;MRF89XAM.c: 158:     BYTE counter;
-[v _counter `uc ~T0 @X0 1 a ]
-"160
-[; ;MRF89XAM.c: 160:     for(counter = 0; counter < length; counter++)
-{
-[e = _counter -> -> 0 `i `uc ]
-[e $U 889  ]
+"178
+[; ;MRF89XAM.c: 178:         while(PORTBbits.RB2 == 0);
+[e $U 885  ]
 [e :U 886 ]
-"161
-[; ;MRF89XAM.c: 161:     {
-{
-"162
-[; ;MRF89XAM.c: 162:         transmit_MRF89XAM((BYTE) tx_str[counter]);
-[e ( _transmit_MRF89XAM (1 -> *U + _tx_str * -> _counter `ux -> -> # *U _tx_str `ui `ux `uc ]
-"163
-[; ;MRF89XAM.c: 163:     }
-}
-[e ++ _counter -> -> 1 `i `uc ]
-[e :U 889 ]
-[e $ < -> _counter `ui _length 886  ]
+[e :U 885 ]
+[e $ == -> . . _PORTBbits 0 2 `i -> 0 `i 886  ]
 [e :U 887 ]
+"180
+[; ;MRF89XAM.c: 180:         write_spi_reg(0x00, 0b01100010);
+[e ( _write_spi_reg (2 , -> -> 0 `i `uc -> -> 98 `i `uc ]
+"181
+[; ;MRF89XAM.c: 181:         MRF_transmitting = 0;
+[e = _MRF_transmitting -> -> 0 `i `uc ]
+"182
+[; ;MRF89XAM.c: 182:         INTCON3bits.INT1IF = 0;
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+"183
+[; ;MRF89XAM.c: 183:         INTCON3bits.INT1IE = 1;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"184
+[; ;MRF89XAM.c: 184:     return;
+[e $UE 875  ]
+"185
+[; ;MRF89XAM.c: 185: }
+[e :UE 875 ]
 }
-"164
-[; ;MRF89XAM.c: 164:     transmit_MRF89XAM('\n');
-[e ( _transmit_MRF89XAM (1 -> -> 10 `ui `uc ]
-"165
-[; ;MRF89XAM.c: 165:     return;
-[e $UE 885  ]
-"166
-[; ;MRF89XAM.c: 166: }
-[e :UE 885 ]
-}
-"171
-[; ;MRF89XAM.c: 171: BYTE receive_MRF89XAM(void)
+"190
+[; ;MRF89XAM.c: 190: BYTE receive_MRF89XAM(void)
 [v _receive_MRF89XAM `(uc ~T0 @X0 1 ef ]
-"172
-[; ;MRF89XAM.c: 172: {
+"191
+[; ;MRF89XAM.c: 191: {
 {
 [e :U _receive_MRF89XAM ]
 [f ]
-"173
-[; ;MRF89XAM.c: 173:     while(PORTBbits.RB5);
-[e $U 891  ]
-[e :U 892 ]
-[e :U 891 ]
-[e $ != -> . . _PORTBbits 0 5 `i -> 0 `i 892  ]
-[e :U 893 ]
-"174
-[; ;MRF89XAM.c: 174:     return read_spi_data();
-[e ) ( _read_spi_data ..  ]
-<<<<<<< Updated upstream
-[e $UE 890  ]
-"175
-[; ;MRF89XAM.c: 175: }
-[e :UE 890 ]
-=======
-[e $UE 905  ]
-"216
-[; ;MRF89XAM.c: 216: }
-[e :UE 905 ]
->>>>>>> Stashed changes
-}
-"180
-[; ;MRF89XAM.c: 180: void MRF_parse_message(char message[], char code[])
-[v _MRF_parse_message `(v ~T0 @X0 1 ef2`*uc`*uc ]
-"181
-[; ;MRF89XAM.c: 181: {
-{
-[e :U _MRF_parse_message ]
-"180
-[; ;MRF89XAM.c: 180: void MRF_parse_message(char message[], char code[])
-[v _message `*uc ~T0 @X0 1 r1 ]
-[v _code `*uc ~T0 @X0 1 r2 ]
-"181
-[; ;MRF89XAM.c: 181: {
-[f ]
-"182
-[; ;MRF89XAM.c: 182:     BYTE valid = 0;
-[v _valid `uc ~T0 @X0 1 a ]
-[e = _valid -> -> 0 `i `uc ]
-"183
-[; ;MRF89XAM.c: 183:     BYTE counter;
-[v _counter `uc ~T0 @X0 1 a ]
-"184
-[; ;MRF89XAM.c: 184:     BYTE length = (BYTE) strlen(message);
-[v _length `uc ~T0 @X0 1 a ]
-[e = _length -> ( _strlen (1 -> _message `*Cuc `uc ]
-"185
-[; ;MRF89XAM.c: 185:     BYTE param1_full = 0;
-[v _param1_full `uc ~T0 @X0 1 a ]
-[e = _param1_full -> -> 0 `i `uc ]
-<<<<<<< Updated upstream
-"187
-[; ;MRF89XAM.c: 187:     if(!strcmp(message, "R"))
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 2C -> 0 `i 895  ]
-"188
-[; ;MRF89XAM.c: 188:     {
-=======
-"228
-[; ;MRF89XAM.c: 228:     if(!strcmp(message, "R"))
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 2C -> 0 `i 907  ]
-"229
-[; ;MRF89XAM.c: 229:     {
->>>>>>> Stashed changes
-{
-"189
-[; ;MRF89XAM.c: 189:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"190
-[; ;MRF89XAM.c: 190:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
 "193
-[; ;MRF89XAM.c: 193:     }
-}
-<<<<<<< Updated upstream
-[e $U 896  ]
+[; ;MRF89XAM.c: 193:     return read_spi_data();
+[e ) ( _read_spi_data ..  ]
+[e $UE 888  ]
 "194
-[; ;MRF89XAM.c: 194:     else if(!strcmp(message, "RA"))
-[e :U 895 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 4C -> 0 `i 897  ]
-"195
-[; ;MRF89XAM.c: 195:     {
-=======
-[e $U 908  ]
-"235
-[; ;MRF89XAM.c: 235:     else if(!strcmp(message, "RA"))
-[e :U 907 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 4C -> 0 `i 909  ]
-"236
-[; ;MRF89XAM.c: 236:     {
->>>>>>> Stashed changes
-{
-"196
-[; ;MRF89XAM.c: 196:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"197
-[; ;MRF89XAM.c: 197:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"204
-[; ;MRF89XAM.c: 204:     }
+[; ;MRF89XAM.c: 194: }
+[e :UE 888 ]
 }
-[e $U 898  ]
-"205
-[; ;MRF89XAM.c: 205:     else if(!strcmp(message, "H"))
-[e :U 897 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 6C -> 0 `i 899  ]
-"206
-[; ;MRF89XAM.c: 206:     {
-{
-"207
-[; ;MRF89XAM.c: 207:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"208
-[; ;MRF89XAM.c: 208:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"212
-[; ;MRF89XAM.c: 212:     }
-}
-[e $U 900  ]
-"213
-[; ;MRF89XAM.c: 213:     else if(!strcmp(message, "STP"))
-[e :U 899 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 8C -> 0 `i 901  ]
-"214
-[; ;MRF89XAM.c: 214:     {
-{
-"215
-[; ;MRF89XAM.c: 215:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"216
-[; ;MRF89XAM.c: 216:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"220
-[; ;MRF89XAM.c: 220:     }
-}
-[e $U 902  ]
-"221
-[; ;MRF89XAM.c: 221:     else if(!strcmp(message, "RES"))
-[e :U 901 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 10C -> 0 `i 903  ]
-"222
-[; ;MRF89XAM.c: 222:     {
-{
-"223
-[; ;MRF89XAM.c: 223:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"224
-[; ;MRF89XAM.c: 224:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"231
-[; ;MRF89XAM.c: 231:     }
-}
-[e $U 904  ]
-"232
-[; ;MRF89XAM.c: 232:     else if(!strcmp(message, "REC"))
-[e :U 903 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 12C -> 0 `i 905  ]
-"233
-[; ;MRF89XAM.c: 233:     {
-{
-"234
-[; ;MRF89XAM.c: 234:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"235
-[; ;MRF89XAM.c: 235:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"245
-[; ;MRF89XAM.c: 245:     }
-}
-<<<<<<< Updated upstream
-[e $U 906  ]
-"246
-[; ;MRF89XAM.c: 246:     else if(message[0] == 'A' || message[0] == 'M')
-[e :U 905 ]
-[e $ ! || == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 65 `ui == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 77 `ui 907  ]
-=======
-[e $U 910  ]
-"246
-[; ;MRF89XAM.c: 246:     else if(!strcmp(message, "H"))
-[e :U 909 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 6C -> 0 `i 911  ]
->>>>>>> Stashed changes
-"247
-[; ;MRF89XAM.c: 247:     {
-{
-"248
-[; ;MRF89XAM.c: 248:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"249
-<<<<<<< Updated upstream
-[; ;MRF89XAM.c: 249:         code[0] = message[0];
-=======
-[; ;MRF89XAM.c: 249:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"253
-[; ;MRF89XAM.c: 253:     }
-}
-[e $U 912  ]
-"254
-[; ;MRF89XAM.c: 254:     else if(!strcmp(message, "STP"))
-[e :U 911 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 8C -> 0 `i 913  ]
-"255
-[; ;MRF89XAM.c: 255:     {
-{
-"256
-[; ;MRF89XAM.c: 256:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"257
-[; ;MRF89XAM.c: 257:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"261
-[; ;MRF89XAM.c: 261:     }
-}
-[e $U 914  ]
-"262
-[; ;MRF89XAM.c: 262:     else if(!strcmp(message, "RES"))
-[e :U 913 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 10C -> 0 `i 915  ]
-"263
-[; ;MRF89XAM.c: 263:     {
-{
-"264
-[; ;MRF89XAM.c: 264:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"265
-[; ;MRF89XAM.c: 265:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"272
-[; ;MRF89XAM.c: 272:     }
-}
-[e $U 916  ]
-"273
-[; ;MRF89XAM.c: 273:     else if(!strcmp(message, "REC"))
-[e :U 915 ]
-[e $ ! ! != ( _strcmp (2 , -> _message `*Cuc :s 12C -> 0 `i 917  ]
-"274
-[; ;MRF89XAM.c: 274:     {
-{
-"275
-[; ;MRF89XAM.c: 275:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"276
-[; ;MRF89XAM.c: 276:         strcpy(code, message);
-[e ( _strcpy (2 , _code -> _message `*Cuc ]
-"286
-[; ;MRF89XAM.c: 286:     }
-}
-[e $U 918  ]
-"287
-[; ;MRF89XAM.c: 287:     else if(message[0] == 'A' || message[0] == 'M')
-[e :U 917 ]
-[e $ ! || == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 65 `ui == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 77 `ui 919  ]
-"288
-[; ;MRF89XAM.c: 288:     {
-{
-"289
-[; ;MRF89XAM.c: 289:         valid = 1;
-[e = _valid -> -> 1 `i `uc ]
-"290
-[; ;MRF89XAM.c: 290:         code[0] = message[0];
->>>>>>> Stashed changes
-[e = *U + _code * -> -> 0 `i `x -> -> # *U _code `i `x *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x ]
-"250
-[; ;MRF89XAM.c: 250:         code[1] = '\0';
-[e = *U + _code * -> -> 1 `i `x -> -> # *U _code `i `x -> -> 0 `ui `uc ]
-"251
-[; ;MRF89XAM.c: 251:     }
-}
-<<<<<<< Updated upstream
-[e $U 908  ]
-"252
-[; ;MRF89XAM.c: 252:     else if(message[0] == 'N' && message[1] == 'A' && message[2] == 'V')
-[e :U 907 ]
-[e $ ! && && == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 78 `ui == -> *U + _message * -> -> 1 `i `x -> -> # *U _message `i `x `ui -> 65 `ui == -> *U + _message * -> -> 2 `i `x -> -> # *U _message `i `x `ui -> 86 `ui 909  ]
-"253
-[; ;MRF89XAM.c: 253:     {
-=======
-[e $U 920  ]
-"293
-[; ;MRF89XAM.c: 293:     else if(message[0] == 'N' && message[1] == 'A' && message[2] == 'V')
-[e :U 919 ]
-[e $ ! && && == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 78 `ui == -> *U + _message * -> -> 1 `i `x -> -> # *U _message `i `x `ui -> 65 `ui == -> *U + _message * -> -> 2 `i `x -> -> # *U _message `i `x `ui -> 86 `ui 921  ]
-"294
-[; ;MRF89XAM.c: 294:     {
->>>>>>> Stashed changes
-{
-"254
-[; ;MRF89XAM.c: 254:         strcpy(MRF_param1, "");
-[e ( _strcpy (2 , &U _MRF_param1 :s 13C ]
-"255
-[; ;MRF89XAM.c: 255:         strcpy(MRF_param2, "");
-[e ( _strcpy (2 , &U _MRF_param2 :s 14C ]
-"256
-[; ;MRF89XAM.c: 256:         code[0] = message[0];
-[e = *U + _code * -> -> 0 `i `x -> -> # *U _code `i `x *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x ]
-"257
-[; ;MRF89XAM.c: 257:         code[1] = message[1];
-[e = *U + _code * -> -> 1 `i `x -> -> # *U _code `i `x *U + _message * -> -> 1 `i `x -> -> # *U _message `i `x ]
-"258
-[; ;MRF89XAM.c: 258:         code[2] = message[2];
-[e = *U + _code * -> -> 2 `i `x -> -> # *U _code `i `x *U + _message * -> -> 2 `i `x -> -> # *U _message `i `x ]
-"259
-[; ;MRF89XAM.c: 259:         code[3] = '\0';
-[e = *U + _code * -> -> 3 `i `x -> -> # *U _code `i `x -> -> 0 `ui `uc ]
-"262
-[; ;MRF89XAM.c: 262:         for(counter = 0; counter < length; counter++)
-{
-[e = _counter -> -> 0 `i `uc ]
-<<<<<<< Updated upstream
-[e $U 913  ]
-[e :U 910 ]
-"263
-[; ;MRF89XAM.c: 263:         {
-{
-"264
-[; ;MRF89XAM.c: 264:             if((0 && isdigit(message[counter]), ((unsigned)(message[counter])-'0') < 10) || message[counter] == '.')
-[e $ ! || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `i -> 0 `i `i -> < - -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `ui -> 46 `ui 914  ]
-"265
-[; ;MRF89XAM.c: 265:             {
-{
-"266
-[; ;MRF89XAM.c: 266:                 if(!param1_full)
-[e $ ! ! != -> _param1_full `i -> 0 `i 915  ]
-"267
-[; ;MRF89XAM.c: 267:                 {
-=======
-[e $U 925  ]
-[e :U 922 ]
-"304
-[; ;MRF89XAM.c: 304:         {
-{
-"305
-[; ;MRF89XAM.c: 305:             if((0 && isdigit(message[counter]), ((unsigned)(message[counter])-'0') < 10) || message[counter] == '.')
-[e $ ! || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `i -> 0 `i `i -> < - -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + _message * -> _counter `ux -> -> # *U _message `ui `ux `ui -> 46 `ui 926  ]
-"306
-[; ;MRF89XAM.c: 306:             {
-{
-"307
-[; ;MRF89XAM.c: 307:                 if(!param1_full)
-[e $ ! ! != -> _param1_full `i -> 0 `i 927  ]
-"308
-[; ;MRF89XAM.c: 308:                 {
->>>>>>> Stashed changes
-{
-"268
-[; ;MRF89XAM.c: 268:                     append_string(MRF_param1, message[counter]);
-[e ( _append_string (2 , &U _MRF_param1 *U + _message * -> _counter `ux -> -> # *U _message `ui `ux ]
-<<<<<<< Updated upstream
-"269
-[; ;MRF89XAM.c: 269:                     if(!((0 && isdigit(message[counter+1]), ((unsigned)(message[counter+1])-'0') < 10) || message[counter+1] == '.'))
-[e $ ! ! || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `i -> 0 `i `i -> < - -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `ui -> 46 `ui 916  ]
-"270
-[; ;MRF89XAM.c: 270:                         param1_full = 1;
-[e = _param1_full -> -> 1 `i `uc ]
-[e :U 916 ]
-"271
-[; ;MRF89XAM.c: 271:                 }
-}
-[e $U 917  ]
-"272
-[; ;MRF89XAM.c: 272:                 else
-[e :U 915 ]
-"273
-[; ;MRF89XAM.c: 273:                     append_string(MRF_param2, message[counter]);
-[e ( _append_string (2 , &U _MRF_param2 *U + _message * -> _counter `ux -> -> # *U _message `ui `ux ]
-[e :U 917 ]
-"274
-[; ;MRF89XAM.c: 274:             }
-}
-[e :U 914 ]
-"275
-[; ;MRF89XAM.c: 275:         }
-}
-[e ++ _counter -> -> 1 `i `uc ]
-[e :U 913 ]
-[e $ < -> _counter `i -> _length `i 910  ]
-[e :U 911 ]
-=======
-"310
-[; ;MRF89XAM.c: 310:                     if(!((0 && isdigit(message[counter+1]), ((unsigned)(message[counter+1])-'0') < 10) || message[counter+1] == '.'))
-[e $ ! ! || != ; -> && != -> 0 `i -> 0 `i != ( _isdigit (1 -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `i -> 0 `i `i -> < - -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `ui -> 48 `ui -> -> 10 `i `ui `i -> 0 `i == -> *U + _message * -> + -> _counter `i -> 1 `i `x -> -> # *U _message `i `x `ui -> 46 `ui 928  ]
-"311
-[; ;MRF89XAM.c: 311:                         param1_full = 1;
-[e = _param1_full -> -> 1 `i `uc ]
-[e :U 928 ]
-"312
-[; ;MRF89XAM.c: 312:                 }
-}
-[e $U 929  ]
-"313
-[; ;MRF89XAM.c: 313:                 else
-[e :U 927 ]
-"314
-[; ;MRF89XAM.c: 314:                     append_string(MRF_param2, message[counter]);
-[e ( _append_string (2 , &U _MRF_param2 *U + _message * -> _counter `ux -> -> # *U _message `ui `ux ]
-[e :U 929 ]
-"315
-[; ;MRF89XAM.c: 315:             }
-}
-[e :U 926 ]
-"316
-[; ;MRF89XAM.c: 316:         }
-}
-[e ++ _counter -> -> 1 `i `uc ]
-[e :U 925 ]
-[e $ < -> _counter `i -> _length `i 922  ]
-[e :U 923 ]
->>>>>>> Stashed changes
-}
-"276
-[; ;MRF89XAM.c: 276:     }
-}
-<<<<<<< Updated upstream
-[e $U 918  ]
-"277
-[; ;MRF89XAM.c: 277:     else if(message[0] == 'J')
-[e :U 909 ]
-[e $ ! == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 74 `ui 919  ]
-"278
-[; ;MRF89XAM.c: 278:     {
-=======
-[e $U 930  ]
-"318
-[; ;MRF89XAM.c: 318:     else if(message[0] == 'J')
-[e :U 921 ]
-[e $ ! == -> *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x `ui -> 74 `ui 931  ]
-"319
-[; ;MRF89XAM.c: 319:     {
->>>>>>> Stashed changes
-{
-"279
-[; ;MRF89XAM.c: 279:         strcpy(MRF_param1, "");
-[e ( _strcpy (2 , &U _MRF_param1 :s 15C ]
-"280
-[; ;MRF89XAM.c: 280:         strcpy(MRF_param2, "");
-[e ( _strcpy (2 , &U _MRF_param2 :s 16C ]
-"283
-[; ;MRF89XAM.c: 283:         append_string(MRF_param1, message[1]);
-[e ( _append_string (2 , &U _MRF_param1 *U + _message * -> -> 1 `i `x -> -> # *U _message `i `x ]
-"284
-[; ;MRF89XAM.c: 284:         append_string(MRF_param2, message[2]);
-[e ( _append_string (2 , &U _MRF_param2 *U + _message * -> -> 2 `i `x -> -> # *U _message `i `x ]
-"285
-[; ;MRF89XAM.c: 285:         code[0] = message[0];
-[e = *U + _code * -> -> 0 `i `x -> -> # *U _code `i `x *U + _message * -> -> 0 `i `x -> -> # *U _message `i `x ]
-"286
-[; ;MRF89XAM.c: 286:         code[1] = '\0';
-[e = *U + _code * -> -> 1 `i `x -> -> # *U _code `i `x -> -> 0 `ui `uc ]
-"287
-[; ;MRF89XAM.c: 287:     }
-}
-<<<<<<< Updated upstream
-[e :U 919 ]
-[e :U 918 ]
-[e :U 908 ]
-[e :U 906 ]
-[e :U 904 ]
-[e :U 902 ]
-[e :U 900 ]
-[e :U 898 ]
-[e :U 896 ]
-"288
-[; ;MRF89XAM.c: 288:     return;
-[e $UE 894  ]
-"289
-[; ;MRF89XAM.c: 289: }
-[e :UE 894 ]
-=======
-[e :U 931 ]
-[e :U 930 ]
-[e :U 920 ]
-[e :U 918 ]
-[e :U 916 ]
-[e :U 914 ]
-[e :U 912 ]
-[e :U 910 ]
-[e :U 908 ]
-"329
-[; ;MRF89XAM.c: 329:     return;
-[e $UE 906  ]
-"330
-[; ;MRF89XAM.c: 330: }
-[e :UE 906 ]
->>>>>>> Stashed changes
-}
-[a 9C 82 69 83 0 ]
-[a 10C 82 69 83 0 ]
-[a 1C 82 0 ]
-[a 2C 82 0 ]
-[a 7C 83 84 80 0 ]
-[a 8C 83 84 80 0 ]
-[a 5C 72 0 ]
-[a 6C 72 0 ]
-[a 11C 82 69 67 0 ]
-[a 12C 82 69 67 0 ]
-[a 3C 82 65 0 ]
-[a 4C 82 65 0 ]
-[a 13C 0 ]
-[a 14C 0 ]
-[a 15C 0 ]
-[a 16C 0 ]

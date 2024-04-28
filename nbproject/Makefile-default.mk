@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=BeeBot_Main.c MRF89XAM.c BeeBot_Globals.c MCP2221A.c
+SOURCEFILES_QUOTED_IF_SPACED=BeeBot_Main.c MRF89XAM.c BeeBot_Globals.c MCP2221A.c GPS.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/BeeBot_Main.p1 ${OBJECTDIR}/MRF89XAM.p1 ${OBJECTDIR}/BeeBot_Globals.p1 ${OBJECTDIR}/MCP2221A.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/BeeBot_Main.p1.d ${OBJECTDIR}/MRF89XAM.p1.d ${OBJECTDIR}/BeeBot_Globals.p1.d ${OBJECTDIR}/MCP2221A.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/BeeBot_Main.p1 ${OBJECTDIR}/MRF89XAM.p1 ${OBJECTDIR}/BeeBot_Globals.p1 ${OBJECTDIR}/MCP2221A.p1 ${OBJECTDIR}/GPS.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/BeeBot_Main.p1.d ${OBJECTDIR}/MRF89XAM.p1.d ${OBJECTDIR}/BeeBot_Globals.p1.d ${OBJECTDIR}/MCP2221A.p1.d ${OBJECTDIR}/GPS.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/BeeBot_Main.p1 ${OBJECTDIR}/MRF89XAM.p1 ${OBJECTDIR}/BeeBot_Globals.p1 ${OBJECTDIR}/MCP2221A.p1
+OBJECTFILES=${OBJECTDIR}/BeeBot_Main.p1 ${OBJECTDIR}/MRF89XAM.p1 ${OBJECTDIR}/BeeBot_Globals.p1 ${OBJECTDIR}/MCP2221A.p1 ${OBJECTDIR}/GPS.p1
 
 # Source Files
-SOURCEFILES=BeeBot_Main.c MRF89XAM.c BeeBot_Globals.c MCP2221A.c
+SOURCEFILES=BeeBot_Main.c MRF89XAM.c BeeBot_Globals.c MCP2221A.c GPS.c
 
 
 
@@ -120,6 +120,14 @@ ${OBJECTDIR}/MCP2221A.p1: MCP2221A.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/MCP2221A.d ${OBJECTDIR}/MCP2221A.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/MCP2221A.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/GPS.p1: GPS.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/GPS.p1.d 
+	@${RM} ${OBJECTDIR}/GPS.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit4   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/GPS.p1 GPS.c 
+	@-${MV} ${OBJECTDIR}/GPS.d ${OBJECTDIR}/GPS.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/GPS.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/BeeBot_Main.p1: BeeBot_Main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -152,6 +160,14 @@ ${OBJECTDIR}/MCP2221A.p1: MCP2221A.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/MCP2221A.p1 MCP2221A.c 
 	@-${MV} ${OBJECTDIR}/MCP2221A.d ${OBJECTDIR}/MCP2221A.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/MCP2221A.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/GPS.p1: GPS.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/GPS.p1.d 
+	@${RM} ${OBJECTDIR}/GPS.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/GPS.p1 GPS.c 
+	@-${MV} ${OBJECTDIR}/GPS.d ${OBJECTDIR}/GPS.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/GPS.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

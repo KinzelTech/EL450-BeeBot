@@ -10114,9 +10114,6 @@ int isxdigit_l(int, locale_t);
 int tolower_l(int, locale_t);
 int toupper_l(int, locale_t);
 # 19 "./BeeBot_Globals.h" 2
-<<<<<<< Updated upstream
-# 41 "./BeeBot_Globals.h"
-=======
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
@@ -10263,8 +10260,17 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 20 "./BeeBot_Globals.h" 2
-# 46 "./BeeBot_Globals.h"
->>>>>>> Stashed changes
+# 45 "./BeeBot_Globals.h"
+enum joystick_states
+{
+    FORWARD,
+    BACKWARDS,
+    NO_MOVEMENT
+};
+
+
+
+
 typedef unsigned char BYTE;
 
 
@@ -10272,38 +10278,41 @@ typedef unsigned char BYTE;
 
 struct coords
 {
-    float longitude;
-    float latitude;
+    long longitude;
+    long latitude;
 };
 typedef struct coords COORDS;
 
 
 
 
-COORDS home = {0.00, 0.00};
-COORDS waypoint1 = {0.00, 0.00};
-COORDS waypoint2 = {0.00, 0.00};
-COORDS waypoint3 = {0.00, 0.00};
-COORDS destination = {0.00, 0.00};
-COORDS current_coords = {0.00, 0.00};
+COORDS home = {0, 0};
+
+COORDS waypoints[4] = {{0,0}, {0,0}, {0,0}, {0,0}};
+COORDS current_coords = {12345678, 34512121};
 
 int temperature = 70;
 int humidity = 20;
 BYTE start = 0;
 BYTE mode = 1;
+BYTE left_joystick = 1;
+BYTE right_joystick = 1;
+float battery_percentage;
+float battery_voltage = 0.0f;
+
+char time_utc[10] = "";
+char date_utc[10] = "";
+BYTE hour_counter = 0;
 
 
 
 
 void append_string(char str[], char ch);
-<<<<<<< Updated upstream
-=======
 void bubbleSort(BYTE arr[], BYTE n);
 void itoa(int n, char s[]);
 void reverse_string(char s[]);
 void ftoa(float num, char *str, int decimalPlaces);
 void ltoa(long n, char s[]);
->>>>>>> Stashed changes
 # 14 "./MCP2221A.h" 2
 
 
@@ -10311,14 +10320,17 @@ void ltoa(long n, char s[]);
 
 
 BYTE usb_message_received = 0;
-<<<<<<< Updated upstream
-char usb_message[40] = "";
-=======
 char usb_message[100] = "";
->>>>>>> Stashed changes
 BYTE usb_received = 0;
 char USB_param1[10];
 char USB_param2[10];
+
+char temperatures[25][9];
+char humidities[25][9];
+char batteries[25][9];
+char times[25][9];
+
+
 
 
 
@@ -10328,10 +10340,8 @@ BYTE read_byte_usb (void);
 void transmit_byte_usb (BYTE message);
 void transmit_string_usb(char message[]);
 void parse_usb_message (char message[]);
-<<<<<<< Updated upstream
-=======
 COORDS get_coords_usb (void);
->>>>>>> Stashed changes
+void insertPeriod(char *str);
 # 8 "MCP2221A.c" 2
 
 
@@ -10357,11 +10367,7 @@ void init_uart2(void)
 
 BYTE read_byte_usb(void)
 {
-<<<<<<< Updated upstream
-    BYTE content = RCREG1;
-=======
     BYTE content = RCREG2;
->>>>>>> Stashed changes
 
 
     if(RCSTA2bits.OERR)
@@ -10377,11 +10383,7 @@ BYTE read_byte_usb(void)
 
 void transmit_byte_usb(BYTE message)
 {
-<<<<<<< Updated upstream
-    TXREG1 = message;
-=======
     TXREG2 = message;
->>>>>>> Stashed changes
     return;
 }
 
@@ -10394,21 +10396,12 @@ void transmit_string_usb(char message[])
     transmit_byte_usb('\n');
     for(counter = 0; counter <= strlen(message); counter++)
     {
-<<<<<<< Updated upstream
-        while(PIR1bits.TX1IF == 0);
-        transmit_byte_usb(message[counter]);
-    }
-    transmit_byte_usb('\n');
-=======
         while(PIR3bits.TX2IF == 0);
         transmit_byte_usb(message[counter]);
     }
     transmit_byte_usb('\n');
     return;
->>>>>>> Stashed changes
 }
-
-
 
 
 
@@ -10418,139 +10411,202 @@ void parse_usb_message(char message[])
     BYTE counter;
     BYTE param1_full;
     BYTE length;
-<<<<<<< Updated upstream
-
-
-    if(!strcmp(usb_message, "R"))
-    {
-
-
-    }
-    else if(!strcmp(usb_message, "RA"))
-    {
-=======
-    char response[100] = "";
+    char response[200] = "";
     char temp_string[10] = "";
+    float percentage = 0.0f;
 
     usb_message_received = 0;
 
 
-    if(!strncmp(usb_message, "REPORT", 6))
+
+    if(!strncmp(usb_message, "REPORT_ALL", 10))
     {
 
-        strcpy(response, "Report:");
-        strcat(response, "Temperature = ");
+        for(counter = 0; counter <= hour_counter; counter++)
+        {
+            transmit_string_usb("**********************************");
+            strcpy(response, "Report:\n");
+            strcat(response, "     Temperature = ");
+            strcat(response, temperatures[counter]);
+            strcat(response, "F");
+
+            strcat(response, "\n\n     Humidity = ");
+            strcat(response, humidities[counter]);
+            strcat(response, "%");
+
+
+            strcat(response, "\n\n     Hour = ");
+            itoa(counter, temp_string);
+            strcat(response, temp_string);
+            strcat(response, "\n\n     Time (UTC) = ");
+            strncat(response, times[counter], 6);
+
+
+            strcat(response, "\n\n     Battery % = ");
+            strcat(response, batteries[counter]);
+            transmit_string_usb(response);
+        }
+    }
+    else if(!strncmp(usb_message, "REPORT:", 6))
+    {
+
+
+        strcpy(response, "Report:\n");
+        strcat(response, "     Temperature = ");
         itoa (temperature, temp_string);
+
+        strcpy(temperatures[hour_counter], temp_string);
+
         strcat(response, temp_string);
-        strcat(response, ", Humidity = ");
+        strcat(response, "F");
+        strcat(response, "\n\n     Humidity = ");
         itoa (humidity, temp_string);
+
+        strcpy(humidities[hour_counter], temp_string);
+
         strcat(response, temp_string);
-        strcat(response, ", Current Location = (");
-        ftoa (current_coords.longitude, temp_string, 5);
+        strcat(response, "%");
+
+
+        strcat(response, "\n\n     Hour = ");
+        itoa(hour_counter, temp_string);
+        strcat(response, temp_string);
+        strcat(response, "\n\n     Date (UTC) = ");
+        strncat(response, date_utc, 6);
+        strcat(response, "\n\n     Time (UTC) = ");
+
+        strcpy(times[hour_counter], time_utc);
+
+        strncat(response, time_utc, 6);
+
+
+        strcat(response, "\n\n     Current Location = (");
+        ltoa (current_coords.latitude, temp_string);
+        insertPeriod(temp_string);
         strcat(response, temp_string);
         strcat(response, ", ");
-        ftoa (current_coords.latitude, temp_string, 5);
+        ltoa (current_coords.longitude, temp_string);
+        insertPeriod(temp_string);
         strcat(response, temp_string);
         strcat(response, ")");
         transmit_string_usb(response);
-    }
-    else if(!strncmp(usb_message, "REPORT_ALL", 10))
-    {
 
+
+        strcpy(response, "     Home = (");
+        ltoa (home.latitude, temp_string);
+        insertPeriod(temp_string);
+        strcat(response, temp_string);
+        strcat(response, ", ");
+        ltoa (home.longitude, temp_string);
+        insertPeriod(temp_string);
+        strcat(response, temp_string);
+        strcat(response, ")");
+        transmit_string_usb(response);
+
+
+
+        for(counter = 0; counter < 4; counter++)
+        {
+            strcpy(response, "     Waypoint");
+            append_string(response, (char) (counter+1+48));
+
+            strcat(response, " = ");
+            strcat(response, "(");
+            ltoa (waypoints[counter].latitude, temp_string);
+            insertPeriod(temp_string);
+            strcat(response, temp_string);
+            strcat(response, ", ");
+            ltoa (waypoints[counter].longitude, temp_string);
+            insertPeriod(temp_string);
+            strcat(response, temp_string);
+            strcat(response, ")");
+            transmit_string_usb(response);
+        }
+
+
+        sprintf(response, "     Battery Voltage = %.2f", battery_voltage);
+        transmit_string_usb(response);
+        sprintf(response, "     Battery %% = %.2f%%", battery_percentage);
+
+        itoa((int)battery_percentage, temp_string);
+        strcpy(batteries[hour_counter], temp_string);
+
+        transmit_string_usb(response);
     }
     else if(!strncmp(usb_message, "SET_HOME", 8))
     {
 
+        transmit_string_usb("*****SETTING HOME ADDRESS*****");
         home = current_coords;
     }
     else if(!strncmp(usb_message, "RECALL", 6))
     {
 
-        destination = home;
+        transmit_string_usb("*****RECALLING TO HOME*****");
+        waypoints[3] = home;
     }
     else if(!strncmp(usb_message, "WAYPOINT1", 9))
     {
 
-        waypoint1 = get_coords_usb();
+        transmit_string_usb("*****WAYPOINT1 SET*****");
+        waypoints[0] = get_coords_usb();
     }
     else if(!strncmp(usb_message, "WAYPOINT2", 9))
     {
 
-        waypoint2 = get_coords_usb();
+        transmit_string_usb("*****WAYPOINT2 SET*****");
+        waypoints[1] = get_coords_usb();
     }
     else if(!strncmp(usb_message, "WAYPOINT3", 9))
     {
 
-        waypoint3 = get_coords_usb();
+        transmit_string_usb("*****WAYPOINT3 SET*****");
+        waypoints[2] = get_coords_usb();
     }
     else if(!strncmp(usb_message, "DESTINATION", 11))
     {
 
-        destination = get_coords_usb();
+        transmit_string_usb("*****DESTINATION SET*****");
+        waypoints[3] = get_coords_usb();
     }
     else if(!strncmp(usb_message, "START", 5))
     {
 
+        transmit_string_usb("*****STARTING*****");
     }
     else if(!strncmp(usb_message, "STOP", 4))
     {
 
+        transmit_string_usb("*****STOPPING*****");
     }
     else if(!strncmp(usb_message, "AUTO", 4))
     {
 
+        transmit_string_usb("*****AUTO MODE SET*****");
     }
     else if(!strncmp(usb_message, "MANUAL", 6))
     {
 
+        transmit_string_usb("*****MANUAL MODE SET*****");
+    }
+    else if(!strncmp(usb_message, "STROBE", 6))
+    {
+
+        LATAbits.LA0 = !LATAbits.LA0;
     }
     else
     {
 
+        transmit_string_usb("*****UNRECOGNIZED COMMAND*****");
     }
 
 
     return;
 }
->>>>>>> Stashed changes
 
 
 
 
-<<<<<<< Updated upstream
-
-
-
-    }
-    else if(!strcmp(usb_message, "NAV"))
-    {
-
-    }
-    else if(usb_message[0] == "NAV"[0] && usb_message[1] == "NAV"[1] && usb_message[2] == "NAV"[2])
-    {
-
-
-        for(counter = 0; counter < length; counter++)
-        {
-            if((0 && isdigit(message[counter]), ((unsigned)(message[counter])-'0') < 10) || message[counter] == '.')
-            {
-                if(!param1_full)
-                {
-                    append_string(USB_param1, message[counter]);
-                    if(!((0 && isdigit(message[counter+1]), ((unsigned)(message[counter+1])-'0') < 10) || message[counter+1] == '.'))
-                        param1_full = 1;
-                }
-                else
-                    append_string(USB_param2, message[counter]);
-            }
-        }
-    }
-    else
-    {
-
-    }
-    return;
-=======
 COORDS get_coords_usb(void)
 {
     COORDS msg_coords;
@@ -10559,34 +10615,72 @@ COORDS get_coords_usb(void)
     BYTE lat_counter = 0;
     char longitude[20] = "";
     char latitude[20] = "";
+    BYTE dec_counter = 0;
+
+    char *message = usb_message;
 
 
-    while(!(0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10))
-        counter++;
-
-
-    while((0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10) || usb_message[counter] == '.')
+    while(!(0 && isdigit(*message), ((unsigned)(*message)-'0') < 10) || (*(message+1)) == ' ')
     {
-        longitude[long_counter] = usb_message[counter];
-        long_counter++;
-        counter++;
+        message++;
+        if(*message == '\0')
+            break;
+    }
+    while((0 && isdigit(*message), ((unsigned)(*message)-'0') < 10))
+    {
+        append_string(longitude, *message);
+        message++;
+    }
+    message++;
+    dec_counter = 0;
+    while((0 && isdigit(*message), ((unsigned)(*message)-'0') < 10) && dec_counter < 5)
+    {
+        append_string(longitude, *message);
+        dec_counter++;
+        message++;
     }
 
 
-    while(!(0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10))
-        counter++;
-
-
-    while((0 && isdigit(usb_message[counter]), ((unsigned)(usb_message[counter])-'0') < 10) || usb_message[counter] == '.')
+    while(!(0 && isdigit(*message), ((unsigned)(*message)-'0') < 10))
     {
-        longitude[long_counter] = usb_message[counter];
-        long_counter++;
-        counter++;
+        message++;
+        if(*message == '\0')
+            break;
+    }
+    while((0 && isdigit(*message), ((unsigned)(*message)-'0') < 10))
+    {
+        append_string(latitude, *message);
+        message++;
+    }
+    message++;
+    dec_counter = 0;
+    while((0 && isdigit(*message), ((unsigned)(*message)-'0') < 10) && dec_counter < 5)
+    {
+        append_string(latitude, *message);
+        dec_counter++;
+        message++;
     }
 
-
-    msg_coords.longitude = (float) atof(longitude);
-    msg_coords.latitude = (float) atof(latitude);
+    msg_coords.longitude = atol(longitude);
+    msg_coords.latitude = atol(latitude);
     return msg_coords;
->>>>>>> Stashed changes
+}
+
+
+
+
+void insertPeriod(char *str)
+{
+    int len = (int) strlen(str);
+    if (len == 8)
+    {
+
+        memmove(&str[4], &str[3], (unsigned int) len - 3);
+        str[3] = '.';
+    }
+    else if (len == 7) {
+
+        memmove(&str[3], &str[2], (unsigned int) len - 2);
+        str[2] = '.';
+    }
 }

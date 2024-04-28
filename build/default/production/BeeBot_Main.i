@@ -10174,9 +10174,6 @@ int isxdigit_l(int, locale_t);
 int tolower_l(int, locale_t);
 int toupper_l(int, locale_t);
 # 19 "./BeeBot_Globals.h" 2
-<<<<<<< Updated upstream
-# 41 "./BeeBot_Globals.h"
-=======
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
@@ -10323,8 +10320,17 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 20 "./BeeBot_Globals.h" 2
-# 46 "./BeeBot_Globals.h"
->>>>>>> Stashed changes
+# 45 "./BeeBot_Globals.h"
+enum joystick_states
+{
+    FORWARD,
+    BACKWARDS,
+    NO_MOVEMENT
+};
+
+
+
+
 typedef unsigned char BYTE;
 
 
@@ -10332,65 +10338,61 @@ typedef unsigned char BYTE;
 
 struct coords
 {
-    float longitude;
-    float latitude;
+    long longitude;
+    long latitude;
 };
 typedef struct coords COORDS;
 
 
 
 
-COORDS home = {0.00, 0.00};
-COORDS waypoint1 = {0.00, 0.00};
-COORDS waypoint2 = {0.00, 0.00};
-COORDS waypoint3 = {0.00, 0.00};
-COORDS destination = {0.00, 0.00};
-COORDS current_coords = {0.00, 0.00};
+COORDS home = {0, 0};
+
+COORDS waypoints[4] = {{0,0}, {0,0}, {0,0}, {0,0}};
+COORDS current_coords = {12345678, 34512121};
 
 int temperature = 70;
 int humidity = 20;
 BYTE start = 0;
 BYTE mode = 1;
+BYTE left_joystick = 1;
+BYTE right_joystick = 1;
+float battery_percentage;
+float battery_voltage = 0.0f;
+
+char time_utc[10] = "";
+char date_utc[10] = "";
+BYTE hour_counter = 0;
 
 
 
 
 void append_string(char str[], char ch);
-<<<<<<< Updated upstream
-=======
 void bubbleSort(BYTE arr[], BYTE n);
 void itoa(int n, char s[]);
 void reverse_string(char s[]);
 void ftoa(float num, char *str, int decimalPlaces);
 void ltoa(long n, char s[]);
->>>>>>> Stashed changes
 # 69 "BeeBot_Main.c" 2
 
 # 1 "./MRF89XAM.h" 1
 # 16 "./MRF89XAM.h"
-<<<<<<< Updated upstream
-=======
 void init_spi (void);
->>>>>>> Stashed changes
 void init_MRF89XAM (void);
 void write_spi_reg (BYTE reg_address, BYTE data);
-BYTE read_spi_reg (BYTE reg_address);
+
 void write_spi_data (BYTE data);
 BYTE read_spi_data (void);
-void transmit_MRF89XAM (BYTE data);
 void transmit_string_MRF89XAM(char tx_str[]);
 BYTE receive_MRF89XAM (void);
 void MRF_parse_message(char message[], char code[]);
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 
 
 
-char MRF_param1[10];
-char MRF_param2[10];
+
+char MRF_param1[10] = "";
+char MRF_param2[10] = "";
 BYTE MRF_transmitting = 0;
 char MRF_message[40] = "";
 BYTE MRF_message_received = 0;
@@ -10399,14 +10401,17 @@ BYTE MRF_message_received = 0;
 # 1 "./MCP2221A.h" 1
 # 19 "./MCP2221A.h"
 BYTE usb_message_received = 0;
-<<<<<<< Updated upstream
-char usb_message[40] = "";
-=======
 char usb_message[100] = "";
->>>>>>> Stashed changes
 BYTE usb_received = 0;
 char USB_param1[10];
 char USB_param2[10];
+
+char temperatures[25][9];
+char humidities[25][9];
+char batteries[25][9];
+char times[25][9];
+
+
 
 
 
@@ -10416,214 +10421,235 @@ BYTE read_byte_usb (void);
 void transmit_byte_usb (BYTE message);
 void transmit_string_usb(char message[]);
 void parse_usb_message (char message[]);
-<<<<<<< Updated upstream
-# 71 "BeeBot_Main.c" 2
-=======
 COORDS get_coords_usb (void);
+void insertPeriod(char *str);
 # 71 "BeeBot_Main.c" 2
-# 95 "BeeBot_Main.c"
+
+# 1 "./GPS.h" 1
+# 11 "./GPS.h"
+void init_uart1 (void);
+BYTE read_byte_gps (void);
+void parse_gps_data(char* latitude, char* longitude, char* time, char* speed, char* date, char* longitude_dir, char* latitude_dir);
+
+char gps_data[500] = "";
+char latitude_str[20] = "";
+char longitude_str[20] = "";
+char time_str[20] = "";
+char speed_str[20] = "";
+char date_str[20] = "";
+char latitude_dir_str[20] = "";
+char longitude_dir_str[20] = "";
+# 72 "BeeBot_Main.c" 2
+# 106 "BeeBot_Main.c"
 unsigned int timer_tick = 0;
-BYTE state = 2;
-char current_report[40] = "";
-char all_reports[24][40];
-BYTE last_message_id = 0;
-BYTE left_joystick = 0;
-BYTE right_joystick = 0;
->>>>>>> Stashed changes
+volatile int* adc_out = (volatile int *) 0xFC4;
+BYTE warning_sent = 0;
+BYTE coord_mode = 0;
+unsigned int gps_counter = 0;
+unsigned long th_timer_tick = 0;
+unsigned long j_timer_tick = 0;
+unsigned long last_joystick_tick = 0;
+unsigned long hourly_timer_tick = 0;
+char reports[60][9];
 
 
 
 
-
-<<<<<<< Updated upstream
-
-enum states
-{
-    INIT,
-    WAITING,
-    AUTO,
-    MANUAL,
-    DEBUG,
-    DEPLOYED
-};
-# 97 "BeeBot_Main.c"
-unsigned int timer_tick = 0;
-BYTE state = INIT;
-char current_report[40] = "";
-char all_reports[24][40];
-
-
-
-
-
-=======
->>>>>>> Stashed changes
 void init_pins (void);
-void init_interrupts(void);
+void init_interrupts (void);
+void parse_MRF_message (void);
+BYTE get_battery_level (void);
+void init_adc (void);
+long extractHexadecimalValue(const char *str);
+float adc_to_actual (BYTE adc_value);
+float calculate_battery_percentage(float voltage);
+void update_coords (void);
+void get_temperature_humidity(void);
+void send_hourly_report (void);
+void stop_motor (BYTE motor);
+void move_motor (BYTE motor, BYTE dir);
+void minutes_to_degrees(COORDS* coordinates);
 
 
-<<<<<<< Updated upstream
 
 
+void set_strobe(void) {LATAbits.LA0 = !LATAbits.LA0;}
+void appendHexToBuffer(long value, char *buffer) { sprintf(buffer + strlen(buffer), "%lx", value);}
 
-=======
->>>>>>> Stashed changes
+
 
 
 void main(void)
 {
-    BYTE previous_state;
-    char MRF_msg_code[4];
+    char temp_string[40] = "";
+
 
     OSCCON = 0b01100111;
     _delay((unsigned long)((200)*(8000000/4000.0)));
 
 
-<<<<<<< Updated upstream
-=======
+    init_pins ();
+    init_uart1 ();
+    init_uart2 ();
+    init_spi ();
+    init_adc ();
+    init_MRF89XAM ();
+    init_interrupts();
+    stop_motor(0);
+    stop_motor(1);
+    mode = 1;
 
-    char test_string[16] = "";
-
->>>>>>> Stashed changes
     while(1)
     {
 
-
-        switch(state)
+        if(MRF_message_received)
         {
-<<<<<<< Updated upstream
-            case INIT:
-
-                init_pins ();
-                init_interrupts();
-                init_uart2 ();
-                previous_state = INIT;
-                state = WAITING;
-                break;
-            case WAITING:
-
-                if(MRF_message_received)
-                {
-                    MRF_message_received = 0;
-                    MRF_parse_message(MRF_message, MRF_msg_code);
-
-                    if(!strcmp(MRF_msg_code, "NAV"))
-                    {
-                        state = AUTO;
-                        previous_state = WAITING;
-                    }
-                    else if(!strcmp(MRF_msg_code, "M"))
-                    {
-                        state = MANUAL;
-                        previous_state = WAITING;
-                    }
-                }
-                break;
-            case AUTO:
-
-                break;
-            case MANUAL:
-
-                break;
-            case DEBUG:
-=======
-            case 2:
-
-                init_pins ();
-                init_uart2 ();
-                init_spi ();
-                init_MRF89XAM ();
-                init_interrupts();
-                previous_state = 2;
-                state = 3;
-                break;
-            case 3:
-
-                while(1)
-                {
-                    if(MRF_message_received)
-                    {
-                        _delay((unsigned long)((10)*(8000000/4000.0)));
-                        MRF_message_received = 0;
-                        if(!strcmp(MRF_message, "hello\n\n\n"))
-                        {
-                            transmit_string_MRF89XAM("HI");
-                        }
-                        strcpy(MRF_message, "");
-                    }
-                    if(usb_message_received)
-                    {
-                        usb_message_received = 0;
-                        transmit_string_usb(usb_message);
-                        strcpy(usb_message, "");
-                    }
-                }
-
-
-                if(MRF_message_received)
-                {
-                    LATAbits.LA0 = 1;
-                    MRF_message_received = 0;
-
-
-                    if(!strcmp(MRF_msg_code, "NAV"))
-                    {
-                        state = 1;
-                        previous_state = 3;
-                    }
-                    else if(!strcmp(MRF_msg_code, "M"))
-                    {
-                        state = 0;
-                        previous_state = 3;
-                    }
-                }
-                break;
-            case 1:
-
-                break;
-            case 0:
-
-                break;
-            case 4:
->>>>>>> Stashed changes
-
-
-                if((!PORTDbits.RD5))
-                {
-                    state = previous_state;
-<<<<<<< Updated upstream
-                    previous_state = DEBUG;
-=======
-                    previous_state = 4;
->>>>>>> Stashed changes
-                }
-
-                if(strcmp(usb_message, ""))
-                {
-                    parse_usb_message(usb_message);
-                    strcpy(usb_message, "");
-                }
-                break;
-<<<<<<< Updated upstream
-            case DEPLOYED:
-=======
-            case 5:
->>>>>>> Stashed changes
-
-
-                break;
+            _delay((unsigned long)((25)*(8000000/4000.0)));
+            parse_MRF_message();
+            MRF_message_received = 0;
+            strcpy(MRF_message, "");
         }
-<<<<<<< Updated upstream
-
-
-        if(PORTDbits.RD5 && state != DEBUG)
+        else if(usb_message_received)
         {
-            previous_state = WAITING;
-            state = DEBUG;
+            _delay((unsigned long)((10)*(8000000/4000.0)));
+            parse_usb_message(usb_message);
+            usb_message_received = 0;
             strcpy(usb_message, "");
         }
-=======
->>>>>>> Stashed changes
+
+
+        if(mode == 1)
+        {
+
+           stop_motor(0);
+           stop_motor(1);
+           LATAbits.LA0 = 0;
+        }
+
+
+        else if(mode == 0)
+        {
+
+            if(j_timer_tick - last_joystick_tick > 1000)
+            {
+                left_joystick = right_joystick = 1;
+            }
+
+
+
+            if(left_joystick > 200)
+            {
+                LATAbits.LA0 = 1;
+                move_motor(1, 0);
+
+
+                move_motor(0, 0);
+                transmit_string_usb("FORWARDS\n");
+            }
+            else if(left_joystick == 0)
+            {
+                if(right_joystick <= 1 || right_joystick >= 200)
+                {
+                    LATAbits.LA0 = 1;
+                    move_motor(0, 1);
+                    move_motor(1, 1);
+                    transmit_string_usb("BACKWARDS\n");
+                }
+            }
+            else
+            {
+                LATAbits.LA0 = 0;
+                stop_motor(0);
+                stop_motor(1);
+                transmit_string_usb("STOPPING\n");
+            }
+
+
+            if(right_joystick > 200)
+            {
+                if(left_joystick > 200)
+                {
+                    stop_motor(0);
+                    _delay((unsigned long)((60)*(8000000/4000.0)));
+                    move_motor(0, FORWARD);
+                }
+                else if(left_joystick == 0)
+                {
+                    stop_motor(1);
+                    _delay((unsigned long)((60)*(8000000/4000.0)));
+                    move_motor(1, 1);
+                }
+                else
+                {
+                    LATAbits.LA0 = 1;
+                    move_motor(1, 0);
+                    move_motor(0, 1);
+                }
+                transmit_string_usb("RIGHT TURN\n\n");
+            }
+            else if(right_joystick == 0)
+            {
+                if(left_joystick <= 1 || left_joystick >= 200)
+                {
+                    if(left_joystick > 200)
+                    {
+                        stop_motor(1);
+                        _delay((unsigned long)((60)*(8000000/4000.0)));
+                        move_motor(1, FORWARD);
+                    }
+                    else if(left_joystick == 0)
+                    {
+                        stop_motor(0);
+                        _delay((unsigned long)((60)*(8000000/4000.0)));
+                        move_motor(0, 1);
+                    }
+                    else
+                    {
+                        LATAbits.LA0 = 1;
+                        move_motor(1, 1);
+                        move_motor(0, 0);
+                    }
+                    transmit_string_usb("LEFT TURN\n\n");
+                }
+            }
+        }
+        else if(!start)
+        {
+
+        }
+
+
+        if(th_timer_tick >= 5000)
+        {
+            th_timer_tick = 0;
+
+
+            get_temperature_humidity();
+
+
+            battery_voltage = adc_to_actual(get_battery_level());
+            battery_percentage = calculate_battery_percentage(battery_voltage);
+            if(battery_voltage <= 9.3)
+            {
+                if(!warning_sent)
+                {
+                    transmit_string_usb("LOW BATTERY");
+                    transmit_string_MRF89XAM("LOWBATT");
+                }
+            }
+
+
+            strncpy(time_utc, time_str, 6);
+            strncpy(date_utc, date_str, 6);
+
+
+            if(hourly_timer_tick >= 3100000)
+            {
+                hourly_timer_tick = 0;
+                hour_counter++;
+                send_hourly_report();
+            }
+        }
     }
     return;
 }
@@ -10631,14 +10657,8 @@ void main(void)
 
 
 
-
-
 void init_pins(void)
 {
-    TRISDbits.RD6 = 1;
-    TRISDbits.RD6 = 1;
-    TRISDbits.RD7 = 1;
-
 
     TRISDbits.RD6 = 1;
     TRISDbits.RD6 = 1;
@@ -10652,26 +10672,81 @@ void init_pins(void)
     TRISCbits.RC2 = 1;
     TRISCbits.RC3 = 0;
     TRISCbits.RC4 = 1;
-    TRISCbits.RC5 = 1;
-
-
+    TRISCbits.RC5 = 0;
     LATCbits.LC0 = 1;
     LATCbits.LC1 = 1;
 
-<<<<<<< Updated upstream
-=======
 
     TRISAbits.RA0 = 0;
     LATAbits.LA0 = 0;
 
 
->>>>>>> Stashed changes
-    ANSELA = 0;
-    ANSELB = 0;
-    ANSELC = 0;
-    ANSELD = 0;
-    ANSELE = 0;
+    TRISDbits.RD2 = 1;
+
+
+    TRISAbits.RA3 = 0;
+    TRISAbits.RA4 = 0;
+    TRISAbits.RA5 = 0;
+    TRISAbits.RA6 = 0;
+    TRISAbits.RA7 = 0;
+    TRISBbits.RB4 = 1;
+
+
+    TRISDbits.RD1 = 0;
+    TRISEbits.RE0 = 0;
+    LATAbits.LA3 = 0;
+    LATAbits.LA4 = 0;
+    LATAbits.LA5 = 0;
+    LATAbits.LA6 = 0;
+    LATAbits.LA7 = 0;
+
+
+    TRISCbits.RC6 = 1;
+    TRISAbits.RA2 = 0;
+    LATAbits.LA2 = 0;
+
+
+    ANSELA = 0x00;
+    ANSELB = 0x00;
+    ANSELC = 0x00;
+    ANSELD = 0x04;
+    ANSELE = 0x00;
     return;
+}
+
+
+
+
+void init_adc(void)
+{
+    ADCON2bits.ACQT = 2;
+    ADCON2bits.ADFM = 0;
+    ADCON2bits.ADCS = 5;
+    ADCON1bits.PVCFG = 0;
+    ADCON1bits.NVCFG = 0;
+    return;
+}
+
+
+
+
+BYTE get_battery_level(void)
+{
+    BYTE result;
+
+
+    PIR1bits.ADIF = 0;
+    ADCON0bits.CHS = 22;
+    ADCON0bits.ADON = 1;
+
+
+    ADCON0bits.GODONE = 1;
+    while(PIR1bits.ADIF != 1) {}
+    PIR1bits.ADIF = 0;
+    result = (BYTE) *adc_out;
+
+    ADCON0bits.ADON = 0;
+    return result;
 }
 
 
@@ -10683,16 +10758,20 @@ void init_interrupts(void)
     INTCONbits.GIE = 0;
 
 
-<<<<<<< Updated upstream
-=======
-    PIE3bits.RC2IE = 1;
->>>>>>> Stashed changes
-
+    PIE1bits.RC1IE = 1;
 
 
     PIE3bits.RC2IE = 1;
 
 
+    INTCON3bits.INT1IE = 1;
+    INTCON2bits.INTEDG1 = 1;
+
+
+    T0CON = 0x08;
+    TMR0H = 0xF8;
+    TMR0L = 0x2F;
+    INTCONbits.TMR0IE = 1;
 
 
     INTCONbits.PEIE = 1;
@@ -10707,37 +10786,33 @@ void init_interrupts(void)
 void __attribute__((picinterrupt(("")))) ISR(void)
 {
     char MRF_input = 0;
+    char gps_input = 0;
     char temp_receive_string[40] = "";
 
 
-<<<<<<< Updated upstream
-
-    char usb_input = 0;
     if(PIR1bits.RC1IF && PIE1bits.RC1IE)
     {
-        usb_input = read_byte_usb();
-        append_string(usb_message, usb_input);
-    }
-
-
-    if(TMR0IE && TMR0IF)
-    {
-        TMR0IF = 0;
-        timer_tick++;
-        TMR0H = 0xF8;
-        TMR0L = 0x2F;
-    }
-
-
-    if(INTCON3bits.INT1F && !MRF_transmitting)
-    {
-        INTCON3bits.INT1F = 0;
-        MRF_input = (char) receive_MRF89XAM();
-        if(MRF_input == '\n')
+        gps_input = read_byte_gps();
+        if(gps_counter < 300)
         {
-            MRF_message_received = 1;
-            strcpy(MRF_message, temp_receive_string);
-=======
+            gps_data[gps_counter] = gps_input;
+            gps_counter++;
+        }
+        else if(gps_counter < 500)
+        {
+            gps_counter++;
+        }
+        else
+        {
+            PIE1bits.RC1IE = 0;
+            parse_gps_data(latitude_str, longitude_str, time_str, speed_str, date_str, latitude_dir_str, longitude_dir_str);
+            gps_counter = 0;
+            update_coords();
+            PIE1bits.RC1IE = 1;
+        }
+    }
+
+
     char usb_input = 0;
     if(PIR3bits.RC2IF && PIE3bits.RC2IE)
     {
@@ -10746,6 +10821,17 @@ void __attribute__((picinterrupt(("")))) ISR(void)
             usb_message_received = 1;
         else
             append_string(usb_message, usb_input);
+    }
+
+    if(TMR0IE && TMR0IF)
+    {
+        TMR0IF = 0;
+        timer_tick++;
+        TMR0H = 0xF8;
+        TMR0L = 0x2F;
+        th_timer_tick++;
+        j_timer_tick++;
+        hourly_timer_tick++;
     }
 
 
@@ -10757,9 +10843,7 @@ void __attribute__((picinterrupt(("")))) ISR(void)
             MRF_input = (char) receive_MRF89XAM();
             append_string(MRF_message, MRF_input);
             if(strlen(MRF_message) == 8)
-            {
                 MRF_message_received = 1;
-            }
             else
                 MRF_message_received = 0;
         }
@@ -10770,165 +10854,405 @@ void __attribute__((picinterrupt(("")))) ISR(void)
 
 
 
-char parse_MRF_message()
+void parse_MRF_message(void)
 {
     char message_id = MRF_message[0];
-    char temp_string[9] = "";
+    char temp_string[40] = "";
     char response[9] = "";
     BYTE counter;
 
 
     if (strcmp(MRF_message, "\n\n\n\n\n\n\n\n"))
     {
-        if (last_message_id == 0)
-        {
 
-            switch (last_message_id)
-            {
-                case 1:
-                    waypoint1.longitude = atol(MRF_message);
-                    last_message_id = 11;
-                    break;
-                case 11:
-                    waypoint1.latitude = atol(MRF_message);
-                    last_message_id = 0;
-                    transmit_string_MRF89XAM("W1 Set");
-                    break;
-                case 2:
-                    waypoint2.longitude = atol(MRF_message);
-                    last_message_id = 22;
-                    break;
-                case 22:
-                    waypoint2.latitude = atol(MRF_message);
-                    last_message_id = 0;
-                    transmit_string_MRF89XAM("W2 Set");
-                    break;
-                case 3:
-                    waypoint3.longitude = atol(MRF_message);
-                    last_message_id = 33;
-                    break;
-                case 33:
-                    waypoint3.latitude = atol(MRF_message);
-                    last_message_id = 0;
-                    transmit_string_MRF89XAM("W3 Set");
-                    break;
-                case 4:
-                    waypoint1.longitude = atol(MRF_message);
-                    last_message_id = 11;
-                    break;
-                case 44:
-                    waypoint1.latitude = atol(MRF_message);
-                    last_message_id = 0;
-                    transmit_string_MRF89XAM("Dest Set");
-                    break;
-            }
+        if (!strncmp(MRF_message, "hello", 5))
+        {
+            transmit_string_MRF89XAM("HI!");
         }
-        else
+        switch (message_id)
         {
 
-            switch (message_id)
-            {
+            case 'R':
 
-                case 'R':
-
-                    strcpy (response, "RT");
-                    append_string(response, (char) temperature);
-                    strcat (response, "H");
-                    append_string(response, (char) humidity);
-                    transmit_string_MRF89XAM(response);
-
-
-                    ltoa( (long) (current_coords.longitude * 100000), temp_string);
-                    transmit_string_MRF89XAM(temp_string);
-                    ltoa( (long) (current_coords.latitude * 100000), temp_string);
-                    transmit_string_MRF89XAM(temp_string);
-                    break;
+                strcpy(response, "RT");
+                append_string(response, (char) temperature);
+                strcat(response, "H");
+                append_string(response, (char) humidity);
+                strcat(response, "B");
+                append_string(response, (char) battery_percentage);
+                append_string(response, (char) hour_counter+20);
+                transmit_string_usb(response);
+                transmit_string_MRF89XAM(response);
+                strcpy(reports[hour_counter], response);
 
 
-                case 'H':
-                    home = current_coords;
-                    break;
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+                strcpy(response, "O");
+                appendHexToBuffer(current_coords.longitude, response);
+                transmit_string_MRF89XAM(response);
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+                strcpy(response, "A");
+                appendHexToBuffer(current_coords.latitude, response);
+                transmit_string_MRF89XAM(response);
+                break;
 
 
-                case 'C':
-                    destination = home;
-                    break;
+            case 'L':
+                for(counter = 0; counter <= hour_counter; counter++)
+                {
+                    transmit_string_MRF89XAM(reports[counter]);
+                    _delay((unsigned long)((100)*(8000000/4000.0)));
+                }
+                break;
 
 
-                case '1':
-                    last_message_id = 1;
-                    break;
+            case 'H':
+                home = current_coords;
+                 _delay((unsigned long)((1500)*(8000000/4000.0)));
+                strcpy(response, "O");
+                appendHexToBuffer(home.longitude, response);
+                transmit_string_MRF89XAM(response);
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+                strcpy(response, "A");
+                appendHexToBuffer(home.latitude, response);
+                transmit_string_MRF89XAM(response);
+                break;
 
 
-                case '2':
-                    last_message_id = 2;
-                    break;
+            case 'C':
+                waypoints[3] = home;
+
+                _delay((unsigned long)((1500)*(8000000/4000.0)));
+                strcpy(response, "O");
+                appendHexToBuffer(waypoints[3].longitude, response);
+                transmit_string_MRF89XAM(response);
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+                strcpy(response, "A");
+                appendHexToBuffer(waypoints[3].latitude, response);
+                transmit_string_MRF89XAM(response);
+                break;
 
 
-                case '3':
-                    last_message_id = 3;
-                    break;
+            case '1':
+                transmit_string_usb("Setting Waypoint 1");
+                coord_mode = 1;
+                break;
+
+            case '2':
+                transmit_string_usb("Setting Waypoint 2");
+                coord_mode = 2;
+                break;
 
 
-                case 'D':
-                    last_message_id = 4;
-                    break;
+            case '3':
+                transmit_string_usb("Setting Waypoint 3");
+                coord_mode = 3;
+                break;
 
 
-                case 'S':
-                    start = 1;
-                    break;
+            case 'D':
+                transmit_string_usb("Setting Destination");
+                coord_mode = 4;
+                break;
+
+            case 'O':
+                if (coord_mode > 0 && coord_mode < 5)
+                {
+                    waypoints[coord_mode - 1].latitude = extractHexadecimalValue(MRF_message);
+                    ltoa(waypoints[coord_mode - 1].latitude, temp_string);
+                    transmit_string_usb("latitude: ");
+                    transmit_string_usb(temp_string);
+                }
+                break;
+
+            case 'A':
+                if (coord_mode > 0 && coord_mode < 5)
+                {
+                    waypoints[coord_mode - 1].longitude = extractHexadecimalValue(MRF_message);
+                    ltoa(waypoints[coord_mode - 1].longitude, temp_string);
+                    transmit_string_usb("longitude: ");
+                    transmit_string_usb(temp_string);
+                }
+                coord_mode = 0;
+                break;
 
 
-                case 'X':
-                    start = 0;
-                    break;
+            case 'S':
+                start = 1;
+                transmit_string_usb("\n*****STARTING*****");
+                break;
 
 
-                case 'M':
-                    mode = 0;
-                    break;
+            case 'X':
+                start = 0;
+                transmit_string_usb("\n*****STOPPING*****");
+                break;
 
 
-                case 'A':
-                    mode = 1;
-                    break;
+            case 'M':
+                mode = 0;
+                last_joystick_tick = j_timer_tick = 0;
+                transmit_string_usb("\n*****MANUAL MODE SET*****");
+                break;
 
 
-                case 'J':
-                    for(counter = 1; counter < 8; counter++)
+            case 'U':
+                mode = 1;
+                transmit_string_usb("\n*****AUTO MODE SET*****");
+                break;
+
+
+            case 'J':
+                last_joystick_tick = j_timer_tick;
+                for (counter = 1; counter < 8; counter++)
+                {
+
+                    if (counter < 4)
+                        append_string(temp_string, MRF_message[counter]);
+                    else if (counter == 4)
                     {
 
-                        if(counter <= 3 || counter == 5)
-                            append_string(temp_string, MRF_message[counter]);
-                        else if(counter == 4)
-                        {
-                            left_joystick = atoi(temp_string);
-                            strcpy(temp_string, "");
-                            append_string(temp_string, MRF_message[counter]);
-                        }
-                        else if(counter == 6)
-                        {
-                            append_string(temp_string, MRF_message[counter]);
-                            right_joystick = atoi(temp_string);
-                        }
+                        left_joystick = (BYTE) atoi(temp_string);
+                        strcpy(temp_string, "");
+                        append_string(temp_string, MRF_message[counter]);
                     }
-                    break;
+                    else if(counter == 5)
+                        append_string(temp_string, MRF_message[counter]);
+                    else if (counter == 6)
+                    {
+                        append_string(temp_string, MRF_message[counter]);
+                        right_joystick = (BYTE) atoi(temp_string);
+
+                        sprintf(temp_string, "Left Joy = %d, Right Joy = %d", left_joystick, right_joystick);
+                        transmit_string_usb(temp_string);
+                    }
+                }
+                break;
+            default:
+                message_id = 0x00;
+
+                break;
+        }
+    }
+    return;
+}
 
 
-                default:
-                    message_id = 0x00;
-                    transmit_string_MRF89XAM("UNKNOWN");
-                    break;
-            }
->>>>>>> Stashed changes
+
+
+long extractHexadecimalValue(const char *str)
+{
+    str++;
+    long hexValue = strtol(str, ((void*)0), 16);
+    return hexValue;
+}
+
+
+
+
+float adc_to_actual(BYTE adc_value)
+{
+    float voltage = 0;
+    float ref_voltage = 3.3f;
+
+    voltage = ((float) adc_value) * (ref_voltage/256.0f);
+    voltage *= 4.0f;
+    return voltage;
+}
+
+
+
+
+float calculate_battery_percentage(float voltage)
+{
+
+    float minVoltage = 9.0;
+    float maxVoltage = 12.6;
+    float minPercentage = 0.0;
+    float maxPercentage = 100.0;
+
+
+    float percentage = minPercentage + ((voltage - minVoltage) / (maxVoltage - minVoltage)) * (maxPercentage - minPercentage);
+
+
+    if (percentage < minPercentage)
+        percentage = minPercentage;
+    else if (percentage > maxPercentage)
+        percentage = maxPercentage;
+
+    return percentage;
+}
+
+
+
+
+
+
+void get_temperature_humidity(void)
+{
+    BYTE counter;
+    BYTE th_reading[40] = {0};
+
+
+    INTCONbits.GIE = 0;
+
+
+    TRISAbits.RA1 = 0;
+    LATAbits.LA1 = 0;
+    _delay((unsigned long)((1)*(8000000/4000.0)));
+    LATAbits.LA1 = 1;
+
+
+    _delay((unsigned long)((45)*(8000000/4000000.0)));
+    TRISAbits.RA1 = 1;
+    if(PORTAbits.RA1 == 0)
+    {
+
+        while(PORTAbits.RA1 == 0);
+
+        while(PORTAbits.RA1 == 1);
+
+
+
+
+
+        for(counter = 0; counter < 40; counter++)
+        {
+
+            while(PORTAbits.RA1 == 0);
+
+
+            _delay((unsigned long)((40)*(8000000/4000000.0)));
+            th_reading[counter] = PORTAbits.RA1;
+
+
+            while(PORTAbits.RA1 == 1);
+        }
+    }
+
+
+    INTCONbits.GIE = 1;
+
+
+
+
+
+    temperature = humidity = 0x00;
+    for(counter = 0; counter < 16; counter++)
+    {
+        if(th_reading[counter] == 1)
+            humidity = humidity | (0x01 << (15-counter));
+        if(th_reading[counter + 16] == 1)
+            temperature = temperature | (0x01 << (15-counter));
+    }
+
+
+    temperature /= 10;
+    humidity /= 10;
+
+
+    temperature = (int) ((float) temperature * 9.0f/5.0f + 32.0f);
+
+    return;
+}
+
+void send_hourly_report(void)
+{
+
+    strcpy(MRF_message, "R");
+    parse_MRF_message();
+    strcpy(MRF_message, "");
+
+
+
+    strcpy(usb_message, "REPORT");
+    parse_usb_message(usb_message);
+    strcpy(usb_message, "");
+    return;
+}
+
+void move_motor(BYTE motor, BYTE dir)
+{
+    if(motor == 1)
+    {
+        if(dir == 0)
+        {
+            LATDbits.LD1 = 0;
+            LATAbits.LA4 = 1;
         }
         else
-            append_string(temp_receive_string, MRF_input);
+        {
+            LATDbits.LD1 = 1;
+            LATAbits.LA4 = 0;
+        }
     }
-<<<<<<< Updated upstream
+    else if(motor == 0)
+    {
+        if(dir == 0)
+        {
+            LATEbits.LE0 = 0;
+            LATAbits.LA3 = 1;
+        }
+        else
+        {
+            LATEbits.LE0 = 1;
+            LATAbits.LA3 = 0;
+        }
+    }
     return;
-=======
-    return message_id;
->>>>>>> Stashed changes
+}
+
+void stop_motor(BYTE motor)
+{
+    if(motor == 1)
+        LATDbits.LD1 = LATAbits.LA4 = 0;
+    else if(motor == 0)
+        LATEbits.LE0 = LATAbits.LA3 = 0;
+    return;
+}
+
+
+
+
+void update_coords(void)
+{
+    float temp_f_lat = 0.0f;
+    float temp_f_long = 0.0f;
+
+    temp_f_lat = (float) atof(latitude_str) * 1000.0f;
+    temp_f_long = (float) atof(longitude_str) * 1000.0f;
+
+    current_coords.latitude = (long) temp_f_lat;
+    current_coords.longitude = (long) temp_f_long;
+
+    minutes_to_degrees(&current_coords);
+
+    return;
+}
+
+void minutes_to_degrees(COORDS* coordinates)
+{
+    long whole_long;
+    long whole_lat;
+    long dec_long;
+    long dec_lat;
+
+
+    whole_long = coordinates->longitude / 100000;
+    whole_long *= 100000;
+    whole_lat = coordinates->latitude / 100000;
+    whole_lat *= 100000;
+
+
+    dec_long = (coordinates->longitude - whole_long) * 100;
+    dec_lat = (coordinates->latitude - whole_lat) * 100;
+
+
+    dec_long /= 60;
+    dec_lat /= 60;
+
+
+    coordinates->longitude = whole_long + dec_long;
+    coordinates->latitude = whole_lat + dec_lat;
+    return;
 }
